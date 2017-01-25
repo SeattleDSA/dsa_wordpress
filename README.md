@@ -27,4 +27,4 @@ You can use whatever you want – seriously. While the Sass version comes with B
 - Run npm install
 - Run gulp to confirm everything is working
 
-[Read more about how Gulp is used with JointsWP.](http://jointswp.com/docs/gulp/)# dsa_wordpress
+[Read more about how Gulp is used with JointsWP.](http://jointswp.com/docs/gulp/)
