@@ -73,10 +73,22 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #ec1f27;
 }
 
+.bg-DSAglass {
+  background: rgba(255,255,255,0.85);
+}
+
 button.orbit-next, button.orbit-previous {
 	background-color: rgba(255,255,255,0.25);
 	color: rgba(255,255,255,0.75);
   border: 0px transparent;
+}
+
+.orbit-previous {
+  border-radius: 0 50% 50% 0;
+}
+
+.orbit-next {
+    border-radius: 50% 0 0 50%;
 }
 
 .txt-DSAblack {
@@ -108,21 +120,44 @@ color: white;
 }
 
 .dsa-slide {
-	min-height: 100vh;
+	min-height: 85vh;
 	background-color: #ec1f27;
 	color: white;
 }
 
 .dsa-slide .row {
-    padding-top: 15vh;
+    padding-top: 8rem;
+}
+
+.dsa-slide a {
+  color: white;
+}
+
+.dsa-slide a.button {
+  text-decoration: none;
+  color: #ec1f27;
+}
+
+.dsa-slide a.button:hover {
+  text-decoration: none;
+  color: #ec1f27;
+  background: #231F20;
+}
+
+.top-bar a:hover {
+  background: #231F20;
 }
 
 .txt-center {
   text-align: center;
 }
 
-.dsa-fullheight-cont {
-  padding-top: 6rem;
+.dsa-slide .row.dsa-continue {
+  padding-top: 2rem;
+}
+
+.dsa-slide p {
+  font-size: 1.25rem;
 }
 
 .page blockquote {
@@ -178,6 +213,96 @@ button, .button {
 	color: #fff;
 }
 
+.button.success {
+  border-color: #3adb76;
+}
+
+.button.alert {
+  border-color: #cc4b37;
+}
+
+.button.warning {
+  border-color: #ffae00;
+}
+
+.makegoogleresponsive {
+ 
+position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+ 
+}
+
+.makegoogleresponsive iframe {
+ 
+position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
+ 
+}
+
+.home .page-title {
+	display:none;
+}
+
+.dsa-main {
+	padding-bottom: 2rem;
+}
+
+.mauticform-label {
+    font-size: 1rem;
+}
+
+#mauticform_input_contactus_submit {
+  margin-left: 15px;
+}
+
+.icon-bullet {
+    height: 2em;
+    width: 2em;
+    margin-right: 1em;
+    float: left;
+    margin-top: 0.5em;
+}
+
+
+.dsa-slide.dsa-slide-1 {
+  background: url(../images/bg-dark-march.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:#020205;
+}
+
+.dsa-main-logo {
+  float: left;
+  margin: 1rem 1rem 0 0;
+}
+
+.dsa-main-name {
+  font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;
+  color: white;
+}
+
+a.button.button-clear-white {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-left: 1rem;
+}
+
+a.button.button-red-white {
+  background-color: #ec1f27;
+  color: white;
+  border: 1px solid white;
+}
+
+.row.dsa-main-actions {
+  padding-top: 1rem;
+}
+
+
+.row.dsa-main-actions a {
+    margin: 0 3% 0 0;
+    width: 30%;
+}
 /*********************
 GENERAL STYLES
 *********************/

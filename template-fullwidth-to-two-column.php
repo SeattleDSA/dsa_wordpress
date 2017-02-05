@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Fullwidth to Two Column
+Template Name: Full Width to Two Column
 */
 ?>
 

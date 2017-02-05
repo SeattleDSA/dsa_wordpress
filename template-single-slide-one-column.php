@@ -10,15 +10,10 @@ Template Name: Single Slide to One Column
 
 		<div id="dsa-fullheight" class="bg-DSAred txt-DSAwhite">
 			<div class="row">
-				<div class="large-6 medium-6 small-12 columns dsa-left-fullheight">
-					<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide_left', true)); ?>
-				</div>
-				<div class="large-6 medium-6 small-12 columns dsa-right-fullheight">
-					<?php echo apply_filters('the_content', echo get_post_meta($post->ID, '_dsa_slide_right', true)); ?>
-				</div>
+				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide0', true)); ?>
 			</div>
 			<div class="row">
-				<div class="large-12 columns txt-center dsa-fullheight-cont">
+				<div class="large-12 columns txt-center dsa-continue">
 					<a href="#inner-content" class="txt-DSAwhite button">Continue</a>
 				</div>
 			</div>

@@ -8,9 +8,9 @@ Template Name: Five Calls
 			
 	<div id="content">
 	
-		<div id="inner-content" class="row bg-DSAred">
+		<div id="inner-content" class="row">
 
-			<div class="large-4 medium-4 columns bgDSAwhite">
+			<div class="large-4 medium-4 columns bg-DSAwhite">
 				<div>
 					the_logo
 				</div> <!-- end Branding / Location -->

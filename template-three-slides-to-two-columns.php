@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Three Slides to Two Columns
+Template Name: Three Slides to One to Two Columns
 */
 ?>
 
@@ -12,48 +12,33 @@ Template Name: Three Slides to Two Columns
 			<ul class="orbit-container">
 				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
    				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-				<li class="is-active orbit-slide dsa-slide">
+				<li class="is-active orbit-slide dsa-slide dsa-slide-1">
 					<div class="row padslidetop">
-						<div class="large-6 medium-6 small-12 columns dsa-left-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1_left', true)); ?>
-						</div>
-						<div class="large-6 medium-6 small-12 columns dsa-right-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1_right', true)); ?>
-						</div>
+						<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ?>
 					</div>
 					<div class="row">
-						<div class="large-12 columns txt-center">
-							<a href="#inner-content" class="txt-DSAwhite button">Continue</a>
+						<div class="large-12 columns txt-center dsa-continue">
+							<a href="#inner-content" class="button button-clear-white">Continue</a>
 						</div>
 					</div>
 				</li><!-- end of slide one -->
-				<li class="orbit-slide dsa-slide">
+				<li class="orbit-slide dsa-slide dsa-slide-2">
 					<div class="row padslidetop">
-						<div class="large-6 medium-6 small-12 columns dsa-left-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide2_left', true)); ?>
-						</div>
-						<div class="large-6 medium-6 small-12 columns dsa-right-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide2_right', true)); ?>
-						</div>
+						<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide2', true)); ?>
 					</div>
 					<div class="row">
-						<div class="large-12 columns txt-center">
-							<a href="#inner-content" class="txt-DSAwhite button">Continue</a>
+						<div class="large-12 columns txt-center dsa-continue">
+							<a href="#inner-content" class="button button-clear-white">Continue</a>
 						</div>
 					</div>
 				</li><!-- end of slide one -->
-				<li class="orbit-slide dsa-slide">
+				<li class="orbit-slide dsa-slide dsa-slide-3">
 					<div class="row padslidetop">
-						<div class="large-6 medium-6 small-12 columns dsa-left-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide3_left', true)); ?>
-						</div>
-						<div class="large-6 medium-6 small-12 columns dsa-right-fullheight">
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide3_right', true)); ?>
-						</div>
+							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide3', true)); ?>
 					</div>
 					<div class="row">
-						<div class="large-12 columns txt-center">
-							<a href="#inner-content" class="txt-DSAwhite button">Continue</a>
+						<div class="large-12 columns txt-center dsa-continue">
+							<a href="#inner-content" class="button button-clear-white">Continue</a>
 						</div>
 					</div>
 				</li><!-- end of slide one -->
@@ -68,7 +53,7 @@ Template Name: Three Slides to Two Columns
 	
 		<div id="inner-content" class="row">
 	
-		    <main id="main" class="large-6 medium-6 columns" role="main">
+		    <main id="main" class="large-12 medium-12 columns dsa-main" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -78,7 +63,11 @@ Template Name: Three Slides to Two Columns
 
 			</main> <!-- end #main -->
 
-			<div class="large-6 medium-6 columns">
+			<div class="large-6 medium-6 columns dsa-column-left">
+				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_column_left', true)); ?>
+			</div>
+
+			<div class="large-6 medium-6 columns dsa-column-right">
 				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_column_right', true)); ?>
 			</div>
 		    
