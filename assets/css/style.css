@@ -227,7 +227,7 @@ button, .button {
 
 .makegoogleresponsive {
  
-position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+position: relative; height: 0;
  
 }
 
@@ -235,6 +235,19 @@ position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
  
 position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
  
+}
+
+@media (max-width: 767px) {
+    .makegoogleresponsive iframe {
+        max-width: calc(100vw + 40px) !important;   
+        margin: -11px -25px;
+    min-height: 300px; padding-bottom: 300px;}
+    .makegoogleresponsive { 
+        width:100vw !important; 
+        overflow: hidden !important; 
+        margin: 0 -15px !important;
+        min-height: 350px;
+    }  
 }
 
 .home .page-title {
@@ -263,7 +276,7 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
 
 
 .dsa-slide.dsa-slide-1 {
-  background: url(../images/bg-dark-march.jpg) no-repeat top center fixed;
+  background: url(../images/bg-dark-1.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -271,14 +284,45 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   background-color:#020205;
 }
 
+.dsa-slide.dsa-slide-2 {
+	background: url(../images/bg-dark-2.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:#020205;
+}
+
+.dsa-slide.dsa-slide-3 {
+	background: url(../images/bg-dark-4.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:#020205;
+} 
+
+.dsa-slide .tribe-mini-calendar-event .list-info h2 {
+	font-size:1.5em;
+}
+
+.dsa-slide .tribe-events-title a {
+	color: #ec1f27;
+}
+
+
 .dsa-main-logo {
   float: left;
   margin: 1rem 1rem 0 0;
 }
 
-.dsa-main-name {
+.dsa-main-name, .dsa-slide h1, .dsa-slide h2  {
   font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;
   color: white;
+}
+
+.dsa-main-name {
+	line-height:1.2em;
 }
 
 a.button.button-clear-white {
@@ -294,6 +338,24 @@ a.button.button-red-white {
   border: 1px solid white;
 }
 
+a.button.button-clear-blue {
+  background-color: white;
+  color: #5555ee;
+  border: 2px solid #5555ee;
+}
+
+a.button.button-clear-black {
+  background-color: white;
+  color: #231F20;
+  border: 2px solid #231F20;
+}
+
+a.button.button-clear-gold {
+  background-color: white;
+  color: #bbaa44;
+  border: 2px solid #bbaa44;
+}
+
 .row.dsa-main-actions {
   padding-top: 1rem;
 }
@@ -303,12 +365,56 @@ a.button.button-red-white {
     margin: 0 3% 0 0;
     width: 30%;
 }
+
+.tribe-events-calendar .tribe-events-category-general, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-general {
+  border-left: 0.35em solid #ec1f27;
+}
+
+.tribe-events-calendar .tribe-events-category-activism, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-activism {
+  border-left: 0.35em solid #231F20;
+}
+
+.tribe-events-calendar .tribe-events-category-education, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-education {
+  border-left: 0.35em solid #55e;
+}
+
+.tribe-events-calendar .tribe-events-category-community, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-community {
+  border-left: 0.35em solid #bbaa44;
+}
+
+
+.tribe-this-week-widget-wrapper .tribe-this-week-widget-day .tribe-venue a {
+	display:block;
+	padding: 0.5em 0 0 0;
+}
+
+
+.tribe-events-month .tribe-events-nav-next a, .tribe-events-month .tribe-events-nav-previous a, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button {
+  background-color: #fff;
+  border: 2px solid #ec1f27;
+  color: #ec1f27;
+  display: block;
+  padding: 0.5em;
+}
+
+.tribe-events-month .tribe-events-nav-next a:focus, .tribe-events-month .tribe-events-nav-previous a:hover, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button:hover {
+  background-color: #ec1f27;
+  border: 2px solid #ec1f27;
+  color: #fff;
+  display: block;
+}
+
+.tribe-this-week-events-widget .tribe-this-week-event .entry-title.summary a, .tribe-this-week-events-widget .tribe-this-week-event .tribe-address a, .tribe-events-month-event-title a {
+  display: block;
+}
+
+
 /*********************
 GENERAL STYLES
 *********************/
 
 header, body, p {font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;}
-h1, h2, h3, h4, h5 {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
+h1, h2, h3, h4, h5, b, strong {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
 
 /*********************
 LINK STYLES
