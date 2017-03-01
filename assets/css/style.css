@@ -449,6 +449,13 @@ background-color: #ec1f27;
 background-color: #bbaa44;
 }
 
+#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured .tribe-events-month-event-title a:before {
+    content: "";
+    font-family: FontAwesome;
+    float: left;
+    color: gold;
+}
+
 /*********************
 GENERAL STYLES
 *********************/
