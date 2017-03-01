@@ -302,6 +302,10 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   background-color:#020205;
 } 
 
+/*
+*	The Events Calendar Modifications
+*/
+
 .dsa-slide .tribe-mini-calendar-event .list-info h2 {
 	font-size:1.5em;
 }
@@ -344,15 +348,33 @@ a.button.button-clear-blue {
   border: 2px solid #5555ee;
 }
 
+a.button.button-clear-blue {
+  background-color: #5555ee;
+  color: white;
+  border: 2px solid #5555ee;
+}
+
 a.button.button-clear-black {
   background-color: white;
   color: #231F20;
   border: 2px solid #231F20;
 }
 
+a.button.button-clear-black:hover {
+  background-color: #231F20;
+  color: white;
+  border: 2px solid #231F20;
+}
+
 a.button.button-clear-gold {
   background-color: white;
   color: #bbaa44;
+  border: 2px solid #bbaa44;
+}
+
+a.button.button-clear-gold:hover {
+  background-color: #bbaa44;
+  color: white;
   border: 2px solid #bbaa44;
 }
 
@@ -408,6 +430,24 @@ a.button.button-clear-gold {
   display: block;
 }
 
+#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured.tribe-events-category-general {
+background-color: #ec1f27;
+
+}
+
+#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured.tribe-events-category-community {
+background-color: #bbaa44;
+
+}
+
+
+.tribe-events-category-community .tribe-mini-calendar-event .list-date {
+background-color: #ec1f27;
+}
+
+.tribe-events-category-community .tribe-mini-calendar-event .list-date {
+background-color: #bbaa44;
+}
 
 /*********************
 GENERAL STYLES
