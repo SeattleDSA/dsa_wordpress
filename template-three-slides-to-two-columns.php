@@ -16,32 +16,20 @@ Template Name: Three Slides to One to Two Columns
 					<div class="row padslidetop">
 						<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ?>
 					</div>
-					<div class="row">
-						<div class="large-12 columns txt-center dsa-continue">
-							<a href="#inner-content" class="button button-clear-white">Continue</a>
-						</div>
-					</div>
-				</li><!-- end of slide one -->
+
+				</li><!-- end slide one -->
 				<li class="orbit-slide dsa-slide dsa-slide-2">
 					<div class="row padslidetop">
 						<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide2', true)); ?>
 					</div>
-					<div class="row">
-						<div class="large-12 columns txt-center dsa-continue">
-							<a href="#inner-content" class="button button-clear-white">Continue</a>
-						</div>
-					</div>
-				</li><!-- end of slide one -->
+					
+				</li><!-- end slide two -->
 				<li class="orbit-slide dsa-slide dsa-slide-3">
 					<div class="row padslidetop">
 							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide3', true)); ?>
 					</div>
-					<div class="row">
-						<div class="large-12 columns txt-center dsa-continue">
-							<a href="#inner-content" class="button button-clear-white">Continue</a>
-						</div>
-					</div>
-				</li><!-- end of slide one -->
+
+				</li><!-- end slide three -->
 			</ul>
 
 			<nav class="orbit-bullets">
