@@ -7,10 +7,16 @@
 		    <main id="main" class="large-8 medium-8 columns" role="main">
 			    
 		    	<header>
-		    		<h1 class="page-title"> <?php the_archive_title();?> </h1>
+		    		<h1 class="page-title"> <?php single_term_title(); ?> </h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
-		
+		    	<div class="button-group expanded"><!-- Chapter and Category Specific Subnavigation -->
+					<a href="http://seattledsa.org/category/dispatches/" class="button">All</a>
+					<a href="http://seattledsa.org/category/dispatches/actions/" class="button">Actions</a>
+					<a href="http://seattledsa.org/category/dispatches/education/" class="button">Education</a>
+					<a href="http://seattledsa.org/category/dispatches/minutes/" class="button">Minutes</a>
+				</div>
+				<hr />
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
