@@ -8,14 +8,9 @@ Template Name: Single Slide to One to Two Column
 
 	<div id="content">
 
-		<div id="dsa-fullscreen" class="bg-DSAred txt-DSAwhite">
+		<div class="bg-dark-1 txt-DSAwhite dsa-slide dsa-slide-0">
 			<div class="row">
 					<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide0', true)); ?>
-			</div>
-			<div class="row">
-				<div class="large-12 columns txt-center dsa-continue">
-					<a href="#inner-content" class="txt-DSAwhite button" data-toggle="inner-content" aria-controls="inner-content">Continue</a>
-				</div>
 			</div>
 		</div>
 	

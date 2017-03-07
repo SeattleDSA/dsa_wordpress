@@ -120,13 +120,14 @@ color: white;
 }
 
 .dsa-slide {
-	min-height: 85vh;
+	min-height: 75vh;
 	background-color: #ec1f27;
 	color: white;
 }
 
 .dsa-slide .row {
-    padding-top: 8rem;
+    padding-top: 4rem;
+    padding: bottom: 1rem;
 }
 
 .dsa-slide a {
@@ -146,6 +147,15 @@ color: white;
 
 .top-bar a:hover {
   background: #231F20;
+}
+
+.top-bar img.dsa-rose-mark {
+  height: 2.5rem;
+  width: auto;
+}
+
+.menu>li>a.dsa-top-name{
+  display:inline-block;
 }
 
 .txt-center {
@@ -274,8 +284,7 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
     margin-top: 0.5em;
 }
 
-
-.dsa-slide.dsa-slide-1 {
+.dsa-slide.dsa-slide-1, .bg-dark-1 {
   background: url(../images/bg-dark-1.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -284,7 +293,7 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   background-color:#020205;
 }
 
-.dsa-slide.dsa-slide-2 {
+.dsa-slide.dsa-slide-2, .bg-dark-2 {
 	background: url(../images/bg-dark-2.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -293,7 +302,7 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   background-color:#020205;
 }
 
-.dsa-slide.dsa-slide-3 {
+.dsa-slide.dsa-slide-3, .bg-dark-3  {
 	background: url(../images/bg-dark-4.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -301,19 +310,6 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   background-size: cover;
   background-color:#020205;
 } 
-
-/*
-*	The Events Calendar Modifications
-*/
-
-.dsa-slide .tribe-mini-calendar-event .list-info h2 {
-	font-size:1.5em;
-}
-
-.dsa-slide .tribe-events-title a {
-	color: #ec1f27;
-}
-
 
 .dsa-main-logo {
   float: left;
@@ -327,6 +323,53 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
 
 .dsa-main-name {
 	line-height:1.2em;
+}
+
+/** Eva Mockup **/
+.dsa-national-logomark {
+  float: left;
+  margin: 0 1rem 0 0;
+}
+
+h1.dsa-national-logotype {
+  font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
+  border-bottom: 0.25rem solid white;
+  display:inline-block;
+  font-size: 4rem;
+}
+
+h2.dsa-local-brand {
+  font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;
+  font-size: 2rem;
+}
+
+.row.dsa-main-actions {
+  padding-top: 1rem;
+}
+
+
+.row.dsa-main-actions a {
+    margin: 0 3% 0 0;
+    width: 30%;
+}
+
+.row.dsa-call-to-action a {
+    margin: 0 3% 0 0;
+    width: 30%;
+    font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+a.button.radius.button-white {
+  border: none;
+  color: black;
+}
+
+a.button.radius.button-white:hover {
+  border: none;
+  background-color: #ec1f27;
+  color: white;
 }
 
 a.button.button-clear-white {
@@ -378,14 +421,21 @@ a.button.button-clear-gold:hover {
   border: 2px solid #bbaa44;
 }
 
-.row.dsa-main-actions {
-  padding-top: 1rem;
+.button.radius {
+  border-radius: 1rem;
+
 }
 
+/*
+* The Events Calendar Modifications
+*/
 
-.row.dsa-main-actions a {
-    margin: 0 3% 0 0;
-    width: 30%;
+.dsa-slide .tribe-mini-calendar-event .list-info h2 {
+  font-size:1.5em;
+}
+
+.dsa-slide .tribe-events-title a {
+  color: #ec1f27;
 }
 
 .tribe-events-calendar .tribe-events-category-general, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-general {

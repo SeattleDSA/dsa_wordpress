@@ -4,7 +4,7 @@
 <div class="top-bar" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dsa-rose-mark.png" class="dsa-rose-mark" alt="" /> <a href="<?php echo home_url(); ?>" class="dsa-top-name"><?php bloginfo('name'); ?></a></li>
 		</ul>
 	</div>
 	<div class="top-bar-right show-for-medium">
