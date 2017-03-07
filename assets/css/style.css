@@ -150,12 +150,16 @@ color: white;
 }
 
 .top-bar img.dsa-rose-mark {
-  height: 2.5rem;
-  width: auto;
+  height: auto;
+  width: 35px;
+  display: inline;
+  max-width: 35px;
+  float: left;
 }
 
 .menu>li>a.dsa-top-name{
   display:inline-block;
+  padding: 0.75rem 0 0.75rem 0.5rem;
 }
 
 .txt-center {
