@@ -23,9 +23,9 @@ function joints_register_sidebars() {
 
 
 	register_sidebar(array(
-		'id' => 'dsa1of4',
+		'id' => 'dsa1of3',
 		'name' => __('DSA Footer 1', 'jointswp'),
-		'description' => __('For use 4 column footer page template.', 'jointswp'),
+		'description' => __('For use 3 column footer page template.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -33,9 +33,9 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'dsa2of4',
+		'id' => 'dsa2of3',
 		'name' => __('DSA Footer 2', 'jointswp'),
-		'description' => __('For use 4 column footer page template.', 'jointswp'),
+		'description' => __('For use 3 column footer page template.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -43,19 +43,9 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'dsa3of4',
+		'id' => 'dsa3of3',
 		'name' => __('DSA Footer 3', 'jointswp'),
-		'description' => __('For use 4 column footer page template.', 'jointswp'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	register_sidebar(array(
-		'id' => 'dsa4of4',
-		'name' => __('DSA Footer 4', 'jointswp'),
-		'description' => __('For use 4 column footer page template.', 'jointswp'),
+		'description' => __('For use 3 column footer page template.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

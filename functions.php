@@ -43,6 +43,14 @@ function myplugin_add_custom_box() {
   			add_meta_box( 'wp_editor_test_3_box', 'DSA Left Column', 'wp_editor_meta_box_3' );
   			add_meta_box( 'wp_editor_test_4_box', 'DSA Right Column', 'wp_editor_meta_box_4' );
   	}
+    if ( 'template-homepage-v1.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+          add_meta_box( 'wp_editor_test_8_box', 'DSA Feature Box', 'wp_editor_meta_box_8' );
+          add_meta_box( 'wp_editor_test_5_box', 'Slide 1', 'wp_editor_meta_box_5' );
+          add_meta_box( 'wp_editor_test_6_box', 'Slide 2', 'wp_editor_meta_box_6' );
+          add_meta_box( 'wp_editor_test_7_box', 'Slide 3', 'wp_editor_meta_box_7' );
+          add_meta_box( 'wp_editor_test_9_box', 'Homepage Row 2', 'wp_editor_meta_box_9' );
+          add_meta_box( 'wp_editor_test_10_box', 'Homepage Row 3', 'wp_editor_meta_box_10' );
+    }
   	if ( 'template-fullwidth-to-two-column.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
   			add_meta_box( 'wp_editor_test_3_box', 'DSA Left Column', 'wp_editor_meta_box_3' );
   			add_meta_box( 'wp_editor_test_4_box', 'DSA Right Column', 'wp_editor_meta_box_4' );
@@ -125,6 +133,34 @@ function wp_editor_meta_box_7( $post ) {
   wp_editor( $field_value[0], '_dsa_slide3' );
 }
 
+function wp_editor_meta_box_8( $post ) {
+
+  // Use nonce for verification
+  wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
+
+  $field_value = get_post_meta( $post->ID, '_dsa_feature_box', false );
+  wp_editor( $field_value[0], '_dsa_feature_box' );
+}
+
+function wp_editor_meta_box_9( $post ) {
+
+  // Use nonce for verification
+  wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
+
+  $field_value = get_post_meta( $post->ID, '_dsa_homepage_row_2', false );
+  wp_editor( $field_value[0], '_dsa_homepage_row_2' );
+}
+
+function wp_editor_meta_box_10( $post ) {
+
+  // Use nonce for verification
+  wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
+
+  $field_value = get_post_meta( $post->ID, '_dsa_homepage_row_3', false );
+  wp_editor( $field_value[0], '_dsa_homepage_row_3' );
+}
+
+
 /* When the post is saved, saves our custom data */
 function myplugin_save_postdata( $post_id ) {
 
@@ -173,6 +209,15 @@ function myplugin_save_postdata( $post_id ) {
 
   if ( isset ( $_POST['_dsa_slide3'] ) ) {
     update_post_meta( $post_id, '_dsa_slide3', $_POST['_dsa_slide3'] );
+  }
+  if ( isset ( $_POST['_dsa_feature_box'] ) ) {
+    update_post_meta( $post_id, '_dsa_feature_box', $_POST['_dsa_feature_box'] );
+  }
+   if ( isset ( $_POST['_dsa_homepage_row_2'] ) ) {
+    update_post_meta( $post_id, '_dsa_homepage_row_2', $_POST['_dsa_homepage_row_2'] );
+  }
+   if ( isset ( $_POST['_dsa_homepage_row_3'] ) ) {
+    update_post_meta( $post_id, '_dsa_homepage_row_3', $_POST['_dsa_homepage_row_3'] );
   }
 
 }

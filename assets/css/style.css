@@ -4,9 +4,11 @@
   
 @font-face {font-family: 'ManifoldDSA-ExtraBold';src: url('webfonts/ManifoldDSA-ExtraBold.eot');src: url('webfonts/ManifoldDSA-ExtraBold.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'),url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'),url('webfonts/ManifoldDSA-ExtraBold.ttf') format('truetype');}
  
-  
 @font-face {font-family: 'ManifoldDSA-Medium';src: url('webfonts/ManifoldDSA-Medium.eot');src: url('webfonts/ManifoldDSA-Medium.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'),url('webfonts/ManifoldDSA-Medium.woff') format('woff'),url('webfonts/ManifoldDSA-Medium.ttf') format('truetype');}
- 
+
+@font-face {font-family: 'ManifoldDSA-Light';src: url('webfonts/ManifoldDSA-Light.eot');src: url('webfonts/ManifoldDSA-Light.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Light.woff2') format('woff2'),url('webfonts/ManifoldDSA-Light.woff') format('woff'),url('webfonts/ManifoldDSA-Light.ttf') format('truetype');}
+
+
 /************************************************
 
 Stylesheet: Main Stylesheet
@@ -22,6 +24,27 @@ You can add your own CSS here.
 
 Click the help icon above to learn more.
 */
+/* Gallery Changes*/
+.gallery-columns-2 .gallery-item {
+    width: 45%;
+    padding: 2.5%;
+    margin-right: 2.5%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f7f7f7;
+    border: 1px solid #d7d7d7;
+}
+
+.gallery-columns-3 .gallery-item {
+    width: 27.5%;
+    padding: 2.5%;
+    margin-right: 2.5%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f7f7f7;
+    border: 1px solid #d7d7d7;
+}
+
 .top-bar, .top-bar ul, .off-canvas { background-color: #ec1f27;
 }
 
@@ -30,14 +53,14 @@ color: white;
 }
 
 .top-bar-right a, .off-canvas .menu>li>a {
-font-weight: bold;
-text-transform: lowercase;
+text-transform: capitalize;
 font-size: 1.25rem;
 color: white;
 }
 
 .menu .active>a {
 background-color: #231F20;
+border-radius: 2em;
 }
 
 .dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
@@ -47,10 +70,6 @@ border-color: white transparent transparent !important;
 .page-title {
 color: #231F20;
 margin: 4rem 0 3rem 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-color: #231F20;
 }
 
 a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -83,6 +102,26 @@ button.orbit-next, button.orbit-previous {
   border: 0px transparent;
 }
 
+.btn.bg-DSAred {
+  color: #fff;
+}
+
+.btn.bg-DSAred:hover {
+  color:  #ec1f27;
+  background-color: #fff;
+}
+
+.btn.bg-DSAblack {
+  background-color: #231F20;
+  color: #fff;
+}
+
+.btn.bg-DSAblack:hover {
+  color:  #231F20;
+  background-color: #fff;
+}
+
+
 .orbit-previous {
   border-radius: 0 50% 50% 0;
 }
@@ -95,19 +134,13 @@ button.orbit-next, button.orbit-previous {
   color: #231F20;
 }
 
-.txt-DSAwhite {
+.txt-DSAwhite, .txt-white {
   color: white;
 }
 
 a.txt-DSAwhite:hover {
 background-color: #231F20;
 color: white;
-}
-
-#dsa-footer {
-  border-top: 8px solid #231F20;
-  margin-top: 2rem;
-  padding-top: 1rem;
 }
 
 #dsa-fullheight, #dsa-fullscreen {
@@ -137,16 +170,19 @@ color: white;
 .dsa-slide a.button {
   text-decoration: none;
   color: #ec1f27;
+  border-radius: 2em;
 }
 
 .dsa-slide a.button:hover {
   text-decoration: none;
   color: #ec1f27;
   background: #231F20;
+  border-radius: 2em;
 }
 
 .top-bar a:hover {
   background: #231F20;
+  border-radius: 2em;
 }
 
 .top-bar img.dsa-rose-mark {
@@ -216,14 +252,13 @@ border-top: 8px solid #231F20;
 }
 
 button, .button {
-	background-color: #fff;
-	border: 2px solid #ec1f27;
-	color: #ec1f27;
+	background-color: #ec1f27;
+	color: #fff;
+  border-radius: 2em;
 }
 
 .button:focus, .button:hover {
-	background-color: #ec1f27;
-	border: 2px solid #ec1f27;
+	background-color: #231F20;
 	color: #fff;
 }
 
@@ -329,7 +364,15 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
 	line-height:1.2em;
 }
 
-/** Eva Mockup **/
+/*********
+*
+* Eva Mockup
+*
+**********/
+
+.button-group .button {
+margin-right: 1em;
+}
 .dsa-national-logomark {
   float: left;
   margin: 0 1rem 0 0;
@@ -345,6 +388,76 @@ h1.dsa-national-logotype {
 h2.dsa-local-brand {
   font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;
   font-size: 2rem;
+}
+
+.card-gray, #content #inner-content.card-gray {
+  background-color: #F7F7F7;
+  padding: 2rem 4rem;
+}
+
+.card-red {
+  background-color: #ec1f27;
+  padding: 2rem 4rem;
+}
+
+.bdr-stripe-black {
+  border-bottom: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-black.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-black.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-black.png) 12 repeat;
+}
+
+.bdr-stripe-red {
+  border-bottom: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-red.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-red.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-red.png) 12 repeat;
+}
+
+.bdr-stripe-gold {
+  border-bottom: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-gold.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-gold.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-gold.png) 12 repeat;
+}
+
+.bdr-stripe-gray {
+  border-bottom: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-gray.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-gray.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-gray.png) 12 repeat;
+}
+
+.bdr-stripe-white {
+  border-bottom: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-white.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-white.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-white.png) 12 repeat;
+}
+
+.bdr-stripe-red-left {
+   border-left: 12px solid transparent;
+  padding: 12px;
+  -webkit-border-image: url(../images/stripes-red.png) 12 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../images/stripes-red.png) 12 repeat; /* Opera 11-12.1 */
+  border-image: url(../images/stripes-red.png) 12 repeat; 
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small {
+  text-transform: uppercase;
+  font-size: 0.5em;
+  display:block;
+  margin: 0.5em 0 1em 0;
+}
+
+.eva-orbit button.orbit-next, .eva-orbit button.orbit-previous {
+background-color: transparent;
+color: white;
 }
 
 .row.dsa-main-actions {
@@ -363,6 +476,19 @@ h2.dsa-local-brand {
     font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
     text-transform: uppercase;
     font-size: 1.25rem;
+}
+
+#menu-footer.menu > li {
+  width: 45%;
+  display:inline-block;
+}
+
+#dsa-footer .sidebar .widget {
+  text-align: center;
+}
+
+#dsa-footer .sidebar .widget div {
+  text-align: left;
 }
 
 a.button.radius.button-white {
@@ -386,7 +512,6 @@ a.button.button-clear-white {
 a.button.button-red-white {
   background-color: #ec1f27;
   color: white;
-  border: 1px solid white;
 }
 
 a.button.button-clear-blue {
@@ -430,6 +555,10 @@ a.button.button-clear-gold:hover {
 
 }
 
+.menu>li>a.dsa-top-name:hover {
+  background-color: #ec1f27;
+}
+
 /*
 * The Events Calendar Modifications
 */
@@ -466,18 +595,18 @@ a.button.button-clear-gold:hover {
 
 
 .tribe-events-month .tribe-events-nav-next a, .tribe-events-month .tribe-events-nav-previous a, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button {
-  background-color: #fff;
-  border: 2px solid #ec1f27;
-  color: #ec1f27;
-  display: block;
-  padding: 0.5em;
-}
-
-.tribe-events-month .tribe-events-nav-next a:focus, .tribe-events-month .tribe-events-nav-previous a:hover, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button:hover {
   background-color: #ec1f27;
-  border: 2px solid #ec1f27;
   color: #fff;
   display: block;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+.tribe-events-month .tribe-events-nav-next a:hover, .tribe-events-month .tribe-events-nav-previous a:hover, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button:hover {
+  background-color: #231F20;
+  color: #fff;
+  display: block;
+  border-radius: 2em;
 }
 
 .tribe-this-week-events-widget .tribe-this-week-event .entry-title.summary a, .tribe-this-week-events-widget .tribe-this-week-event .tribe-address a, .tribe-events-month-event-title a {
@@ -494,7 +623,6 @@ background-color: #bbaa44;
 
 }
 
-
 .tribe-events-category-community .tribe-mini-calendar-event .list-date {
 background-color: #ec1f27;
 }
@@ -510,12 +638,38 @@ background-color: #bbaa44;
     color: gold;
 }
 
+/*
+*	Form Changes
+*/
+[type=phone]
+{	display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4375rem;
+    margin: 0 0 1rem;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    border-radius: 0;
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 2px hsla(0,0%,4%,.1);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0a0a0a;
+    -webkit-transition: border-color .25s ease-in-out,-webkit-box-shadow .5s;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 /*********************
 GENERAL STYLES
 *********************/
 
-header, body, p {font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;}
-h1, h2, h3, h4, h5, b, strong {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
+header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;}
+h1, h2, h3, h4, h5 {font-family: ManifoldDSA-Light, Helvetica, Tahoma, Sans-Serif;}
+b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
 
 /*********************
 LINK STYLES
@@ -595,9 +749,10 @@ POSTS & CONTENT STYLES
   padding: 10px; }
 
 .wp-caption {
-  max-width: 100%;
-  background: #eee;
-  padding: 5px; }
+    max-width: 80%;
+    background: #eee;
+    margin-left: 10%;
+    padding: 10px 25px; }
   .wp-caption img {
     max-width: 100%;
     margin-bottom: 0;
@@ -766,7 +921,27 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  margin-top: 1em; }
+  margin-top: 0em;
+  padding-top:1em;
+background-color: #ec1f27;
+color: #fff;
+}
+
+.footer a {
+color: #fff;
+}
+
+.footer a:hover {
+background-color: #000;
+color: #fff;
+}
+
+.footer h4 {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 0.25em 1em;
+}
 
 /*********************
 FOUNDATION STYLES

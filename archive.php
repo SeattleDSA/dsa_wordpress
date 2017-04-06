@@ -11,10 +11,10 @@
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 		    	<div class="button-group expanded"><!-- Chapter and Category Specific Subnavigation -->
-					<a href="http://seattledsa.org/category/dispatches/" class="button">All</a>
-					<a href="http://seattledsa.org/category/dispatches/actions/" class="button">Actions</a>
-					<a href="http://seattledsa.org/category/dispatches/education/" class="button">Education</a>
-					<a href="http://seattledsa.org/category/dispatches/minutes/" class="button">Minutes</a>
+					<a href="http://seattledsa.org/dispatches/" class="button">All</a>
+					<a href="http://seattledsa.org/dispatches/actions/" class="button">Actions</a>
+					<a href="http://seattledsa.org/dispatches/education/" class="button">Education</a>
+					<a href="http://seattledsa.org/dispatches/minutes/" class="button">Minutes</a>
 				</div>
 				<hr />
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

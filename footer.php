@@ -1,9 +1,8 @@
 				<footer class="footer" role="contentinfo">
 					<div id="dsa-footer" class="row">
-						<?php get_sidebar('dsa1of4'); ?>
-						<?php get_sidebar('dsa2of4'); ?>
-						<?php get_sidebar('dsa3of4'); ?>
-						<?php get_sidebar('dsa4of4'); ?>
+						<?php get_sidebar('dsa1of3'); ?>
+						<?php get_sidebar('dsa2of3'); ?>
+						<?php get_sidebar('dsa3of3'); ?>
 					</div><!-- end #dsaFooter-content widgets -->
 					<div id="inner-footer" class="row">
 						<div class="large-12 medium-12 columns">
