@@ -8,58 +8,144 @@ Template Name: Hompage v1
 
 	<div id="content">
 
-		<div id="dsa-home-row-1">
-			<div  class="row ease dsa-home-row-3-edit" data-animate="fade-in fade-out">
-				<div class="large-6 medium-4 small-12 columns home-whitespace">
-					&nbsp;
-				</div>
-				<div id="inner-content" class="large-6 medium-8 small-12 columns card-gray bdr-stripe-gray" aria-expanded="true">
-					<main id="main" role="main">
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="sdsa-2017-frontispiece">
+
+		  <article class="essay">
+		    <div class="bound">
+		      <div class="inner">
+		        <div class="plate">
+		          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php get_template_part( 'parts/loop', 'pagealt' ); ?> 
-						<?php endwhile; endif; ?>		
-					</main> <!-- end #main -->					
-				</div>
-				<div class="large-6 medium-6 small-12 columns card-gray bdr-stripe-red">
-					<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_feature_box', true)); ?>
-				</div><!-- End DSA Feature Box -->
-				<div class="large-6 medium-6 small-12 columns card-red bdr-stripe-black">
-					<div class="orbit eva-orbit" role="region" aria-label="Slides" data-orbit>
-						<ul class="orbit-container">
-							<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-			   				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-							<li class="is-active orbit-slide dsa-eva-slide dsa-eva-slide-1">
-								<div class="txt-center txt-white">
-									<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ?>
-								</div>
+						<?php endwhile; endif; ?>	
+		         
+		        </div>
+		      </div>
+		    </div>
+		  </article><!-- end article -->
 
-							</li><!-- end slide one -->
-							<li class="orbit-slide dsa-eva-slide dsa-eva-slide-2">
-								<div class="txt-center txt-white">
-									<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide2', true)); ?>
-								</div>
-								
-							</li><!-- end slide two -->
-							<li class="orbit-slide dsa-eva-slide dsa-eva-slide-3">
-								<div class="txt-center txt-white">
-										<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide3', true)); ?>
-								</div>
 
-							</li><!-- end slide three -->
-						</ul>
+		  <div class="diptych">
+		    <div class="bound">
+		      <div class="cards">
 
-						<nav class="orbit-bullets">
-				    		<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-				   			<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-				    		<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-				  		</nav> <!-- end of orbit navigation-->
-					</div> <!-- end of orbit region -->
-				</div><!-- end DSA Slides -->
-			</div><!-- end #inner-content -->
-		</div>
+		        <div class="card beliefs-cycle">
+		          <div class="inner">
+
+		            <div class="contents">
+		              <h1>What we believe</h1>
+		              
+		              <div class="beliefs-carousel">
+		                <button class="control prev" aria-hidden="true"></button>
+		                <button class="control next" aria-hidden="true"></button>
+		                <ol class="beliefs">
+		                  <li class="active">Everyone should be able to live a full and dignified life.</li>
+		                  <li>The economy must be run democratically; none shall be poor so another can be rich.</li>
+		                  <li>The abolition of poverty.</li>
+		                  <li>Affordable, humane housing for all.</li>
+		                  <li>Universal Medicare-for-all.</li>
+		                  <li>Free education: from pre-K to trades, college and beyond.</li>
+		                  <li>Democracy in the workplace; all workers have the right to organize.</li>
+		                  <li>Complete reproductive freedom in all forms.</li>
+		                  <li>An end to racial, gender and all other forms of oppression.</li>
+		                  <li>An end to punitive justice and mass incarceration.</li>
+		                  <li>An end to military and police aggression.</li>
+		                  <li>Democratic control over the environment to preserve the planet.</li>
+		                  <!-- ?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ? -->
+		                </ol>
+		              </div>
+
+		              <div class="action">
+		                <a href="https://seattledsa.org/platform/" class="dark small">Read full platform</a>
+		              </div>
+		            </div>
+
+		          </div>
+		        </div><!-- end beliefs carousel -->
+
+		        <div class="card newsletter-signup">
+		          <div class="inner">
+		            <div class="pairing">
+		              <figure>
+		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/handshake.png" alt="" />
+		              </figure>
+		              <div class="form">
+		                <div class="fields">
+		                  <!-- <h1>Get our newsletter</h1>
+		                  <input type="text" placeholder="Your Name" />
+		                  <input type="text" placeholder="Your Email" />
+		                  <input type="submit" class="submit dark" value="Sign me up!"> -->
+		                  <?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_feature_box', true)); ?>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div><!-- newsletter signup -->
+
+		      </div><!-- end cards -->
+		    </div><!-- end bound -->
+		  </div><!-- end diptych -->
+		</div><!-- end sdsa-2017-frontispiece -->
+
+		<script async>jQuery(document).ready(function($) {
+		  if($(".beliefs-carousel").length) {
+
+		  
+		    var curActive = $(".beliefs-carousel .active");
+		    var totalBeliefs = $(".beliefs-carousel li").length;
+		    var curIndex = 1;
+		    
+
+		    //console.log("curIndex is: " + curIndex);
+
+		    function beliefAdvance() {
+		      curActive = curActive.next();
+		      if(curIndex == totalBeliefs) {
+		        curActive = $(".beliefs-carousel li:eq(0)")
+		        $(curActive).addClass("active");
+		        curIndex = 1;
+		      } else {
+		        curIndex = curActive.index() + 1;
+		        $(curActive).addClass("active");
+		      }
+		    }
+		    
+		    function beliefRewind() {
+		      curActive = curActive.prev();
+		      if(curIndex == 1) {
+		        curActive = $(".beliefs-carousel li:eq(11)")
+		        $(curActive).addClass("active");
+		        curIndex = totalBeliefs;
+		      } else {
+		        curIndex = curIndex - 1;
+		        $(curActive).addClass("active");
+		      }
+		    }
+
+		    
+		    $(".control").click(function(){
+
+		      $(".beliefs-carousel li").removeClass("active");
+		      if($(this).hasClass("next")) {
+		        beliefAdvance();
+		        //console.log("curIndex is: " + curIndex);
+		      } else {
+		        beliefRewind();
+		        //console.log("curIndex is: " + curIndex);
+		      }
+		      
+		    });
+
+		  }
+
+
+
+
+
+		}); // end doc ready
+		</script>
 	
-		<div id="dsa-home-row-2" class="bg-DSAred">
-			<div class="row dsa-home-row-2-edit">
+		<div id="dsa-home-row-3" class="bg-DSAred">
+			<div class="row dsa-home-row-3-edit">
 				<div class="text-center"><?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_homepage_row_2', true)); ?></div>
 				<?php // Retrieve the next 5 upcoming events
 					$events = tribe_get_events( array(
@@ -77,7 +163,7 @@ Template Name: Hompage v1
 					// Loop through the events, displaying the title
 					// and content for each
 					foreach ( $events as $event ) {
-					    echo "<div class=\"card-gray bdr-stripe-red-left\"><h4 class=\"txt-bold\">";
+					    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4 class=\"txt-bold\">";
 					    echo tribe_get_event_link( $event->ID, $full_link=true);
 						echo "</h4><p>";
 					    echo tribe_events_event_schedule_details( $event->ID );
@@ -89,18 +175,18 @@ Template Name: Hompage v1
 					    echo $event->post_content;
 					    echo "</p><a href=\"";
 					    echo tribe_get_event_link ( $event->ID  );
-					    echo "\">Find out more &rsaquo;</a></div><br>";
+					    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
 					}
 
-					echo "<div class=\"text-center\"><a class=\"button\" href=\"";
+					echo "<div class=\"text-center\"><a class=\"button dark\" href=\"";
 					echo tribe_events_get_list_widget_view_all_link ();
 					echo "\">See All</a></div>";
 				?>
 			</div>
 		</div> 
 
-		<div id="dsa-home-row-3" class="bg-dark-1">
-			<div class="row dsa-home-row-3-edit text-center txt-white">
+		<div id="dsa-home-row-4" class="bg-dark-1">
+			<div class="row dsa-home-row-4-edit text-center txt-white">
 				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_homepage_row_3', true)); ?>
 			</div>
 			<div class="row">
