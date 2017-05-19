@@ -12,6 +12,7 @@ Template Name: Hompage 2017
 		  <article class="essay">
 		    <div class="bound">
 		    	<?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
+					<br>
 					<div id="dsa-alert" class="dsa-alert callout large-collapse medium-collapse row" data-closable>
 						
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/announcement-icon.svg" class="dsa-alert-icon float-left" />
