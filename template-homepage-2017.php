@@ -1,19 +1,26 @@
 <?php
 /*
-Template Name: Hompage v1
+Template Name: Hompage 2017
 */
 ?>
 
 <?php get_header(); ?>
 
 	<div id="content">
-
 		<div class="sdsa-2017-frontispiece">
 
 		  <article class="essay">
 		    <div class="bound">
 		      <div class="inner">
-		        <div class="plate">
+		      	<?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
+					<div class="dsa-alert callout" data-closable>
+						<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_alert_box', true)); ?>
+						<button class="dsa-close close-button" aria-label="Dismiss alert" type="button" data-close>
+		   					<span aria-hidden="true">&times;</span>
+		  				</button>
+					</div>
+				<?php endif; ?>
+		        <div class="plate"><!-- Begin Main Content-->
 		          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php get_template_part( 'parts/loop', 'pagealt' ); ?> 
 						<?php endwhile; endif; ?>	
