@@ -443,6 +443,14 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
 *
 **********/
 
+.dsa-space {
+   min-height: 18vh;
+}
+
+.dsa-space-2 {
+   min-height: 25vh;
+}
+
 .dsa-alert.callout {
   background-color: #0a0a0a;
   color: white;
@@ -736,7 +744,7 @@ h1.home-title {
 }
 @media screen and (max-width: 899px) {
     .sdsa-2017-frontispiece .essay .inner {
-        padding: 55% 0 0 0
+        padding:  15% 0 0 0
     }
 }
 .sdsa-2017-frontispiece .plate {
@@ -745,11 +753,11 @@ h1.home-title {
     line-height: 1.4
 }
 @media screen and (max-width: 899px) {
-    .sdsa-2017-frontispiece .plate {
+    .sdsa-2017-frontispiece .plate, .dsa-alert {
         box-sizing: border-box;
         max-width: 550px;
         margin: 0 auto
-    }
+    } 
 }
 .sdsa-2017-frontispiece .plate h1 {
     font-size: 1.875rem;

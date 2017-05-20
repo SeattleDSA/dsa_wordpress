@@ -13,6 +13,7 @@ Template Name: Hompage 2017
 		    <div class="bound">
 		    	<?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
 					<br>
+					<div class="hide-for-large dsa-space">&nbsp;</div>
 					<div id="dsa-alert" class="dsa-alert callout large-collapse medium-collapse row" data-closable>
 						
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/announcement-icon.svg" class="dsa-alert-icon float-left" />
@@ -28,6 +29,8 @@ Template Name: Hompage 2017
 						    });
 						});
 					</script>
+					<?php else: ?>
+					<div class="hide-for-large dsa-space-2">&nbsp;</div>	
 				<?php endif; ?>
 		      <div class="inner">
 		        <div class="plate"><!-- Begin Main Content-->
