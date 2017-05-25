@@ -461,6 +461,22 @@ position: absolute; top:0; left: 0; width: 100%; min-height: 300px;
   display: inline;
 }
 
+input::placeholder, textarea::placeholder, input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
+	color: #aaa;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input#mce-FNAME::-webkit-input-placeholder, input#mce-LNAME::-webkit-input-placeholder, input#mce-EMAIL::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder, input#mce-FNAME::-moz-placeholder, input#mce-LNAME::-moz-placeholder, input#mce-EMAIL::-moz-placeholder {
+	color: #aaa;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder, input#mce-FNAME:-ms-input-placeholder, input#mce-LNAME:-ms-input-placeholder, input#mce-EMAIL:-ms-input-placeholder {
+	color: #aaa;
+}
+
 button.dsa-close {
   background-color: transparent;
   color: white;
@@ -779,13 +795,14 @@ h1.home-title {
     padding-top: 40px
 }
 .sdsa-2017-frontispiece .plate .actions ul {
-    text-align: center
+    text-align: center;
+    margin: 0px;
 }
 .sdsa-2017-frontispiece .plate .actions li {
     display: inline-block
 }
 .sdsa-2017-frontispiece .plate .actions li {
-    margin: 0 3% 10px
+    margin: 0 6px 10px 0
 }
 .sdsa-2017-frontispiece .plate .actions a {
     display: inline-block;
@@ -909,7 +926,7 @@ h1.home-title {
 }
 
 input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
-  color: black;
+  color: #aaa;
 }
 
 .sdsa-2017-frontispiece .diptych .newsletter-signup h1 {
@@ -923,7 +940,7 @@ input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::pla
 .sdsa-2017-frontispiece .diptych .newsletter-signup input::-webkit-input-placeholder,
 .sdsa-2017-frontispiece .diptych .newsletter-signup input::-ms-input-placeholder,
 .sdsa-2017-frontispiece .diptych .newsletter-signup input::placeholder {
-    color: black
+    color: #aaa
 }
 
 .sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"] {
