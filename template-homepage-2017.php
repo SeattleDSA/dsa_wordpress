@@ -166,7 +166,7 @@ Template Name: Hompage 2017
 	
 		<div id="dsa-home-row-3" class="bg-DSAred">
 			<div class="row dsa-home-row-3-edit">
-				<div class="text-center"><?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_homepage_row_2', true)); ?></div>
+				<div class="text-center"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="141" height="141" /><br /><h2 class="dsa-section-title txt-DSAwhite">Upcoming Events</h2></div>
 				<?php // Retrieve the next 5 upcoming events
 					$events = tribe_get_events( array(
 					    'posts_per_page' => 2,
@@ -232,7 +232,7 @@ Template Name: Hompage 2017
 					}
 					?>
 			</div><br>
-			<div class="row text-center">
+			<div class="row text-center padding-bottom">
 				<?php
    					// Get the ID of a given category
    					$category_id = get_cat_ID( 'dispatches' );

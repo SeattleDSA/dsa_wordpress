@@ -1,4 +1,4 @@
-				<footer class="footer" role="contentinfo">
+				<footer class="footer padding-top" role="contentinfo">
 					<div id="dsa-footer" class="row">
 						<?php get_sidebar('dsa1of3'); ?>
 						<?php get_sidebar('dsa2of3'); ?>
