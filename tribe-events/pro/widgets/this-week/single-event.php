@@ -23,8 +23,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="fn org tribe-venue">
 		<?php echo tribe_get_venue ( $event->ID ); ?>
 	</div>
-	<div class="fn org tribe-address">
-		<?php echo tribe_get_map_link_html ( $event->ID ); ?>
-	</div>
+	
+		<?php 
+			function empty_content($str) {
+    			return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+			}
+			$address_check = tribe_get_map_link_html(); 
+			
+			if(empty_content($address_check)) { 
+				?>
+					<div class="fn org tribe-address">
+						<?php echo tribe_get_map_link_html ( $event->ID );?>
+					</div>
+				<?php
+
+			} 
+			else {
+				echo "";
+			}
+		?>
+	
 
 </div>
+
+<?php /**
+* (!empty($address_check))
+*
+*/ ?>
