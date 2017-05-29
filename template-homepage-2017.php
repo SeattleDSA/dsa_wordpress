@@ -179,7 +179,11 @@ Template Name: Hompage 2017
 		               		)
 		                )
 					) );
-					 
+					
+					function empty_content($str) {
+						    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+					}
+
 					// Loop through the events, displaying the title
 					// and content for each
 					foreach ( $events as $event ) {
@@ -190,7 +194,12 @@ Template Name: Hompage 2017
 					    echo "<br>";
 					    echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
 					    echo "  ";
-					    echo tribe_get_map_link_html ( $event->ID  );
+					    
+					    
+						if ( tribe_show_google_map_link($event->ID) ) {
+							echo tribe_get_map_link_html($event->ID);
+						}
+						
 					    echo "</p><p>";
 					    echo $event->post_content;
 					    echo "</p><a href=\"";
