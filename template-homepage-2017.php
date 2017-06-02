@@ -187,6 +187,8 @@ Template Name: Hompage 2017
 					// Loop through the events, displaying the title
 					// and content for each
 					foreach ( $events as $event ) {
+						$dsa_event_description = $event->post_content;
+
 					    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4 class=\"txt-bold\">";
 					    echo tribe_get_event_link( $event->ID, $full_link=true);
 						echo "</h4><p>";
@@ -201,7 +203,8 @@ Template Name: Hompage 2017
 						}
 						
 					    echo "</p><p>";
-					    echo $event->post_content;
+					    echo substr($dsa_event_description, 0, 300);
+					    // echo $event->post_content; 
 					    echo "</p><a href=\"";
 					    echo tribe_get_event_link ( $event->ID  );
 					    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
