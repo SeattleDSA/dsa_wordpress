@@ -170,7 +170,7 @@ Template Name: Hompage 2017
 				<?php // Retrieve the next 5 upcoming events
 					$events = tribe_get_events( array(
 					    'posts_per_page' => 2,
-					    'start_date' => date( 'Y-m-d H:i:s' ),
+					    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
 					    'tax_query'=> array(
 		                	array(
 			                    'taxonomy' => 'tribe_events_cat',
