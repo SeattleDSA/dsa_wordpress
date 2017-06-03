@@ -205,7 +205,7 @@ Template Name: Hompage 2017
 					    echo "</p><p>";
 					    echo substr($dsa_event_description, 0, 300);
 					    // echo $event->post_content; 
-					    echo "</p><a href=\"";
+					    echo "...</p><a href=\"";
 					    echo tribe_get_event_link ( $event->ID  );
 					    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
 					}
