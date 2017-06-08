@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 		
-		    <main id="main" class="large-8 medium-8 columns" role="main">
+		    <main id="main" class="large-12 medium-12 columns" role="main">
 			    
 		    	<header>
 		    		<h1 class="page-title"> <?php single_term_title(); ?> </h1>
@@ -34,7 +34,7 @@
 		
 			</main> <!-- end #main -->
 	
-			<?php get_sidebar(); ?>
+			<!-- <?php get_sidebar(); ?> -->
 	    
 	    </div> <!-- end #inner-content -->
 	    

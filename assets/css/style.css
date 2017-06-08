@@ -289,7 +289,7 @@ border-top: 8px solid #231F20;
         border-bottom: 8px solid #231F20;
 }
 
-button, .button, input[type="button"] {
+button, .button, input[type="button"], .pagination .button {
 	background-color: #ec1f27;
 	color: #fff;
   border-radius: 2em;
@@ -298,14 +298,23 @@ button, .button, input[type="button"] {
   font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
 }
 
-.button:focus, .button:hover, input[type="button"]:hover {
+.pagination .button.current {
+	padding: .1875rem .625rem
+}
+
+.pagination .button a, .pagination .button a:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
+.button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
 	background-color: #f04e54;
 	color: #fff;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 	transform: translateY(-2px);
 }
 
-button.dark, .button.dark, #page #mc_embed_signup .button.dark {
+button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current {
   background-color: #231F20;
   color: #fff;
   border-radius: 2em;
@@ -346,6 +355,14 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark {
 
 .button.warning {
   border-color: #ffae00;
+}
+
+.archive.category .post .entry-content p, .archive.category .post .entry-content h1, .archive.category .post .entry-content h2, .archive.category .post .entry-content h3, .archive.category .post .entry-content h4, .archive.category .post .entry-content h5  {
+ 	margin-bottom: 1rem;
+    font-size: 100%;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif
 }
 
 .makegoogleresponsive {
