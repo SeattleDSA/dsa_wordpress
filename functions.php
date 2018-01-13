@@ -45,7 +45,7 @@ function myplugin_add_custom_box() {
   	}
     if ( 'template-homepage-2017.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
           add_meta_box( 'wp_editor_test_8_box', 'DSA Feature Box', 'wp_editor_meta_box_8' );
-          add_meta_box( 'wp_editor_test_4_box', 'Column Right', 'wp_editor_meta_box_4' );
+          add_meta_box( 'wp_editor_test_4_box', 'Final Row', 'wp_editor_meta_box_4' );
           add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
     }
   	if ( 'template-fullwidth-to-two-column.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
