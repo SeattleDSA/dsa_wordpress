@@ -842,7 +842,7 @@ h1.home-title {
 }
 @media screen and (max-width: 899px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-foregrounds/mobile-mural-2.png") no-repeat left top;
+        background: url("../images/ui-foregrounds/mobile-mural.png") no-repeat left top;
         background-size: 100% auto
     }
 }
