@@ -818,25 +818,25 @@ h1.home-title {
 }
 @media screen and (min-width: 1701px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1351px) and (max-width: 1700px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1100px) and (max-width: 1390px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 900px) and (max-width: 1099px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
@@ -1188,25 +1188,25 @@ input[type="submit"]:hover {
 
 @media screen and (min-width: 1701px) {
     #content #dsa-home-row-1 {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1351px) and (max-width: 1700px) {
     #content #dsa-home-row-1 {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1100px) and (max-width: 1390px) {
     #content #dsa-home-row-1 {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 900px) and (max-width: 1099px) {
     #content #dsa-home-row-1 {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat 0% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
