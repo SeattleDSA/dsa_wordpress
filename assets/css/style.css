@@ -818,26 +818,26 @@ h1.home-title {
 }
 @media screen and (min-width: 1701px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1351px) and (max-width: 1700px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -21% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 1100px) and (max-width: 1390px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -30% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (min-width: 900px) and (max-width: 1099px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -40% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/diamond-head-2.png") no-repeat 0% 207px, url("../images/ui-glyphs/rainbow.png") no-repeat -72% -98px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 204px 95px, 883px, 1280px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 @media screen and (max-width: 899px) {
