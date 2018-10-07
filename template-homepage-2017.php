@@ -86,7 +86,7 @@ Template Name: Hompage 2017
 		          <div class="inner">
 		            <div class="pairing">
 		              <figure>
-		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/handshake.svg" alt="" />
+		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sdsa_logo_bg.svg" alt="" />
 		              </figure>
 		              <div class="form">
 		                <div class="fields">
