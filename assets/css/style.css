@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /********* Web Fonts *******/
 
   
@@ -1550,6 +1550,24 @@ POSTS & CONTENT STYLES
 *********************/
 #content #inner-content {
   padding: 1rem 0rem; }
+
+#content #inner-content .article-header h1, #content #inner-content h2 {
+	font-weight: 700;
+	font-weight: bold;
+	font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, sans-serif;
+	margin-bottom: 0.5rem;
+	margin-top: 2rem;
+}
+
+#content #inner-content .post p,  #content #inner-content .post li {
+	color: rgba(0,0,0,0.9)
+	font-size: 1.25rem;
+	line-height: 1.58;
+}
+
+#content #inner-content .post p.byline {
+	color:	rgba (0,0,0,0.6);
+}
 
 .page-title .vcard {
   border: 0px;
