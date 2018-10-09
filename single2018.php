@@ -8,13 +8,13 @@
 			
 <div id="content">
 
-	<div id="inner-content" class="row">
+	<div id="inner-content">
 
-		<main id="main" class="large-8 medium-8 columns" role="main">
+		<main id="main" class="row" role="main">
 		
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-		    	<?php get_template_part( 'parts/loop', 'single' ); ?>
+		    	<?php get_template_part( 'parts/loop', 'single2018' ); ?>
 		    	
 		    <?php endwhile; else : ?>
 		
@@ -24,7 +24,9 @@
 
 		</main> <!-- end #main -->
 
-		<?php get_sidebar(); ?>
+		<div class="row footer-row columns large-8 medium-8 small-12 large-offset-2 medium-offset-2">
+			<?php get_sidebar(); ?>
+		</div><!-- end footer-row -->
 
 	</div> <!-- end #inner-content -->
 
