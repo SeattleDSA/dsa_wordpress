@@ -1560,13 +1560,22 @@ POSTS & CONTENT STYLES
 }
 
 #content #inner-content .post p,  #content #inner-content .post li {
-	color: rgba(0,0,0,0.9)
+	color: rgba(0,0,0,0.9);
 	font-size: 1.25rem;
 	line-height: 1.58;
 }
 
 #content #inner-content .post p.byline {
 	color:	rgba (0,0,0,0.6);
+}
+
+#content #inner-content .button.dsa-share {
+	padding: 0.75rem;
+}
+
+#content #inner-content .button.dsa-share .button-icon {
+	width: 1.75rem;
+	height: auto;
 }
 
 .page-title .vcard {

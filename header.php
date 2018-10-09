@@ -35,7 +35,6 @@
 	    <?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<link rel="stylesheet" href="https://use.fontawesome.com/1f728dd4e9.css"> 
 
 		<?php wp_head(); ?>
 
