@@ -17,11 +17,11 @@
 	</header> <!-- end article header -->
 	
 
-	<section class="entry-content columns large-8 medium-10 small-12 large-offset-2 medium-offset-1" itemprop="articleBody">
+	<section class="entry-content columns large-10 medium-10 small-12 large-offset-1 medium-offset-1" itemprop="articleBody">
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 						
-	<footer class="article-footer columns large-8 medium-10 small-12 large-offset-2 medium-offset-1">
+	<footer class="article-footer columns large-10 medium-10 small-12 large-offset-1 medium-offset-1">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	
 		<div class="dsa-share">

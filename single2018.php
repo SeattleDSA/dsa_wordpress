@@ -24,7 +24,7 @@
 
 		</main> <!-- end #main -->
 
-		<div class="row footer-row columns large-8 medium-8 small-12 large-offset-2 medium-offset-2">
+		<div class="footer-row row">
 			<?php get_sidebar(); ?>
 		</div><!-- end footer-row -->
 
