@@ -667,6 +667,12 @@ SIDEBARS & ASIDES
   .widget ul li {
     list-style: none; }
 
+@media print, screen and (min-width: 40em) {
+	.single #inner-content .sidebar {
+		margin-top: 100vh;
+	}
+}
+
 /*********************
 FOOTER STYLES
 *********************/
