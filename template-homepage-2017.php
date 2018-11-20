@@ -218,7 +218,7 @@ Template Name: Hompage 2017
 						}
 
 						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"";
-						echo tribe_events_get_list_widget_view_all_link ();
+						echo tribe_get_events_link ();
 						echo "\">See All</a></div>";
 					}
 					else {
