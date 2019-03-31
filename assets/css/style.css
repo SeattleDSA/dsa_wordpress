@@ -1572,75 +1572,7 @@ color: white;
 CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
-.tribe-events-calendar .tribe-events-category-general, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-general {
-  border-left: 0.35em solid #ec1f27;
-}
 
-.tribe-events-calendar .tribe-events-category-activism, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-activism {
-  border-left: 0.35em solid #231F20;
-}
-
-.tribe-events-calendar .tribe-events-category-education, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-education {
-  border-left: 0.35em solid #999;
-}
-
-.tribe-events-calendar .tribe-events-category-community, .tribe-this-week-widget-weekday-wrapper .tribe-events-category-community {
-  border-left: 0.35em solid #E5B900;
-}
-
-.tribe-this-week-widget-wrapper .tribe-this-week-widget-day .tribe-venue a {
-	display:block;
-	padding: 0.5em 0 0 0;
-}
-
-.tribe-events-month .tribe-events-nav-next a, .tribe-events-month .tribe-events-nav-previous a, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button {
-  background-color: #ec1f27;
-  color: #fff;
-  display: block;
-  padding: 0.5em;
-  border-radius: 2em;
-}
-
-.tribe-events-month .tribe-events-nav-next a:hover, .tribe-events-month .tribe-events-nav-previous a:hover, #tribe-events .tribe-events-month .tribe-events-ical.tribe-events-button:hover {
-  background-color: #231F20;
-  color: #fff;
-  display: block;
-  border-radius: 2em;
-}
-
-.tribe-this-week-events-widget .tribe-this-week-event .entry-title.summary a, .tribe-this-week-events-widget .tribe-this-week-event .tribe-address a, .tribe-events-month-event-title a {
-  display: block;
-}
-
-#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured.tribe-events-category-general {
-background-color: #ec1f27;
-
-}
-
-#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured.tribe-events-category-community {
-background-color: #E5B900;
-
-}
-
-.tribe-events-category-community .tribe-mini-calendar-event .list-date {
-background-color: #ec1f27;
-}
-
-.tribe-events-category-community .tribe-mini-calendar-event .list-date {
-background-color: #bbaa44;
-}
-
-#tribe-events-content table.tribe-events-calendar .type-tribe_events.tribe-event-featured .tribe-events-month-event-title a:before {
-    content: "";
-    font-family: FontAwesome;
-    float: left;
-    color: gold;
-}
-
-.tribe-this-week-events-widget .tribe-this-week-event .entry-title.summary a, .tribe-events-tooltip .entry-title {
-  font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 800;
-}
 
 /******************************************************************
 PRINT STYLESHEET
