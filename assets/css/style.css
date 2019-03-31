@@ -1116,6 +1116,8 @@ h1.home-title {
 .sdsa-2017-frontispiece .essay {
     position: relative
 }
+
+
 @media screen and (min-width: 1701px) {
     .sdsa-2017-frontispiece .essay {
         background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
@@ -1140,6 +1142,17 @@ h1.home-title {
         background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
     }
 }
+
+/*
+@media screen and (min-width: 1100px) and (min-width: 899px) {
+    .sdsa-2017-frontispiece .essay {
+    background: url(../images/ui-glyphs/sdsa-scene.svg?q=1) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+*/
+
 @media screen and (max-width: 899px) {
     .sdsa-2017-frontispiece .essay {
         background: url("../images/ui-foregrounds/mobile-mural.png") no-repeat left top;
@@ -1602,6 +1615,15 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 	border-bottom: 1px solid #e5e5e5;
     margin: 0 0.25rem;
     padding: 0.25rem 0;
+}
+
+.events-archive.events-gridview #tribe-events-content table .type-tribe_events:last-child {
+	border-bottom: 0px solid transparent;
+}
+
+.events-archive.events-gridview #tribe-events-content table .type-tribe_events a.url {
+	display: block;
+	width: 100%;
 }
 
 #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
