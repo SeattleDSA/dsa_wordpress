@@ -415,6 +415,10 @@ POSTS & CONTENT STYLES
 	margin-top: 2rem;
 }
 
+.archive #content #inner-content .article-header h1, .archive #content #inner-content h2 {
+	margin-top: 0;
+}
+
 .entry-content p, .entry-content li {
 	color: rgba(0,0,0,0.9);
 	font-size: 1.25rem;

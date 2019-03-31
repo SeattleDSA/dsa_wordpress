@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('archive-card bdr-stripe-red'); ?> role="article">					
 	<div class="row">
-		<div class="archive-item-background large-3 medium-4 small-12 columns">
+		<div class="archive-item-background large-4 medium-4 small-12 columns">
 			<a href="<?php the_permalink() ?>" class="archive-image-link">
 				<?php 
 					if ( has_post_thumbnail() ) { 
@@ -13,7 +13,7 @@
 			</a>
 			
 		</div>
-		<header class="archive-item-content large-9 medium-8 small-12 columns">
+		<header class="archive-item-content large-8 medium-8 small-12 columns">
 			<h2 class="txt-bold archive-item-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			<?php get_template_part( 'parts/content', 'byline' ); ?>	
 			<section class="archive-item-excerpt" itemprop="articleBody">
