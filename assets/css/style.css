@@ -1,11 +1,22 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /*********************
 WEB FONTS
 *********************/
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-@font-face {font-family: 'ManifoldDSA-ExtraBold';src: url('webfonts/ManifoldDSA-ExtraBold.eot'), url('webfonts/ManifoldDSA-ExtraBold.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'),url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'),url('webfonts/ManifoldDSA-ExtraBold.ttf') format('truetype');}
-@font-face {font-family: 'ManifoldDSA-Medium';src: url('webfonts/ManifoldDSA-Medium.eot'), url('webfonts/ManifoldDSA-Medium.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'),url('webfonts/ManifoldDSA-Medium.woff') format('woff'),url('webfonts/ManifoldDSA-Medium.ttf') format('truetype');}
+@font-face {
+  font-family: 'ManifoldDSA-ExtraBold';
+  src: url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfonts/ManifoldDSA-ExtraBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+@font-face {
+  font-family: 'ManifoldDSA-Medium';
+  src: url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfonts/ManifoldDSA-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfonts/ManifoldDSA-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 /************************************************
 
@@ -17,8 +28,8 @@ MAIN STYLESHEET
 GENERAL STYLES
 *********************/
 
-header, body, p {font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 400;}
-h1, h2, h3, h4, h5, b, strong {font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 600;}
+header, body, p {font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 400;}
+h1, h2, h3, h4, h5, b, strong {font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 600;}
 h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
 
 .txt-center {
@@ -65,7 +76,7 @@ border-top: 8px solid #231F20;
     font-size: 100%;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .archive-header-card {
@@ -347,7 +358,7 @@ button, .button, input[type="button"], .pagination .button {
   border-radius: 2em;
   transition: all 150ms;
   text-transform: uppercase;
-  font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .pagination .button.current {
@@ -699,7 +710,7 @@ color: #fff;
     display: inline-block;
     padding: 0.25em 1em;
     font-weight: 400;
-    font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
 #dsa-footer .sidebar .widget {
@@ -742,7 +753,7 @@ FORM STYLES
   border-radius: 2em;
   transition: all 150ms;
   text-transform: uppercase;
-  font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 #page #mc_embed_signup .button.dark:hover {
@@ -847,7 +858,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder, input#mce-FNAME:-ms
 button.dsa-close {
   background-color: transparent;
   color: white;
-  font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   line-height: 2rem;
   margin-top: 0.25rem;
@@ -869,7 +880,7 @@ margin-right: 1em;
 }
 
 h1.dsa-national-logotype {
-  font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   border-bottom: 0.25rem solid white;
   display:inline-block;
   font-size: 4rem;
@@ -878,7 +889,7 @@ h1.dsa-national-logotype {
 }
 
 h2.dsa-local-brand {
-  font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   font-size: 2rem;
 }
 
@@ -976,7 +987,7 @@ h2.dsa-local-brand {
 
 h1.home-title {
   font-size: 2rem;
-  font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* from jonwhite */
@@ -1186,7 +1197,7 @@ h1.home-title {
     color: white;
     padding: 10px 30px 10px;
     background: #EC1F27;
-    font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     border-radius: 30px;
     font-weight: 700;
     font-size: 1.0625rem;
@@ -1289,7 +1300,7 @@ h1.home-title {
 .sdsa-2017-frontispiece .diptych .newsletter-signup input[type="text"], .sdsa-2017-frontispiece .diptych .newsletter-signup input[type="email"] {
     border: none;
     color: black;
-    font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     display: inline-block;
     text-align: center;
     width: 45%;
@@ -1306,7 +1317,7 @@ input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::pla
 }
 
 .sdsa-2017-frontispiece .diptych .newsletter-signup h1 {
-  font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .sdsa-2017-frontispiece .diptych .newsletter-signup input[type="email"]  { 
@@ -1325,7 +1336,7 @@ input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::pla
     color: white;
     padding: 12px 30px 12px;
     background: #EC1F27;
-    font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     border-radius: 30px;
     font-weight: 700;
     font-size: 1.0625rem;
@@ -1383,7 +1394,7 @@ border-right: 1px solid #fff;
     color: white;
     padding: 12px 30px 12px;
     background: #EC1F27;
-    font-family: ManifoldDSA-ExtraBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     border-radius: 30px;
     font-weight: 700;
     font-size: 1.0625rem;
@@ -1552,7 +1563,7 @@ div#dsa-home-row-4 {
 }
 
 #dsa-home-row-3 h2, #dsa-home-row-4 h2 {
-	font-family: ManifoldDSA-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
 }
 
@@ -1590,7 +1601,8 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
-	font-family: ManifoldDSA-ExtraBold,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: 'ManifoldDSA-Medium',Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-size: 0.9rem;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -1602,7 +1614,7 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 .tribe-events-tooltip .tribe-events-event-body {
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 }
 
 /******************************************************************
