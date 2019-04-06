@@ -157,15 +157,23 @@ HEADER STYLES
 /*********************
 MENU & NAVIGATION
 *********************/
+.top-bar {
+	padding: 0;
+}
+
 .top-bar .title-area {
   z-index: 1; }
 
 .off-canvas-list ul {
-  margin-left: 0; }
-  .off-canvas-list ul li a {
-    border-bottom: 0px; }
-  .off-canvas-list ul .dropdown {
-    margin-left: 20px; }
+	margin-left: 0; }
+
+.off-canvas-list ul li a {
+    border-bottom: 0px;
+}
+
+.off-canvas-list ul .dropdown {
+    margin-left: 20px;
+}
 
 .top-bar, .top-bar ul, .off-canvas { background-color: #ec1f27;
 }
@@ -225,26 +233,29 @@ color: white;
 
 .top-bar a:hover {
   background: #231F20;
-  border-radius: 2em;
 }
 
 .top-bar img.dsa-rose-mark {
-  height: auto;
-  width: 48px;
-  display: inline;
+  height: 2.5rem;
+  width: auto;
+  display: inline-block;
   padding: 0;
-  margin-top: -8px;
+  margin: 0.25rem 0 0 0.25rem;
+  line-height:1;
+  vertical-align: top;
 }
 
-.menu>li>a.dsa-top-name{
+.menu>li>a.dsa-top-name {
   display:inline-block;
-  padding: 0.5rem 0 0 0;
-  font-size: 1.25rem;
+  padding: 1rem 0 1rem 0.35rem;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .menu>li>a {
-  padding: 0.5rem 1rem;
-  line-height: 2;
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1.2rem;
 }
 
 .menu.vertical>li {
@@ -258,26 +269,6 @@ color: white;
 
 .menu>li>a.dsa-top-name:hover {
   background-color: #ec1f27;
-}
-
-@media screen and (max-width: 40rem) {
-  .top-bar-left .menu li {
-      text-align: center;
-  }
-  .top-bar img.dsa-rose-mark, .menu>li>a.dsa-top-name {
-    padding: 0;
-  }
-
-  .top-bar img.dsa-rose-mark {
-    margin-top: 0px;
-  }
-}
-
-
-@media screen and (max-width: 65rem) {
-  .menu>li>a.dsa-top-name {
-    font-size: 1rem;
-  }
 }
 
 /***************
@@ -819,6 +810,248 @@ TABS
 
 .tabs-panel {
 	box-shadow: 2px -2px 4px rgba(0,0,0,0.2);
+}
+
+/*********************
+DAVID P. 2019 based on EVA G. / JON W.
+*********************/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+.page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar, .page-template-template-homepage-2019 .top-bar ul, .page-template-template-homepage-2019 {
+	background: #EEF0F3;
+}
+
+.page-template-template-homepage-2019 .row {
+	max-width: 1917px;
+}
+
+.page-template-template-homepage-2019 h1 {
+	font-size: 2rem;
+}
+
+.page-template-template-homepage-2019 .sdsa-main, .page-template-template-homepage-2019 .sdsa-newsletter {
+	background-color: #eef0f3;
+    margin: 1rem 0 0 0;
+    padding: 2rem;
+}
+
+.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2 {
+	font-family: 'Work Sans', san-serif;
+	font-weight: 400;
+}
+
+.page-template-template-homepage-2019 h2 {
+	font-size: 3rem;
+	border-top: 1rem solid black;
+	padding-top: 1rem;
+}
+
+@media screen and (min-width: 1100px) {
+    .page-template-template-homepage-2019 .sdsa-newsletter .pairing {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .page-template-template-homepage-2019 .sdsa-newsletter figure {
+        width: 29.116465863454%;
+        margin: 0 auto
+    }
+    .page-template-template-homepage-2019 .sdsa-newsletter .form {
+        width: 61.847389558233%;
+        margin: 0
+    }
+}
+.page-template-template-homepage-2019 .sdsa-newsletter .pairing {
+    width: 85.862068965517%;
+    margin: 0 auto
+}
+.page-template-template-homepage-2019 .sdsa-newsletter figure {
+    max-width: 145px;
+    margin: 0 auto 30px
+}
+.page-template-template-homepage-2019 .sdsa-newsletter .fields {
+    max-width: 250px;
+    margin: 0 auto
+}
+.page-template-template-homepage-2019 .sdsa-newsletter h1 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 41px
+}
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="text"], .page-template-template-homepage-2019 .sdsa-newsletter input[type="email"] {
+    border: none;
+    color: black;
+    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    background: white;
+    padding: 11px 10px 11px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05)
+}
+
+.page-template-template-homepage-2019 input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
+  color: #aaa;
+}
+
+.page-template-template-homepage-2019 .sdsa-newsletter h1 {
+  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="email"]  { 
+  width: 100%;
+}
+
+.page-template-template-homepage-2019 .sdsa-newsletter input::-webkit-input-placeholder,
+.page-template-template-homepage-2019 .sdsa-newsletter input::-ms-input-placeholder,
+.page-template-template-homepage-2019 .sdsa-newsletter input::placeholder {
+    color: #aaa
+}
+
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"] {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 30px 12px;
+    background: #EC1F27;
+    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms
+}
+
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"].small {
+    padding: 6px 13px 3px
+}
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"]:hover {
+    background: #f04e54;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+}
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"].dark {
+    background: black
+}
+.page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"].dark:hover {
+    background: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+}
+.page-template-template-homepage-2019 .sdsa-beliefs {
+	background-color: #EC1F27;
+	color: white;
+	-ms-flex-order: 2;
+	order: 2;
+	margin-top: 1rem;
+	text-align: center;
+	padding: 1rem;
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .inner {
+    padding: 0px;
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .contents {
+    margin: 0 20px;
+}
+.page-template-template-homepage-2019 .sdsa-beliefs h1 {
+    text-transform: uppercase;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .beliefs-carousel {
+    position: relative
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action {
+    padding-top: 40px
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    padding: 12px 30px 12px;
+    background: #EC1F27;
+    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action a.small {
+    padding: 8px 13px 8px
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action a:hover {
+    background: #f04e54;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action a.dark {
+    background: black
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .action a.dark:hover {
+    background: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .beliefs {
+    position: relative;
+    z-index: 1;
+    min-height: 50px
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .beliefs li {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 1.3125rem;
+    line-height: 1.1;
+    box-sizing: border-box;
+    padding: 0 40px;
+    opacity: 0;
+    transition: all 400ms;
+    font-weight: 500;
+    list-style:none;
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .beliefs li.active {
+    opacity: 1
+}
+@media screen and (max-width: 370px) {
+    .page-template-template-homepage-2019 .sdsa-beliefs .beliefs li {
+        font-size: 1.125rem
+    }
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .control {
+    position: absolute;
+    background: url("../images/ui-glyphs/caret-leftward.png") no-repeat center center;
+    background-size: 10px 18px;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+    transform: translateY(-50%) scale(1);
+    z-index: 2
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .control.prev {
+    left: -10px
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .control.next {
+    right: -10px;
+    background-image: url("../images/ui-glyphs/caret-rightward.png")
+}
+.page-template-template-homepage-2019 .sdsa-beliefs .control:hover {
+    transform: translateY(-50%) scale(1.2)
 }
 
 /*********************

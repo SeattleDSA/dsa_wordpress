@@ -217,9 +217,7 @@ Template Name: Hompage 2017
 						    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
 						}
 
-						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"";
-						echo tribe_events_get_list_widget_view_all_link ();
-						echo "\">See All</a></div>";
+						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"https://seattledsa.org/events/\">See All</a></div>";
 					}
 					else {
 						echo "<div>This template uses The Events Calendar plugin.</div>";

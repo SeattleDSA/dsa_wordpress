@@ -40,6 +40,11 @@ function myplugin_add_custom_box() {
           add_meta_box( 'wp_editor_test_4_box', 'Final Row', 'wp_editor_meta_box_4' );
           add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
     }
+    elseif ( 'template-homepage-2019.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+          add_meta_box( 'wp_editor_test_8_box', 'DSA Feature Box', 'wp_editor_meta_box_8' );
+          add_meta_box( 'wp_editor_test_4_box', 'Final Row', 'wp_editor_meta_box_4' );
+          add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
+    }
 }
 
 /* Prints the box content */
