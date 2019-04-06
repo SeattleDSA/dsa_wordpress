@@ -135,7 +135,7 @@ Template Name: Hompage 2019
 		        </div><!-- end sdsa-beliefs -->
 		    </div>
 		</div>
-		<div class="row">
+		<div class="row windowbottom">
 			<div class="sdsa-calendar large-4 medium-6 small-12 columns">
 				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="141" height="141" /><br /> -->
 				<h2>Upcoming Events</h2>
@@ -209,7 +209,7 @@ Template Name: Hompage 2019
 					    $my_query->the_post(); 
 					    ?>
 					    <div class="sdsa-dispatches-item">
-						    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3><br/>
+						    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 						    	<b>By <?php the_author() ?> / <?php the_time('F j, Y') ?></b>
 						</div>
 					    <?php

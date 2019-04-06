@@ -817,8 +817,20 @@ DAVID P. 2019 based on EVA G. / JON W.
 *********************/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
-.page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar, .page-template-template-homepage-2019 .top-bar ul, .page-template-template-homepage-2019 {
-	background: #EEF0F3;
+.page-template-template-homepage-2019 .menu li a {
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 1rem 0.5rem;
+    color: #ec1f27;
+}
+
+.page-template-template-homepage-2019 .menu li a:hover {
+	color: white;
+	background-color: #ec1f27;
+}
+
+.page-template-template-homepage-2019 .sdsa-main, .page-template-template-homepage-2019 .sdsa-newsletter, .page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar, .page-template-template-homepage-2019 .top-bar ul, .page-template-template-homepage-2019 {
+	background: #e9ebec;
 }
 
 .page-template-template-homepage-2019 .row {
@@ -829,13 +841,25 @@ DAVID P. 2019 based on EVA G. / JON W.
 	font-size: 2rem;
 }
 
+.page-template-template-homepage-2019 .row.windowbottom h3 {
+	font-size: 1.5rem;
+	line-height: 1;
+	margin: 0 0 0.25rem 0;
+	padding: 0;
+}
+
+.page-template-template-homepage-2019 .row.windowbottom .sdsa-calendar-item, .page-template-template-homepage-2019 .row.windowbottom .sdsa-dispatches-item {
+	border-bottom: 1px solid #ccc;
+    padding: 0 0 1rem 0;
+    margin: 0 0 1rem 0;
+}
+
 .page-template-template-homepage-2019 .sdsa-main, .page-template-template-homepage-2019 .sdsa-newsletter {
-	background-color: #eef0f3;
     margin: 1rem 0 0 0;
     padding: 2rem;
 }
 
-.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2 {
+.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 header, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2 {
 	font-family: 'Work Sans', san-serif;
 	font-weight: 400;
 }
