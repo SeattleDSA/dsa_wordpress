@@ -188,11 +188,6 @@ font-size: 1.25rem;
 color: white;
 }
 
-.menu .active>a {
-background-color: #231F20;
-border-radius: 2em;
-}
-
 .dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
 border-color: white transparent transparent !important;
 }
@@ -231,7 +226,7 @@ background-color: #231F20;
 color: white;
 }
 
-.top-bar a:hover {
+.top-bar a:hover, .menu .active a {
   background: #231F20;
 }
 
@@ -774,6 +769,22 @@ TABLES
 *********************/
 table tbody tr:nth-child(even) {
 background-color: #ebeef3;
+}
+
+table.sdsa-platform-table tbody tr:nth-child(even) {
+	background-color: transparent;
+}
+
+table.sdsa-platform-table tr td figure img {
+	width: 4rem !important;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+table.sdsa-platform-table tr td:nth-child(1) {
+	width: 5rem;
 }
 
 /*********************
@@ -1898,6 +1909,10 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 
 .tribe-events-tooltip .tribe-events-event-body {
 	font-size: 0.8rem;
+}
+
+#tribe-events-pg-template, .tribe-events-pg-template {
+	margin: 4rem auto;
 }
 
 /******************************************************************
