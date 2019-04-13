@@ -145,6 +145,11 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #ec1f27;
 }
 
+a:focus, a:hover {
+	color: #0a0a0a;
+	background-color: rgba(236,31,39,0.3);
+}
+
 /*********************
 4. H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -828,13 +833,44 @@ table.sdsa-platform-table tr td:nth-child(1) {
 20. Accordion
 *********************/
 .accordion-title {
-  font-size: 1.5rem;
-  color: #ec1f27;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    color: #ec1f27;
+    border-top: 0.15rem solid #0a0a0a;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    transition: background .35s ease-in-out;
+    padding: 0.5rem 1rem;
 }
 
-.accordion-title:hover, .accordion-title:active {
+.accordion-title:hover, .accordion-title:active, .accordion-title:focus {
   color: #fff;
-  background-color: #ec1f27;
+  background-color: #0a0a0a;
+}
+
+.accordion-title:before {
+	font-size: 1.5rem;
+	line-height: 4rem;
+	margin-top: 0;
+	top: inherit;
+}
+
+:last-child:not(.is-active)>.accordion-title, :last-child>.accordion-content:last-child {
+	border-bottom: 0.1rem solid #0a0a0a;
+}
+
+.accordion-title img {
+	height: 4rem;
+	width: auto;
+	margin-right: 0.5rem;
+}
+
+.accordion-content {
+	border-top: 0.15rem solid #0a0a0a;
+	border-left: 0.15rem solid #0a0a0a;
+    border-right: 0.15rem solid #0a0a0a;
+    border-bottom: 0px solid transparent;
 }
 
 .accordion-content ol {
@@ -842,7 +878,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
   border-left: 0.1rem solid #0a0a0a;
 }
 
-.accordion content ol li {
+.accordion-content ol li {
   padding-left: 0.75rem;
 }
 
@@ -1197,62 +1233,6 @@ h2.dsa-local-brand {
 .card-red {
   background-color: #ec1f27;
   padding: 2rem 4rem;
-}
-
-.bdr-stripe-black {
-	  border-bottom: 16px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripe-black-on-white.png) 36 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripe-black-on-white.png) 36 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripe-black-on-white.png) 36 repeat;
-}
-
-.bdr-stripe-red {
-	border-bottom: 16px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripe-red-on-white.png) 36 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripe-red-on-white.png) 36 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripe-red-on-white.png) 36 repeat;
-}
-
-.bdr-stripe-gold {
-	  border-bottom: 16px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripe-gold-on-white.png) 18 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripe-gold-on-white.png) 18 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripe-gold-on-white.png) 18 repeat;
-}
-
-.bdr-stripe-gray {
-	  border-bottom: 16px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripes-gray.png) 18 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripes-gray.png) 18 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripes-gray.png) 18 repeat;
-}
-
-.bdr-stripe-white {
-  border-bottom: 16px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripes-white.png) 18 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripes-white.png) 18 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripes-white.png) 18 repeat;
-}
-
-.bdr-stripe-red-left {
-   border-left: 18px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripe-black-on-red.png) 16 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripe-black-on-red.png) 16 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripe-black-on-red.png) 16 repeat; 
-}
-
-.bdr-stripe-red-white-left {
-   border-left: 18px solid transparent;
-  padding: 12px;
-  -webkit-border-image: url(../images/stripe-red-on-white-2.png) 32 repeat; /* Safari 3.1-5 */
-  -o-border-image: url(../images/stripe-red-on-white-2.png) 32 repeat; /* Opera 11-12.1 */
-  border-image: url(../images/stripe-red-on-white-2.png) 32 repeat; 
 }
 
 /** begin jon white conversion **/
