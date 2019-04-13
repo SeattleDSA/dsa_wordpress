@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*********************
-WEB FONTS
+1. WEB FONTS
 *********************/
 
 @font-face {
@@ -25,7 +25,7 @@ MAIN STYLESHEET
 *************************************************/
 
 /*********************
-GENERAL STYLES
+2. GENERAL STYLES
 *********************/
 
 header, body, p {font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 400;}
@@ -136,26 +136,31 @@ border-top: 8px solid #231F20;
 }
 
 /*********************
-LINK STYLES
+3. LINK STYLES
 *********************/
 a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #ec1f27;
+}
+
 /*********************
-H1, H2, H3, H4, H5 P STYLES
+4. H1, H2, H3, H4, H5 P STYLES
 *********************/
 
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
+
 /*********************
-HEADER STYLES
+5. HEADER STYLES
 *********************/
 
 .header ul.off-canvas-list li {
   list-style: none; }
 
 /*********************
-MENU & NAVIGATION
+6. MENU & NAVIGATION
 *********************/
 .top-bar {
 	padding: 0;
@@ -195,10 +200,6 @@ border-color: white transparent transparent !important;
 .page-title {
 color: #231F20;
 margin: 4rem 0 3rem 0;
-}
-
-a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #ec1f27;
 }
 
 .bg-DSAblack {
@@ -267,7 +268,7 @@ color: white;
 }
 
 /***************
-BUTTONS
+7. BUTTONS
 ****************/
 
 a.button.radius.button-white {
@@ -390,7 +391,7 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 }
 
 /*********************
-POSTS & CONTENT STYLES
+8. POSTS & CONTENT STYLES
 *********************/
 #content #inner-content {
   padding: 1rem 0rem;
@@ -461,7 +462,7 @@ POSTS & CONTENT STYLES
 
 
 /*********************
-2018 POST FORMAT TESTING
+9. 2018 POST FORMAT TESTING
 *********************/
 
 .post-template-single2018-php #content #inner-content header {
@@ -516,7 +517,7 @@ POSTS & CONTENT STYLES
     color: #fff; }
 
 /*********************
-IMAGE GALLERY STYLES
+10. IMAGE GALLERY STYLES
 *********************/
 .gallery-columns-2 .gallery-item {
     width: 45%;
@@ -539,13 +540,13 @@ IMAGE GALLERY STYLES
 }
 
 /*********************
-PAGE NAVI STYLES
+11. PAGE NAVI STYLES
 *********************/
 .page-navigation {
   margin-top: 1rem; }
 
 /*********************
-COMMENT STYLES
+12. COMMENT STYLES
 *********************/
 #comments .commentlist {
   margin-left: 0px; }
@@ -605,7 +606,7 @@ COMMENT STYLES
   float: right; }
 
 /*********************
-COMMENT FORM STYLES
+13. COMMENT FORM STYLES
 *********************/
 .respond-form {
   margin: 1.5em 10px;
@@ -661,7 +662,7 @@ COMMENT FORM STYLES
   margin: 0 20px 1.1em; }
 
 /*********************
-SIDEBARS & ASIDES
+14. SIDEBARS & ASIDES
 *********************/
 .widget ul {
   margin: 0; }
@@ -675,7 +676,7 @@ SIDEBARS & ASIDES
 }
 
 /*********************
-FOOTER STYLES
+15. FOOTER STYLES
 *********************/
 .footer {
   clear: both;
@@ -713,7 +714,7 @@ color: #fff;
 
 
 /*********************
-FORM STYLES
+16. FORM STYLES
 *********************/
 [type=phone]
 {	display: block;
@@ -765,7 +766,7 @@ input[type="submit"]:hover {
 }
 
 /*********************
-TABLES
+17. TABLES
 *********************/
 table tbody tr:nth-child(even) {
 background-color: #ebeef3;
@@ -788,14 +789,14 @@ table.sdsa-platform-table tr td:nth-child(1) {
 }
 
 /*********************
-PLUGIN STYLES
+18. PLUGIN STYLES
 *********************/
 .gform_body ul {
   list-style: none outside none;
   margin: 0; }
 
 /*********************
-TABS
+19. TABS
 *********************/
 
 .tabs {
@@ -824,7 +825,30 @@ TABS
 }
 
 /*********************
-DAVID P. 2019 based on EVA G. / JON W.
+20. Accordion
+*********************/
+.accordion-title {
+  font-size: 1.5rem;
+  color: #ec1f27;
+}
+
+.accordion-title:hover, .accordion-title:active {
+  color: #fff;
+  background-color: #ec1f27;
+}
+
+.accordion-content ol {
+  padding-left: 2.5rem;
+  border-left: 0.1rem solid #0a0a0a;
+}
+
+.accordion content ol li {
+  padding-left: 0.75rem;
+}
+
+
+/*********************
+21. DAVID P. 2019 based on EVA G. / JON W.
 *********************/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
@@ -1090,7 +1114,7 @@ DAVID P. 2019 based on EVA G. / JON W.
 }
 
 /*********************
-EVA G. 2017 Theme w/ CODING FROM JON W.
+21b. EVA G. 2017 Theme w/ CODING FROM JON W.
 *********************/
 
 .dsa-space {
@@ -1865,7 +1889,7 @@ color: white;
 }
 
 /*********************
-CALENDAR via THEEVENTSCALENDAR PLUGIN
+22. CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
 table.tribe-events-calendar tbody tr:nth-child(even) {
@@ -1916,7 +1940,7 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 /******************************************************************
-PRINT STYLESHEET
+23. PRINT STYLESHEET
 ******************************************************************/
 @media print {
   * {
