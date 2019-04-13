@@ -70,6 +70,7 @@ Template Name: Hompage 2017
 		                  <li>An end to punitive justice and mass incarceration.</li>
 		                  <li>An end to military and police aggression.</li>
 		                  <li>Democratic control over the environment to preserve the planet.</li>
+		                  <li>Total freedom to migrate; humanity has no borders.</li>
 		                  <!-- ?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ? -->
 		                </ol>
 		              </div>
@@ -217,9 +218,7 @@ Template Name: Hompage 2017
 						    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
 						}
 
-						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"";
-						echo tribe_get_events_link ();
-						echo "\">See All</a></div>";
+						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"https://seattledsa.org/events/\">See All</a></div>";
 					}
 					else {
 						echo "<div>This template uses The Events Calendar plugin.</div>";
