@@ -71,6 +71,18 @@ border-top: 8px solid #231F20;
         border-bottom: 8px solid #231F20;
 }
 
+.sdsa-page-hero {
+	background-attachment: initial;
+    background-size: 64px, cover;
+    background-repeat: repeat, no-repeat;
+    padding: 1rem;
+    border-radius: 1rem;
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .archive.category .post .entry-content p, .archive.category .post .entry-content h1, .archive.category .post .entry-content h2, .archive.category .post .entry-content h3, .archive.category .post .entry-content h4, .archive.category .post .entry-content h5  {
  	margin-bottom: 1rem;
     font-size: 100%;
@@ -347,14 +359,15 @@ a.button.button-clear-gold:hover {
 button, .button, input[type="button"], .pagination .button {
 	background-color: #ec1f27;
 	color: #fff;
-  border-radius: 2em;
-  transition: all 150ms;
-  text-transform: uppercase;
-  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	border-radius: 2em;
+	transition: all 150ms;
+	text-transform: uppercase;
+	font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.pagination .button.current {
-	padding: .1875rem .625rem
+.pagination .current {
+	padding: .1875rem .625rem;
+	background-color: #ec1f27;
 }
 
 .pagination .button a, .pagination .button a:hover {
@@ -450,6 +463,53 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
   background: #eee;
   border: 1px solid #cecece;
   padding: 10px; }
+
+.single .post .entry-content img.wp-post-image, .single .event-thumbnail-image .tribe-events-event-image img {
+  border-radius: 2rem 2rem 0rem 0rem;
+
+}
+.single .event-thumbnail-image .tribe-events-event-image {
+margin-bottom: 0px; 
+}
+
+.single .tribe-events-schedule .recurringinfo {
+  float: right;
+  background-color: #edeeef;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.single .post .entry-content .post-thumbnail-caption, .single .event-thumbnail-image .event-thumbnail-caption {
+    padding: 1rem 1.5rem 1rem;
+    background-color: #EDEEEF;
+    border-radius: 0rem 0rem 2rem 2rem;
+}
+
+.single .tribe-events-schedule .recurringinfo .tribe-events-divider {
+  color: #edeeef;
+}
+
+.single-tribe_events .tribe-events-cal-links {
+  clear: initial;
+}
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+  font-size: 1.5rem;
+}
+
+.tribe-events-gmap {
+  background-color: #ec1f27;
+  color: #fff;
+  border-radius: 2em;
+  font-size: 1rem;
+  transition: all 150ms;
+  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  display: inline-block;
+}
 
 .wp-caption {
     max-width: 80%;

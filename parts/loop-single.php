@@ -11,7 +11,8 @@
 	</div>
 
     <section class="entry-content" itemprop="articleBody">
-		<?php the_post_thumbnail('full'); ?>
+		<figure><?php the_post_thumbnail('full'); ?>
+		<figcaption class="post-thumbnail-caption"><strong>Caption:</strong> <?php the_post_thumbnail_caption(''); ?></figcaption></figure>
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 						
