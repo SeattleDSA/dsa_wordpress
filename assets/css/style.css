@@ -842,15 +842,15 @@ table.sdsa-platform-table tbody tr:nth-child(even) {
 }
 
 table.sdsa-platform-table tr td figure img {
-	width: 4rem !important;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+	width: 6rem !important;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
 table.sdsa-platform-table tr td:nth-child(1) {
-	width: 5rem;
+	width: 6rem;
 }
 
 /*********************
