@@ -1227,7 +1227,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
 }
 .page-template-template-homepage-2019 .sdsa-beliefs .control {
     position: absolute;
-    background: url("../images/ui-glyphs/caret-leftward.png") no-repeat center center;
+    background: url("../images/ui-glyphs/caret-leftward.svg") no-repeat center center;
     background-size: 10px 18px;
     background-color: transparent;
     width: 40px;
@@ -1244,7 +1244,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
 }
 .page-template-template-homepage-2019 .sdsa-beliefs .control.next {
     right: -10px;
-    background-image: url("../images/ui-glyphs/caret-rightward.png")
+    background-image: url("../images/ui-glyphs/caret-rightward.svg")
 }
 .page-template-template-homepage-2019 .sdsa-beliefs .control:hover {
     transform: translateY(-50%) scale(1.2)
@@ -1611,7 +1611,7 @@ h1.home-title {
     }
 }
 .sdsa-2017-frontispiece .diptych .newsletter-signup {
-    background: url("../images/ui-glyphs/stripes-red.png") repeat-x left bottom;
+    background: url("../images/ui-glyphs/stripes-red.svg") repeat-x left bottom;
     background-size: 18px 16px;
     background-color: #f7f7f7;
     -ms-flex-order: 1;
@@ -1723,7 +1723,7 @@ input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::pla
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle {
-    background: url("../images/ui-glyphs/essay-plate-bottom.png") repeat-x left top, url("../images/ui-glyphs/stripes-black.png") repeat-x left bottom;
+    background: url("../images/ui-glyphs/essay-plate-bottom.svg") repeat-x left top, url("../images/ui-glyphs/stripes-black.svg") repeat-x left bottom;
     background-size: 18px 109px, 18px 16px;
     background-color: #EC1F27;
     color: white;
@@ -1809,7 +1809,7 @@ border-right: 1px solid #fff;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .control {
     position: absolute;
-    background: url("../images/ui-glyphs/caret-leftward.png") no-repeat center center;
+    background: url("../images/ui-glyphs/caret-leftward.svg") no-repeat center center;
     background-size: 10px 18px;
     background-color: transparent;
     width: 40px;
@@ -1826,7 +1826,7 @@ border-right: 1px solid #fff;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .control.next {
     right: -10px;
-    background-image: url("../images/ui-glyphs/caret-rightward.png")
+    background-image: url("../images/ui-glyphs/caret-rightward.svg")
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .control:hover {
     transform: translateY(-50%) scale(1.2)
