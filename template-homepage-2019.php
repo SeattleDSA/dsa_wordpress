@@ -137,8 +137,7 @@ Template Name: Hompage 2019
 		</div>
 		<div class="row windowbottom">
 			<div class="sdsa-calendar large-4 medium-6 small-12 columns">
-				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="141" height="141" /><br /> -->
-				<h2>Upcoming Events</h2>
+				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="float-left section-icon" /> Upcoming Events</h2>
 				<?php // Retrieve the next 5 upcoming events
 					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
 	    				//plugin is activated
@@ -167,11 +166,11 @@ Template Name: Hompage 2019
 
 						    echo "<div class=\"sdsa-calendar-item\"><h3>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
-							echo "</h3>";
+							echo "</h3><p class=\"sdsa-calendar-item-details\">";
 						    echo tribe_events_event_schedule_details( $event->ID );
-						    echo "<br>";
+						    echo "</p><p class=\"sdsa-calendar-item-address\">";
 						    echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
-						    echo "  ";
+						    echo "</p>";
 						    
 						    
 							if ( tribe_show_google_map_link($event->ID) ) {
@@ -194,7 +193,7 @@ Template Name: Hompage 2019
 				?>
 			</div><!-- end sdsa-calendar -->
 			<div class="sdsa-dispatches large-4 medium-6 small-12 columns">
-				<h2>Dispatches</h2>
+				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/pencil.svg" class="float-left section-icon" /> Dispatches</h2>
 				<?php
 					$how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
 
@@ -210,7 +209,7 @@ Template Name: Hompage 2019
 					    ?>
 					    <div class="sdsa-dispatches-item">
 						    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						    	<b>By <?php the_author() ?> / <?php the_time('F j, Y') ?></b>
+						    	<p>By <?php the_author() ?> / <?php the_time('F j, Y') ?></p>
 						</div>
 					    <?php
 					    $counter++;

@@ -24,7 +24,7 @@ $event_id = get_the_ID();
 
 <div id="tribe-events-content" class="tribe-events-single">
 
-	<p class="tribe-events-back">
+	<p class="tribe-events-back hide-for-print">
 		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
 	</p>
 
@@ -63,7 +63,7 @@ $event_id = get_the_ID();
 					if ( has_post_thumbnail() ) {
 					  echo '<figure class="event-thumbnail-image">';
 					  echo tribe_event_featured_image( $event_id, 'full', false );
-					  echo '<figcaption class="event-thumbnail-caption"><strong>Caption:</strong>';
+					  echo '<figcaption class="event-thumbnail-caption hide-for-print">';
 					  the_post_thumbnail_caption('');
 					  echo '</figcaption></figure>';
 					} else {
@@ -84,10 +84,10 @@ $event_id = get_the_ID();
 				<div class="tribe-events-single-event-description tribe-events-content">
 					<?php the_content(); ?>
 				</div>
-				<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+				<div class="hide-for-print"><?php do_action( 'tribe_events_single_event_after_the_content' ) ?></div>
 			</div>
 
-			<div class="large-12 medium-12 columns">
+			<div class="large-12 medium-12 columns hide-for-print">
 				<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->
@@ -97,7 +97,7 @@ $event_id = get_the_ID();
 	<?php endwhile; ?>
 	<hr />
 	<!-- Event footer -->
-	<div id="tribe-events-footer">
+	<div id="tribe-events-footer" class="hide-for-print">
 		<!-- Navigation -->
 		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'the-events-calendar' ), $events_label_singular ); ?>">
 			<ul class="tribe-events-sub-nav">

@@ -1,11 +1,11 @@
-				<footer class="footer padding-top" role="contentinfo">
-					<div id="dsa-footer" class="row">
+				<footer class="footer padding-top hide-for-print" role="contentinfo">
+					<div id="dsa-footer" class="row hide-for-print">
 						<?php get_sidebar('dsa1of3'); ?>
 						<?php get_sidebar('dsa2of3'); ?>
 						<?php get_sidebar('dsa3of3'); ?>
 					</div><!-- end #dsaFooter-content widgets -->
 					<div id="inner-footer" class="row">
-						<div class="large-12 medium-12 columns">
+						<div class="large-12 medium-12 columns hide-for-print">
 							<nav role="navigation">
 	    						<?php joints_footer_links(); ?>
 	    					</nav>

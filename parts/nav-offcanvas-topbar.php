@@ -1,7 +1,7 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
 
-<div class="top-bar" id="top-bar-menu">
+<div class="top-bar hide-for-print" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
 			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/dsa-rose-mark.svg" class="dsa-rose-mark" width="35" height="35" alt="" /> <a href="<?php echo home_url(); ?>" class="dsa-top-name"><b>Seattle</b> Democratic Socialists of America<!-- <?php bloginfo('name'); ?> --></a></li>

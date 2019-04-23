@@ -72,15 +72,21 @@ border-top: 8px solid #231F20;
 }
 
 .sdsa-page-hero {
-	background-attachment: initial;
-    background-size: 64px, cover;
-    background-repeat: repeat, no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 1rem;
     border-radius: 1rem;
     min-height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sdsa-page-hero .page-title {
+	color: white;
+	margin: 1rem;
+	font-size: 4rem;
 }
 
 .archive.category .post .entry-content p, .archive.category .post .entry-content h1, .archive.category .post .entry-content h2, .archive.category .post .entry-content h3, .archive.category .post .entry-content h4, .archive.category .post .entry-content h5  {
@@ -444,6 +450,10 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 .entry-content img {
   max-width: 100%;
   height: auto; }
+
+ .post .entry-content a {
+ 	text-decoration: underline;
+ }
 
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
@@ -851,6 +861,7 @@ table.sdsa-platform-table tr td figure img {
 
 table.sdsa-platform-table tr td:nth-child(1) {
 	width: 6rem;
+	vertical-align: text-top;
 }
 
 /*********************
@@ -948,6 +959,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
 *********************/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
+
 .page-template-template-homepage-2019 .menu li a {
     font-size: 1.2rem;
     line-height: 1;
@@ -960,16 +972,32 @@ table.sdsa-platform-table tr td:nth-child(1) {
 	background-color: #ec1f27;
 }
 
-.page-template-template-homepage-2019 .sdsa-main, .page-template-template-homepage-2019 .sdsa-newsletter, .page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar, .page-template-template-homepage-2019 .top-bar ul, .page-template-template-homepage-2019 {
-	background: #e9ebec;
+.page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar {
+	background: #fefefe;
+}
+
+.page-template-template-homepage-2019 .top-bar ul {
+	background: transparent;
+}
+
+.page-template-template-homepage-2019 {
+	background: #F3F3F9;
 }
 
 .page-template-template-homepage-2019 .row {
+	width: 100%;
 	max-width: 1917px;
 }
 
 .page-template-template-homepage-2019 h1 {
 	font-size: 2rem;
+}
+.section-icon {
+	height: 3.75rem;
+    margin-right: 1rem;
+    width: auto;
+    box-shadow: 0 4px 4px #adadbf;
+    border-radius: 50%;
 }
 
 .page-template-template-homepage-2019 .row.windowbottom h3 {
@@ -980,24 +1008,32 @@ table.sdsa-platform-table tr td:nth-child(1) {
 }
 
 .page-template-template-homepage-2019 .row.windowbottom .sdsa-calendar-item, .page-template-template-homepage-2019 .row.windowbottom .sdsa-dispatches-item {
-	border-bottom: 1px solid #ccc;
-    padding: 0 0 1rem 0;
-    margin: 0 0 1rem 0;
+	padding: 1rem;
+    margin: 0 0 1rem;
+    background: #fefefe;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px #ADADBF;
 }
 
-.page-template-template-homepage-2019 .sdsa-main, .page-template-template-homepage-2019 .sdsa-newsletter {
-    margin: 1rem 0 0 0;
+.page-template-template-homepage-2019 .sdsa-main .hentry, .page-template-template-homepage-2019 .sdsa-newsletter {
+    background-color: #fefefe;
     padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px #ADADBF;
+    margin-top: 1rem;
+ }
+
+.page-template-template-homepage-2019 .sdsa-main {
+	background: transparent;
 }
 
-.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 header, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2 {
-	font-family: 'Work Sans', san-serif;
+.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 header, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2, .page-template-template-homepage-2019 h1 {
+	font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
 }
 
 .page-template-template-homepage-2019 h2 {
 	font-size: 3rem;
-	border-top: 1rem solid black;
 	padding-top: 1rem;
 }
 
@@ -1011,25 +1047,27 @@ table.sdsa-platform-table tr td:nth-child(1) {
         align-items: center
     }
     .page-template-template-homepage-2019 .sdsa-newsletter figure {
-        width: 29.116465863454%;
-        margin: 0 auto
+        width: 32%;
+        margin: 0 1rem 0 0;
     }
     .page-template-template-homepage-2019 .sdsa-newsletter .form {
-        width: 61.847389558233%;
-        margin: 0
+        width: 65%;
+        margin: 0;
+        padding: 0;
     }
 }
 .page-template-template-homepage-2019 .sdsa-newsletter .pairing {
-    width: 85.862068965517%;
-    margin: 0 auto
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .page-template-template-homepage-2019 .sdsa-newsletter figure {
     max-width: 145px;
     margin: 0 auto 30px
 }
 .page-template-template-homepage-2019 .sdsa-newsletter .fields {
-    max-width: 250px;
-    margin: 0 auto
+    max-width: 100%;
+    margin: 0 auto;
 }
 .page-template-template-homepage-2019 .sdsa-newsletter h1 {
     font-size: 1.875rem;
@@ -1067,7 +1105,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
 .page-template-template-homepage-2019 .sdsa-newsletter input::-webkit-input-placeholder,
 .page-template-template-homepage-2019 .sdsa-newsletter input::-ms-input-placeholder,
 .page-template-template-homepage-2019 .sdsa-newsletter input::placeholder {
-    color: #aaa
+    color: #aaa;
 }
 
 .page-template-template-homepage-2019 .sdsa-newsletter input[type="submit"] {
@@ -1108,6 +1146,9 @@ table.sdsa-platform-table tr td:nth-child(1) {
 	margin-top: 1rem;
 	text-align: center;
 	padding: 1rem;
+	border: 0px solid transparent;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px #ADADBF;
 }
 .page-template-template-homepage-2019 .sdsa-beliefs .inner {
     padding: 0px;
@@ -1450,40 +1491,12 @@ h1.home-title {
 }
 
 
-@media screen and (min-width: 1701px) {
+@media screen and (min-width: 900px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
         background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
     }
 }
-@media screen and (min-width: 1351px) and (max-width: 1700px) {
-    .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -21% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
-    }
-}
-@media screen and (min-width: 1100px) and (max-width: 1390px) {
-    .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -30% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
-    }
-}
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-    .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.png") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.png") no-repeat -40% 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.png") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.png") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.png") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.png") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px
-    }
-}
-
-/*
-@media screen and (min-width: 1100px) and (min-width: 899px) {
-    .sdsa-2017-frontispiece .essay {
-    background: url(../images/ui-glyphs/sdsa-scene.svg?q=1) no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-}
-*/
 
 @media screen and (max-width: 899px) {
     .sdsa-2017-frontispiece .essay {
@@ -2023,4 +2036,24 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
   .wp-prev-next,
   .respond-form,
   nav {
-    display: none; } }
+    display: none; }
+  a.tribe-events-gmap, hr, .tribe-events-single-section.tribe-events-event-meta a:after, .tribe-events-meta-group .tribe-events-event-categories-label, .tribe-events-meta-group .tribe-events-event-categories, .tribe-events-start-date-label, .tribe-events-start-time-label, .tribe-country-name, .tribe-region.tribe-events-abbr:after, .tribe-events-before-html, .tribe-events-abbr.tribe-events-start-date:after {
+  	display: none;
+  }
+  .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-venue {
+  	width: 50%;
+  	margin: 0;
+  	padding: 1rem;
+  }
+  .tribe-events-meta-group .tribe-events-single-section-title {
+  	font-size: 1.25rem;
+  	color: #ec1f27;
+  }
+  .tribe-events-single-event-description.tribe-events-content {
+  	word-wrap: break-word;
+  }
+  .tribe-events-meta-group.tribe-events-meta-group-gmap, .tribe-events-venue-map, .single-tribe_events .tribe-events-event-meta, .tribe-events-meta-group .tribe-events-single-section-title, #tribe-events-content, .footer.padding-top, .padding-top {
+  	margin: 0;
+  	padding: 0;
+  }
+}
