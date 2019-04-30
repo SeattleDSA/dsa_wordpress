@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 						
-	<header class="article-header sdsa-page-hero" style="background-image: url('<?php the_post_thumbnail_url( $size ); ?>');">
+	<header class="article-header sdsa-page-hero" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-line.svg'), url('<?php the_post_thumbnail_url( $size ); ?>');">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 	</header> <!-- end article header -->
 					

@@ -27,17 +27,17 @@ Template Name: Hompage 2019
 				</script>
 		<?php endif; ?>
 
-		<div class="row sdsa-background" style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sdsa-scene.svg') no-repeat center center fixed; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;"> <!-- fmr sdsa-2017-frontpiece --->
-			<div class="sdsa-peek large-6 medium-6 small-12 columns">
+		<div class="row sdsa-background"> <!-- fmr sdsa-2017-frontpiece --->
+			<div class="sdsa-peek large-4 medium-4 small-12 columns">
 				&nbsp;
 			</div>
-			<article class="sdsa-main large-3 medium-6 small-12 columns">
+			<article class="sdsa-main large-4 medium-8 small-12 columns">
 		    	<!-- Begin Main Content-->
 	        	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php get_template_part( 'parts/loop', 'pagealt' ); ?> 
 				<?php endwhile; endif; ?>	 
 			</article><!-- end article -->
-			<div class="sdsa-actions large-3 medium-6 columns">
+			<div class="sdsa-actions large-4 medium-8 small-12 columns">
 		    	<div class="sdsa-newsletter">
 		            <div class="pairing">
 		              <figure>
@@ -78,7 +78,7 @@ Template Name: Hompage 2019
 								</div>
 
 								<div class="action">
-									<a href="https://seattledsa.org/platform/" class="dark small">Read full platform</a>
+									<a href="https://seattledsa.org/platform/" class="button">Read full platform</a>
 								</div>
 								<script async>jQuery(document).ready(function($) {
 										if($(".beliefs-carousel").length) {
@@ -136,7 +136,11 @@ Template Name: Hompage 2019
 		    </div>
 		</div>
 		<div class="row windowbottom">
-			<div class="sdsa-calendar large-4 medium-6 small-12 columns">
+			<div class="sdsa-workinggroup large-4 medium-12 columns">
+				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_column_right', true)); ?>
+			</div>
+			
+			<div class="sdsa-calendar large-4 medium-5 small-12 columns">
 				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="float-left section-icon" /> Upcoming Events</h2>
 				<?php // Retrieve the next 5 upcoming events
 					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
@@ -144,7 +148,7 @@ Template Name: Hompage 2019
 
 
 						$events = tribe_get_events( array(
-						    'posts_per_page' => 2,
+						    'posts_per_page' => 3,
 						    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
 						    'tax_query'=> array(
 			                	array(
@@ -167,16 +171,22 @@ Template Name: Hompage 2019
 						    echo "<div class=\"sdsa-calendar-item\"><h3>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
 							echo "</h3><p class=\"sdsa-calendar-item-details\">";
+
+							if ( tribe_show_google_map_link($event->ID) ) {
+								echo "<a href=\"";
+								echo tribe_get_map_link($event->ID);
+								echo "\" class=\"sdsa-calendar-item-directions\"><img src=\"";
+								echo get_template_directory_uri() . '/assets/images/icons/red/location.svg';
+								echo "\" /></a>";
+							}
+
 						    echo tribe_events_event_schedule_details( $event->ID );
 						    echo "</p><p class=\"sdsa-calendar-item-address\">";
 						    echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
 						    echo "</p>";
-						    
-						    
-							if ( tribe_show_google_map_link($event->ID) ) {
-								echo tribe_get_map_link_html($event->ID);
-							}
 							
+							// echo tribe_get_map_link_html($event->ID);
+
 						    // echo "<br>";
 						   	// echo substr($dsa_event_description, 0, 300);
 						    // echo "... <a href=\"";
@@ -192,7 +202,7 @@ Template Name: Hompage 2019
 					}
 				?>
 			</div><!-- end sdsa-calendar -->
-			<div class="sdsa-dispatches large-4 medium-6 small-12 columns">
+			<div class="sdsa-dispatches large-4 medium-7 small-12 columns">
 				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/pencil.svg" class="float-left section-icon" /> Dispatches</h2>
 				<?php
 					$how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
@@ -207,9 +217,23 @@ Template Name: Hompage 2019
 					  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
 					    $my_query->the_post(); 
 					    ?>
-					    <div class="sdsa-dispatches-item">
-						    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						    	<p>By <?php the_author() ?> / <?php the_time('F j, Y') ?></p>
+					    <div class="sdsa-dispatches-item row">
+						    	<div class="sdsa-dispatches-thumbnail large-4 medium-6 small-12 columns">
+						    		<a href="<?php the_permalink() ?>" class="archive-image-link">
+										<?php 
+											if ( has_post_thumbnail() ) { 
+												the_post_thumbnail('large'); 
+											}
+											else {
+												echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/images/dsa_blog.png" />';
+											}
+										?>
+									</a>
+								</div>
+								<div class="sdsa-dispatches-headline large-8 medium-6 small-12 columns">
+									<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							    	<p>By <?php the_author() ?> / <?php the_time('F j, Y') ?></p>
+							    </div>
 						</div>
 					    <?php
 					    $counter++;
@@ -219,9 +243,7 @@ Template Name: Hompage 2019
 					}
 				?>
 			</div><!-- end sdsa-dispatches -->
-			<div class="sdsa-workinggroup large-4 medium-12 columns">
-				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_column_right', true)); ?>
-			</div>
+			
 		</div><!-- end row -->
 	</div> <!-- end #content -->
 
