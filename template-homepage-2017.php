@@ -197,25 +197,31 @@ Template Name: Hompage 2017
 						foreach ( $events as $event ) {
 							$dsa_event_description = $event->post_content;
 
-						    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4 class=\"txt-bold\">";
+						    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12\"><h4>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
-							echo "</h4><p>";
-						    echo tribe_events_event_schedule_details( $event->ID );
-						    echo "<br>";
-						    echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
-						    echo "  ";
-						    
-						    
-							if ( tribe_show_google_map_link($event->ID) ) {
-								echo tribe_get_map_link_html($event->ID);
-							}
-							
-						    echo "</p><p>";
-						    echo substr($dsa_event_description, 0, 300);
-						    // echo $event->post_content; 
-						    echo "...</p><a href=\"";
-						    echo tribe_get_event_link ( $event->ID  );
-						    echo "\"><b>Find out more &rsaquo;</b></a></div><br>";
+							echo "</h4><hr><div class=\"row\"><div class=\"large-6 medium-6 small-12 column\"><p>";
+							    echo substr($dsa_event_description, 0, 300);
+							    echo "...</p><a href=\"";
+							    echo tribe_get_event_link ( $event->ID  );
+								echo "\" class=\"button\"><b>Find out more &rsaquo;</b></a></div>";
+						    echo "<div class=\"large-6 medium-6 small-12 column\">";
+						    	echo "<div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
+							    	echo tribe_get_event_link ( $event->ID  );
+							    echo "\"><img src=\"";
+						    		echo get_stylesheet_directory_uri();
+						    	echo "/assets/images/icons/red/calendar.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+						    		echo tribe_events_event_schedule_details( $event->ID );
+						    	echo "</div></div><br><div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
+						    		echo tribe_get_event_link ( $event->ID  );
+							    echo "\"><img src=\"";
+						    		echo get_stylesheet_directory_uri();
+						    	echo "/assets/images/icons/red/location.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+							    	echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
+							    	echo "<br>";
+									if ( tribe_show_google_map_link($event->ID) ) {
+										echo tribe_get_map_link_html($event->ID);
+									}
+						    echo "</div></div></div></div></div><br>";
 						}
 
 						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"https://seattledsa.org/events/\">See All</a></div>";

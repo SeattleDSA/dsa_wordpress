@@ -18,7 +18,13 @@
 
 		</main> <!-- end #main -->
 
-		<?php get_sidebar(); ?>
+		<?php if ( in_category('minutes') ) {
+    		/* no sidebar for category minutes */
+		} 
+		else {
+			get_sidebar(); 
+		}
+		?>
 
 	</div> <!-- end #inner-content -->
 

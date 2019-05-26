@@ -479,6 +479,13 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 	color:	rgba (0,0,0,0.6);
 }
 
+#content #inner-content .category-minutes h2 {
+	border-top: 0.5rem solid;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 4rem 0 0.5rem 0;
+}
+
 .page-title .vcard {
   border: 0px;
   padding: 0px; }
