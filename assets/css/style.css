@@ -338,6 +338,16 @@ a.button.radius.button-white {
   color: black;
 }
 
+a.hollow {
+	border-width: 2px;
+}
+
+a.button.hollow {
+	border-width: 2px;
+	border-color: #ec1f27;
+	color: #ec1f27;
+}
+
 a.button.radius.button-white:hover {
   border: none;
   background-color: #ec1f27;
@@ -1414,7 +1424,7 @@ h2.dsa-local-brand {
 }
 
 .card-gray, #content #inner-content.card-gray {
-  background-color: #F7F7F7;
+  background-color: #FFF;
   padding: 2rem 4rem;
 }
 

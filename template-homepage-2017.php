@@ -209,13 +209,13 @@ Template Name: Hompage 2017
 							    	echo tribe_get_event_link ( $event->ID  );
 							    echo "\"><img src=\"";
 						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/red/calendar.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+						    	echo "/assets/images/icons/white/calendar.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
 						    		echo tribe_events_event_schedule_details( $event->ID );
 						    	echo "</div></div><br><div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
 						    		echo tribe_get_event_link ( $event->ID  );
 							    echo "\"><img src=\"";
 						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/red/location.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+						    	echo "/assets/images/icons/white/location.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
 							    	echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
 							    	echo "<br>";
 									if ( tribe_show_google_map_link($event->ID) ) {
