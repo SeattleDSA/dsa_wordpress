@@ -84,7 +84,7 @@ Template Name: Next Events
 			                	array(
 				                    'taxonomy' => 'tribe_events_cat',
 				                    'field' => 'slug',
-				                    'terms' => 'general'
+				                    'terms' => 'new-member'
 			               		)
 			                )
 						) );

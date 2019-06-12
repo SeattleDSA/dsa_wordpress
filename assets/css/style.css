@@ -5,6 +5,7 @@
 
 @font-face {
   font-family: 'ManifoldDSA-ExtraBold';
+  font-display: fallback;
   src: url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
        url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
        url('webfonts/ManifoldDSA-ExtraBold.ttf')  format('truetype'); /* Safari, Android, iOS */
@@ -13,6 +14,7 @@
 
 @font-face {
   font-family: 'ManifoldDSA-Medium';
+  font-display: fallback;
   src: url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'), /* Super Modern Browsers */
        url('webfonts/ManifoldDSA-Medium.woff') format('woff'), /* Pretty Modern Browsers */
        url('webfonts/ManifoldDSA-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
@@ -87,6 +89,10 @@ ul.dropdown.menu.calendar-category-menu > li > a:hover {
 
 .calendar-category-menu > li.is-active {
   border-radius: 1rem 1rem 0 0;
+}
+
+.tribe-events-category-new-member .tribe-events-month-event-title a:after {
+content: "🌹";
 }
 
 img.icon-list {

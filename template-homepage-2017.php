@@ -87,7 +87,7 @@ Template Name: Hompage 2017
 		          <div class="inner">
 		            <div class="pairing">
 		              <figure>
-		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sdsa_logo_bg.svg" alt="" />
+		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sdsa_logo_bg.svg" loading="lazy" alt="" />
 		              </figure>
 		              <div class="form">
 		                <div class="fields">
@@ -168,7 +168,7 @@ Template Name: Hompage 2017
 		<div id="dsa-home-row-3" class="bg-DSAred">
 			<div class="row dsa-home-row-3-edit">
 				<div class="text-center">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="141" height="141" /><br />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" loading="lazy" width="141" height="141" /><br />
 					<h2 class="dsa-section-title txt-DSAwhite">Upcoming Events</h2>
 				</div>
 				<?php // Retrieve the next 5 upcoming events
@@ -209,13 +209,13 @@ Template Name: Hompage 2017
 							    	echo tribe_get_event_link ( $event->ID  );
 							    echo "\"><img src=\"";
 						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/white/calendar.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+						    	echo "/assets/images/icons/white/calendar.svg\" loading=\"lazy\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
 						    		echo tribe_events_event_schedule_details( $event->ID );
 						    	echo "</div></div><br><div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
 						    		echo tribe_get_event_link ( $event->ID  );
 							    echo "\"><img src=\"";
 						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/white/location.svg\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
+						    	echo "/assets/images/icons/white/location.svg\" class=\"dsa-calendar-icon\" loading=\"lazy\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
 							    	echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
 							    	echo "<br>";
 									if ( tribe_show_google_map_link($event->ID) ) {
