@@ -195,7 +195,7 @@ Template Name: Hompage 2019
 						    echo "</div>";
 						}
 
-						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"https://seattledsa.org/events/\">See All</a></div>";
+						echo "<div class=\"text-center\"><a class=\"button\" href=\"https://seattledsa.org/events/\">See all Events</a></div>";
 					}
 					else {
 						echo "<div>This template uses The Events Calendar plugin.</div>";
@@ -203,7 +203,7 @@ Template Name: Hompage 2019
 				?>
 			</div><!-- end sdsa-calendar -->
 			<div class="sdsa-dispatches large-4 medium-7 small-12 columns">
-				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/pencil.svg" class="float-left section-icon" /> Dispatches</h2>
+				<h2><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/typewriter.svg" class="float-left section-icon" /> Dispatches</h2>
 				<?php
 					$how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
 
@@ -242,6 +242,7 @@ Template Name: Hompage 2019
 					  wp_reset_postdata();
 					}
 				?>
+				<a href="<?php echo get_site_url(); ?>/dispatches/" class="button">See all Dispatches</a>
 			</div><!-- end sdsa-dispatches -->
 			
 		</div><!-- end row -->
