@@ -2096,7 +2096,19 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 /******************************************************************
-23. PRINT STYLESHEET
+23. fullPage.js Plugin Changes
+******************************************************************/
+.fullpage-wrapper .mcw-fp-section p, .fullpage-wrapper .mcw-fp-section li {
+	font-size: 1.2rem;
+}
+
+.fullpage-wrapper .mcw-fp-section .wp-block-image figcaption {
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
+/******************************************************************
+24. PRINT STYLESHEET
 ******************************************************************/
 @media print {
   * {
