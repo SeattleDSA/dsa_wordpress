@@ -10,17 +10,27 @@ Template Name: Hompage 2017
 		<div class="sdsa-2017-frontispiece">
 
 		  <article class="essay">
-		    <div class="bound">
+		    <div class="grid-container">
 		    	<?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
 					<br>
 					<div class="hide-for-large dsa-space">&nbsp;</div>
-					<div id="dsa-alert" class="dsa-alert callout large-collapse medium-collapse row" data-closable>
+					<div id="dsa-alert" class="dsa-alert card dark grid-x grid-margin-x grid-margin-y" data-closable>
 						
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/announcement-icon.svg" class="dsa-alert-icon float-left" />
-							<button id="dsa-hide" class="dsa-close float-right" aria-label="Dismiss alert" type="button" data-close>
-			   					<span aria-hidden="true"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.svg" /></span>
-			  				</button>
-							<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_alert_box', true)); ?>	
+							<div class="cell large-1">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/bullhorn.svg" />
+							</div>
+							
+							<div class="cell large-10">
+								<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_alert_box', true)); ?>
+							</div>
+
+							<div class="cell large-1">
+								<button id="dsa-hide" class="dsa-close cell large-1" aria-label="Dismiss alert" data-close>
+			   						<span aria-hidden="true">
+			   							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/checkbox-x.svg" />
+			   						</span>
+			  					</button>
+			  				</div>
 					</div>
 					<script>
 						jQuery(document).ready(function(){
@@ -32,8 +42,8 @@ Template Name: Hompage 2017
 					<?php else: ?>
 					<div class="hide-for-large dsa-space-2">&nbsp;</div>	
 				<?php endif; ?>
-		      <div class="inner">
-		        <div class="plate"><!-- Begin Main Content-->
+		      <div class="grid-x grid-margin-x">
+		        <div class="plate card cell large-offset-6 large-6 medium-offset-3 medium-9 small-12"><!-- Begin Main Content-->
 		          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php get_template_part( 'parts/loop', 'pagealt' ); ?> 
 						<?php endwhile; endif; ?>	
@@ -45,14 +55,14 @@ Template Name: Hompage 2017
 
 
 		  <div class="diptych">
-		    <div class="bound">
-		      <div class="cards">
+		    <div class="grid-container">
+		      <div class="grid-x grid-margin-x">
 
-		        <div class="card beliefs-cycle">
+		        <div class="card cell large-6 medium-6 small-12 beliefs-cycle">
 		          <div class="inner">
 
 		            <div class="contents">
-		              <h1>What we believe</h1>
+		              <h2>What we believe</h2>
 		              
 		              <div class="beliefs-carousel">
 		                <button class="control prev" aria-hidden="true"></button>
@@ -71,35 +81,28 @@ Template Name: Hompage 2017
 		                  <li>An end to military and police aggression.</li>
 		                  <li>Democratic control over the environment to preserve the planet.</li>
 		                  <li>Total freedom to migrate; humanity has no borders.</li>
-		                  <!-- ?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_slide1', true)); ? -->
 		                </ol>
 		              </div>
 
 		              <div class="action">
-		                <a href="https://seattledsa.org/platform/" class="dark small">Read full platform</a>
+		                <a href="<?php echo home_url(); ?>/platform/" class="dark button">Read full platform</a>
 		              </div>
 		            </div>
 
 		          </div>
 		        </div><!-- end beliefs carousel -->
 
-		        <div class="card newsletter-signup">
-		          <div class="inner">
-		            <div class="pairing">
-		              <figure>
-		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sdsa_logo_bg.svg" loading="lazy" alt="" />
+		        <div class="card cell large-6 medium-6 small-12 newsletter-signup">
+		            <div class="grid-x grid-margin-x">
+		              <figure class="cell large-4 medium-3 small-6">
+		                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.svg" loading="lazy" alt="" />
 		              </figure>
-		              <div class="form">
+		              <div class="form cell large-8 medium-9 small-6">
 		                <div class="fields">
-		                  <!-- <h1>Get our newsletter</h1>
-		                  <input type="text" placeholder="Your Name" />
-		                  <input type="text" placeholder="Your Email" />
-		                  <input type="submit" class="submit dark" value="Sign me up!"> -->
-		                  <?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_feature_box', true)); ?>
+		                    <?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_feature_box', true)); ?>
 		                </div>
 		              </div>
 		            </div>
-		          </div>
 		        </div><!-- newsletter signup -->
 
 		      </div><!-- end cards -->
@@ -166,116 +169,108 @@ Template Name: Hompage 2017
 		</script>
 	
 		<div id="dsa-home-row-3" class="bg-DSAred">
-			<div class="row dsa-home-row-3-edit">
-				<div class="text-center">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" loading="lazy" width="141" height="141" /><br />
-					<h2 class="dsa-section-title txt-DSAwhite">Upcoming Events</h2>
+			<div class="grid-container homepage-events">
+				<div class="grid-x grid-margin-x grid-margin-y text-center">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" loading="lazy" class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3" /><br />
+					<h2 class="dsa-section-title txt-DSAwhite cell">Upcoming Events</h2>
+					<div class="cell grid-x grid-margin-x grid-margin-y">
+						<?php // Retrieve the next 5 upcoming events
+							if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
+			    				//plugin is activated
+
+
+								$events = tribe_get_events( array(
+								    'posts_per_page' => 2,
+								    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
+								) );
+								
+								function empty_content($str) {
+									    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
+								}
+
+								// Loop through the events, displaying the title
+								// and content for each
+								foreach ( $events as $event ) {
+									$dsa_event_description = $event->post_content;
+
+								    echo "<div class=\"card cell small-12\"><h3>";
+								    echo tribe_get_event_link( $event->ID, $full_link=true);
+									echo "</h3><hr><div class=\"grid-x grid-margin-x\"><div class=\"cell large-7 medium-6 small-12\"><p>";
+									    echo substr($dsa_event_description, 0, 300);
+									    echo "...</p><a href=\"".tribe_get_event_link ( $event->ID  )."\" class=\"button\"><b>Find out more &rsaquo;</b></a></div>";
+								    echo "<div class=\"cell large-5 medium-6 small-12\">";
+								    	echo "<div class=\"grid-x grid-margin-x\"><div class=\"cell large-3 medium-4 small-3\"><a href=\"";
+									    	echo tribe_get_event_link ( $event->ID  );
+									    echo "\"><img src=\"";
+								    		echo get_stylesheet_directory_uri();
+								    	echo "/assets/images/icons/white/calendar.svg\" loading=\"lazy\" class=\"dsa-calendar-icon\" /></a></div><div class=\"cell large-9 medium-8 small-9\">";
+								    		echo tribe_events_event_schedule_details( $event->ID );
+								    	echo "</div></div><br><div class=\"grid-x grid-margin-x\"><div class=\"cell large-3 medium-4 small-3\"><a href=\"".tribe_get_event_link ( $event->ID  )."\"><img src=\"".get_stylesheet_directory_uri()."/assets/images/icons/white/location.svg\" class=\"dsa-calendar-icon\" loading=\"lazy\" /></a></div><div class=\"cell large-9 medium-8 small-9 \">";
+									    echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
+									    echo "<br>";
+											if ( tribe_show_google_map_link($event->ID) ) {
+												echo tribe_get_map_link_html($event->ID);
+											}
+								    echo "</div></div></div></div></div><br>";
+								}
+
+								echo "<div class=\"cell text-center\"><a class=\"button dark\" href=\"".home_url()."/events/\">See All</a></div>";
+							}
+							else {
+								echo "<div class=\"text-center cell\">This template uses The Events Calendar plugin.</div>";
+							}
+						?>
+					</div>
 				</div>
-				<?php // Retrieve the next 5 upcoming events
-					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
-	    				//plugin is activated
-
-
-						$events = tribe_get_events( array(
-						    'posts_per_page' => 2,
-						    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
-						    'tax_query'=> array(
-			                	array(
-				                    'taxonomy' => 'tribe_events_cat',
-				                    'field' => 'slug',
-				                    'terms' => 'general'
-			               		)
-			                )
-						) );
-						
-						function empty_content($str) {
-							    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
-						}
-
-						// Loop through the events, displaying the title
-						// and content for each
-						foreach ( $events as $event ) {
-							$dsa_event_description = $event->post_content;
-
-						    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12\"><h4>";
-						    echo tribe_get_event_link( $event->ID, $full_link=true);
-							echo "</h4><hr><div class=\"row\"><div class=\"large-6 medium-6 small-12 column\"><p>";
-							    echo substr($dsa_event_description, 0, 300);
-							    echo "...</p><a href=\"";
-							    echo tribe_get_event_link ( $event->ID  );
-								echo "\" class=\"button\"><b>Find out more &rsaquo;</b></a></div>";
-						    echo "<div class=\"large-6 medium-6 small-12 column\">";
-						    	echo "<div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
-							    	echo tribe_get_event_link ( $event->ID  );
-							    echo "\"><img src=\"";
-						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/white/calendar.svg\" loading=\"lazy\" class=\"dsa-calendar-icon\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
-						    		echo tribe_events_event_schedule_details( $event->ID );
-						    	echo "</div></div><br><div class=\"row\"><div class=\"large-3 medium-4 small-3 column\"><a href=\"";
-						    		echo tribe_get_event_link ( $event->ID  );
-							    echo "\"><img src=\"";
-						    		echo get_stylesheet_directory_uri();
-						    	echo "/assets/images/icons/white/location.svg\" class=\"dsa-calendar-icon\" loading=\"lazy\" /></a></div><div class=\"large-9 medium-8 small-9 column\">";
-							    	echo tribe_get_venue_single_line_address ( $event->ID, $link = false );
-							    	echo "<br>";
-									if ( tribe_show_google_map_link($event->ID) ) {
-										echo tribe_get_map_link_html($event->ID);
-									}
-						    echo "</div></div></div></div></div><br>";
-						}
-
-						echo "<div class=\"text-center\"><a class=\"button dark\" href=\"https://seattledsa.org/events/\">See All</a></div>";
-					}
-					else {
-						echo "<div>This template uses The Events Calendar plugin.</div>";
-					}
-				?>
 			</div>
 		</div> 
 
 		<div id="dsa-home-row-4" class="bg-dark-1">
-			<div class="row dsa-home-row-4-edit text-center txt-white">
-				<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_column_right', true)); ?>
-			</div>
-			<div class="row"> 
-				<?php
-					$how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
+			<div class="dsa-home-row-4-edit text-center grid-container">
+				<div class="grid-x grid-margin-x grid-margin-y text-center txt-white ">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/typewriter.svg" loading="lazy" class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3" /><br />
+					<h2 class="dsa-section-title txt-DSAwhite cell">Dispatches</h2>
+				</div>
+				<div class=""> 
+					<?php
+						$how_many_last_posts = intval(get_post_meta($post->ID, 'archived-posts-no', true));
 
-					/* Here, we're making sure that the number fetched is reasonable. In case it's higher than 200 or lower than 2, we're just resetting it to the default value of 15. */
-					if($how_many_last_posts > 200 || $how_many_last_posts < 2) $how_many_last_posts = 2;
+						/* Here, we're making sure that the number fetched is reasonable. In case it's higher than 200 or lower than 2, we're just resetting it to the default value of 15. */
+						if($how_many_last_posts > 200 || $how_many_last_posts < 2) $how_many_last_posts = 2;
 
-					$my_query = new WP_Query('post_type=post&nopaging=1');
-					if($my_query->have_posts()) {
-					  echo '<div class="archives-latest-section">';
-					  $counter = 1;
-					  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
-					    $my_query->the_post(); 
-					    ?>
-					    <div class="large-6 medium-6 small-12 columns">
-					    	<div class="large-12 medium-12 small-12 columns card-gray bdr-stripe-black">
-						    	<h4 class="txt-bold"><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4><br/>
-						    	<b>By <?php the_author() ?> / <?php the_time('F j, Y') ?></b>
-						    </div>
-						</div>
-					    <?php
-					    $counter++;
-					  }
-					  echo '</div>';
-					  wp_reset_postdata();
-					}
+						$my_query = new WP_Query('post_type=post&nopaging=1');
+						if($my_query->have_posts()) {
+						  echo '<div class="archives-latest-section grid-x grid-margin-x">';
+						  $counter = 1;
+						  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
+						    $my_query->the_post(); 
+						    ?>
+						    <div class="cell card large-6 medium-6 small-12">
+						    	<div class="cell large-12 medium-12 small-12 card-gray bdr-stripe-black">
+							    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3><br/>
+							    	<strong><?php the_time('F j, Y') ?></strong>
+							    </div>
+							</div>
+						    <?php
+						    $counter++;
+						  }
+						  echo '</div>';
+						  wp_reset_postdata();
+						}
+						?>
+				</div><br>
+				<div class="row text-center padding-bottom">
+					<?php
+	   					// Get the ID of a given category
+	   					$category_id = get_cat_ID( 'dispatches' );
+	 
+					    // Get the URL of this category
+					    $category_link = get_category_link( $category_id );
 					?>
-			</div><br>
-			<div class="row text-center padding-bottom">
-				<?php
-   					// Get the ID of a given category
-   					$category_id = get_cat_ID( 'dispatches' );
- 
-				    // Get the URL of this category
-				    $category_link = get_category_link( $category_id );
-				?>
- 
-				<!-- Print a link to this category -->
-				<a href="<?php echo esc_url( $category_link ); ?>" class="button" title="Dispatches">See All</a>
+	 
+					<!-- Print a link to this category -->
+					<a href="<?php echo esc_url( $category_link ); ?>" class="button" title="Dispatches">See All</a>
+				</div>
 			</div>
 		</div>
 	

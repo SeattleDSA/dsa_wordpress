@@ -1,8 +1,8 @@
-<div id="dsa2of3" class="sidebar large-4 medium-4 small-12 columns" role="complementary">
+<div id="footerLeft" class="sidebar cell large-6 medium-6 small-12" role="complementary">
 
-	<?php if ( is_active_sidebar( 'dsa2of3' ) ) : ?>
+	<?php if ( is_active_sidebar( 'footerleft' ) ) : ?>
 
-		<?php dynamic_sidebar( 'dsa2of3' ); ?>
+		<?php dynamic_sidebar( 'footerleft' ); ?>
 
 	<?php else : ?>
 

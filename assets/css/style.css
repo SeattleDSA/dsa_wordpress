@@ -4,20 +4,25 @@
 *********************/
 
 @font-face {
-  font-family: 'ManifoldDSA-ExtraBold';
+  font-family: 'Manifold DSA';
   font-display: fallback;
-  src: url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfonts/ManifoldDSA-ExtraBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('webfonts/ManifoldDSA-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfonts/ManifoldDSA-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfonts/ManifoldDSA-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: bold;
+       font-weight: 600;
 }
 
 
 @font-face {
-  font-family: 'ManifoldDSA-Medium';
+  font-family: 'Manifold DSA';
   font-display: fallback;
   src: url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'), /* Super Modern Browsers */
        url('webfonts/ManifoldDSA-Medium.woff') format('woff'), /* Pretty Modern Browsers */
        url('webfonts/ManifoldDSA-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+       font-weight: normal;
+       font-weight: 400;
+       font-style: normal;
 }
 
 /************************************************
@@ -30,9 +35,12 @@ MAIN STYLESHEET
 2. GENERAL STYLES
 *********************/
 
-header, body, p {font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 400;}
-h1, h2, h3, h4, h5, b, strong {font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 600;}
+header, body, p, h1, h2, h3, h4, h5 {font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.25;}
+header, body, p {font-weight: 400;}
+h1, h2, h3, h4, h5, b, strong {font-weight: 600;}
 h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
+
+
 
 .txt-center {
   text-align: center;
@@ -78,6 +86,10 @@ img.bullet-icon {
 ul.dropdown.menu.calendar-category-menu > li > a:hover {
   background-color: transparent;
   color: #ec1f27;
+}
+
+.dropdown.menu > li.is-active > a {
+	color: #fff;
 }
 
 .calendar-category-menu > li {
@@ -134,33 +146,33 @@ img.icon-list {
 	font-size: 4rem;
 }
 
+.archive #content {
+  background-color: #EC1f27;
+}
+
+.archive.post-type-archive-tribe_events #content {
+	background-color: #fff;
+}
+
+.archive.post-type-archive-tribe_events .tribe-events-tooltip p {
+	font-size: 1rem;
+}
+
+
 .archive.category .post .entry-content p, .archive.category .post .entry-content h1, .archive.category .post .entry-content h2, .archive.category .post .entry-content h3, .archive.category .post .entry-content h4, .archive.category .post .entry-content h5  {
  	margin-bottom: 1rem;
     font-size: 100%;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.archive-header-card {
-  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
-  margin-bottom: 2rem;
-  background-color: white;
-  padding: 2rem;
-}
-
-.archive-card.bdr-stripe-red {
-  padding: 24px 24px 12px 24px;
-  background-color: white;
-  margin-bottom: 2rem;
+.archive-header, .archive-header .page-title {
+  color: white;
 }
 
 .archive-card .row.archive-item-image {
   margin: 0 -13px 1rem -13px;
-}
-
-.archive #content {
-  background-color: #ddd;
 }
 
 .archive #content #inner-content {
@@ -210,7 +222,7 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 a:focus, a:hover {
 	color: #EC1F27;
-	background-color: rgba(236,31,39,0.1);
+	background-color: #fee;
 }
 
 /*********************
@@ -219,6 +231,36 @@ a:focus, a:hover {
 
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 1rem;
+    margin: 2.33em 0;
+}
 
 /*********************
 5. HEADER STYLES
@@ -262,7 +304,7 @@ color: white;
 }
 
 .dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
-border-color: white transparent transparent !important;
+border-color: #EC1F27 transparent transparent !important;
 }
 
 .page-title {
@@ -295,9 +337,7 @@ background-color: #231F20;
 color: white;
 }
 
-.top-bar a:hover, .menu .active a {
-  background: #231F20;
-}
+
 
 .top-bar img.dsa-rose-mark {
   height: 2.5rem;
@@ -326,6 +366,16 @@ color: white;
   padding-top: 0;
 }
 
+.menu > li.active > a {
+  background: #fff;
+  color: #EC1F27;
+}
+
+.menu > li.active > a:hover, .off-canvas .menu > li > a:hover, .top-bar-right a:hover,  .top-bar a:hover, .top-bar ul a:hover {
+  color: #EC1F27;
+  background-color: #fee;
+}
+
 #menu-footer.menu > li {
   width: 45%;
   display:inline-block;
@@ -333,6 +383,7 @@ color: white;
 
 .menu>li>a.dsa-top-name:hover {
   background-color: #ec1f27;
+  color: #fff;
 }
 
 /***************
@@ -360,59 +411,6 @@ a.button.radius.button-white:hover {
   color: white;
 }
 
-a.button.button-clear-white {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  margin-left: 1rem;
-}
-
-a.button.button-red-white {
-  background-color: #ec1f27;
-  color: white;
-}
-
-a.button.button-clear-blue {
-  background-color: white;
-  color: #5555ee;
-  border: 2px solid #5555ee;
-}
-
-a.button.button-clear-blue {
-  background-color: #5555ee;
-  color: white;
-  border: 2px solid #5555ee;
-}
-
-a.button.button-clear-black {
-  background-color: white;
-  color: #231F20;
-  border: 2px solid #231F20;
-}
-
-a.button.button-clear-black:hover {
-  background-color: #231F20;
-  color: white;
-  border: 2px solid #231F20;
-}
-
-a.button.button-clear-gold {
-  background-color: #E5B900;
-  color: white;
-  border: 2px solid #E5B900;
-}
-
-a.button.button-clear-gold:hover {
-  background-color: #FFDD4C;
-  color: white;
-  border: 2px solid #FFDD4C;
-}
-
-.button.radius {
-  border-radius: 1rem;
-
-}
-
 .button-group.expanded .button {
   padding: 0.85em 0.5em;
 }
@@ -420,10 +418,13 @@ a.button.button-clear-gold:hover {
 button, .button, input[type="button"], .pagination .button {
 	background-color: #ec1f27;
 	color: #fff;
-	border-radius: 2em;
+	border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 	transition: all 150ms;
-	text-transform: uppercase;
-	font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .pagination .current {
@@ -446,7 +447,6 @@ button, .button, input[type="button"], .pagination .button {
 button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current {
   background-color: #231F20;
   color: #fff;
-  border-radius: 2em;
   transition: all 150ms;
 }
 
@@ -454,7 +454,6 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
   background-color: #333;
   color: #fff;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transform: translateY(-2px);
 }
 
 .button.success {
@@ -474,6 +473,10 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 *********************/
 #content #inner-content {
   padding: 1rem 0rem;
+}
+
+#content .entry-content figure {
+  margin: 2rem 0;
 }
 
 #content #inner-content .article-header h1, #content #inner-content h2 {
@@ -576,7 +579,7 @@ margin-bottom: 0px;
   border-radius: 2em;
   font-size: 1rem;
   transition: all 150ms;
-  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: capitalize;
   padding: 0.5rem 1rem;
   line-height: 1;
@@ -1015,344 +1018,6 @@ table.sdsa-platform-table tr td:nth-child(1) {
   padding-left: 0.75rem;
 }
 
-
-/*********************
-21. DAVID P. 2019 based on EVA G. / JON W.
-*********************/
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-.page-template-template-homepage-2019 a.button.hollow {
-	color: #ec1f27;
-	border: 2px solid #ec1f27;
-	border-radius: 0.5rem;
-	font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.page-template-template-homepage-2019 a.button, .page-template-template-homepage-2019 .button, .page-template-template-homepage-2019 .pagination .button, .page-template-template-homepage-2019 button, .page-template-template-homepage-2019 input[type=button], .page-template-template-homepage-2019 input[type="submit"] {
-	color: #fff;
-	background-color: #ec1f27;
-	border-radius: 0.5rem;
-	font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.page-template-template-homepage-2019 .dsa-top-name b {
-	color: #0a0a0a;
-}
-
-.page-template-template-homepage-2019 .menu li a {
-    font-size: 1.2rem;
-    line-height: 1;
-    padding: 1rem 0.5rem;
-    color: #ec1f27;
-}
-
-.page-template-template-homepage-2019 .menu li a:hover {
-	color: #ec1f27;
-	background-color: #ffeaeb;
-}
-
-.page-template-template-homepage-2019 .off-canvas, .page-template-template-homepage-2019 .top-bar {
-	background: #fefefe;
-}
-
-.page-template-template-homepage-2019 .top-bar ul {
-	background: transparent;
-}
-
-.page-template-template-homepage-2019 {
-	background: #F3F3F9;
-}
-
-.page-template-template-homepage-2019 .row {
-	width: 100%;
-	max-width: 1917px;
-}
-
-.page-template-template-homepage-2019 h1 {
-	font-size: 2rem;
-}
-.section-icon {
-	height: 3.75rem;
-    margin-right: 1rem;
-    width: auto;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.15);
-    border-radius: 50%;
-}
-
-.page-template-template-homepage-2019 .row.windowbottom h3 {
-	font-size: 1.5rem;
-	line-height: 1;
-	margin: 0 0 0.25rem 0;
-	padding: 0;
-}
-
-.page-template-template-homepage-2019 .row.windowbottom .sdsa-calendar-item, .page-template-template-homepage-2019 .row.windowbottom .sdsa-dispatches-item {
-	padding: 1rem;
-    margin: 0 0 1rem;
-    background: #fefefe;
-    border-radius: 1rem;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.15);
-}
-
-.page-template-template-homepage-2019 .sdsa-main .hentry, .page-template-template-homepage-2019 .sdsa-newsletter {
-    background-color: #fefefe;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.15);
-    margin-top: 1rem;
- }
-
-.page-template-template-homepage-2019 .sdsa-main {
-	background: transparent;
-}
-
-.page-template-template-homepage-2019 body, .page-template-template-homepage-2019 header, .page-template-template-homepage-2019 p, .page-template-template-homepage-2019 h2, .page-template-template-homepage-2019 h1 {
-	font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-weight: 400;
-}
-
-.page-template-template-homepage-2019 b {
-	font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-weight: 600;
-}
-
-.page-template-template-homepage-2019 h2 {
-	font-size: 3rem;
-	padding-top: 1rem;
-}
-
-@media screen and (min-width: 1100px) {
-    .page-template-template-homepage-2019 .sdsa-newsletter .pairing {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-align: center;
-        align-items: center
-    }
-    .page-template-template-homepage-2019 .sdsa-newsletter figure {
-        width: 6rem;
-    	margin: 1rem;
-    	text-align: center;
-    	align-self: center;
-    	display: inline-block;
-    }
-    .page-template-template-homepage-2019 .sdsa-newsletter .form {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-.page-template-template-homepage-2019 .sdsa-newsletter .pairing {
-    width: 100%;
-    margin: 0 1rem 0 0;
-    padding: 0;
-    text-align: center;
-    display: block;
-}
-
-.page-template-template-homepage-2019 .mc-field-group.row {
-	width: 100%;
-	margin: 0;
-}
-
-.page-template-template-homepage-2019 .sdsa-newsletter figure {
-    max-width: 6rem;
-    margin: 0 1rem 0 0;
-}
-.page-template-template-homepage-2019 .sdsa-newsletter .fields {
-    max-width: 100%;
-    margin: 0 auto;
-}
-.page-template-template-homepage-2019 .sdsa-newsletter h1 {
-    font-size: 1.75rem;
-    font-weight: 500;
-    line-height: 1.75rem;
-    margin-bottom: 0.5rem;
-    font-family: 'Work Sans',sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
-.page-template-template-homepage-2019 .sdsa-newsletter input[type="text"], .page-template-template-homepage-2019 .sdsa-newsletter input[type="email"] {
-    border: none;
-    color: black;
-    font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    display: inline-block;
-    text-align: center;
-    width: 45%;
-    background: white;
-    padding: 11px 10px 11px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05)
-}
-
-.page-template-template-homepage-2019 input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
-  color: #aaa;
-}
-
-.page-template-template-homepage-2019 .sdsa-newsletter input[type="email"]  { 
-  width: 100%;
-}
-
-.page-template-template-homepage-2019 .sdsa-newsletter input::-webkit-input-placeholder,
-.page-template-template-homepage-2019 .sdsa-newsletter input::-ms-input-placeholder,
-.page-template-template-homepage-2019 .sdsa-newsletter input::placeholder {
-    color: #aaa;
-}
-
-.page-template-template-homepage-2019 .sdsa-beliefs {
-	background-color: #EC1F27;
-	color: white;
-	-ms-flex-order: 2;
-	order: 2;
-	margin-top: 1rem;
-	text-align: center;
-	padding: 1rem;
-	border: 0px solid transparent;
-    border-radius: 1rem;
-    box-shadow: 0 4px 4px rgba(0,0,0,.15);
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .inner {
-    padding: 0px;
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .contents {
-    margin: 0 20px;
-}
-.page-template-template-homepage-2019 .sdsa-beliefs h1 {
-    text-transform: uppercase;
-    font-size: 1.0625rem;
-    font-weight: 700;
-    margin-bottom: 35px;
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .beliefs-carousel {
-    position: relative
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .action {
-    padding-top: 40px
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .action a {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    padding: 12px 30px 12px;
-    background: #EC1F27;
-    font-family: 'Work Sans', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    border: none;
-    cursor: pointer;
-    transition: all 150ms
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .action a.small {
-    padding: 8px 13px 8px
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .action a:hover {
-    background: #f04e54;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
-
-.page-template-template-homepage-2019 .sdsa-beliefs .beliefs {
-    position: relative;
-    z-index: 1;
-    min-height: 50px
-}
-
-@media screen and (min-width: 900px) {
-	.page-template-template-homepage-2019 .row.sdsa-background {
-		background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg"), url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg"), url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg"), url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg"), url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg"), url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg"), url("../images/ui-glyphs/frontispiece-scenery-sky.png");
-	    background-size: 15rem, 30rem, 10rem, 45rem, 25rem, 25rem, 1rem;
-	    -webkit-background-size: 15rem, 30rem, 10rem, 45rem, 25rem, 25rem, 1rem;
-	    background-attachment: initial;
-	    background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-	    background-position: left bottom, -15rem bottom, 25% bottom, bottom, center, right top, top;
-	}
-}
-
-@media screen and (max-width: 899px) {
-    .page-template-template-homepage-2019 .row.sdsa-background {
-        background: url("../images/ui-foregrounds/mobile-mural.png") no-repeat left top;
-        background-size: 100% auto;
-    }
-}
-
-.sdsa-peek {
-	height: 15rem;
-}
-
-.page-template-template-homepage-2019 .sdsa-beliefs .beliefs li {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translateY(-50%);
-    font-size: 1.3125rem;
-    line-height: 1.1;
-    box-sizing: border-box;
-    padding: 0 40px;
-    opacity: 0;
-    transition: all 400ms;
-    font-weight: 500;
-    list-style:none;
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .beliefs li.active {
-    opacity: 1
-}
-@media screen and (max-width: 370px) {
-    .page-template-template-homepage-2019 .sdsa-beliefs .beliefs li {
-        font-size: 1.125rem
-    }
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .control {
-    position: absolute;
-    background: url("../images/ui-glyphs/caret-leftward.svg") no-repeat center center;
-    background-size: 10px 18px;
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    border: none;
-    cursor: pointer;
-    transition: all 200ms;
-    transform: translateY(-50%) scale(1);
-    z-index: 2
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .control.prev {
-    left: -10px
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .control.next {
-    right: -10px;
-    background-image: url("../images/ui-glyphs/caret-rightward.svg")
-}
-.page-template-template-homepage-2019 .sdsa-beliefs .control:hover {
-    transform: translateY(-50%) scale(1.2)
-}
-
-.page-template-template-homepage-2019 .sdsa-calendar-item-details, .page-template-template-homepage-2019 .sdsa-calendar-item-directions {
-	margin-bottom: 0;
-}
-
-.page-template-template-homepage-2019 .sdsa-calendar-item-directions {
-	width: 3.5rem;
-    height: auto;
-    display: inline-block;
-    float: right;
-    margin: 0 0 0 1rem;
-}
-
-.page-template-template-homepage-2019 .sdsa-dispatches-thumbnail {
-	padding-left: 0;
-}
-
-.page-template-template-homepage-2019 .sdsa-dispatches-thumbnail img {
-	border-radius: 1rem;
-}
-
-.page-template-template-homepage-2019 .sdsa-dispatches-headline {
-	margin-top: 1.5rem;
-}
-
 /*********************
 21b. EVA G. 2017 Theme w/ CODING FROM JON W.
 *********************/
@@ -1365,9 +1030,9 @@ table.sdsa-platform-table tr td:nth-child(1) {
    min-height: 25vh;
 }
 
-.dsa-alert.callout {
+.dsa-alert.card.card {
   background-color: #0a0a0a;
-  color: white;
+  color: #fff;
 }
 
 .dsa-alert.callout p {
@@ -1394,11 +1059,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder, input#mce-FNAME:-ms
 button.dsa-close {
   background-color: transparent;
   color: white;
-  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   line-height: 2rem;
   margin-top: 0.25rem;
   margin-left:1rem;
+  padding: 0;
 }
 
 .dsa-alert-icon {
@@ -1416,7 +1082,7 @@ margin-right: 1em;
 }
 
 h1.dsa-national-logotype {
-  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   border-bottom: 0.25rem solid white;
   display:inline-block;
   font-size: 4rem;
@@ -1425,18 +1091,8 @@ h1.dsa-national-logotype {
 }
 
 h2.dsa-local-brand {
-  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   font-size: 2rem;
-}
-
-.card-gray, #content #inner-content.card-gray {
-  background-color: #FFF;
-  padding: 2rem 4rem;
-}
-
-.card-red {
-  background-color: #ec1f27;
-  padding: 2rem 4rem;
 }
 
 /** begin jon white conversion **/
@@ -1467,7 +1123,7 @@ h2.dsa-local-brand {
 
 h1.home-title {
   font-size: 2rem;
-  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* from jonwhite */
@@ -1596,8 +1252,8 @@ h1.home-title {
 
 @media screen and (min-width: 900px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 556px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 450px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 202px 255px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 
@@ -1607,26 +1263,27 @@ h1.home-title {
         background-size: 100% auto
     }
 }
-.sdsa-2017-frontispiece .essay .inner {
-    padding: 164px 0 0 52.833333333333%
-}
-@media screen and (max-width: 899px) {
-    .sdsa-2017-frontispiece .essay .inner {
-        padding:  15% 0 0 0
-    }
-}
+
 .sdsa-2017-frontispiece .plate {
     background: #f7f7f7;
-    padding: 50px 12.190812720848% 0;
+    padding: 3rem 4rem;
     line-height: 1.4
 }
-@media screen and (max-width: 899px) {
-    .sdsa-2017-frontispiece .plate, .dsa-alert {
-        box-sizing: border-box;
-        max-width: 550px;
-        margin: 0 auto
-    } 
+
+.sdsa-2017-frontispiece .card, .card {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.15);
+  border: none;
+  background-color: #fff;
 }
+
+.card p {
+  text-align: left;
+}
+
 .sdsa-2017-frontispiece .plate h1 {
     font-size: 1.875rem;
     line-height: 1.2;
@@ -1634,236 +1291,37 @@ h1.home-title {
     letter-spacing: -0.015em;
     margin: 0 -10px 2.5rem 0
 }
-.sdsa-2017-frontispiece .plate h1 mark {
-    font-weight: 700
-}
-.sdsa-2017-frontispiece .plate p {
-    margin-bottom: 1.75em
-}
-.sdsa-2017-frontispiece .plate p:last-of-type {
-    margin-bottom: 0
-}
-.sdsa-2017-frontispiece .plate .actions {
-    padding-top: 40px
-}
-.sdsa-2017-frontispiece .plate .actions ul {
-    text-align: center;
-    margin: 0px;
-}
-.sdsa-2017-frontispiece .plate .actions li {
-    display: inline-block
-}
-.sdsa-2017-frontispiece .plate .actions li {
-    margin: 0 6px 10px 0
-}
-.sdsa-2017-frontispiece .plate .actions a {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    padding: 10px 30px 10px;
-    background: #EC1F27;
-    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    border: none;
-    cursor: pointer;
-    transition: all 150ms
-}
-.sdsa-2017-frontispiece .plate .actions a.small {
-    padding: 8px 13px 8px;
-}
-.sdsa-2017-frontispiece .plate .actions a:hover {
-    background: #f04e54;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
-.sdsa-2017-frontispiece .plate .actions a.dark {
-    background: black
-}
-.sdsa-2017-frontispiece .plate .actions a.dark:hover {
-    background: #333;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
-.sdsa-2017-frontispiece .diptych .card {
-    text-align: center;
-    border: 0px transparent;
-    margin-bottom: 0;
-    margin-top: -1rem;
-}
+
 @media screen and (min-width: 900px) {
-    .sdsa-2017-frontispiece .diptych .cards {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 100%
-    }
     .sdsa-2017-frontispiece .diptych .card {
-        width: 47.166666666667%;
         text-align: center
     }
 }
-@media screen and (max-width: 899px) {
-    .sdsa-2017-frontispiece .diptych .card {
-        max-width: 550px;
-        margin: 0 auto 60px
-    }
-    .sdsa-2017-frontispiece .diptych .card:last-of-type {
-        margin-bottom: 0
-    }
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup {
-    background: url("../images/ui-glyphs/stripes-red.svg") repeat-x left bottom;
-    background-size: 18px 16px;
-    background-color: #f7f7f7;
-    -ms-flex-order: 1;
-    order: 1;
-    box-shadow: 0 -5px 0 #f7f7f7;
-    margin-top: 2rem;
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup .inner {
-    padding: 40px 0 12px;
-}
 
-@media screen and (min-width: 1100px) {
-    .sdsa-2017-frontispiece .diptych .newsletter-signup .pairing {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-align: center;
-        align-items: center
-    }
-    .sdsa-2017-frontispiece .diptych .newsletter-signup figure {
-        width: 29.116465863454%;
-        margin: 0 auto
-    }
-    .sdsa-2017-frontispiece .diptych .newsletter-signup .form {
-        width: 61.847389558233%;
-        margin: 0
-    }
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup .pairing {
-    width: 85.862068965517%;
-    margin: 0 auto
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup figure {
-    max-width: 145px;
-    margin: 0 auto 30px
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup .fields {
-    max-width: 250px;
-    margin: 0 auto
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup h1 {
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 1.05;
-    margin-bottom: 41px
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="text"], .sdsa-2017-frontispiece .diptych .newsletter-signup input[type="email"] {
-    border: none;
-    color: black;
-    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    display: inline-block;
-    text-align: center;
-    width: 45%;
-    background: white;
-    padding: 11px 10px 11px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05)
-}
-
-input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
-  color: #aaa;
-}
-
-.sdsa-2017-frontispiece .diptych .newsletter-signup h1 {
-  font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="email"]  { 
-  width: 100%;
-}
-
-.sdsa-2017-frontispiece .diptych .newsletter-signup input::-webkit-input-placeholder,
-.sdsa-2017-frontispiece .diptych .newsletter-signup input::-ms-input-placeholder,
-.sdsa-2017-frontispiece .diptych .newsletter-signup input::placeholder {
-    color: #aaa
-}
-
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"] {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    padding: 12px 30px 12px;
-    background: #EC1F27;
-    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    border: none;
-    cursor: pointer;
-    transition: all 150ms
-}
-
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"].small {
-    padding: 6px 13px 3px
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"]:hover {
-    background: #f04e54;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"].dark {
-    background: black
-}
-.sdsa-2017-frontispiece .diptych .newsletter-signup input[type="submit"].dark:hover {
-    background: #333;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
 .sdsa-2017-frontispiece .diptych .beliefs-cycle {
-    background: url("../images/ui-glyphs/essay-plate-bottom.svg") repeat-x left top, url("../images/ui-glyphs/stripes-black.svg") repeat-x left bottom;
-    background-size: 18px 109px, 18px 16px;
-    background-color: #EC1F27;
-    color: white;
-    -ms-flex-order: 2;
-    order: 2;
-    margin-top: -1rem;
-border-right: 1px solid #fff;
+  background-size: 18px 109px, 18px 16px;
+  background-color: #EC1F27;
+  color: white;
+  -ms-flex-order: 2;
+  order: 2;
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .inner {
-    padding: 138px 0 65px
-}
+
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .contents {
     margin: 0 20px
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle h1 {
     text-transform: uppercase;
-    font-size: 1.0625rem;
-    font-weight: 700;
-    margin-bottom: 35px
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs-carousel {
-    position: relative
+    position: relative;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .action {
-    padding-top: 40px
+    padding-top: 2rem;
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action a {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    padding: 12px 30px 12px;
-    background: #EC1F27;
-    font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.0625rem;
-    border: none;
+.sdsa-2017-frontispiece .diptych .card.beliefs-cycle .action a {
     cursor: pointer;
     transition: all 150ms
 }
@@ -1875,9 +1333,7 @@ border-right: 1px solid #fff;
     transform: translateY(-2px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action a.dark {
-    background: black
-}
+
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .action a.dark:hover {
     background: #333;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
@@ -1893,14 +1349,18 @@ border-right: 1px solid #fff;
     left: 0;
     width: 100%;
     transform: translateY(-50%);
-    font-size: 1.3125rem;
+    font-size: 1.3rem;
     line-height: 1.1;
     box-sizing: border-box;
     padding: 0 40px;
     opacity: 0;
     transition: all 400ms;
-    font-weight: 500;
+    font-weight: 400;
     list-style:none;
+}
+
+.text-center {
+  text-align:center;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs li.active {
     opacity: 1
@@ -1981,9 +1441,6 @@ border-right: 1px solid #fff;
  	.dsa-main-content {
  		border-bottom: 12px solid transparent;
 	  padding: 12px;
-	  -webkit-border-image: url(../images/stripes-black.png) 12 repeat; /* Safari 3.1-5 */
-	  -o-border-image: url(../images/stripes-black.png) 12 repeat; /* Opera 11-12.1 */
-	  border-image: url(../images/stripes-black.png) 12 repeat;
 	}
 	#dsa-home-row-1 .dsa-home-row-2-edit .dsa-slides {
 		background: #ec1f27 none;
@@ -2028,7 +1485,7 @@ div#dsa-home-row-4 {
 }
 
 #dsa-home-row-3 h2, #dsa-home-row-4 h2 {
-	font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
 }
 
@@ -2075,7 +1532,7 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
-	font-family: 'ManifoldDSA-Medium',Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: 'Manifold DSA',Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 0.9rem;
 }
 

@@ -3,7 +3,17 @@
 function joints_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'jointswp'),
+		'name' => __('Sidebar - Posts', 'jointswp'),
+		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'sidebar2',
+		'name' => __('Sidebar - Pages', 'jointswp'),
 		'description' => __('The first (primary) sidebar.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -23,9 +33,9 @@ function joints_register_sidebars() {
 
 
 	register_sidebar(array(
-		'id' => 'dsa1of3',
-		'name' => __('DSA Footer 1', 'jointswp'),
-		'description' => __('For use 3 column footer page template.', 'jointswp'),
+		'id' => 'footerleft',
+		'name' => __('Footer Left', 'jointswp'),
+		'description' => __('Populates top-left of footer.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -33,25 +43,14 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'dsa2of3',
-		'name' => __('DSA Footer 2', 'jointswp'),
-		'description' => __('For use 3 column footer page template.', 'jointswp'),
+		'id' => 'footerright',
+		'name' => __('Footer Right', 'jointswp'),
+		'description' => __('Populates top-right of footer.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
-	register_sidebar(array(
-		'id' => 'dsa3of3',
-		'name' => __('DSA Footer 3', 'jointswp'),
-		'description' => __('For use 3 column footer page template.', 'jointswp'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
 
 	/*
 	to add more sidebars or widgetized areas, just copy

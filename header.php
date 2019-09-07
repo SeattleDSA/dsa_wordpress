@@ -46,7 +46,7 @@
 	<!-- Uncomment this line if using the Off-Canvas Menu --> 
 		
 	<body <?php body_class(); ?>>
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQX7PPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- For Seattle DSA only <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQX7PPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 
 		<div class="off-canvas-wrapper">
 							

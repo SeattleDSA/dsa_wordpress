@@ -31,7 +31,7 @@ $event_id = get_the_ID();
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
-	<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
+	<?php the_title( '<h1 class="event-title">', '</h1>' ); ?>
 
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
@@ -55,9 +55,9 @@ $event_id = get_the_ID();
 	<!-- #tribe-events-header -->
 
 	<?php while ( have_posts() ) :  the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x'); ?>>
 			<!-- Event featured image, but exclude link -->
-			<div class="large-6 medium-6 columns">
+			<div class="cell large-6 medium-6">
 
 				<?php 
 					if ( has_post_thumbnail() ) {
@@ -73,13 +73,11 @@ $event_id = get_the_ID();
 
 				
 
-				<!-- Event meta -->
-				<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-				<?php tribe_get_template_part( 'modules/meta' ); ?>
+				
 				
 			</div> <!-- end column 1 / meta and faetured image column-->
 			<!-- Event content -->
-			<div class="large-6 medium-6 columns">
+			<div class="cell large-6 medium-6">
 				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 				<div class="tribe-events-single-event-description tribe-events-content">
 					<?php the_content(); ?>
@@ -87,7 +85,13 @@ $event_id = get_the_ID();
 				<div class="hide-for-print"><?php do_action( 'tribe_events_single_event_after_the_content' ) ?></div>
 			</div>
 
-			<div class="large-12 medium-12 columns hide-for-print">
+			<div class="cell large-6 medium-6">
+				<!-- Event meta -->
+				<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+				<?php tribe_get_template_part( 'modules/meta' ); ?>
+			</div>
+
+			<div class="cell large-12 medium-12 hide-for-print">
 				<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->

@@ -1,20 +1,20 @@
 <?php
 /*
-Template Name: Full Width (w/ Hero Image; No Sidebar)
+Template Name: Regular (No Sidebar)
 */
 ?>
 
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div id="content" class="grid-container">
 	
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="grid-x grid-x-margin">
 	
-		    <main id="main" class="medium-12 columns dsa-readable" role="main">
+		    <main id="main" class="cell medium-12 dsa-readable" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<?php get_template_part( 'parts/loop', 'pagehero' ); ?>
+					<?php get_template_part( 'parts/loop', 'page' ); ?>
 					
 				<?php endwhile; endif; ?>							
 

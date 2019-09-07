@@ -1,24 +1,27 @@
-				<footer class="footer padding-top hide-for-print" role="contentinfo">
-					<div id="dsa-footer" class="row hide-for-print">
-						<?php get_sidebar('dsa1of3'); ?>
-						<?php get_sidebar('dsa2of3'); ?>
-						<?php get_sidebar('dsa3of3'); ?>
+				<footer class="footer padding-tophide-for-print" role="contentinfo">
+					<div class="grid-container">
+						<div id="dsa-footer" class="hide-for-print grid-x grid-margin-x grid-margin-y">
+							<?php get_sidebar('footerLeft'); ?>
+							<?php get_sidebar('footerRight'); ?>
+						</div>
 					</div><!-- end #dsaFooter-content widgets -->
-					<div id="inner-footer" class="row">
-						<div class="large-12 medium-12 columns hide-for-print">
-							<nav role="navigation">
-	    						<?php joints_footer_links(); ?>
-	    					</nav>
-	    				</div>
-						<div class="large-12 medium-12 columns">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+					<div class="grid-container">
+						<div id="inner-footer" class="grid-x grid-margin-x grid-margin-y">
+							<div class="large-6 medium-12 cell hide-for-print">
+								<nav role="navigation">
+		    						<?php joints_footer_links(); ?>
+		    					</nav>
+		    				</div>
+							<div class="large-6 medium-12 cell">
+								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+							</div>
 						</div>
 					</div> <!-- end #inner-footer -->
 				</footer> <!-- end .footer -->
 			</div>  <!-- end .main-content -->
 		</div> <!-- end .off-canvas-wrapper -->
 		<?php wp_footer(); ?>
-		<!-- Google Tag Manager -->
+		<!-- Google Tag Manager for Seattle DSA Only -->
 			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
