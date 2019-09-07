@@ -16,15 +16,15 @@ Template Name: Hompage 2017
 					<div class="hide-for-large dsa-space">&nbsp;</div>
 					<div id="dsa-alert" class="dsa-alert card dark grid-x grid-margin-x grid-margin-y" data-closable>
 						
-							<div class="cell large-1">
+							<div class="cell large-1 medium-2 small-2">
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/bullhorn.svg" />
 							</div>
 							
-							<div class="cell large-10">
+							<div class="cell large-10 medium-8 small-8">
 								<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_alert_box', true)); ?>
 							</div>
 
-							<div class="cell large-1">
+							<div class="cell large-1 medium-2 small-2">
 								<button id="dsa-hide" class="dsa-close cell large-1" aria-label="Dismiss alert" data-close>
 			   						<span aria-hidden="true">
 			   							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/checkbox-x.svg" />
