@@ -11,7 +11,7 @@ function site_scripts() {
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 	
-	// Select which grid system you want to use (Foundation Grid by default)
+	// Uses FOundation Grid XY System
     wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/vendor/foundation-sites/dist/css/foundation.min.css', array(), '', 'all' );
 
     // Register main stylesheet
