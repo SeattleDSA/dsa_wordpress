@@ -39,30 +39,16 @@ function myplugin_add_custom_box() {
           add_meta_box( 'wp_editor_test_8_box', 'Email Signup Box (use Mailchimp embed code)', 'wp_editor_meta_box_8' );
           add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
     }
-    elseif ( 'template-homepage-2019.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-          add_meta_box( 'wp_editor_test_8_box', 'DSA Feature Box', 'wp_editor_meta_box_8' );
-          add_meta_box( 'wp_editor_test_4_box', 'Final Row', 'wp_editor_meta_box_4' );
-          add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
-    }
 }
 
-/* Prints the box content */
-function wp_editor_meta_box_4( $post ) {
-
-  // Use nonce for verification
-  wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
-
-  $field_value = get_post_meta( $post->ID, '_dsa_column_right', false );
-  wp_editor( $field_value[0], '_dsa_column_right' );
-}
 
 function wp_editor_meta_box_8( $post ) {
 
   // Use nonce for verification
   wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
 
-  $field_value = get_post_meta( $post->ID, '_dsa_feature_box', false );
-  wp_editor( $field_value[0], '_dsa_feature_box' );
+  $field_value = get_post_meta( $post->ID, '_email_signup', false );
+  wp_editor( $field_value[0], '_email_signup' );
 }
 
 function wp_editor_meta_box_11( $post ) {
@@ -101,13 +87,9 @@ function myplugin_save_postdata( $post_id ) {
   }
 
   // OK, we're authenticated: we need to find and save the data
-
-  if ( isset ( $_POST['_dsa_column_right'] ) ) {
-    update_post_meta( $post_id, '_dsa_column_right', $_POST['_dsa_column_right'] );
-  }
-
-  if ( isset ( $_POST['_dsa_feature_box'] ) ) {
-    update_post_meta( $post_id, '_dsa_feature_box', $_POST['_dsa_feature_box'] );
+  
+  if ( isset ( $_POST['_email_signup'] ) ) {
+    update_post_meta( $post_id, '_email_signup', $_POST['_email_signup'] );
   }
    if ( isset ( $_POST['_dsa_alert_box'] ) ) {
     update_post_meta( $post_id, '_dsa_alert_box', $_POST['_dsa_alert_box'] );

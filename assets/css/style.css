@@ -427,6 +427,12 @@ button, .button, input[type="button"], .pagination .button {
   text-decoration: none;
 }
 
+button.hollow, .button.hollow, input[type="button"], .pagination .button.hollow {
+  background-color: #fff;
+  border: 2px solid #ec1f27;
+  color: #ec1f27;
+}
+
 .pagination .current {
 	padding: .1875rem .625rem;
 	background-color: #ec1f27;
@@ -437,7 +443,7 @@ button, .button, input[type="button"], .pagination .button {
 	color: #fff;
 }
 
-.button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
 	background-color: #f04e54;
 	color: #fff;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
