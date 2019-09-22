@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: WIP Hompage 2019
+Template Name: Hompage 2019
 */
 ?>
 
@@ -8,6 +8,7 @@ Template Name: WIP Hompage 2019
 
 	<div id="content">
 		
+	
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>

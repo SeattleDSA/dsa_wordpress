@@ -262,6 +262,14 @@ h6 {
     margin: 2.33em 0;
 }
 
+.caps {
+	text-transform: uppercase;
+}
+
+.thin {
+	font-weight: 300;
+}
+
 /*********************
 5. HEADER STYLES
 *********************/
@@ -627,18 +635,23 @@ margin-bottom: 0px;
 	margin-top: 4rem;
 }
 
-#content #inner-content .dsa-share {
-	font-size: 1.25rem;
+.dsa-share {
 	margin-top: 1rem;
 }
 
-#content #inner-content .button.dsa-share {
-	padding: 0.75rem;
+.dsa-share-item {
+	padding: 0.5rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	display:inline;
+	background-color:#ccc;
+	border-radius: 0.25rem;
 }
 
-#content #inner-content .button.dsa-share .button-icon {
-	width: 1.5rem;
-	height: auto;
+.dsa-share-item .button-icon {
+	height: 1.5rem;
+	width: auto;
+	line-height:1.5rem;
 }
 
 .post-password-form input[type="submit"] {
@@ -1252,14 +1265,17 @@ h1.home-title {
     padding-bottom: 50px
 }
 .sdsa-2017-frontispiece .essay {
-    position: relative
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    border-radius: 0rem 0rem 2rem 2rem;
 }
 
 
 @media screen and (min-width: 900px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 450px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -240px 443px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 22% 47px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 408px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 202px 255px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 350px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -300px 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 15% 50px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
+        background-size: 400px 300px, 600px 400px, 140px 600px, 800px 400px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 

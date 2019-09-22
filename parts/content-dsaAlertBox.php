@@ -7,7 +7,7 @@ Use:	Notifying members of emergencies, changes to established plans, or notices.
 ?>
 <?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
 	<br>
-	<div class="hide-for-large dsa-space">&nbsp;</div>
+	<div class="hide-for-medium dsa-space">&nbsp;</div>
 	<div id="dsa-alert" class="dsa-alert card dark grid-x grid-margin-x grid-margin-y" data-closable>
 		
 		<div class="cell large-1 medium-2 small-3">
