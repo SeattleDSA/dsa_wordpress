@@ -32,14 +32,16 @@ Template Name: Next Events (2 Up)
 				margin-bottom: 3pt;
 			}
 			h1 small {
-				color: #000;
+				color: #666;
 				display: inline;
-				font-size: 12pt;
 				text-transform: none;
-				font-family: ManifoldDSA-Light, Helvetica, Tahoma, Sans-Serif;
+				font-size: 12pt;
 			}
 			h1 {
 				font-size: 14pt;
+			}
+			a, h1 a, h2 a, h3 a, h4 a {
+				color: black;
 			}
 			h1 img {
 			    border: 1pt solid #aaa;
@@ -51,12 +53,9 @@ Template Name: Next Events (2 Up)
 				color: #fff;
 				display: none !important;
 				}
-				h1 {
+				h1, h1 small {
 					font-size: 10pt;
 					font-weight: bold;
-				}
-				h1 small {
-					font-weight: 200;
 				}
 				h2, h4 {
 				font-size: 8pt;
@@ -65,8 +64,10 @@ Template Name: Next Events (2 Up)
 					font-size: 8pt;
 					margin-bottom: 0;
 				}
-				a[href]:after { content: none !important; }
+				a[href]:after { content: none !important; color: black;}
   				img[src]:after { content: none !important; }
+  				.card-gray {border: 0px solid transparent; border-bottom: 1px solid #ccc;}
+  				#nextevents1, #nextevents2, img {filter: grayscale(100%);}
 			}
 		</style><!-- Hide Header/Footer -->
 		
