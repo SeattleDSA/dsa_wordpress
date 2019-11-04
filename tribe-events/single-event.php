@@ -39,6 +39,10 @@ $event_id = get_the_ID();
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
 	</div>
+	
+	<p>
+		Short URL: <a href="<?php echo site_url()."/?p=" ?><?php echo the_ID(); ?>"><?php echo site_url()."/?p=" ?><?php echo the_ID(); ?></a>
+	</p>
 
 	<!-- Event header -->
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
