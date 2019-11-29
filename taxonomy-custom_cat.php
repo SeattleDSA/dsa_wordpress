@@ -15,11 +15,11 @@ taxonomy-shoes.php
 
 <?php get_header(); ?>
 			
-<div id="content">
+<div id="content" class="container">
 
-	<div id="inner-content" class="row">
+	<div id="inner-content" class="grid-x grid-x-margin">
 
-	    <main id="main" class="large-8 medium-8 columns first" role="main">
+	    <main id="main" class="large-8 medium-8 cell first" role="main">
 	
 		    <header>
 		    	<h1 class="page-title"><span><?php _e( 'Posts Categorized:', 'jointswp' ); ?></span> <?php single_cat_title(); ?></h1>

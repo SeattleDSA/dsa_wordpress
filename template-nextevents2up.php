@@ -8,7 +8,7 @@ Template Name: Next Events (2 Up)
 
 <?php get_header(); ?>
 
-	<div id="content row">
+	<div id="content" class="container">
 
 		<style>
 			header, footer, .footer, #non-printable {
@@ -71,7 +71,7 @@ Template Name: Next Events (2 Up)
 			}
 		</style><!-- Hide Header/Footer -->
 		
-		<div id="nextevents1" class="columns large-6 medium-6 small-6 bg-DSAred">
+		<div id="nextevents1" class="cell large-6 medium-6 small-6 bg-DSAred">
 			<div class="row">
 				<div class="text-center dsa-nextevents-title">
 					<br />
