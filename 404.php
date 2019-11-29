@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div class="grid-container">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="grid-x grid-margin-x">
 	
-			<main id="main" class="large-8 medium-8 columns" role="main">
+			<main id="main" class="large-6 medium-8 cell" role="main">
 
 				<article id="content-not-found">
 				

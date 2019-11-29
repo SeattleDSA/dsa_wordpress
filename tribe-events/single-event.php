@@ -34,7 +34,6 @@ $event_id = get_the_ID();
 	<?php the_title( '<h1 class="event-title">', '</h1>' ); ?>
 
 	<div class="tribe-events-schedule tribe-clearfix">
-		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
 		<?php if ( tribe_get_cost() ) : ?>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
@@ -62,24 +61,22 @@ $event_id = get_the_ID();
 		<div id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x'); ?>>
 			<!-- Event featured image, but exclude link -->
 			<div class="cell large-6 medium-6">
-
 				<?php 
 					if ( has_post_thumbnail() ) {
-					  echo '<figure class="event-thumbnail-image">';
-					  echo tribe_event_featured_image( $event_id, 'full', false );
-					  echo '<figcaption class="event-thumbnail-caption hide-for-print">';
-					  the_post_thumbnail_caption('');
-					  echo '</figcaption></figure>';
+						echo '<figure class="event-thumbnail-image">';
+						echo tribe_event_featured_image( $event_id, 'full', false );
+						if ($thumbnail_image && isset($thumbnail_image[0])) {
+							echo '<figcaption class="event-thumbnail-caption hide-for-print">' . the_post_thumbnail_caption('') . '</figcaption>';
+							echo '</figure>';}
+						else {
+							echo '</figure>';
+						}
 					} else {
 					  echo '';
 					}
 				?>
+			</div> <!-- end column 1 / meta and featured image column-->
 
-				
-
-				
-				
-			</div> <!-- end column 1 / meta and faetured image column-->
 			<!-- Event content -->
 			<div class="cell large-6 medium-6">
 				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
@@ -89,10 +86,31 @@ $event_id = get_the_ID();
 				<div class="hide-for-print"><?php do_action( 'tribe_events_single_event_after_the_content' ) ?></div>
 			</div>
 
-			<div class="cell large-6 medium-6">
-				<!-- Event meta -->
-				<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-				<?php tribe_get_template_part( 'modules/meta' ); ?>
+			<div class="cell large-6 medium-6" id="event-test">
+				<h2>Date</h2>
+				<p>
+					<?php echo tribe_get_start_date( null, false ) ?><br>
+					<?php echo tribe_get_start_time() . ' to ' . tribe_get_end_time()?>
+				</p>
+				
+				<?php if ( tribe_has_venue() ) : ?>
+					<h2>Venue</h2>
+					<p>
+						<?php echo tribe_get_venue() ?><br>
+						<?php echo tribe_get_address() ?><br>
+						<?php echo tribe_get_city() . ', ' . tribe_get_state() . ' ' . tribe_get_zip() ?>
+					</p>
+				<?php endif ?>
+				
+				<p><?php echo tribe_get_map_link_html() ?></p>
+
+				<?php if ( tribe_has_organizer() ) : ?>
+					<h2>Organizer</h2>
+					<p>
+						<?php echo tribe_get_organizer() ?>
+					</p>
+				<?php endif ?>
+
 			</div>
 
 			<div class="cell large-12 medium-12 hide-for-print">

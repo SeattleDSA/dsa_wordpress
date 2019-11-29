@@ -3,27 +3,10 @@
 1. WEB FONTS
 *********************/
 
-@font-face {
-  font-family: 'Manifold DSA';
-  font-display: fallback;
-  src: url('webfonts/ManifoldDSA-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfonts/ManifoldDSA-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfonts/ManifoldDSA-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
-		font-weight: bold;
-       font-weight: 600;
-}
-
-
-@font-face {
-  font-family: 'Manifold DSA';
-  font-display: fallback;
-  src: url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfonts/ManifoldDSA-Medium.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfonts/ManifoldDSA-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
-       font-weight: normal;
-       font-weight: 400;
-       font-style: normal;
-}
+html, body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+  @supports (font-variation-settings: normal) {
+    html, body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter var', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+  }
 
 /************************************************
 
@@ -35,9 +18,7 @@ MAIN STYLESHEET
 2. GENERAL STYLES
 *********************/
 
-header, body, p, h1, h2, h3, h4, h5 {font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.25;}
-header, body, p {font-weight: 400;}
-h1, h2, h3, h4, h5, b, strong {font-weight: 600;}
+h1, h2, h3, h4, h5, b, strong {font-weight: 700;}
 h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
 
 
@@ -71,6 +52,10 @@ img.bullet-icon {
 	width: 100%;
 }
 
+.dropdown.menu>li.is-active>a {
+  color: #ec1f27;
+}
+
 .dropdown.menu>li.is-dropdown-submenu-parent>a:after {
 	border-color: #ec1f27 transparent transparent;
 }
@@ -86,10 +71,6 @@ img.bullet-icon {
 ul.dropdown.menu.calendar-category-menu > li > a:hover {
   background-color: transparent;
   color: #ec1f27;
-}
-
-.dropdown.menu > li.is-active > a {
-	color: #fff;
 }
 
 .calendar-category-menu > li {
@@ -164,7 +145,6 @@ img.icon-list {
     font-size: 100%;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .archive-header, .archive-header .page-title {
@@ -232,36 +212,6 @@ a:focus, a:hover {
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
 
-h1 {
-    font-size: 2.5rem;
-    margin: 0.67em 0;
-}
-
-h2 {
-    font-size: 2rem;
-    margin: 0.83em 0;
-}
-
-h3 {
-    font-size: 1.75rem;
-    margin: 1em 0;
-}
-
-h4 {
-    font-size: 1.5rem;
-    margin: 1.33em 0;
-}
-
-h5 {
-    font-size: 1.25rem;
-    margin: 1.67em 0;
-}
-
-h6 {
-    font-size: 1rem;
-    margin: 2.33em 0;
-}
-
 .caps {
 	text-transform: uppercase;
 }
@@ -298,17 +248,16 @@ h6 {
     margin-left: 20px;
 }
 
-.top-bar, .top-bar ul, .off-canvas { background-color: #ec1f27;
+.top-bar, .top-bar ul, .off-canvas { 
+  background-color: white;
 }
 
 .top-bar a, .top-bar ul a {
-color: white;
+color: #231F20;
 }
 
 .top-bar-right a, .off-canvas .menu>li>a {
-text-transform: capitalize;
 font-size: 1.25rem;
-color: white;
 }
 
 .dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
@@ -320,15 +269,19 @@ color: #231F20;
 margin: 4rem 0 3rem 0;
 }
 
-.bg-DSAblack {
+.bg-dsa-black {
   background-color: #231F20;
 }
 
-.txt-DSAred {
+.bg-dsa-red {
+  background-color: #ec1f27;
+}
+
+.txt-dsa-red {
   color: #ec1f27;
 }
 
-.btn.bg-DSAred {
+.btn.bg-dsa-red {
   color: #fff;
 }
 
@@ -336,7 +289,7 @@ margin: 4rem 0 3rem 0;
   color: #231F20;
 }
 
-.txt-DSAwhite, .txt-white {
+.txt-dsa-white, .txt-white {
   color: white;
 }
 
@@ -344,8 +297,6 @@ a.txt-DSAwhite:hover {
 background-color: #231F20;
 color: white;
 }
-
-
 
 .top-bar img.dsa-rose-mark {
   height: 2.5rem;
@@ -375,23 +326,19 @@ color: white;
 }
 
 .menu > li.active > a {
-  background: #fff;
-  color: #EC1F27;
+  color: #ec1f27;
+  background-color: #fff;
+  font-weight: 700;
 }
 
 .menu > li.active > a:hover, .off-canvas .menu > li > a:hover, .top-bar-right a:hover,  .top-bar a:hover, .top-bar ul a:hover {
   color: #EC1F27;
-  background-color: #fee;
+  background-color: #FFF;
 }
 
 #menu-footer.menu > li {
   width: 45%;
   display:inline-block;
-}
-
-.menu>li>a.dsa-top-name:hover {
-  background-color: #ec1f27;
-  color: #fff;
 }
 
 /***************
@@ -429,7 +376,6 @@ button, .button, input[type="button"], .pagination .button {
 	border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 	transition: all 150ms;
-	font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
   font-weight: 600;
   text-decoration: none;
@@ -593,7 +539,6 @@ margin-bottom: 0px;
   border-radius: 2em;
   font-size: 1rem;
   transition: all 150ms;
-  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-transform: capitalize;
   padding: 0.5rem 1rem;
   line-height: 1;
@@ -860,7 +805,6 @@ color: #fff;
     display: inline-block;
     padding: 0.25em 1em;
     font-weight: 400;
-    font-family: 'ManifoldDSA-Medium', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
 #dsa-footer .sidebar .widget {
@@ -903,7 +847,6 @@ color: #fff;
   border-radius: 2em;
   transition: all 150ms;
   text-transform: uppercase;
-  font-family: 'ManifoldDSA-ExtraBold', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 #page #mc_embed_signup .button.dark:hover {
@@ -1078,7 +1021,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder, input#mce-FNAME:-ms
 button.dsa-close {
   background-color: transparent;
   color: white;
-  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   line-height: 2rem;
   margin-top: 0.25rem;
@@ -1101,7 +1043,6 @@ margin-right: 1em;
 }
 
 h1.dsa-national-logotype {
-  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   border-bottom: 0.25rem solid white;
   display:inline-block;
   font-size: 4rem;
@@ -1110,7 +1051,6 @@ h1.dsa-national-logotype {
 }
 
 h2.dsa-local-brand {
-  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   font-size: 2rem;
 }
 
@@ -1142,7 +1082,6 @@ h2.dsa-local-brand {
 
 h1.home-title {
   font-size: 2rem;
-  font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* from jonwhite */
@@ -1269,6 +1208,7 @@ h1.home-title {
     max-width: 1600px;
     margin: 0 auto;
     border-radius: 0rem 0rem 2rem 2rem;
+    box-shadow: 0 0 4px 4px inset rgba(0,0,0,0.15);
 }
 
 
@@ -1507,7 +1447,6 @@ div#dsa-home-row-4 {
 }
 
 #dsa-home-row-3 h2, #dsa-home-row-4 h2 {
-	font-family: 'Manifold DSA', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
 }
 
@@ -1554,7 +1493,6 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 }
 
 #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
-	font-family: 'Manifold DSA',Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 0.9rem;
 }
 

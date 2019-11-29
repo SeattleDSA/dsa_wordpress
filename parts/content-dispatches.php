@@ -5,10 +5,10 @@ Part:	Dispatches Feed
 Use:	Grid-container with two most recent posts
 */
 ?>
-<div class="dsa-home-row-4-edit text-center grid-container">
-	<div class="grid-x grid-margin-x grid-margin-y text-center txt-white ">
+<div class="text-center grid-container">
+	<div class="grid-x grid-margin-x grid-margin-y text-center">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/typewriter.svg" loading="lazy" class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3" /><br />
-		<h2 class="dsa-section-title txt-DSAwhite cell">Dispatches</h2>
+		<h2 class="dsa-section-title cell">Dispatches</h2>
 	</div>
 	<div class=""> 
 		<?php
@@ -25,7 +25,7 @@ Use:	Grid-container with two most recent posts
 			    $my_query->the_post(); 
 			    ?>
 			    <div class="cell card large-6 medium-6 small-12">
-			    	<div class="cell large-12 medium-12 small-12 card-gray bdr-stripe-black">
+			    	<div class="cell large-12 medium-12 small-12">
 				    	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3><br/>
 				    	<strong><?php the_time('F j, Y') ?></strong>
 				    </div>

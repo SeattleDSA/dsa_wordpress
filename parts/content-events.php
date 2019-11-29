@@ -6,10 +6,10 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 */
 ?>
 <div class="grid-container homepage-events">
-	<div class="grid-x grid-margin-x grid-margin-y text-center">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" loading="lazy" class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3" />
+	<div class="grid-x grid-margin-x grid-margin-y text-center txt-dsa-white">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3" />
 		<br />
-		<h2 class="dsa-section-title txt-DSAwhite cell">Upcoming Events</h2>
+		<h2 class="cell">Upcoming Events</h2>
 		<div class="cell grid-x grid-margin-x grid-margin-y">		
 			<?php // Retrieve the next 2 upcoming events
 				if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
