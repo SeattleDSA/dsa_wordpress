@@ -232,6 +232,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 *********************/
 .top-bar {
 	padding: 0;
+  border-bottom:  1px solid rgba(51, 51, 51, 0.1);
 }
 
 .top-bar .title-area {
@@ -303,22 +304,24 @@ color: white;
   width: auto;
   display: inline-block;
   padding: 0;
-  margin: 0.25rem 0 0 0.25rem;
+  margin: 0.25rem 0rem 0.25rem 0.25rem;
   line-height:1;
   vertical-align: top;
 }
 
 .menu>li>a.dsa-top-name {
   display:inline-block;
-  padding: 1rem 0 1rem 0.35rem;
-  font-size: 1.2rem;
-  line-height: 1;
+  padding: 1rem 1rem 1rem 0.25rem;
 }
 
 .menu>li>a {
   padding: 1rem;
   line-height: 1;
   font-size: 1.2rem;
+}
+
+.dropdown.menu>li>a {
+  padding: 1rem;
 }
 
 .menu.vertical>li {
@@ -333,7 +336,7 @@ color: white;
 
 .menu > li.active > a:hover, .off-canvas .menu > li > a:hover, .top-bar-right a:hover,  .top-bar a:hover, .top-bar ul a:hover {
   color: #EC1F27;
-  background-color: #FFF;
+  background-color: #fef0f1;
 }
 
 #menu-footer.menu > li {
@@ -439,17 +442,8 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
   margin: 2rem 0;
 }
 
-#content #inner-content .article-header h1, #content #inner-content h2 {
-	margin-bottom: 0.5rem;
-	margin-top: 2rem;
-}
-
-.archive #content #inner-content .article-header h1, .archive #content #inner-content h2 {
-	margin-top: 0;
-}
-
 .entry-content p, .entry-content li {
-	color: rgba(0,0,0,0.9);
+	color: #333;
 	font-size: 1.25rem;
 	line-height: 1.58;
 }
@@ -846,7 +840,6 @@ color: #fff;
   color: #fff;
   border-radius: 2em;
   transition: all 150ms;
-  text-transform: uppercase;
 }
 
 #page #mc_embed_signup .button.dark:hover {
@@ -1201,7 +1194,8 @@ h1.home-title {
 }
 
 .sdsa-2017-frontispiece {
-    padding-bottom: 50px
+    padding-bottom: 50px;
+    background-color: #fafafa;
 }
 .sdsa-2017-frontispiece .essay {
     position: relative;

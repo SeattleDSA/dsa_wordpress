@@ -8,7 +8,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 <div class="inner">
 
 	<div class="contents">
-	  <h2>What we believe</h2>
+	  <h3>What we believe</h3>
 	  
 	  <div class="beliefs-carousel">
 	    <button class="control prev" aria-hidden="true"></button>
