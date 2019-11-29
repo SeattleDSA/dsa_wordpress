@@ -9,7 +9,7 @@ $grid_columns = 4; ?>
 <?php endif; ?> 
 
 		<!--Item: -->
-		<div class="large-3 medium-3 columns panel" data-equalizer-watch>
+		<div class="large-3 medium-3 cell panel" data-equalizer-watch>
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 			
@@ -23,7 +23,7 @@ $grid_columns = 4; ?>
 				</header> <!-- end article header -->	
 								
 				<section class="entry-content" itemprop="articleBody">
-					<?php the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?> 
+					<?php the_content('<button class="button hollow">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?> 
 				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->

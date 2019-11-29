@@ -9,7 +9,7 @@
 	<!-- This content shows up if there are no widgets defined in the backend. -->
 						
 	<div class="alert help">
-		<p><?php _e( '&nbsp;', 'jointswp' );  ?></p>
+		<p>This area is customizable under Widgets &lquote; Footer Left.</p>
 	</div>
 
 	<?php endif; ?>
