@@ -108,6 +108,22 @@ img.icon-list {
         border-bottom: 8px solid #231F20;
 }
 
+.diptych form input {
+	    border-radius: 2rem;
+    border: 0.25rem solid #fafafa;
+    box-shadow: inset 0 0 4px 0px #ddd;
+    padding: 1.25rem 1rem;
+}
+
+.diptych #mc_embed_signup div.mce_inline_error {
+	background-color: #ef1c27;
+}
+
+.diptych #mc_embed_signup input.mce_inline_error {
+	border-color: #ef1c27;
+}
+
+
 .sdsa-page-hero {
 	background-attachment: initial;
     background-size: 1rem, 100%;
