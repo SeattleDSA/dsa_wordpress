@@ -1599,3 +1599,41 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
   	padding: 0;
   }
 }
+/******************************************************************
+25. Table of Contents
+******************************************************************/
+
+
+.js-toc {
+  padding-top: 3rem;
+}
+
+.js-toc ol {
+  list-style-type: none;
+  
+}
+
+.js-toc > ol > li > ol {
+  border-left: 1px solid rgba(60, 65, 86, 0.1);
+}
+
+
+.js-toc-content h1::before, .js-toc-content h2::before, .js-toc-content h3::before, .js-toc-content h4::before, .js-toc-content h5::before, .js-toc-content h6::before {
+    display: block;
+    content: " ";
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
+}
+
+.js-toc a.toc-link {
+  height: 2rem;
+}
+
+.js-toc .toc-link::before {
+  background-color: transparent;
+}
+
+.js-toc .toc-link.is-active-link::before {
+  background-color: #ec1f27;
+}
