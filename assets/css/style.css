@@ -202,7 +202,8 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 a:focus, a:hover {
 	color: #EC1F27;
-	background-color: #fee;
+	background-color: #fff3f3;
+	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
 }
 
 /*********************
@@ -352,6 +353,21 @@ color: white;
 7. BUTTONS
 ****************/
 
+button, .button, input[type="button"], .pagination .button {
+	background-color: #ec1f27;
+	color: #fff;
+	border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+	transition: all 150ms;
+  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 1px rgba(0,0,0,0.54);
+  -webkit-transition: all 300ms;
+    transition: all 300ms;
+    font-size: 1rem;
+}
+
 a.button.radius.button-white {
   border: none;
   color: black;
@@ -377,21 +393,58 @@ a.button.radius.button-white:hover {
   padding: 0.85em 0.5em;
 }
 
-button, .button, input[type="button"], .pagination .button {
-	background-color: #ec1f27;
-	color: #fff;
-	border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-	transition: all 150ms;
-  font-weight: bold;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 button.hollow, .button.hollow, input[type="button"], .pagination .button.hollow {
   background-color: #fff;
   border: 2px solid #ec1f27;
   color: #ec1f27;
+}
+
+button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
+    background: #EC1F27;
+    color: #fff;
+    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
+    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
+    background-size: 400%;
+    -webkit-animation: Gradient 1s ease infinite;
+    animation: Gradient 1s ease infinite;
+    border-color: #ec1f27;
+}
+
+.dsa-share {
+	margin: 2rem 0 2rem;
+}
+
+.dsa-share-item {
+	width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    line-height: 2.2;
+    margin: 10px;
+    border-radius: 0.25rem;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    background-color: rgba(0,0,0,0.20);
+    box-shadow: 0 0 1px rgba(0,0,0,0.54);
+}
+
+.dsa-share-item:hover {
+	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
+    background: #EC1F27;
+    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
+    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
+    background-size: 400%;
+    -webkit-animation: Gradient 1s ease infinite;
+    animation: Gradient 1s ease infinite;
+}
+
+.dsa-share-item .button-icon {
+	height: 1.5rem;
+	width: auto;
+	line-height:1.5rem;
 }
 
 .pagination .current {
@@ -404,23 +457,27 @@ button.hollow, .button.hollow, input[type="button"], .pagination .button.hollow 
 	color: #fff;
 }
 
-button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
-	background-color: #f04e54;
-	color: #fff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-	transform: translateY(-2px);
-}
+
 
 button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current {
   background-color: #231F20;
+  border: none;
   color: #fff;
+  border-radius: 0.5rem;
   transition: all 150ms;
+  box-shadow: 0 0 1px rgba(0,0,0,0.54);
 }
 
 .button.dark:focus, .button.dark:hover, input[type="button"]:hover {
-  background-color: #333;
-  color: #fff;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      background: #ECEFF1;
+    background: -webkit-linear-gradient(left,#ECEFF1 0%,#B0BEC5 100%);
+    background: linear-gradient(to right,#ECEFF1 0%,#B0BEC5 100%);
+  color: #231F20;
+  border: none;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.25);
+  background-size: 400%;
+    -webkit-animation: Gradient 1s ease infinite;
+    animation: Gradient 1s ease infinite;
 }
 
 .button.success {
@@ -582,24 +639,6 @@ margin-bottom: 0px;
 	margin-top: 4rem;
 }
 
-.dsa-share {
-	margin: 2rem 0 2rem;
-}
-
-.dsa-share-item {
-	padding: 0.5rem;
-	height: 2.5rem;
-	width: 2.5rem;
-	display:inline;
-	background-color:#ccc;
-	border-radius: 0.25rem;
-}
-
-.dsa-share-item .button-icon {
-	height: 1.5rem;
-	width: auto;
-	line-height:1.5rem;
-}
 
 .post-password-form input[type="submit"] {
   display: inline-block;
@@ -1316,16 +1355,7 @@ h1.home-title {
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .action a.small {
     padding: 8px 13px 8px
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action a:hover {
-    background: #f04e54;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
 
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action a.dark:hover {
-    background: #333;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
-}
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs {
     position: relative;
     z-index: 1;
@@ -1370,7 +1400,8 @@ h1.home-title {
     cursor: pointer;
     transition: all 200ms;
     transform: translateY(-50%) scale(1);
-    z-index: 2
+    z-index: 2;
+    box-shadow: none;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .control.prev {
     left: -10px
