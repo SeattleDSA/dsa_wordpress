@@ -126,15 +126,15 @@ img.icon-list {
 
 .sdsa-page-hero {
 	background-attachment: initial;
-    background-size: 1rem, 100%;
-    background-repeat: repeat, no-repeat;
+    background-size: 100%;
+    background-repeat: no-repeat;
     padding: 1rem;
     border-radius: 1rem;
     min-height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-position: left top, center 25%;
+    background-position: center 25%;
 }
 
 .sdsa-page-hero .page-title {
@@ -292,6 +292,10 @@ margin: 4rem 0 3rem 0;
 
 .bg-dsa-red {
   background-color: #ec1f27;
+}
+
+.bg-light {
+  background-color: #fafafa;
 }
 
 .txt-dsa-red {
@@ -1211,7 +1215,6 @@ h1.home-title {
 
 .sdsa-2017-frontispiece {
     padding-bottom: 50px;
-    background-color: #fafafa;
 }
 .sdsa-2017-frontispiece .essay {
     position: relative;
@@ -1262,6 +1265,10 @@ h1.home-title {
     font-weight: 500;
     letter-spacing: -0.015em;
     margin: 0 -10px 2.5rem 0
+}
+
+.homepage-icon {
+  
 }
 
 @media screen and (min-width: 900px) {

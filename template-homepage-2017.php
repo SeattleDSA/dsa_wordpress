@@ -7,7 +7,7 @@ Template Name: Hompage 2017
 <?php get_header(); ?>
 
 	<div id="content">
-		<div class="sdsa-2017-frontispiece">
+		<div class="sdsa-2017-frontispiece bg-light">
 
 		  <article class="essay">
 		    <div class="grid-container">
@@ -47,7 +47,7 @@ Template Name: Hompage 2017
 			<?php get_template_part( 'parts/content', 'events' ); ?> <!-- see /parts/content-events.php -->
 		</div> 
 
-		<div id="dsa-posts" class="bg-dark-1">
+		<div id="dsa-posts" class="bg-light">
 			<?php get_template_part( 'parts/content', 'dispatches' ); ?> <!-- see /parts/content-dispatches.php -->
 		</div>
 	
