@@ -108,22 +108,6 @@ img.icon-list {
         border-bottom: 8px solid #231F20;
 }
 
-.diptych form input {
-	    border-radius: 2rem;
-    border: 0.25rem solid #fafafa;
-    box-shadow: inset 0 0 4px 0px #ddd;
-    padding: 1.25rem 1rem;
-}
-
-.diptych #mc_embed_signup div.mce_inline_error {
-	background-color: #ef1c27;
-}
-
-.diptych #mc_embed_signup input.mce_inline_error {
-	border-color: #ef1c27;
-}
-
-
 .sdsa-page-hero {
 	background-attachment: initial;
     background-size: 100%;
@@ -468,6 +452,10 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 	line-height: 1.58;
 }
 
+.blog-post h1 {
+	margin: 10rem 0 5rem;
+}
+
 #content #inner-content .post p.byline {
 	color:	rgba (0,0,0,0.6);
 }
@@ -595,7 +583,7 @@ margin-bottom: 0px;
 }
 
 .dsa-share {
-	margin-top: 1rem;
+	margin: 2rem 0 2rem;
 }
 
 .dsa-share-item {
@@ -789,7 +777,7 @@ margin-bottom: 0px;
 
 @media print, screen and (min-width: 40em) {
 	.single #inner-content .sidebar {
-		margin-top: 100vh;
+		margin-top: 24rem;
 	}
 }
 
@@ -1013,6 +1001,27 @@ table.sdsa-platform-table tr td:nth-child(1) {
 .dsa-alert.callout p {
   margin-bottom: 0;
   display: inline;
+}
+
+.diptych form input {
+	    border-radius: 2rem;
+    border: 0.25rem solid #fafafa;
+    box-shadow: inset 0 0 4px 0px #ddd;
+    padding: 1.25rem 1rem;
+}
+
+.diptych #mc_embed_signup div.mce_inline_error {
+	background-color: #ef1c27;
+}
+
+.diptych #mc_embed_signup input.mce_inline_error {
+	border-color: #ef1c27;
+}
+
+
+.inline-icon {
+	width: 3em;
+	height: auto;
 }
 
 input::placeholder, textarea::placeholder, input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
