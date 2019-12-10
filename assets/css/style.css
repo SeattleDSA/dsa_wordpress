@@ -3,9 +3,9 @@
 1. WEB FONTS
 *********************/
 
-html, body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
   @supports (font-variation-settings: normal) {
-    html, body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter var', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter var', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
   }
 
 /************************************************
@@ -20,8 +20,6 @@ MAIN STYLESHEET
 
 h1, h2, h3, h4, h5, b, strong {font-weight: 700;}
 h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
-
-
 
 .txt-center {
   text-align: center;
@@ -46,18 +44,6 @@ img.bullet-icon {
     margin-right: 1em;
     float: left;
     margin-top: 0.5em;
-}
-
-.dropdown.menu>li.opens-right>.is-dropdown-submenu {
-	width: 100%;
-}
-
-.dropdown.menu>li.is-active>a {
-  color: #ec1f27;
-}
-
-.dropdown.menu>li.is-dropdown-submenu-parent>a:after {
-	border-color: #ec1f27 transparent transparent;
 }
 
 .calendar-category-menu .menu.vertical > li {
@@ -204,6 +190,7 @@ a:focus, a:hover {
 	color: #EC1F27;
 	background-color: #fff3f3;
 	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
+	text-decoration: underline;
 }
 
 /*********************
@@ -259,12 +246,70 @@ color: #231F20;
 }
 
 .top-bar-right a, .off-canvas .menu>li>a {
-font-size: 1.25rem;
+font-size: 1rem;
 }
 
 .dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
 border-color: #EC1F27 transparent transparent !important;
 }
+
+.dropdown.menu>li.opens-right>.is-dropdown-submenu {
+	width: 100%;
+}
+
+.dropdown.menu li.is-active a {
+  color: #ec1f27;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a:after {
+	border-color: #ec1f27 transparent transparent;
+}
+
+.top-bar img.dsa-rose-mark {
+  height: 2.5rem;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0.25rem 0rem 0.25rem 0.25rem;
+  line-height:1;
+  vertical-align: top;
+}
+
+.menu li a.dsa-top-name {
+  display:inline-block;
+  padding: 1rem 1rem 1rem 0.25rem;
+}
+
+.menu.vertical>li {
+  padding-top: 0;
+}
+
+.menu li a {
+	padding: 0.75rem 1rem;
+    font-size: 1rem;
+    box-shadow: none;
+}
+
+.menu li.active a {
+  color: #ec1f27;
+  background-color: #fff;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.menu li.active a:hover, .off-canvas .menu>li>a:hover, .top-bar a:hover, .top-bar ul a:hover, .top-bar-right a:hover {
+	background-color: transparent;
+	box-shadow: none;
+	color: #ec1f27;
+	text-decoration: underline;
+}
+
+#menu-footer.menu > li {
+  width: 45%;
+  display:inline-block;
+}
+
+
 
 .page-title {
 color: #231F20;
@@ -276,7 +321,10 @@ margin: 4rem 0 3rem 0;
 }
 
 .bg-dsa-red {
-  background-color: #ec1f27;
+  background: #EC1F27;
+    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
+    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
 }
 
 .bg-light {
@@ -304,57 +352,16 @@ background-color: #231F20;
 color: white;
 }
 
-.top-bar img.dsa-rose-mark {
-  height: 2.5rem;
-  width: auto;
-  display: inline-block;
-  padding: 0;
-  margin: 0.25rem 0rem 0.25rem 0.25rem;
-  line-height:1;
-  vertical-align: top;
-}
-
-.menu>li>a.dsa-top-name {
-  display:inline-block;
-  padding: 1rem 1rem 1rem 0.25rem;
-}
-
-.menu>li>a {
-  padding: 1rem;
-  line-height: 1;
-  font-size: 1.2rem;
-}
-
-.dropdown.menu>li>a {
-  padding: 1rem;
-}
-
-.menu.vertical>li {
-  padding-top: 0;
-}
-
-.menu > li.active > a {
-  color: #ec1f27;
-  background-color: #fff;
-  font-weight: 700;
-}
-
-.menu > li.active > a:hover, .off-canvas .menu > li > a:hover, .top-bar-right a:hover,  .top-bar a:hover, .top-bar ul a:hover {
-  color: #EC1F27;
-  background-color: #fef0f1;
-}
-
-#menu-footer.menu > li {
-  width: 45%;
-  display:inline-block;
-}
 
 /***************
 7. BUTTONS
 ****************/
 
 button, .button, input[type="button"], .pagination .button {
-	background-color: #ec1f27;
+	background: #EC1F27;
+    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
+    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
 	color: #fff;
 	border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -401,15 +408,31 @@ button.hollow, .button.hollow, input[type="button"], .pagination .button.hollow 
 
 button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
 	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
-    background: #EC1F27;
+    background: #FF1744;
     color: #fff;
-    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
-    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
+    background: -webkit-linear-gradient(left,#FF1744 0%,#ff3764 100%);
+    background: linear-gradient(to right,#FF1744 0%,#ff3764 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1744',endColorstr='#ff3764',GradientType=1);
     background-size: 400%;
     -webkit-animation: Gradient 1s ease infinite;
     animation: Gradient 1s ease infinite;
     border-color: #ec1f27;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+.homepage-icon {
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: none;
+	-webkit-transition: all 300ms;
+    transition: all 300ms;
+    display:block;
+}
+
+.homepage-icon:hover {
+	box-shadow: 0 5px 8px rgba(0,0,0,0.25);
+	background-size: 400%;
+	border: 1px solid rgba(0,0,0,0.1);
 }
 
 .dsa-share {
@@ -457,10 +480,10 @@ button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[t
 	color: #fff;
 }
 
-
-
 button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current {
-  background-color: #231F20;
+  background: #231F20; 
+  background: -webkit-linear-gradient(left,#231F20 0%,#353035 100%);
+  background: linear-gradient(to right,#231F20 0%,#353035 100%);
   border: none;
   color: #fff;
   border-radius: 0.5rem;
@@ -469,15 +492,16 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
 }
 
 .button.dark:focus, .button.dark:hover, input[type="button"]:hover {
-      background: #ECEFF1;
-    background: -webkit-linear-gradient(left,#ECEFF1 0%,#B0BEC5 100%);
-    background: linear-gradient(to right,#ECEFF1 0%,#B0BEC5 100%);
-  color: #231F20;
+      background: #353035;
+  background: -webkit-linear-gradient(left,#353035 0%,#B0BEC5 100%);
+  background: linear-gradient(to right,#353035 0%,#B0BEC5 100%);
+  color: #FFF;
   border: none;
   box-shadow: 0 5px 8px rgba(0,0,0,0.25);
   background-size: 400%;
     -webkit-animation: Gradient 1s ease infinite;
     animation: Gradient 1s ease infinite;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
 }
 
 .button.success {
@@ -1326,8 +1350,6 @@ h1.home-title {
 }
 
 .sdsa-2017-frontispiece .diptych .beliefs-cycle {
-  background-size: 18px 109px, 18px 16px;
-  background-color: #EC1F27;
   color: white;
   -ms-flex-order: 2;
   order: 2;
