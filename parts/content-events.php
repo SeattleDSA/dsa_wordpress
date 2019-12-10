@@ -38,13 +38,13 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    <div class="card cell large-6 small-12">
 					    	<h3><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h3>
 					    	<hr>
-					    	<div class="grid-x grid-margin-x">
+					    	<div class="grid-x grid-margin-x grid-margin-y">
 						    	<div class="cell large-12 medium-6 small-12">
 						    		<p><?php echo substr($dsa_event_description, 0, 300) ?>...</p>
 									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button">Find out more &rsaquo;</a>
 								</div>
 					    		<div class="cell large-12 medium-6 small-12">
-						    		<div class="grid-x grid-margin-x">
+						    		<div class="grid-x grid-margin-x grid-margin-y">
 							    		<div class="cell large-2 medium-4 small-3">
 					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="homepage-icon">
 					    						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="dsa-calendar-icon" />

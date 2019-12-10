@@ -22,7 +22,7 @@ Use:	Grid-container with two most recent posts
 
 			$my_query = new WP_Query('post_type=post&nopaging=1');
 			if($my_query->have_posts()) {
-			  echo '<div class="archives-latest-section grid-x grid-margin-x">';
+			  echo '<div class="archives-latest-section grid-x grid-margin-x grid-margin-y">';
 			  $counter = 1;
 			  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
 			    $my_query->the_post(); 

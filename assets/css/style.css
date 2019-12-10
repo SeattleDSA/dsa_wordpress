@@ -357,7 +357,7 @@ color: white;
 7. BUTTONS
 ****************/
 
-button, .button, input[type="button"], .pagination .button {
+button, .button, input[type="button"], .pagination .button, .tribe-events-notices {
 	background: #EC1F27;
     background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
     background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
@@ -375,24 +375,38 @@ button, .button, input[type="button"], .pagination .button {
     font-size: 1rem;
 }
 
+.tribe-events-notices {
+	text-shadow: 0px 2px 4px rgba(0,0,0,.25);
+	border: 1px solid #ec1f27;
+}
+
 a.button.radius.button-white {
   border: none;
   color: black;
+}
+
+#tribe-bar-views-toggle {
+	box-shadow: none;
 }
 
 a.hollow {
 	border-width: 2px;
 }
 
-a.button.hollow {
-	border-width: 2px;
-	border-color: #ec1f27;
+a.button.hollow, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
+	border: 2px solid #ec1f27;
 	color: #ec1f27;
+	font-weight: 700;
+	background: #fff;
+	background: -webkit-linear-gradient(left,#FFFFFF 0%,#FFFFFF 100%);
+    background: linear-gradient(to right,#FFFFFF 0%,#FFFFFF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF',GradientType=1);
 }
 
 a.button.radius.button-white:hover {
   border: none;
   background-color: #ec1f27;
+
   color: white;
 }
 
@@ -400,13 +414,7 @@ a.button.radius.button-white:hover {
   padding: 0.85em 0.5em;
 }
 
-button.hollow, .button.hollow, input[type="button"], .pagination .button.hollow {
-  background-color: #fff;
-  border: 2px solid #ec1f27;
-  color: #ec1f27;
-}
-
-button.hollow:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, #tribe-events .tribe-events-button:hover, .tribe-events-button:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
 	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
     background: #FF1744;
     color: #fff;
