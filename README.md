@@ -7,7 +7,11 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 
 ### Vendor Libraries used
 JQuery [repo](https://github.com/jquery/jquery)
+
 Foundation for Sites [repo](https://github.com/foundation/foundation-sites)
+
 tobot [repo](https://github.com/tscanlin/tocbot)
+
 what-input [repo](https://github.com/ten1seven/what-input)
+
 inter typeface [repo](https://github.com/rsms/inter)
