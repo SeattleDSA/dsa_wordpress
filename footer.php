@@ -7,12 +7,10 @@
 					</div><!-- end #dsaFooter-content widgets -->
 					<div class="grid-container">
 						<div id="inner-footer" class="grid-x grid-margin-x grid-margin-y">
-							<div class="large-6 medium-12 cell hide-for-print">
+							<div class="large-12 medium-12 cell hide-for-print">
 								<nav role="navigation">
 		    						<?php joints_footer_links(); ?>
 		    					</nav>
-		    				</div>
-							<div class="large-6 medium-12 cell">
 								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 							</div>
 						</div>

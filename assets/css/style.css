@@ -3,7 +3,7 @@
 1. WEB FONTS
 *********************/
 
-html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+html, body { font-family: "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
 
 /************************************************
 
@@ -246,9 +246,6 @@ color: #231F20;
 font-size: 1rem;
 }
 
-.dropdown.menu.vertical>li.opens-left>a:after, .is-accordion-submenu-parent>a:after {
-border-color: #EC1F27 transparent transparent !important;
-}
 
 .dropdown.menu>li.opens-right>.is-dropdown-submenu {
 	width: 100%;
@@ -256,10 +253,6 @@ border-color: #EC1F27 transparent transparent !important;
 
 .dropdown.menu li.is-active a {
   color: #ec1f27;
-}
-
-.dropdown.menu>li.is-dropdown-submenu-parent>a:after {
-	border-color: #ec1f27 transparent transparent;
 }
 
 .top-bar img.dsa-rose-mark {

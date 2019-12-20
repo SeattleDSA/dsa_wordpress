@@ -6,13 +6,13 @@ function site_scripts() {
     wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
     
     // Adding Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/vendor/foundation-sites/dist/js/foundation.min.js?v=8', array( 'jquery' ), '6.2.3', true );
+    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/vendor/foundation-sites/dist/js/foundation.min.js', array( 'jquery' ), '6.2.3', true );
     
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 	
-	// Select which grid system you want to use (Foundation Grid by default)
-    wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/vendor/foundation-sites/dist/css/foundation.min.css?v=8', array(), '', 'all' );
+    // Stylesheets
+    wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/vendor/foundation-sites/dist/css/foundation.min.css', array(), '', 'all' );
     wp_enqueue_style( 'inter-typeface', get_template_directory_uri() . '/vendor/inter/inter.css', array(), '', 'all' );
     wp_enqueue_style( 'share-icons', get_template_directory_uri() . '/vendor/iconmoon/share.css', array(), '', 'all' );
     // Register main stylesheet
