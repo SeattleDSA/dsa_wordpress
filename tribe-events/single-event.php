@@ -58,9 +58,9 @@ $event_id = get_the_ID();
 	<!-- #tribe-events-header -->
 
 	<?php while ( have_posts() ) :  the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x'); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x grid-padding-x grid-margin-y grid-padding-y'); ?>>
 			<!-- Event featured image, but exclude link -->
-			<div class="cell large-6 medium-6">
+			<div class="cell large-4 medium-6">
 				<?php 
 					if ( has_post_thumbnail() ) {
 						echo '<figure class="event-thumbnail-image">';
@@ -72,21 +72,9 @@ $event_id = get_the_ID();
 							echo '</figure>';
 						}
 					} else {
-					  echo '';
+					  echo '<figure class="event-thumbnail-image bg-dsa-red event-thumbnail-default" style="padding: 1rem; margin-bottom: 1rem;"><img src="' . get_stylesheet_directory_uri() . '/assets/images/icons/white/calendar.svg" height="128" width="128" /></figure>';
 					}
 				?>
-			</div> <!-- end column 1 / meta and featured image column-->
-
-			<!-- Event content -->
-			<div class="cell large-6 medium-6">
-				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-				<div class="tribe-events-single-event-description tribe-events-content">
-					<?php the_content(); ?>
-				</div>
-				<div class="hide-for-print"><?php do_action( 'tribe_events_single_event_after_the_content' ) ?></div>
-			</div>
-
-			<div class="cell large-6 medium-6" id="event-test">
 				<h2>Date</h2>
 				<p>
 					<?php echo tribe_get_start_date( null, false ) ?><br>
@@ -110,10 +98,22 @@ $event_id = get_the_ID();
 						<?php echo tribe_get_organizer() ?>
 					</p>
 				<?php endif ?>
+				
+			</div>
+			<!-- end column 1 / meta and featured image column-->
 
+			<!-- Event content -->
+			<div class="cell large-8 medium-6">
+				<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+				<div class="tribe-events-single-event-description tribe-events-content">
+					<?php the_content(); ?>
+				</div>
+				<div class="hide-for-print"><?php do_action( 'tribe_events_single_event_after_the_content' ) ?></div>
 			</div>
 
-			<div class="cell large-12 medium-12 hide-for-print">
+
+
+			<div class="cell large-8 medium-12 hide-for-print">
 				<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->

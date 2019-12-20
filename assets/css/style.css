@@ -3,10 +3,7 @@
 1. WEB FONTS
 *********************/
 
-html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
-  @supports (font-variation-settings: normal) {
-    html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: 'Inter var', sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
-  }
+html, body, h1, h2, h3, h4, h5, h6, p, sup, sub { font-family: "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
 
 /************************************************
 
@@ -278,6 +275,8 @@ border-color: #EC1F27 transparent transparent !important;
 .menu li a.dsa-top-name {
   display:inline-block;
   padding: 1rem 1rem 1rem 0.25rem;
+  font-weight: bold;
+  font-weight: 700;
 }
 
 .menu.vertical>li {
@@ -288,6 +287,10 @@ border-color: #EC1F27 transparent transparent !important;
 	padding: 0.75rem 1rem;
     font-size: 1rem;
     box-shadow: none;
+}
+
+.menu .is-active > a {
+	background-color: rgba(236,31,39,.015);
 }
 
 .menu li.active a {
@@ -309,7 +312,16 @@ border-color: #EC1F27 transparent transparent !important;
   display:inline-block;
 }
 
+@media screen and (min-width: 40rem) {
 
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
+border-color: #ec1f27 transparent transparent!important;
+}
+
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left>a::after {
+	border-color: transparent #ec1f27 transparent transparent;
+}
+}
 
 .page-title {
 color: #231F20;
@@ -367,7 +379,7 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
   padding: 0.5rem 1rem;
 	transition: all 150ms;
   font-weight: bold;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   box-shadow: 0 0 1px rgba(0,0,0,0.54);
   -webkit-transition: all 300ms;
@@ -1074,8 +1086,8 @@ table.sdsa-platform-table tr td:nth-child(1) {
   display: inline;
 }
 
-.diptych form input {
-	    border-radius: 2rem;
+.diptych form input#mce-LNAME, .diptych form input#mce-FNAME, .diptych form input#mce-EMAIL {
+	border-radius: 2rem;
     border: 0.25rem solid #fafafa;
     box-shadow: inset 0 0 4px 0px #ddd;
     padding: 1.25rem 1rem;
@@ -1177,112 +1189,11 @@ h1.home-title {
   font-size: 2rem;
 }
 
-/* from jonwhite */
+/* from Jon W. */
 .bound {
     width: 92%;
     max-width: 1200px;
     margin: 0 auto
-}
-
-@media screen and (min-width: 1141px) and (max-width: 1330px) {
-    .sdsa-2017-global-header .branding .logo {
-        max-width: 400px
-    }
-}
-.sdsa-2017-global-header .branding a {
-    background: url("/images/ui-glyphs/sdsa-logo.png") no-repeat center center;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap
-}
-.sdsa-2017-global-header .atlas li {
-    display: inline-block;
-    float: left;
-    color: white;
-    font-weight: 900
-}
-.sdsa-2017-global-header .atlas a {
-    padding: 4px 19px 3px;
-    background: transparent;
-    border-radius: 20px;
-    transition: all 200ms;
-    box-shadow: none;
-    position: relative;
-    z-index: 2
-}
-@media screen and (min-width: 1141px) and (max-width: 1330px) {
-    .sdsa-2017-global-header .atlas a {
-        padding: 4px 13px 3px
-    }
-}
-.sdsa-2017-global-header .atlas a:not(.selected):hover {
-    background: #b91016;
-    box-shadow: 0 0 0 3px #b91016;
-    transform: translateY(-2px)
-}
-.sdsa-2017-global-header .atlas a.selected {
-    background: black;
-    z-index: 1
-}
-.sdsa-2017-global-header .atlas li:last-of-type a {
-    background: #f04e54;
-    z-index: 1
-}
-@media screen and (min-width: 1141px) {
-    .sdsa-2017-global-header .branding,     .sdsa-2017-global-header .atlas {
-        position: absolute;
-        top: 50%
-    }
-    .sdsa-2017-global-header .branding {
-        left: 0;
-        width: 100%;
-        transform: translateY(-50%)
-    }
-    .sdsa-2017-global-header .atlas {
-        right: -19px;
-        transform: translateY(-15%)
-    }
-}
-@media screen and (max-width: 1140px) {
-    .sdsa-2017-global-header .inner {
-        padding: 30px 0 30px
-    }
-    .sdsa-2017-global-header .branding .logo {
-        margin: 0 auto 25px
-    }
-    .sdsa-2017-global-header .atlas {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        padding-top: 20px
-    }
-    .sdsa-2017-global-header .atlas li {
-        float: none;
-        display: inline-block;
-        margin-bottom: 12px
-    }
-    .sdsa-2017-global-header .atlas a {
-        font-size: 0.875rem;
-        padding: 4px 12px 3px
-    }
-}
-.sdsa-2017-global-footer {
-    padding: 50px 0;
-    background: #EC1F27;
-    color: white
-}
-.sdsa-2017-global-footer .triptych {
-    outline: 1px solid orange
-}
-.sdsa-2017-global-footer section {
-    width: 30%;
-    float: left;
-    outline: 2px solid aqua
-}
-.sdsa-2017-global-footer section:nth-of-type(1), .sdsa-2017-global-footer section:nth-of-type(2) {
-    margin-right: 5%
 }
 
 .padding-bottom {
@@ -1342,7 +1253,7 @@ h1.home-title {
 .sdsa-2017-frontispiece .plate h1 {
     font-size: 1.875rem;
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.015em;
     margin: 0 -10px 2.5rem 0
 }
@@ -1352,7 +1263,7 @@ h1.home-title {
 }
 
 @media screen and (min-width: 900px) {
-    .sdsa-2017-frontispiece .diptych .card {
+    .sdsa-2017-frontispiece .diptych .card.beliefs-cycle {
         text-align: center
     }
 }
@@ -1369,7 +1280,7 @@ h1.home-title {
 .sdsa-2017-frontispiece .diptych .beliefs-cycle h1 {
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 3rem;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs-carousel {
@@ -1587,7 +1498,7 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 	.tribe-events-tooltip h3 {
 		font-size: 1rem;
 		padding: 0 0.25rem;
-		font-weight: bolder;
+		font-weight: 700;
 	}
 }
 
@@ -1604,6 +1515,8 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 ******************************************************************/
 .fullpage-wrapper .mcw-fp-section p, .fullpage-wrapper .mcw-fp-section li {
 	font-size: 1.2rem;
+	font-weight: 400;
+	font-weight: normal;
 }
 
 .fullpage-wrapper .mcw-fp-section .wp-block-image figcaption {

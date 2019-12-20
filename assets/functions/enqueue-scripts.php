@@ -14,8 +14,9 @@ function site_scripts() {
 	// Select which grid system you want to use (Foundation Grid by default)
     wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/vendor/foundation-sites/dist/css/foundation.min.css', array(), '', 'all' );
     wp_enqueue_style( 'inter-typeface', get_template_directory_uri() . '/vendor/inter/inter.css', array(), '', 'all' );
+    wp_enqueue_style( 'share-icons', get_template_directory_uri() . '/vendor/iconmoon/share.css', array(), '', 'all' );
     // Register main stylesheet
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '', 'all' );
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css?v=4', array(), '', 'all' );
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

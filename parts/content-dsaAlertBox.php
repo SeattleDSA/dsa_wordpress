@@ -34,5 +34,5 @@ Use:	Notifying members of emergencies, changes to established plans, or notices.
 		});
 	</script>
 <?php else: ?>
-	<div class="hide-for-large dsa-space-2">&nbsp;</div>	
+	<div class="hide-for-large hide-for-medium dsa-space-2">&nbsp;</div>	
 <?php endif; ?>
