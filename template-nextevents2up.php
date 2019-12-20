@@ -8,8 +8,7 @@ Template Name: Next Events (2 Up)
 
 <?php get_header(); ?>
 
-	<div id="content" class="container">
-
+	<div id="content" class="grid-x grid-margin-x grid-margin-y">
 		<style>
 			header, footer, .footer, #non-printable {
 				display: none !important;
@@ -60,7 +59,7 @@ Template Name: Next Events (2 Up)
 				h2, h4 {
 				font-size: 8pt;
 				}
-				.card-gray p, .card-gray ul.meta-details li {
+				.card p, .card ul.meta-details li {
 					font-size: 8pt;
 					margin-bottom: 0;
 				}
@@ -71,8 +70,8 @@ Template Name: Next Events (2 Up)
 			}
 		</style><!-- Hide Header/Footer -->
 		
-		<div id="nextevents1" class="cell large-6 medium-6 small-6 bg-DSAred">
-			<div class="row">
+		<div id="nextevents1" class="cell large-6 medium-6 small-12">
+			<div class="">
 				<div class="text-center dsa-nextevents-title">
 					<br />
 					<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="64" height="64" /> <b>Seattle Democratic Socialists of America</b> <small>Upcoming Events</small></h1>
@@ -103,7 +102,7 @@ Template Name: Next Events (2 Up)
 						foreach ( $events as $event ) {
 							$dsa_event_description = $event->post_content;
 
-						    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
+						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
 							echo "</h4></b><ul class=\"meta-details\"><li><b>Time:</b> ";
 						    echo tribe_events_event_schedule_details( $event->ID );
@@ -126,8 +125,8 @@ Template Name: Next Events (2 Up)
 				?>
 			</div>
 		</div> 
-		<div id="nextevents2" class="columns large-6 medium-6 small-6 bg-DSAred">
-			<div class="row">
+		<div id="nextevents2" class="cell large-6 medium-6 small-12">
+			<div class="">
 				<div class="text-center dsa-nextevents-title">
 					<br />
 					<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="64" height="64" /> <b>Seattle Democratic Socialists of America</b> <small>Upcoming Events</small></h1>
@@ -142,7 +141,7 @@ Template Name: Next Events (2 Up)
 						foreach ( $events as $event ) {
 							$dsa_event_description = $event->post_content;
 
-						    echo "<div class=\"card-gray large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
+						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
 							echo "</h4></b><ul class=\"meta-details\"><li><b>Time:</b> ";
 						    echo tribe_events_event_schedule_details( $event->ID );

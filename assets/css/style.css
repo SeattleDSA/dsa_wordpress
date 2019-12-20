@@ -387,6 +387,11 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
     font-size: 1rem;
 }
 
+.footer .button {
+	background: #EC1F27;
+	box-shadow: none;
+}
+
 .tribe-events-notices {
 	text-shadow: 0px 2px 4px rgba(0,0,0,.25);
 	border: 1px solid #ec1f27;
@@ -500,7 +505,8 @@ button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submi
 	color: #fff;
 }
 
-button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current {
+
+button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current, #mc_embed_signup .button {
   background: #231F20; 
   background: -webkit-linear-gradient(left,#231F20 0%,#353035 100%);
   background: linear-gradient(to right,#231F20 0%,#353035 100%);
@@ -511,7 +517,7 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
   box-shadow: 0 0 1px rgba(0,0,0,0.54);
 }
 
-.button.dark:focus, .button.dark:hover, input[type="button"]:hover {
+.button.dark:focus, .button.dark:hover, input[type="button"]:hover, #mc_embed_signup .button:hover, #mc_embed_signup .button:focus {
       background: #353035;
   background: -webkit-linear-gradient(left,#353035 0%,#B0BEC5 100%);
   background: linear-gradient(to right,#353035 0%,#B0BEC5 100%);
@@ -523,6 +529,7 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
     animation: Gradient 1s ease infinite;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
 }
+
 
 .button.success {
   border-color: #3adb76;
