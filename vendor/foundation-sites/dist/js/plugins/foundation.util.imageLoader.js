@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["./foundation.core", "jquery"], factory);
 	else if(typeof exports === 'object')
-		exports["foundation.util.motion"] = factory(require("./foundation.core"), require("jquery"));
+		exports["foundation.util.imageLoader"] = factory(require("./foundation.core"), require("jquery"));
 	else
-		root["__FOUNDATION_EXTERNAL__"] = root["__FOUNDATION_EXTERNAL__"] || {}, root["__FOUNDATION_EXTERNAL__"]["foundation.util.motion"] = factory(root["__FOUNDATION_EXTERNAL__"]["foundation.core"], root["jQuery"]);
+		root["__FOUNDATION_EXTERNAL__"] = root["__FOUNDATION_EXTERNAL__"] || {}, root["__FOUNDATION_EXTERNAL__"]["foundation.util.imageLoader"] = factory(root["__FOUNDATION_EXTERNAL__"]["foundation.core"], root["jQuery"]);
 })(window, function(__WEBPACK_EXTERNAL_MODULE__foundation_core__, __WEBPACK_EXTERNAL_MODULE_jquery__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,11 +107,11 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__foundation_core__;
 
 /***/ }),
 
-/***/ "./js/entries/plugins/foundation.util.motion.js":
-/*!******************************************************!*\
-  !*** ./js/entries/plugins/foundation.util.motion.js ***!
-  \******************************************************/
-/*! exports provided: Foundation, Motion, Move */
+/***/ "./js/entries/plugins/foundation.util.imageLoader.js":
+/*!***********************************************************!*\
+  !*** ./js/entries/plugins/foundation.util.imageLoader.js ***!
+  \***********************************************************/
+/*! exports provided: Foundation, onImagesLoaded */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -120,121 +120,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _foundation_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_foundation_core__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Foundation", function() { return _foundation_core__WEBPACK_IMPORTED_MODULE_0__["Foundation"]; });
 
-/* harmony import */ var _foundation_util_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../foundation.util.motion */ "./js/foundation.util.motion.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Motion", function() { return _foundation_util_motion__WEBPACK_IMPORTED_MODULE_1__["Motion"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Move", function() { return _foundation_util_motion__WEBPACK_IMPORTED_MODULE_1__["Move"]; });
+/* harmony import */ var _foundation_util_imageLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../foundation.util.imageLoader */ "./js/foundation.util.imageLoader.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onImagesLoaded", function() { return _foundation_util_imageLoader__WEBPACK_IMPORTED_MODULE_1__["onImagesLoaded"]; });
 
 
 
-_foundation_core__WEBPACK_IMPORTED_MODULE_0__["Foundation"].Motion = _foundation_util_motion__WEBPACK_IMPORTED_MODULE_1__["Motion"];
-_foundation_core__WEBPACK_IMPORTED_MODULE_0__["Foundation"].Move = _foundation_util_motion__WEBPACK_IMPORTED_MODULE_1__["Move"];
+_foundation_core__WEBPACK_IMPORTED_MODULE_0__["Foundation"].onImagesLoaded = _foundation_util_imageLoader__WEBPACK_IMPORTED_MODULE_1__["onImagesLoaded"];
 
 
 /***/ }),
 
-/***/ "./js/foundation.util.motion.js":
-/*!**************************************!*\
-  !*** ./js/foundation.util.motion.js ***!
-  \**************************************/
-/*! exports provided: Move, Motion */
+/***/ "./js/foundation.util.imageLoader.js":
+/*!*******************************************!*\
+  !*** ./js/foundation.util.imageLoader.js ***!
+  \*******************************************/
+/*! exports provided: onImagesLoaded */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Move", function() { return Move; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Motion", function() { return Motion; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onImagesLoaded", function() { return onImagesLoaded; });
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _foundation_core_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation.core.utils */ "./foundation.core");
-/* harmony import */ var _foundation_core_utils__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_foundation_core_utils__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 
 /**
- * Motion module.
- * @module foundation.motion
+ * Runs a callback function when images are fully loaded.
+ * @param {Object} images - Image(s) to check if loaded.
+ * @param {Func} callback - Function to execute when image is fully loaded.
  */
 
-var initClasses = ['mui-enter', 'mui-leave'];
-var activeClasses = ['mui-enter-active', 'mui-leave-active'];
-var Motion = {
-  animateIn: function animateIn(element, animation, cb) {
-    animate(true, element, animation, cb);
-  },
-  animateOut: function animateOut(element, animation, cb) {
-    animate(false, element, animation, cb);
-  }
-};
+function onImagesLoaded(images, callback) {
+  var self = this,
+      unloaded = images.length;
 
-function Move(duration, elem, fn) {
-  var anim,
-      prog,
-      start = null; // console.log('called');
-
-  if (duration === 0) {
-    fn.apply(elem);
-    elem.trigger('finished.zf.animate', [elem]).triggerHandler('finished.zf.animate', [elem]);
-    return;
+  if (unloaded === 0) {
+    callback();
   }
 
-  function move(ts) {
-    if (!start) start = ts; // console.log(start, ts);
-
-    prog = ts - start;
-    fn.apply(elem);
-
-    if (prog < duration) {
-      anim = window.requestAnimationFrame(move, elem);
+  images.each(function () {
+    // Check if image is loaded
+    if (this.complete && typeof this.naturalWidth !== 'undefined') {
+      singleImageLoaded();
     } else {
-      window.cancelAnimationFrame(anim);
-      elem.trigger('finished.zf.animate', [elem]).triggerHandler('finished.zf.animate', [elem]);
+      // If the above check failed, simulate loading on detached element.
+      var image = new Image(); // Still count image as loaded if it finalizes with an error.
+
+      var events = "load.zf.images error.zf.images";
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(image).one(events, function me(event) {
+        // Unbind the event listeners. We're using 'one' but only one of the two events will have fired.
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).off(events, me);
+        singleImageLoaded();
+      });
+      image.src = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('src');
     }
-  }
+  });
 
-  anim = window.requestAnimationFrame(move);
-}
-/**
- * Animates an element in or out using a CSS transition class.
- * @function
- * @private
- * @param {Boolean} isIn - Defines if the animation is in or out.
- * @param {Object} element - jQuery or HTML object to animate.
- * @param {String} animation - CSS class to use.
- * @param {Function} cb - Callback to run when animation is finished.
- */
+  function singleImageLoaded() {
+    unloaded--;
 
-
-function animate(isIn, element, animation, cb) {
-  element = jquery__WEBPACK_IMPORTED_MODULE_0___default()(element).eq(0);
-  if (!element.length) return;
-  var initClass = isIn ? initClasses[0] : initClasses[1];
-  var activeClass = isIn ? activeClasses[0] : activeClasses[1]; // Set up the animation
-
-  reset();
-  element.addClass(animation).css('transition', 'none');
-  requestAnimationFrame(function () {
-    element.addClass(initClass);
-    if (isIn) element.show();
-  }); // Start the animation
-
-  requestAnimationFrame(function () {
-    element.css('transition', '').addClass(activeClass);
-  }); // Clean up the animation when it finishes
-
-  element.one(Object(_foundation_core_utils__WEBPACK_IMPORTED_MODULE_1__["transitionend"])(element), finish); // Hides the element (for out animations), resets the element, and runs a callback
-
-  function finish() {
-    if (!isIn) element.hide();
-    reset();
-    if (cb) cb.apply(element);
-  } // Resets transitions and removes motion-specific classes
-
-
-  function reset() {
-    element[0].style.transitionDuration = 0;
-    element.removeClass("".concat(initClass, " ").concat(activeClass, " ").concat(animation));
+    if (unloaded === 0) {
+      callback();
+    }
   }
 }
 
@@ -242,14 +190,14 @@ function animate(isIn, element, animation, cb) {
 
 /***/ }),
 
-/***/ 25:
-/*!************************************************************!*\
-  !*** multi ./js/entries/plugins/foundation.util.motion.js ***!
-  \************************************************************/
+/***/ 22:
+/*!*****************************************************************!*\
+  !*** multi ./js/entries/plugins/foundation.util.imageLoader.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.util.motion.js */"./js/entries/plugins/foundation.util.motion.js");
+module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.util.imageLoader.js */"./js/entries/plugins/foundation.util.imageLoader.js");
 
 
 /***/ }),
@@ -267,4 +215,4 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_jquery__;
 
 /******/ });
 });
-//# sourceMappingURL=foundation.util.motion.js.map
+//# sourceMappingURL=foundation.util.imageLoader.js.map
