@@ -1,4 +1,4 @@
-				<footer class="footer padding-tophide-for-print" role="contentinfo">
+				<footer class="footer padding-top hide-for-print" role="contentinfo">
 					<div class="grid-container">
 						<div id="dsa-footer" class="hide-for-print grid-x grid-margin-x grid-margin-y">
 							<?php get_sidebar('footerLeft'); ?>
