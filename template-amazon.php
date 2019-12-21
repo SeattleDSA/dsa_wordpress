@@ -1,16 +1,16 @@
 <?php
 /*
-Template Name: Regular (No Sidebar)
+Template Name: AgitProp (Amazon Theme)
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_template_part( 'parts/header', 'amazon' ); ?>
 			
 	<div id="content" class="grid-container">
 	
 		<div id="inner-content" class="grid-x grid-x-margin">
 	
-		    <main id="main" class="cell medium-12 dsa-readable" role="main">
+		    <main id="main" class="cell medium-12" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -24,4 +24,4 @@ Template Name: Regular (No Sidebar)
 	
 	</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+<?php get_template_part( 'parts/footer', 'amazon' ); ?>
