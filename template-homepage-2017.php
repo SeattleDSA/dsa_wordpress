@@ -24,7 +24,7 @@ Template Name: Hompage 2017
 
 		  <div class="diptych">
 		    <div class="grid-container">
-		      <div class="grid-x grid-margin-x align-middle">
+		      <div class="grid-x grid-margin-x grid-margin-y align-middle">
 		        <div class="card cell large-6 medium-6 small-12 beliefs-cycle bg-dsa-red">
 		        	<?php get_template_part( 'parts/content', 'beliefs' ); ?> <!-- see /parts/content-beliefs.php -->
 				</div>
