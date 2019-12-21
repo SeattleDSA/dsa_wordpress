@@ -210,7 +210,7 @@ NAVIGATION STYLES
   display:inline-flex;
 }
 
-.logged-in.admin-bar header {
+.logged-in.admin-bar .top-bar {
   margin-top: 32px;
 }
 
@@ -284,6 +284,10 @@ body, p, h1, h2, h3, h4, h5, li, figure, figcaption, i {
 
 .wp-block-column {
   flex: 1;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
 }
 
 /*********************

@@ -10,7 +10,7 @@ Template Name: AgitProp (Amazon Theme)
 	
 		<div id="inner-content" class="grid-x grid-x-margin">
 			
-			<nav aria-label="You are here:" role="navigation">
+			<nav aria-label="You are here:" role="navigation" class="top-bar">
 				<?php if (function_exists('the_breadcrumb')) the_breadcrumb(); ?>
 			</nav>
 	
