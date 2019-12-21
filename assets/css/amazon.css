@@ -259,7 +259,7 @@ body, p, h1, h2, h3, h4, h5, li, figure, figcaption, i {
   font-size: 1.2rem;
 }
 
-.button, a {
+.button, a, .breadcrumbs a {
   color: #fd9800;
 }
 
@@ -278,6 +278,8 @@ body, p, h1, h2, h3, h4, h5, li, figure, figcaption, i {
 
 .wp-block-columns {
   display: flex;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
 }
 
 .wp-block-column {

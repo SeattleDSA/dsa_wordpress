@@ -11,6 +11,9 @@ require_once(get_template_directory().'/assets/functions/enqueue-scripts.php');
 // Register custom menus and menu walkers
 require_once(get_template_directory().'/assets/functions/menu.php'); 
 
+// Register Breadcrumbs
+require_once(get_template_directory().'/assets/functions/breadcrumbs.php'); 
+
 // Register sidebars/widget areas
 require_once(get_template_directory().'/assets/functions/sidebar.php'); 
 
