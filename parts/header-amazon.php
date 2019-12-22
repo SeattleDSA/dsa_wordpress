@@ -32,8 +32,9 @@
 
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/foundation-sites/dist/css/foundation.min.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/inter/inter.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/amazonfont/amazonfont.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/amazon.min.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/iconmoon/share.css" />
+		
 		<?php
 			wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
 		    // Adding Foundation scripts file in the footer

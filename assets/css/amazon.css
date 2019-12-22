@@ -241,6 +241,26 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
   }
 }
 
+.topic.button [class^="icon-"]:before, .topic.button [class*=" icon-"]:before {
+  font-size: 5rem;
+  float: left;
+  margin: 0rem 1rem 1rem 0;
+}
+
+.topic.button:hover [class^="icon-"]:before, .topic.button:hover [class*=" icon-"]:before {
+  color: #232f3e;
+}
+
+
+.topic.button {
+  font-size: 2rem;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  text-align: left;
+}
+
 
 /*********************
 AGITPROP DARK
@@ -252,6 +272,10 @@ body {
 
 body, p, h1, h2, h3, h4, h5, li, figure, figcaption, i {
   color: white;
+}
+
+body, p, li, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 
 .grid-container p {
