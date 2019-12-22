@@ -239,7 +239,10 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
   .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
     border-color: #fd9800 transparent transparent;
   }
+
+
 }
+
 
 .topic.button {
   font-size: 1.75rem;
@@ -249,7 +252,7 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
 
 .topic.button [class^="icon-"]:before, .topic.button [class*=" icon-"]:before {
   font-size: 5rem;
-  float: left;
+  display:flex;
   margin: 0rem 1rem 1rem 0;
 }
 
@@ -313,6 +316,23 @@ body, p, li, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 
 .wp-block-column {
   flex: 1;
+  margin: 1rem;
+}
+
+@media print, screen and (max-width: 39em) {
+	.topic.button {
+		font-size: 1rem;
+	}
+
+	.wp-block-columns {
+		flex-wrap: wrap;
+	}
+
+	.wp-block-column {
+	  flex: 1;
+	  margin: 1rem;
+	  flex-wrap: wrap;
+	}
 }
 
 .breadcrumbs {
