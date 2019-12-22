@@ -241,6 +241,12 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
   }
 }
 
+.topic.button {
+  font-size: 1.75rem;
+  text-align: left;
+}
+
+
 .topic.button [class^="icon-"]:before, .topic.button [class*=" icon-"]:before {
   font-size: 5rem;
   float: left;
@@ -251,14 +257,13 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
   color: #232f3e;
 }
 
+.icon.button small {
+  color: #a9b1bb;
+  display:block;
+}
 
-.topic.button {
-  font-size: 2rem;
-  -webkit-transition: background-color 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;
-  text-align: left;
+.topic.button:hover small {
+	color: #ffffff;
 }
 
 
@@ -292,7 +297,7 @@ body, p, li, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   border: 1px solid #fd9800;
   border-radius: .25rem;
-  transition: color .15s ease-in-out , background-color .15s ease-in-out , border-color .15s ease-in-out , box-shadow .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
 .button:hover, .button:focus, input.button:hover, input.button:focus {
