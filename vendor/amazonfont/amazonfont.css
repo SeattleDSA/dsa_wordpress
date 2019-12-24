@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'amazonfont';
-  src:  url('fonts/amazonfont.eot?kaw91q');
-  src:  url('fonts/amazonfont.eot?kaw91q#iefix') format('embedded-opentype'),
-    url('fonts/amazonfont.ttf?kaw91q') format('truetype'),
-    url('fonts/amazonfont.woff?kaw91q') format('woff'),
-    url('fonts/amazonfont.svg?kaw91q#amazonfont') format('svg');
+  src:  url('fonts/amazonfont.eot?rd2a2c');
+  src:  url('fonts/amazonfont.eot?rd2a2c#iefix') format('embedded-opentype'),
+    url('fonts/amazonfont.ttf?rd2a2c') format('truetype'),
+    url('fonts/amazonfont.woff?rd2a2c') format('woff'),
+    url('fonts/amazonfont.svg?rd2a2c#amazonfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-books:before {
+  content: "\e90c";
+  color: #f8981c;
+}
+.icon-tree:before {
+  content: "\e90d";
+  color: #f8981c;
+}
 .icon-amazon-box:before {
   content: "\e900";
   color: #f8981c;
