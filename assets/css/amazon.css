@@ -314,6 +314,27 @@ body, p, li, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30vh;
 }
 
+@media print {
+	.wp-block-columns {
+	  display: flex;
+	  margin-top: 0rem;
+	  margin-bottom: 3rem;
+	}
+	#wpadminbar {
+		display: none;
+	}
+	a[href]:after {
+    content: none !important;
+  }
+  .wp-block-columns {
+  	display: block;
+  }
+
+  .wp-block-column {
+  	display: block;
+  }
+}
+
 .wp-block-column {
   flex: 1;
   margin: 1rem;
