@@ -50,7 +50,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="dsa-calendar-icon" />
 					    					</a>
 					    			 	</div>
-					    				<div class="cell large-4 medium-8 small-9">
+					    				<div class="cell large-10 medium-8 small-9">
 					    					<p><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
 					    				</div>
 					    				<div class="cell large-2 medium-4 small-3">
@@ -58,12 +58,11 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/location.svg" class="dsa-calendar-icon" />
 					    					</a>
 					    				</div>
-					    				<div class="cell large-4 medium-8 small-9">
+					    				<div class="cell large-10 medium-8 small-9">
 						    				<?php if ( tribe_has_venue( $event->ID ) ) {
 												echo '<p>';
 												echo tribe_get_venue( $event->ID ) . '<br>';
-												echo tribe_get_address( $event->ID ) . '<br>';
-												echo tribe_get_city( $event->ID ) . ', ' . tribe_get_state( $event->ID );
+												echo tribe_get_address( $event->ID ) . ', ' . tribe_get_city( $event->ID ) . ', ' . tribe_get_state( $event->ID );
 												echo '</p>';
 											} 
 											else {
