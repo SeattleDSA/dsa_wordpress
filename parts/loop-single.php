@@ -5,9 +5,9 @@
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->
 	<div class="dsa-share">
-			<a class="dsa-share-item" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
-			<a class="dsa-share-item" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook2"></span></a>
-		</div>
+		<a class="button" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
+		<a class="button" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook2"></span></a>
+	</div>
 
     <section class="entry-content" itemprop="articleBody">
 		<?php if ( has_post_thumbnail() ) : ?>

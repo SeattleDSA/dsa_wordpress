@@ -111,7 +111,7 @@ img.icon-list {
 }
 
 .archive #content {
-  background-color: #EC1f27;
+  background-color: #f9f9f9;
 }
 
 .archive.post-type-archive-tribe_events #content {
@@ -128,10 +128,6 @@ img.icon-list {
     font-size: 100%;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-}
-
-.archive-header, .archive-header .page-title {
-  color: white;
 }
 
 .archive-card .row.archive-item-image {
