@@ -1588,6 +1588,39 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
   	margin: 0;
   	padding: 0;
   }
+  p {
+    font-size: 12pt;
+  }
+  h1 {
+    font-size: 18pt;
+  }
+  h2 {
+    font-size: 16pt;
+  }
+  h3 {
+    font-size: 14pt;
+  }
+    .wp-block-columns {
+    display: flex;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+  }
+  #wpadminbar {
+    display: none;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  .wp-block-columns {
+    display: block;
+  }
+
+  .wp-block-column {
+    display: block;
+  }
+  .wp-block-spacer {
+    display: none;
+  }
 }
 /******************************************************************
 25. Table of Contents
