@@ -7,7 +7,7 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 
 ## Vendor Libraries used
 * **JQuery** [repo](https://github.com/jquery/jquery)
-* **Foundation for Sites** css/js framework [repo](https://github.com/foundation/foundation-sites)
+* **Foundation for Sites** css/js framework. [repo](https://github.com/foundation/foundation-sites)
 * **tocbot** generates table of contents. [repo](https://github.com/tscanlin/tocbot)
 * **what-input** detects whether mouse or touch input for ui. [repo](https://github.com/ten1seven/what-input)
-* **inter typeface** type used throughout site, using variable type. [repo](https://github.com/rsms/inter)
+* **inter typeface** type used throughout site. [repo](https://github.com/rsms/inter)
