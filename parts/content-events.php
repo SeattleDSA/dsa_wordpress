@@ -9,7 +9,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 	<div class="grid-x grid-margin-x grid-margin-y txt-dsa-white">
 		<div class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3">
 			<a href="<?php echo home_url(); ?>/events/" class="homepage-icon">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" loading="lazy" />
 			</a>
 		</div>
 		<br />

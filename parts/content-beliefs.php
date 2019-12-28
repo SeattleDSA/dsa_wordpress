@@ -11,8 +11,8 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 	  <h3>What we believe</h3>
 	  
 	  <div class="beliefs-carousel">
-	    <button class="control prev" aria-hidden="true"></button>
-	    <button class="control next" aria-hidden="true"></button>
+	    <button class="control prev" aria-hidden="true">&lsaquo;</button>
+	    <button class="control next" aria-hidden="true">&rsaquo;</button>
 	    <ol class="beliefs">
 	      <li class="active">Everyone should be able to live a full and dignified life.</li>
 	      <li>The economy must be run democratically; none shall be poor so another can be rich.</li>
