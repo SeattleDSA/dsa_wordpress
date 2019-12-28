@@ -358,7 +358,7 @@ color: white;
 7. BUTTONS
 ****************/
 
-button, .button, input[type="button"], .pagination .button, .tribe-events-notices {
+button, .button, input[type="button"], .pagination .button, .tribe-events-notices, .excerpt-read-more {
   background: #EC1F27;
     background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
     background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
@@ -420,7 +420,7 @@ a.button.radius.button-white:hover {
   padding: 0.85em 0.5em;
 }
 
-button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, #tribe-events .tribe-events-button:hover, .tribe-events-button:hover, .button.hollow:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, #tribe-events .tribe-events-button:hover, .tribe-events-button:hover, .button.hollow:hover, .excerpt-read-more:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
   box-shadow: 0 5px 8px rgba(244,67,54,0.25);
     background: #FF1744;
     color: #fff;
@@ -432,6 +432,10 @@ button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submi
     animation: Gradient 1s ease infinite;
     border-color: #ec1f27;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+}
+
+.card .excerpt-read-more {
+ float: right;
 }
 
 .homepage-icon {
