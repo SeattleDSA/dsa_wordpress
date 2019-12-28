@@ -1186,11 +1186,6 @@ h1.home-title {
 }
 
 /* from Jon W. */
-.bound {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0 auto
-}
 
 .padding-bottom {
   padding-bottom: 3rem;
@@ -1204,9 +1199,6 @@ h1.home-title {
     padding-bottom: 50px;
 }
 .sdsa-2017-frontispiece .essay {
-    position: relative;
-    max-width: 1600px;
-    margin: 0 auto;
     border-radius: 0rem 0rem 2rem 2rem;
     box-shadow: 0 0 4px 4px inset rgba(0,0,0,0.15);
 }
@@ -1226,12 +1218,6 @@ h1.home-title {
     }
 }
 
-.sdsa-2017-frontispiece .plate {
-    background: #f7f7f7;
-    padding: 3rem 4rem;
-    line-height: 1.4
-}
-
 .sdsa-2017-frontispiece .card, .card {
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -1247,27 +1233,17 @@ h1.home-title {
 }
 
 .sdsa-2017-frontispiece .plate h1 {
-    font-size: 1.875rem;
-    line-height: 1.2;
+    font-size: 1.75rem;
+    line-height: 1.25;
     font-weight: 400;
-    letter-spacing: -0.015em;
-    margin: 0 -10px 2.5rem 0
-}
-
-.homepage-icon {
-  
-}
-
-@media screen and (min-width: 900px) {
-    .sdsa-2017-frontispiece .diptych .card.beliefs-cycle {
-        text-align: center
-    }
+    margin: 0 0 1rem 0;
 }
 
 .sdsa-2017-frontispiece .diptych .beliefs-cycle {
   color: white;
   -ms-flex-order: 2;
   order: 2;
+  text-align: center;
 }
 
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .contents {
@@ -1282,21 +1258,12 @@ h1.home-title {
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs-carousel {
     position: relative;
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action {
-    padding-top: 2rem;
-}
-.sdsa-2017-frontispiece .diptych .card.beliefs-cycle .action a {
-    cursor: pointer;
-    transition: all 150ms
-}
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .action a.small {
-    padding: 8px 13px 8px
-}
 
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs {
     position: relative;
     z-index: 1;
-    min-height: 50px
+    min-height: 75px;
+    padding: 3rem 1rem;
 }
 .sdsa-2017-frontispiece .diptych .beliefs-cycle .beliefs li {
     position: absolute;
@@ -1304,10 +1271,10 @@ h1.home-title {
     left: 0;
     width: 100%;
     transform: translateY(-50%);
-    font-size: 1.3rem;
-    line-height: 1.1;
+    font-size: 1.25rem;
+    line-height: 1.35;
     box-sizing: border-box;
-    padding: 0 40px;
+    padding: 1rem;
     opacity: 0;
     transition: all 400ms;
     font-weight: 400;
@@ -1350,99 +1317,6 @@ h1.home-title {
     transform: translateY(-50%) scale(1.2)
 }
 
-@media screen and (min-width: 1701px) {
-    #content #dsa-home-row-1 {
-        background: url("../images/scene-01-waves.png") repeat-x left 556px, url("../images/scene-02-trees.png") no-repeat -240px 443px, url("../images/scene-03-spaceneedle.png") no-repeat 22% 47px, url("../images/scene-04-mountain.png") no-repeat 45% 408px, url("../images/scene-05-cloud1.png") no-repeat 42% 235px, url("../images/scene-06-cloud2.png") no-repeat 87% 54px, url("../images/scene-07-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
-    }
-}
-@media screen and (min-width: 1351px) and (max-width: 1700px) {
-    #content #dsa-home-row-1 {
-        background: url("../images/scene-01-waves.png") repeat-x left 556px, url("../images/scene-02-trees.png") no-repeat -21% 443px, url("../images/scene-03-spaceneedle.png") no-repeat 22% 47px, url("../images/scene-04-mountain.png") no-repeat 45% 408px, url("../images/scene-05-cloud1.png") no-repeat 42% 235px, url("../images/scene-06-cloud2.png") no-repeat 87% 54px, url("../images/scene-07-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
-    }
-}
-@media screen and (min-width: 1100px) and (max-width: 1390px) {
-    #content #dsa-home-row-1 {
-        background: url("../images/scene-01-waves.png") repeat-x left 556px, url("../images/scene-02-trees.png") no-repeat -30% 443px, url("../images/scene-03-spaceneedle.png") no-repeat 22% 47px, url("../images/scene-04-mountain.png") no-repeat 45% 408px, url("../images/scene-05-cloud1.png") no-repeat 42% 235px, url("../images/scene-06-cloud2.png") no-repeat 87% 54px, url("../images/scene-07-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
-    }
-}
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-    #content #dsa-home-row-1 {
-        background: url("../images/scene-01-waves.png") repeat-x left 556px, url("../images/scene-02-trees.png") no-repeat -40% 443px, url("../images/scene-03-spaceneedle.png") no-repeat 22% 47px, url("../images/scene-04-mountain.png") no-repeat 45% 408px, url("../images/scene-05-cloud1.png") no-repeat 42% 235px, url("../images/scene-06-cloud2.png") no-repeat 87% 54px, url("../images/scene-07-sky.png") no-repeat left top;
-        background-size: 204px 95px, 480px 208px, 152px 604px, 558px 243px, 126px 66px, 148px 64px, 100% 651px;
-    }
-}
-@media screen and (max-width: 899px) {
-    #content #dsa-home-row-1 {
-        background: url("../images/mobile-mural.png") no-repeat left top;
-        background-size: 100% auto;
-    }
-}
-
-@media screen and (min-width: 65em){
-  #dsa-home-row-1 .dsa-home-row-2-edit .dsa-slides {
-        background: url(../images/card-top-blue.png) repeat-x left top;
-        background-size: 18px 109px, 18px 16px;
-        background-color: #EC1F27;
-        color: white;
-        -ms-flex-order: 2 !important;
-        order: 2  !important;
-    }
-}
-
-@media screen and (max-width: 40em) {
-  .dsa-main-content {
-    border-bottom: 12px solid transparent;
-    padding: 12px;
-  }
-  #dsa-home-row-1 .dsa-home-row-2-edit .dsa-slides {
-    background: #ec1f27 none;
-  }
-  .card-gray {
-    margin-bottom: 2rem;
-  }
-}
-
-#dsa-home-row-1 .dsa-home-row-1-edit {
-    padding: 132px 0 0 0
-}
-@media screen and (max-width: 899px) {
-    #dsa-home-row-1 #inner-content {
-        padding: 55% 0 0 0
-    }
-}
-
-#dsa-home-row-1 .dsa-slides .orbit {
-  padding: 175px 0 48px;
-}
-
-#dsa-home-row-1 .row {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#dsa-home-row-1 .dsa-home-row-edit-2 {
-  display: -ms-flexbox;
-  display: flex !important;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-div#dsa-home-row-3 {
-    background-color: #EC1F27;
-}
-
-div#dsa-home-row-4 {
-  background-color: #292d2f;
-}
-
-#dsa-home-row-3 h2, #dsa-home-row-4 h2 {
-  font-weight: 400;
-}
-
 h1 small, h2 small, h3 small, h4 small, h5 small {
   text-transform: uppercase;
   font-size: 0.5em;
@@ -1450,10 +1324,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
   margin: 0.5em 0 1em 0;
 }
 
-.eva-orbit button.orbit-next, .eva-orbit button.orbit-previous {
-background-color: transparent;
-color: white;
-}
 
 /*********************
 22. CALENDAR via THEEVENTSCALENDAR PLUGIN
