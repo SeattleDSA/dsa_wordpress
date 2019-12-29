@@ -362,6 +362,48 @@ color: white;
 7. BUTTONS
 ****************/
 
+.button-icon {
+	background-color: #fff;
+    color: #ec1f27;
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+    font-size: 8rem;
+    vertical-align: middle;
+    display: inline-flex;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.1);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.button-icon-small {
+	background-color: #fff;
+    color: #ec1f27;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2.5rem;
+    vertical-align: middle;
+    display: inline-flex;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.1);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.button-icon:focus, .button-icon:hover, .button-icon-small:focus, .button-icon-small:hover {
+	background-color: #fff;
+	box-shadow: 0 5px 8px rgba(0,0,0,.25);
+    background-size: 400%;
+    border: 1px solid rgba(0,0,0,.1);
+    text-decoration: none;
+}
+
 button, .button, input[type="button"], .pagination .button, .tribe-events-notices, .excerpt-read-more {
   background: #EC1F27;
     background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
@@ -459,41 +501,6 @@ button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submi
   box-shadow: 0 5px 8px rgba(0,0,0,0.25);
   background-size: 400%;
   border: 1px solid rgba(0,0,0,0.1);
-}
-
-.dsa-share {
-  margin: 2rem 0 2rem;
-}
-
-.dsa-share-item {
-  width: 3rem;
-    height: 3rem;
-    padding: 0.5rem;
-    text-align: center;
-    line-height: 2.2;
-    margin: 10px;
-    border-radius: 0.25rem;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
-    background-color: rgba(0,0,0,0.20);
-    box-shadow: 0 0 1px rgba(0,0,0,0.54);
-}
-
-.dsa-share-item:hover {
-  box-shadow: 0 5px 8px rgba(244,67,54,0.25);
-    background: #EC1F27;
-    background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
-    background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
-    background-size: 400%;
-    -webkit-animation: Gradient 1s ease infinite;
-    animation: Gradient 1s ease infinite;
-}
-
-.dsa-share-item .button-icon {
-  height: 1.5rem;
-  width: auto;
-  line-height:1.5rem;
 }
 
 .pagination .current {

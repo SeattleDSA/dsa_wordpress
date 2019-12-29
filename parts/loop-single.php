@@ -5,8 +5,8 @@
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->
 	<div class="dsa-share">
-		<a class="button" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
-		<a class="button" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook2"></span></a>
+		Share on <a class="button-icon-small" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
+		<a class="button-icon-small" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook"></span></a>
 	</div>
 
     <section class="entry-content" itemprop="articleBody">
@@ -39,8 +39,8 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	
 		<div class="dsa-share">
-			<a class="button" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
-			<a class="button" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook2"></span></a>
+			Share on <a class="button-icon-small" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
+			<a class="button-icon-small" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook"></span></a>
 		</div>
 	</footer> <!-- end article footer -->
 					

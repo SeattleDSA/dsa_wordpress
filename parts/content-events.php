@@ -7,13 +7,10 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 ?>
 <div class="grid-container homepage-events">
 	<div class="grid-x grid-margin-x grid-margin-y txt-dsa-white">
-		<div class="cell large-2 large-offset-5 medium-4 medium-offset-4 small-6 small-offset-3">
-			<a href="<?php echo home_url(); ?>/events/" class="homepage-icon">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" loading="lazy" />
-			</a>
+		<div class="cell large-12 medium-12 small-12 text-center">
+				<a href="<?php echo home_url(); ?>/events/" class="button-icon icon-calendar"></a>
+				<h2 class="cell text-center">Upcoming Events</h2>
 		</div>
-		<br />
-		<h2 class="cell text-center">Upcoming Events</h2>
 		<div class="cell grid-x grid-margin-x grid-margin-y">		
 			<?php // Retrieve the next 2 upcoming events
 				if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
@@ -46,16 +43,16 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    		<div class="cell large-12 medium-6 small-12">
 						    		<div class="grid-x grid-margin-x grid-margin-y">
 							    		<div class="cell large-2 medium-4 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="homepage-icon">
-					    						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/calendar.svg" class="dsa-calendar-icon" />
+					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small">
+					    						<span class="icon-calendar" />
 					    					</a>
 					    			 	</div>
 					    				<div class="cell large-10 medium-8 small-9">
 					    					<p><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
 					    				</div>
 					    				<div class="cell large-2 medium-4 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="homepage-icon">
-					    						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/white/location.svg" class="dsa-calendar-icon" />
+					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small">
+					    						<span class="icon-location" />
 					    					</a>
 					    				</div>
 					    				<div class="cell large-10 medium-8 small-9">
