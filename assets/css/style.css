@@ -247,8 +247,9 @@ font-size: 1rem;
 }
 
 
-.dropdown.menu>li.opens-right>.is-dropdown-submenu {
+.dropdown.menu li.opens-right .is-dropdown-submenu {
   width: 100%;
+  list-style: none;
 }
 
 .dropdown.menu li.is-active a {
@@ -441,13 +442,10 @@ a.button.radius.button-white {
   box-shadow: none;
 }
 
-a.hollow {
-  border-width: 2px;
-}
-
-a.button.hollow, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
+a.button.hollow, a.tribe-events-button, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
   border: 2px solid #ec1f27;
   color: #ec1f27;
+  padding: 0.5rem 1rem;
   font-weight: 700;
   background: #fff;
   background: -webkit-linear-gradient(left,#FFFFFF 0%,#FFFFFF 100%);
@@ -466,7 +464,7 @@ a.button.radius.button-white:hover {
   padding: 0.85em 0.5em;
 }
 
-button.hollow:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, #tribe-events .tribe-events-button:hover, .tribe-events-button:hover, .button.hollow:hover, .excerpt-read-more:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+button.hollow:hover, a.tribe-events-button:hover, a.tribe-events-gmap:hover, #tribe-bar-form .tribe-bar-submit input[type=submit]:hover, #tribe-events .tribe-events-button:hover, .tribe-events-button:hover, .button.hollow:hover, .excerpt-read-more:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover {
   box-shadow: 0 5px 8px rgba(244,67,54,0.25);
     background: #FF1744;
     color: #fff;
@@ -1223,17 +1221,15 @@ h1.home-title {
 }
 
 
-@media screen and (min-width: 900px) {
-    .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 350px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -300px 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 15% 50px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud2.svg") no-repeat 87% 54px, url("../images/ui-glyphs/frontispiece-scenery-sky.png") no-repeat left top;
-        background-size: 400px 300px, 600px 400px, 140px 600px, 800px 400px, 126px 66px, 148px 64px, 100% 651px;
-    }
+.sdsa-2017-frontispiece .essay {
+    background: url("../images/ui-foregrounds/mobile-mural.png") no-repeat left top;
+    background-size: 100% auto
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (min-width: 900px) {
     .sdsa-2017-frontispiece .essay {
-        background: url("../images/ui-foregrounds/mobile-mural.png") no-repeat left top;
-        background-size: 100% auto
+        background: url("../images/ui-glyphs/frontispiece-scenery-wave.svg") repeat-x left 350px, url("../images/ui-glyphs/frontispiece-scenery-elevation-trees.svg") no-repeat -300px 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-needle.svg") no-repeat 15% 50px, url("../images/ui-glyphs/frontispiece-scenery-elevation-rainier.svg") no-repeat 45% 200px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 42% 235px, url("../images/ui-glyphs/frontispiece-scenery-elevation-cloud1.svg") no-repeat 87% 54px, #ddd left top;
+        background-size: 400px 300px, 600px 400px, 140px 600px, 800px 400px, 126px 66px, 148px 64px, 100% 651px;
     }
 }
 

@@ -22,32 +22,32 @@ $event_id = get_the_ID();
 
 ?>
 
-<div id="tribe-events-content" class="tribe-events-single">
+<div id="tribe-events-content" class="tribe-events-single grid-container">
 
-	<p class="tribe-events-back hide-for-print">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" class="button hollow"> <?php printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
-	</p>
+	<div class="cell large-12 small-12">
+		<p class="tribe-events-back hide-for-print">
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" class="button hollow"> <?php printf( '&#xE13A; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
+		</p>
+		<!-- Notices -->
+		<?php tribe_the_notices() ?>
 
-	<!-- Notices -->
-	<?php tribe_the_notices() ?>
-
-	<?php the_title( '<h1 class="event-title">', '</h1>' ); ?>
-
-	<div class="tribe-events-schedule tribe-clearfix">
+		<?php the_title( '<h1 class="event-title">', '</h1>' ); ?>
+	</div>
+	<div class="tribe-events-schedule tribe-clearfix cell large-12 small-12">
 		<?php if ( tribe_get_cost() ) : ?>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
+		<p>
+			Short URL: <a href="<?php echo site_url()."/?p=" ?><?php echo the_ID(); ?>"><?php echo site_url()."/?p=" ?><?php echo the_ID(); ?></a>
+		</p>
 	</div>
-	
-	<p>
-		Short URL: <a href="<?php echo site_url()."/?p=" ?><?php echo the_ID(); ?>"><?php echo site_url()."/?p=" ?><?php echo the_ID(); ?></a>
-	</p>
 
 	<!-- Event header -->
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 	</div>
 	<!-- #tribe-events-header -->
 
+	<div class="cell large-12 small-12">
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x grid-padding-x grid-margin-y grid-padding-y'); ?>>
 			<!-- Event featured image, but exclude link -->
@@ -112,14 +112,15 @@ $event_id = get_the_ID();
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
+	</div>
 	<hr />
 	<!-- Event footer -->
-	<div id="tribe-events-footer" class="hide-for-print">
+	<div id="tribe-events-footer" class="hide-for-print cell large-12 small-12">
 		<!-- Navigation -->
 		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'the-events-calendar' ), $events_label_singular ); ?>">
 			<ul class="tribe-events-sub-nav">
-				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
+				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&#xE13A;</span> %title%' ) ?></li>
+				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&#xE13B;</span>' ) ?></li>
 			</ul>
 			<!-- .tribe-events-sub-nav -->
 		</nav>
