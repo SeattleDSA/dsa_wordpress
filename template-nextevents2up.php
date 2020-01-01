@@ -13,18 +13,8 @@ Template Name: Next Events (2 Up)
 			header, footer, .footer, #non-printable {
 				display: none !important;
 			}
-			.bdr-stripe-red-white-left {
-				border: 1pt solid #aaa;
-	    		padding: 3pt 6pt;
-	    		-webkit-border-image: none;
-	    		-o-border-image: none;
-	    		border-image: none;	
-			}
 			div.recurringinfo {
 				display: none;
-			}
-			.card-gray {
-				margin-bottom: 6pt;
 			}
 
 			ul.meta-details {
@@ -47,21 +37,31 @@ Template Name: Next Events (2 Up)
 				border-radius: 50%;
 			}
 
+			span.icon-calendar {
+				font-size: 3rem;
+				color: #ec1f27;
+			}
+
 			@media print {
 				header, footer, #header, #footer, .header, .footer, #non-printable {
 				color: #fff;
 				display: none !important;
 				}
 				h1, h1 small {
-					font-size: 10pt;
+					font-size: 9pt;
 					font-weight: bold;
 				}
-				h2, h4 {
+				h2, h3, h4 {
 				font-size: 8pt;
 				}
 				.card p, .card ul.meta-details li {
 					font-size: 8pt;
 					margin-bottom: 0;
+					box-shadow: none;
+					border: 1px solid #fdfdfd;
+				}
+				.card {
+					padding: 1rem;
 				}
 				a[href]:after { content: none !important; color: black;}
   				img[src]:after { content: none !important; }
@@ -74,7 +74,7 @@ Template Name: Next Events (2 Up)
 			<div class="">
 				<div class="text-center dsa-nextevents-title">
 					<br />
-					<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="64" height="64" /> <b>Seattle Democratic Socialists of America</b> <small>Upcoming Events</small></h1>
+					<h1><span class="icon-calendar"></span> Seattle Democratic Socialists of America <small>Upcoming Events</small></h1>
 				</div>
 				<?php // Retrieve the next 5 upcoming events
 					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
@@ -102,7 +102,7 @@ Template Name: Next Events (2 Up)
 						foreach ( $events as $event ) {
 							$dsa_event_description = $event->post_content;
 
-						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
+						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12\"><h4><b>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
 							echo "</h4></b><ul class=\"meta-details\"><li><b>Time:</b> ";
 						    echo tribe_events_event_schedule_details( $event->ID );
@@ -129,7 +129,7 @@ Template Name: Next Events (2 Up)
 			<div class="">
 				<div class="text-center dsa-nextevents-title">
 					<br />
-					<h1><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ui-foregrounds/calendar.svg" width="64" height="64" /> <b>Seattle Democratic Socialists of America</b> <small>Upcoming Events</small></h1>
+					<h1><span class="icon-calendar"></span> Seattle Democratic Socialists of America <small>Upcoming Events</small></h1>
 				</div>
 				<?php // Retrieve the next 5 upcoming events
 					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
@@ -141,7 +141,7 @@ Template Name: Next Events (2 Up)
 						foreach ( $events as $event ) {
 							$dsa_event_description = $event->post_content;
 
-						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12 bdr-stripe-red-white-left\"><h4><b>";
+						    echo "<div class=\"card large-10 large-centered medium-10 medium-centered small-12\"><h4><b>";
 						    echo tribe_get_event_link( $event->ID, $full_link=true);
 							echo "</h4></b><ul class=\"meta-details\"><li><b>Time:</b> ";
 						    echo tribe_events_event_schedule_details( $event->ID );
