@@ -38,6 +38,18 @@ function tribe_attachment_404_fix () {
 		add_action( 'init', array( Tribe__Events__Main::instance(), 'init' ), 1 );
 	}
 }
+
+add_action( 'wp_head', 'community_add_css' );
+function community_add_css() {
+  if (tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) {
+?>
+<style>  
+  .recurrence-row {display:none !important;}
+</style>
+<?php
+	}
+}
+
 add_action( 'after_setup_theme', 'tribe_attachment_404_fix' );
 
 

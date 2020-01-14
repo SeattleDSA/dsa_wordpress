@@ -1089,14 +1089,9 @@ table.sdsa-platform-table tr td:nth-child(1) {
    min-height: 25vh;
 }
 
-.dsa-alert.card.card {
-  background-color: #0a0a0a;
-  color: #fff;
-}
-
-.dsa-alert.callout p {
-  margin-bottom: 0;
-  display: inline;
+.dsa-alert {
+  background-color: #fafafa;
+  border-radius: 1rem;
 }
 
 .diptych form input#mce-LNAME, .diptych form input#mce-FNAME, .diptych form input#mce-EMAIL {

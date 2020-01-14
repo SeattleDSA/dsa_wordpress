@@ -8,23 +8,16 @@ Use:	Notifying members of emergencies, changes to established plans, or notices.
 <?php if ( get_post_meta($post->ID, '_dsa_alert_box', true) ) : ?><!-- Begin DSA Alert Box; Conditional -->
 	<br>
 	<div class="hide-for-medium dsa-space">&nbsp;</div>
-	<div id="dsa-alert" class="dsa-alert card dark grid-x grid-margin-x grid-margin-y" data-closable>
-		
-		<div class="cell large-1 medium-2 small-3">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/bullhorn.svg" />
+	<div id="dsa-alert" class="dsa-alert grid-container grid-x grid-margin-x grid-margin-y" data-closable>
+		<div class="cell large-2 medium-2 small-12 txt-center">
+			<a class="icon-bullhorn h1 button close-button" aria-label="Close alert" type="button" data-close> </a>
 		</div>
-		
-		<div class="cell large-10 medium-8 small-6">
+		<div class="cell large-8 medium-8 small-8 txt-center">
 			<?php echo apply_filters('the_content', get_post_meta($post->ID, '_dsa_alert_box', true)); ?>
 		</div>
-
-		<div class="cell large-1 medium-2 small-3">
-			<button id="dsa-hide" class="dsa-close cell large-1" aria-label="Dismiss alert" data-close>
-					<span aria-hidden="true">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/white/checkbox-x.svg" />
-					</span>
-				</button>
-			</div>
+		<div class="cell large-2 medium-2 show-for-medium txt-center">
+			<a class="icon-checkbox h1 button close-button" aria-label="Close alert" type="button" data-close> </a>
+		</div>
 	</div>
 	<script>
 		jQuery(document).ready(function(){
