@@ -43,33 +43,6 @@ img.bullet-icon {
     margin-top: 0.5em;
 }
 
-.calendar-category-menu .menu.vertical > li {
-  margin: 0;
-}
-
-.calendar-category-menu .js-dropdown-active, ul.dropdown.menu.calendar-category-menu > li:hover {
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
-}
-
-ul.dropdown.menu.calendar-category-menu > li > a:hover {
-  background-color: transparent;
-  color: #ec1f27;
-}
-
-.calendar-category-menu > li {
-  background-color: #fefefe;
-    width: 100%;
-    border: 1px solid #ccc;
-    display: block;
-}
-
-.calendar-category-menu > li.is-active {
-  border-radius: 1rem 1rem 0 0;
-}
-
-.tribe-events-category-new-member .tribe-events-month-event-title a:after {
-content: "🌹";
-}
 
 img.icon-list {
   height: 3rem;
@@ -123,7 +96,10 @@ img.icon-list {
 }
 
 .tribe-event-description a.excerpt-read-more {
-	display: block;
+	background: #ec1f27;
+    display: inline-flex;
+    padding: 0rem 0.5rem;
+    margin: 0 0 0 1rem;
 }
 
 
@@ -186,7 +162,7 @@ a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 a:focus, a:hover {
   color: #EC1F27;
   background-color: #fff3f3;
-  box-shadow: 0 5px 8px rgba(244,67,54,0.25);
+  
   text-decoration: underline;
 }
 
@@ -442,7 +418,7 @@ a.button.radius.button-white {
   box-shadow: none;
 }
 
-a.button.hollow, a.tribe-events-button, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
+a.button.hollow, a.tribe-events-button, .tribe-events-sub-nav .tribe-events-nav-previous a, .tribe-events-sub-nav .tribe-events-nav-next a, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
   border: 2px solid #ec1f27;
   color: #ec1f27;
   padding: 0.5rem 1rem;
@@ -451,6 +427,7 @@ a.button.hollow, a.tribe-events-button, a.tribe-events-gmap, button.hollow, .but
   background: -webkit-linear-gradient(left,#FFFFFF 0%,#FFFFFF 100%);
     background: linear-gradient(to right,#FFFFFF 0%,#FFFFFF 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF',GradientType=1);
+  display: inline-flex;
 }
 
 a.button.radius.button-white:hover {
@@ -1385,6 +1362,54 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
   margin: 4rem auto;
 }
 
+
+.calendar-category-menu .menu.vertical > li {
+  margin: 0;
+}
+
+.calendar-category-menu .js-dropdown-active, ul.dropdown.menu.calendar-category-menu > li:hover {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+button.tribe-events-calendar-month__day-cell {
+	background: none;
+    border-bottom: 1px solid #efefef;
+    border-radius: 0px;
+    border-right: 1px solid #efefef;
+}
+
+ul.dropdown.menu.calendar-category-menu > li > a:hover {
+  background-color: transparent;
+  color: #ec1f27;
+}
+
+.calendar-category-menu > li {
+  background-color: #fefefe;
+    width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.calendar-category-menu > li.is-active {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.tribe_events_cat-new-member .tribe-common-anchor:after, .tribe_events_cat-new-member .tribe-common-anchor-thin:after, .tribe_events_cat-new-member .tribe-events-calendar-month__calendar-event-title-link:after, .cat_new-member .tribe-events-calendar-month__calendar-event-title-link:after, .tribe_events_cat-new-member .tribe-events-calendar-month-mobile-events__mobile-event-title-link:after, .cat_new-member.tribe-events-calendar-month-mobile-events__mobile-event-title-link:after {
+content: "🌹";
+}
+
+.tribe-events button.tribe-events-c-events-bar__search-button, .tribe-events button.tribe-events-c-view-selector__button, .tribe-events button.tribe-events-c-top-bar__datepicker-button {
+	background: none;
+}
+
+.tribe-events .tribe-events-calendar-month__mobile-events-icon--event, .tribe-events .tribe-events-calendar-month__day-cell--selected, .tribe-events .tribe-events-calendar-month__day-cell--selected:focus, .tribe-events .tribe-events-calendar-month__day-cell--selected:hover {
+	background-color: #ec1f27;
+}
+
+.tribe-common .tribe-common-anchor-alt {
+	border-bottom: 2px solid #ec1f27;
+}
+
 /******************************************************************
 23. fullPage.js Plugin Changes
 ******************************************************************/
@@ -1534,4 +1559,8 @@ table.tribe-events-calendar tbody tr:nth-child(even) {
 
 .js-toc .toc-link.is-active-link::before {
   background-color: #ec1f27;
+}
+
+.js-toc-content article h1, .js-toc-content article h2, .js-toc-content article h3, .js-toc-content article h4, .js-toc-content article h5, .js-toc-content article h6 {
+padding-top: 3rem;
 }

@@ -269,6 +269,18 @@ ul.menu.submenu.is-dropdown-submenu.first-sub.vertical a:hover, ul.menu.submenu.
 	color: #ffffff;
 }
 
+.button.inactive, .button.inactive span:before {
+	color: #a9b1bb;
+	border-color:#a9b1bb;
+}
+
+.button.inactive:hover {
+	background:#5d6b7b;
+}
+
+.icon-large, .large-icon {
+	font-size: 10rem;
+}
 
 /*********************
 AGITPROP DARK
@@ -305,6 +317,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   border: 1px solid #fd9800;
   border-radius: .25rem;
   transition: all .15s ease-in-out;
+  text-decoration: none;
+}
+
+.topic.button {
+  max-width: 12rem;
 }
 
 .button:hover, .button:focus, input.button:hover, input.button:focus {
@@ -312,13 +329,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #232f3e;
 }
 
-.wp-block-columns {
-  display: flex;
-  margin-top: 30vh;
-  margin-bottom: 30vh;
-}
-
-@media print {
+@media print only {
 	.wp-block-columns {
 	  display: flex;
 	  margin-top: 0rem;
@@ -339,24 +350,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   }
 }
 
-.wp-block-column {
-  flex: 1;
-  margin: 1rem;
-}
-
-@media print, screen and (max-width: 39em) {
+@media print, screen and (max-width: 39rem) {
 	.topic.button {
 		font-size: 1rem;
-	}
-
-	.wp-block-columns {
-		flex-wrap: wrap;
-	}
-
-	.wp-block-column {
-	  flex: 1;
-	  margin: 1rem;
-	  flex-wrap: wrap;
+    
 	}
 }
 

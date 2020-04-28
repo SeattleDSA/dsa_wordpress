@@ -26,32 +26,35 @@ require_once(get_template_directory().'/assets/functions/page-navi.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/assets/functions/dsa-metaboxes.php');
 
-
+if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){
 /*
  * Possible solution for Single Event page 404 errors where the WP_Query has an attachment set
  * IMPORTANT: Flush permalinks after pasting this code: http://tri.be/support/documentation/troubleshooting-404-errors/
  * Updated to work with post 3.10 versions
- */
-function tribe_attachment_404_fix () {
-	if (class_exists('Tribe__Events__Main')) {
-		remove_action( 'init', array( Tribe__Events__Main::instance(), 'init' ), 10 );
-		add_action( 'init', array( Tribe__Events__Main::instance(), 'init' ), 1 );
+*/
+	function tribe_attachment_404_fix () {
+		if (class_exists('Tribe__Events__Main')) {
+			remove_action( 'init', array( Tribe__Events__Main::instance(), 'init' ), 10 );
+			add_action( 'init', array( Tribe__Events__Main::instance(), 'init' ), 1 );
+		}
 	}
-}
 
-add_action( 'wp_head', 'community_add_css' );
-function community_add_css() {
-  if (tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) {
-?>
-<style>  
-  .recurrence-row {display:none !important;}
-</style>
-<?php
+	add_action( 'wp_head', 'community_add_css' );
+	function community_add_css() {
+	  if (tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) {
+	?>
+	<style>  
+	  .recurrence-row {display:none !important;}
+	</style>
+	<?php
+		}
 	}
+
+	add_action( 'after_setup_theme', 'tribe_attachment_404_fix' );
 }
-
-add_action( 'after_setup_theme', 'tribe_attachment_404_fix' );
-
+else {
+	
+}
 
 /*****
 

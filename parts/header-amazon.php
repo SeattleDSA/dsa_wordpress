@@ -30,7 +30,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/foundation-sites/dist/css/foundation.min.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/minisite.min.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/inter/inter.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/vendor/justice-icons/justice-icons.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/amazon.min.css" />

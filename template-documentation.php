@@ -11,13 +11,13 @@ Template Name: Documentation
 	
 		<div id="inner-content" class="grid-x grid-margin-x">
 
-			<nav class="cell medium-4 large-2 table-of-contents" data-sticky-container role="sidebar">
+			<nav class="cell medium-4 large-3 table-of-contents" data-sticky-container role="sidebar">
 				<div class="js-toc sticky" data-sticky data-margin-top="0" data-top-anchor="1" data-btm-anchor="main:bottom">
 						&nbsp;
 				</div>				
 			</nav>
 	
-		    <main id="main" class="cell medium-8 large-10 dsa-readable js-toc-content" role="main">
+		    <main id="main" class="cell medium-8 large-9 dsa-readable js-toc-content" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
