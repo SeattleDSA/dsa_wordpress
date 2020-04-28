@@ -129,7 +129,7 @@ Template Name: Event List (Print)
 			<div class="">
 				<div class="text-center dsa-nextevents-title">
 					<br />
-					<h1><span class="icon-calendar"></span> Seattle Democratic Socialists of America <small>Upcoming Events</small></h1>
+					<h1><span class="icon-calendar"></span> <?php bloginfo('name'); ?> <small>Upcoming Events</small></h1>
 				</div>
 				<?php // Retrieve the next 5 upcoming events
 					if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){ 

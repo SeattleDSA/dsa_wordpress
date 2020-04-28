@@ -6,7 +6,7 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 *The Events Calendar Plugin:* Adds events to the Homepage 2017 page template and enables the printable Upcoming Events page template. Lots of custom stylings for this plugin are included.
 
 ## Page Template Types (new)
-* template-eventsprint.php: Print-ready upcoming events list, with 2-per-sheet to9 save on print costs.
+* template-eventsprint.php: Print-ready upcoming events list, with 2-per-sheet to save on print costs.
 * template-eventsemail.php: Email-ready upcoming events list, displays a week's worth for copy+paste into mass email blasts.
 * template-documentation.php: uses TOCbot to generate a table of contents automatically based on headings, similar to Wikipedia.
 * template-amazon.php: Applies a unique styleset for organizing against a noted capitalist firm
