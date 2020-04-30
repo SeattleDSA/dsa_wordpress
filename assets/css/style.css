@@ -35,15 +35,6 @@ color: #231F20;
 padding: 0;
 }
 
-img.bullet-icon {
-    height: 2em;
-    width: 2em;
-    margin-right: 1em;
-    float: left;
-    margin-top: 0.5em;
-}
-
-
 img.icon-list {
   height: 3rem;
   width: auto;
@@ -134,14 +125,6 @@ img.icon-list {
 
 .dsa-main {
   padding-bottom: 2rem;
-}
-
-.icon-bullet {
-    height: 2em;
-    width: 2em;
-    margin-right: 1em;
-    float: left;
-    margin-top: 0.5em;
 }
 
 .dsa-main-logo {
@@ -313,25 +296,8 @@ margin: 4rem 0 3rem 0;
   background-color: #fafafa;
 }
 
-.txt-dsa-red {
-  color: #ec1f27;
-}
-
-.btn.bg-dsa-red {
-  color: #fff;
-}
-
-.txt-DSAblack {
-  color: #231F20;
-}
-
-.txt-dsa-white, .txt-white {
+.txt-white {
   color: white;
-}
-
-a.txt-DSAwhite:hover {
-background-color: #231F20;
-color: white;
 }
 
 
@@ -387,6 +353,7 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
     background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EC1F27',endColorstr='#FF1744',GradientType=1);
   color: #fff;
+  border: 2px solid #ec1f27;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   transition: all 150ms;
@@ -397,6 +364,7 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
   -webkit-transition: all 300ms;
     transition: all 300ms;
     font-size: 1rem;
+  display: inline-flex;
 }
 
 .footer .button {
@@ -418,22 +386,19 @@ a.button.radius.button-white {
   box-shadow: none;
 }
 
-a.button.hollow, a.tribe-events-button, .tribe-events-sub-nav .tribe-events-nav-previous a, .tribe-events-sub-nav .tribe-events-nav-next a, a.tribe-events-gmap, button.hollow, .button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
+a.button.hollow, a.tribe-events-button, .tribe-events-sub-nav .tribe-events-nav-previous a, .tribe-events-sub-nav .tribe-events-nav-next a, a.tribe-events-gmap, button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button {
   border: 2px solid #ec1f27;
   color: #ec1f27;
   padding: 0.5rem 1rem;
+  margin: 0.25rem;
   font-weight: 700;
   background: #fff;
-  background: -webkit-linear-gradient(left,#FFFFFF 0%,#FFFFFF 100%);
-    background: linear-gradient(to right,#FFFFFF 0%,#FFFFFF 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF',GradientType=1);
   display: inline-flex;
 }
 
 a.button.radius.button-white:hover {
   border: none;
   background-color: #ec1f27;
-
   color: white;
 }
 
@@ -489,7 +454,7 @@ button.hollow:hover, a.tribe-events-button:hover, a.tribe-events-gmap:hover, #tr
 }
 
 
-button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .button.current, #mc_embed_signup .button {
+button.dark, .button.dark, .pagination .button.current {
   background: #231F20; 
   background: -webkit-linear-gradient(left,#231F20 0%,#353035 100%);
   background: linear-gradient(to right,#231F20 0%,#353035 100%);
@@ -500,7 +465,7 @@ button.dark, .button.dark, #page #mc_embed_signup .button.dark, .pagination .but
   box-shadow: 0 0 1px rgba(0,0,0,0.54);
 }
 
-.button.dark:focus, .button.dark:hover, input[type="button"]:hover, #mc_embed_signup .button:hover, #mc_embed_signup .button:focus {
+.button.dark:focus, .button.dark:hover, input[type="button"]:hover {
       background: #353035;
   background: -webkit-linear-gradient(left,#353035 0%,#B0BEC5 100%);
   background: linear-gradient(to right,#353035 0%,#B0BEC5 100%);
@@ -916,20 +881,6 @@ color: #fff;
     appearance: none;
 }
 
-#page #mc_embed_signup .button {
-  background-color: #231F20 !important;
-  color: #fff;
-  border-radius: 2em;
-  transition: all 150ms;
-}
-
-#page #mc_embed_signup .button.dark:hover {
-  background-color: #231F20;
-  color: #fff;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transform: translateY(-2px);
-}
-
 input[type="submit"] {
   background-color: #EC1F27;
   padding: 1rem;
@@ -1071,41 +1022,10 @@ table.sdsa-platform-table tr td:nth-child(1) {
   border-radius: 1rem;
 }
 
-.diptych form input#mce-LNAME, .diptych form input#mce-FNAME, .diptych form input#mce-EMAIL {
-  border-radius: 2rem;
-    border: 0.25rem solid #fafafa;
-    box-shadow: inset 0 0 4px 0px #ddd;
-    padding: 1.25rem 1rem;
-}
-
-.diptych #mc_embed_signup div.mce_inline_error {
-  background-color: #ef1c27;
-}
-
-.diptych #mc_embed_signup input.mce_inline_error {
-  border-color: #ef1c27;
-}
-
 
 .inline-icon {
   width: 3em;
   height: auto;
-}
-
-input::placeholder, textarea::placeholder, input#mce-FNAME::placeholder, input#mce-LNAME::placeholder, input#mce-EMAIL::placeholder {
-  color: #aaa;
-}
-
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input#mce-FNAME::-webkit-input-placeholder, input#mce-LNAME::-webkit-input-placeholder, input#mce-EMAIL::-webkit-input-placeholder {
-  color: #aaa;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder, input#mce-FNAME::-moz-placeholder, input#mce-LNAME::-moz-placeholder, input#mce-EMAIL::-moz-placeholder {
-  color: #aaa;
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder, input#mce-FNAME:-ms-input-placeholder, input#mce-LNAME:-ms-input-placeholder, input#mce-EMAIL:-ms-input-placeholder {
-  color: #aaa;
 }
 
 button.dsa-close {
@@ -1134,7 +1054,7 @@ margin-right: 1em;
 
 h1.dsa-national-logotype {
   border-bottom: 0.25rem solid white;
-  display:inline-block;
+  display:inline-flex;
   font-size: 4rem;
   padding-bottom: 1.25rem;
   line-height: 0.75;
@@ -1316,10 +1236,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 22. CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
-table.tribe-events-calendar tbody tr:nth-child(even) {
-  background-color: #fefefe;
-}
-
 .tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
   font-size: 1.35rem;
     color: #333;
@@ -1398,8 +1314,30 @@ ul.dropdown.menu.calendar-category-menu > li > a:hover {
 content: "🌹";
 }
 
-.tribe-events button.tribe-events-c-events-bar__search-button, .tribe-events button.tribe-events-c-view-selector__button, .tribe-events button.tribe-events-c-top-bar__datepicker-button {
+.tribe-events button.tribe-events-c-events-bar__search-button, .tribe-events button.tribe-events-c-view-selector__button {
 	background: none;
+}
+
+.tribe-events button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+  display: inline-flex;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.tribe-events .tribe-events-c-ical__link {
+  color: #ec1f27;
+  border: 2px solid #ec1f27;
+}
+
+.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date, .tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-link {
+  color: #ec1f27;
+}
+
+.tribe-events .tribe-events-c-ical__link:active, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-c-ical__link:hover {
+  background-color: #EC!F27;
+  color: #FFFFFF;
 }
 
 .tribe-events .tribe-events-calendar-month__mobile-events-icon--event, .tribe-events .tribe-events-calendar-month__day-cell--selected, .tribe-events .tribe-events-calendar-month__day-cell--selected:focus, .tribe-events .tribe-events-calendar-month__day-cell--selected:hover {
