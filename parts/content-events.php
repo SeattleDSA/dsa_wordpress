@@ -9,7 +9,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 	<div class="grid-x grid-margin-x grid-margin-y">
 		<div class="cell large-12 medium-12 small-12 text-center">
 				<a href="<?php echo home_url(); ?>/events/" class="button-icon icon-calendar"></a>
-				<h2 class="cell text-center txt-dsa-white">Upcoming Events</h2>
+				<h2 class="cell text-center txt-white">Upcoming Events</h2>
 		</div>
 		<div class="cell grid-x grid-margin-x grid-margin-y dsa-events-list">		
 			<?php // Retrieve the next 2 upcoming events
