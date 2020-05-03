@@ -5,7 +5,7 @@ Part:	Beliefs Carousel
 Use:	Shares platform of beliefs, similar to Black Panther Program, as well as points to a Platform landing page at (your__url)/platform
 */
 ?>
-<div class="grid-container homepage-events">
+<div class="grid-container full homepage-events">
 	<div class="grid-x grid-margin-x grid-margin-y">
 		<div class="cell large-12 medium-12 small-12 text-center">
 				<a href="<?php echo home_url(); ?>/events/" class="button-icon icon-calendar"></a>
@@ -18,7 +18,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 
 
 					$events = tribe_get_events( array(
-					    'posts_per_page' => 3,
+					    'posts_per_page' => 4,
 					    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
 					) );
 					
@@ -32,7 +32,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 						$dsa_event_description = $event->post_content;
 						?>
 
-					    <div class="card cell large-4 medium-6 small-12 dsa-events-item">
+					    <div class="card cell large-3 medium-6 small-12 dsa-events-item">
 					    	<h4><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h4>
 					    	<hr>
 					    	<div class="grid-x grid-margin-x grid-margin-y">

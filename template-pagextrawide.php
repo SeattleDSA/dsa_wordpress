@@ -6,7 +6,7 @@ Template Name: Page Extra Wide (No Sidebar)
 
 <?php get_header(); ?>
 			
-	<div id="content">
+	<div id="content" class="grid-container full">
 	
 		<div id="inner-content" class="grid-x grid-margin-x">
 	

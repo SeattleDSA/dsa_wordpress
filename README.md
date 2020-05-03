@@ -8,8 +8,7 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 ## Page Template Types (new)
 * **Page (Default):** includes sidebar widget area.
 * **Page Banner (No Sidebar)**:** include banner and uses a wide container.
-* **Page Narrow (No Sidebar):** default but the sidebar is missing, creating ample whitespace on desktop.
-* **Page Wide (No Sidebar):** page content fills the container, falling short of fullscreen.
+* **Page Wide (No Sidebar):** page content fills the full container in the default width.
 * **Page Extra Wide (No Sidebar):** page stretches full width of window or device.
 * **Event List (Print):** Print-ready upcoming events list, with 2-per-sheet to save on print costs.
 * **Event List (Email):** Email-ready upcoming events list, displays a week's worth for copy+paste into mass email blasts.
