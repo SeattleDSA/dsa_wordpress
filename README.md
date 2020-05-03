@@ -14,7 +14,9 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 * **Event List (Print):** Print-ready upcoming events list, with 2-per-sheet to save on print costs.
 * **Event List (Email):** Email-ready upcoming events list, displays a week's worth for copy+paste into mass email blasts.
 * **Documentation:** uses TOCbot to automatically generate a table of contents based on headings, similar to Wikipedia.
-* **AgitProp (Amazon Theme)** Applies a unique stylesheet and theme for organizing against Amazon.
+* **AgitProp (Amazon Theme):** Applies a unique stylesheet and theme for organizing against Amazon.
+* **Homepage 2017:** Long-running homepage theme that's morphed over the years.
+* **Homepage 2020:** Stay-tuned. Potential redesign that takes advantage of the WordPress Block editor for easier configuration and closer WYSIWYG-ness.
 
 ## Vendor Libraries used
 * **JQuery** [repo](https://github.com/jquery/jquery)
