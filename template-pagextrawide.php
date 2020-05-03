@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Full Width (No Sidebar)
+Template Name: Page Extra Wide (No Sidebar)
 */
 ?>
 

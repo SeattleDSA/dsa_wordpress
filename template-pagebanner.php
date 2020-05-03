@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Regular (No Sidebar)
+Template Name: Page Banner (No Sidebar)
 */
 ?>
 
@@ -14,7 +14,7 @@ Template Name: Regular (No Sidebar)
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<?php get_template_part( 'parts/loop', 'page' ); ?>
+					<?php get_template_part( 'parts/loop', 'pagehero' ); ?>
 					
 				<?php endwhile; endif; ?>							
 

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Image Header (No Sidebar)
+Template Name: Page Wide (No Sidebar)
 */
 ?>
 
@@ -8,13 +8,13 @@ Template Name: Image Header (No Sidebar)
 			
 	<div id="content" class="grid-container">
 	
-		<div id="inner-content" class="grid-x grid-x-margin">
+		<div id="inner-content" class="grid-x grid-margin-x">
 	
-		    <main id="main" class="cell medium-12 dsa-readable" role="main">
+		    <main id="main" class="cell dsa-readable" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<?php get_template_part( 'parts/loop', 'pagehero' ); ?>
+					<?php get_template_part( 'parts/loop', 'page' ); ?>
 					
 				<?php endwhile; endif; ?>							
 
