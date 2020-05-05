@@ -171,6 +171,14 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 .header ul.off-canvas-list li {
   list-style: none; }
 
+.page-template header.article-header {
+  padding: 15vh 0 10vh 0;
+}
+
+.page-template.page-template-template-homepage-2017 header.article-header {
+  padding: 0;
+}
+
 /*********************
 6. MENU & NAVIGATION
 *********************/
@@ -579,30 +587,6 @@ margin-bottom: 0px;
     border-radius: 0rem 0rem 2rem 2rem;
 }
 
-.single .tribe-events-schedule .recurringinfo .tribe-events-divider {
-  color: #edeeef;
-}
-
-.single-tribe_events .tribe-events-cal-links {
-  clear: initial;
-}
-
-.tribe-events-meta-group .tribe-events-single-section-title {
-  font-size: 1.5rem;
-}
-
-.tribe-events-gmap {
-  background-color: #ec1f27;
-  color: #fff;
-  border-radius: 2em;
-  font-size: 1rem;
-  transition: all 150ms;
-  text-transform: capitalize;
-  padding: 0.5rem 1rem;
-  line-height: 1;
-  display: inline-block;
-}
-
 .wp-caption {
     max-width: 80%;
     background: #eee;
@@ -637,7 +621,6 @@ margin-bottom: 0px;
 .post-template-single2018-php #content #inner-content div#sidebar1 {
   margin-top: 4rem;
 }
-
 
 .post-password-form input[type="submit"] {
   display: inline-block;
@@ -1236,6 +1219,30 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 22. CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
+.single .tribe-events-schedule .recurringinfo .tribe-events-divider {
+  color: #edeeef;
+}
+
+.single-tribe_events .tribe-events-cal-links {
+  clear: initial;
+}
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+  font-size: 1.5rem;
+}
+
+.tribe-events-gmap {
+  background-color: #ec1f27;
+  color: #fff;
+  border-radius: 2em;
+  font-size: 1rem;
+  transition: all 150ms;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  display: inline-block;
+}
+
 .tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
   font-size: 1.35rem;
     color: #333;
@@ -1336,7 +1343,7 @@ content: "🌹";
 }
 
 .tribe-events .tribe-events-c-ical__link:active, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-c-ical__link:hover {
-  background-color: #EC!F27;
+  background-color: #EC1F27;
   color: #FFFFFF;
 }
 
