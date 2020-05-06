@@ -77,7 +77,7 @@ $event_id = get_the_ID();
 					<p>
 						<?php echo tribe_get_venue() ?><br>
 						<?php echo tribe_get_address() ?><br>
-						<?php echo tribe_get_city() . ', ' . tribe_get_state() . ' ' . tribe_get_zip() ?>
+						<?php echo tribe_get_city() . ' ' . tribe_get_state() . ' ' . tribe_get_zip() ?>
 					</p>
 				<?php endif ?>
 				

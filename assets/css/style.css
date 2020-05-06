@@ -355,7 +355,7 @@ margin: 4rem 0 3rem 0;
     text-decoration: none;
 }
 
-button, .button, input[type="button"], .pagination .button, .tribe-events-notices, .excerpt-read-more {
+button, .button, input[type="button"], .pagination .button, .tribe-events-notices, .excerpt-read-more, .single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-gcal:hover , .single-tribe_events a.tribe-events-ical, .single-tribe_events a.tribe-events-ical:hover {
   background: #EC1F27;
     background: -webkit-linear-gradient(left,#EC1F27 0%,#FF1744 100%);
     background: linear-gradient(to right,#EC1F27 0%,#FF1744 100%);
