@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 						
-	<header class="article-header sdsa-page-hero" style="background: #ef1c27; background: linear-gradient(to left, #dd1818, #333333), url('<?php the_post_thumbnail_url( $size ); ?>'); background-blend-mode: multiply;">
+	<header class="article-header sdsa-page-hero">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 	</header> <!-- end article header -->
 					
@@ -12,6 +12,18 @@
 	<footer class="article-footer">
 		
 	</footer> <!-- end article footer -->
+
+	<style>
+		.article-header.sdsa-page-hero h1 {
+			color: white;
+			font-size: 3rem;
+			text-align: center;
+		}
+
+		.article-header.sdsa-page-hero {
+			background: linear-gradient(to right, #ec1f27aa,#ff1744aa), url('<?php the_post_thumbnail_url( $size ); ?>');
+		}
+	</style>
 						    
 	<?php comments_template(); ?>
 					

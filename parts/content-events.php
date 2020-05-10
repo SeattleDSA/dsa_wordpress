@@ -38,7 +38,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    	<div class="grid-x grid-margin-x grid-margin-y">
 						    	<div class="cell large-12 medium-12 small-12 dsa-events-description">
 						    		<p><?php echo strip_tags(substr($dsa_event_description, 0, 300)) ?>...</p>
-									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button">Find out more</a>
+									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button hollow">Find out more</a>
 								</div>
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
 						    		<div class="grid-x grid-margin-x grid-margin-y">

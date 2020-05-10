@@ -1,4 +1,11 @@
 <?php
+
+function dsa_change_jquery() {
+  wp_deregister_script( 'jquery' );
+  wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', '3.5.1' );
+}
+add_action( 'wp_enqueue_scripts', 'dsa_change_jquery' );
+
 function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
     
@@ -16,7 +23,7 @@ function site_scripts() {
     wp_enqueue_style( 'inter-typeface', get_template_directory_uri() . '/vendor/inter/inter.css', array(), '3.11', 'all' );
     wp_enqueue_style( 'justice-icons', get_template_directory_uri() . '/vendor/justice-icons/justice-icons.css', array(), '', 'all' );
     // Register main stylesheet
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.0994', 'all' );
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.0995', 'all' );
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
