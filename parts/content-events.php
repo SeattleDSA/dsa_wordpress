@@ -8,7 +8,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 <div class="grid-container homepage-events">
 	<div class="grid-x grid-margin-x grid-margin-y">
 		<div class="cell large-12 medium-12 small-12 text-center">
-				<a href="<?php echo home_url(); ?>/events/" class="button-icon icon-calendar"></a>
+				<a href="<?php echo home_url(); ?>/events/" class="button-icon icon-calendar" aria-label="View full calendar"></a>
 				<h2 class="cell text-center txt-white">Upcoming Events</h2>
 		</div>
 		<div class="cell grid-x grid-margin-x grid-margin-y dsa-events-list">		
@@ -43,7 +43,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
 						    		<div class="grid-x grid-margin-x grid-margin-y">
 							    		<div class="cell large-2 medium-3 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-calendar">
+					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-calendar" aria-label="View event details on calendar">
 					    						
 					    					</a>
 					    			 	</div>
@@ -51,7 +51,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    					<p><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
 					    				</div>
 					    				<div class="cell large-2 medium-3 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-location">
+					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-location"  aria-label="Details on event venue">
 
 					    					</a>
 					    				</div>

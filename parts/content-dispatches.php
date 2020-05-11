@@ -8,7 +8,7 @@ Use:	Grid-container with two most recent posts
 <div class="text-center grid-container">
 	<div class="grid-x grid-margin-x grid-margin-y text-center">
 		<div class="cell large-12 medium-12 small-12 text-center">
-				<a href="<?php echo site_url(); ?>/?post_type=post" class="button-icon icon-typewriter"></a>
+				<a href="<?php echo site_url(); ?>/?post_type=post" class="button-icon icon-typewriter" aria-label="Read all blog posts"></a>
 				<h2 class="dsa-section-title cell">Dispatches</h2>
 		</div>
 	</div>
