@@ -7,12 +7,12 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 ?>
 <div class="inner">
 
-	<div class="contents">
-	  <h3>What we believe</h3>
+	<div class="contents grid-x grid-margin-x align-center text-center">
+	  <h3 class="cell large-12 medium-12 small-12">What we believe</h3>
 	  
-	  <div class="beliefs-carousel">
-	    <button class="control prev" aria-hidden="true">&lsaquo;</button>
-	    <button class="control next" aria-hidden="true">&rsaquo;</button>
+	  <div class="beliefs-carousel cell large-12 medium-12 small-12">
+	    
+	    
 	    <ol class="beliefs">
 	      <li class="active">Everyone should be able to live a full and dignified life.</li>
 	      <li>The economy must be run democratically; none shall be poor so another can be rich.</li>
@@ -30,8 +30,10 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 	    </ol>
 	  </div>
 
-	  <div class="action">
+	  <div class="action cell large-12 medium-12 small-12">
+	    <a class="control prev text-center button hollow" aria-hidden="true">←</a>
 	    <a href="<?php echo home_url(); ?>/platform/" class="dark button">Read full platform</a>
+	    <a class="control next button hollow" aria-hidden="true">→</a>
 	  </div>
 	</div>
 

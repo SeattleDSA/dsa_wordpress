@@ -332,7 +332,7 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
 	background: linear-gradient(to right,var(--color-red) 0%,var(--color-red2) 100%);
 	color: #fff;
 	border: 2px solid var(--color-red);
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	padding: 0.5rem 1rem;
 	transition: all 150ms;
 	font-weight: bold;
@@ -359,14 +359,14 @@ button, .button, input[type="button"], .pagination .button, .tribe-events-notice
   box-shadow: none;
 }
 
-a.button.hollow, a.excerpt-read-more, a.tribe-events-button, .tribe-events .tribe-events-c-ical__link, .tribe-events-nav-pagination .tribe-events-sub-nav a, a.tribe-events-gmap, button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button, .single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-ical, .tribe-events-gmap  {
+a.button.hollow, a.excerpt-read-more, a.tribe-events-button, .tribe-common button.tribe-common-h3, .tribe-events .tribe-events-c-ical__link, .tribe-events-nav-pagination .tribe-events-sub-nav a, a.tribe-events-gmap, button.hollow, #tribe-bar-form .tribe-bar-submit input[type=submit], input[type="button"], .pagination .button.hollow, #tribe-events a.tribe-events-button, a.tribe-events-button, .single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-ical, .tribe-events-gmap  {
   border: 2px solid var(--color-red);
+  border-radius: 0.25rem;
   color: var(--color-red);
   background: var(--color-white);
   padding: 0.5rem 1rem;
   margin: 0.25rem;
   font-weight: 700;
-  background: #fff;
   display: inline-flex;
 }
 
@@ -455,21 +455,6 @@ button.hollow:hover, a.tribe-events-button:hover, .tribe-events-nav-pagination .
     padding: 0.5rem 1rem;
 }
 
-.homepage-icon {
-  border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: none;
-  -webkit-transition: all 300ms;
-    transition: all 300ms;
-    display:block;
-}
-
-.homepage-icon:hover {
-  box-shadow: 0 5px 8px rgba(0,0,0,0.25);
-  background-size: 400%;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
 .pagination .current {
   padding: .1875rem .625rem;
   background-color: var(--color-red);
@@ -482,26 +467,9 @@ button.hollow:hover, a.tribe-events-button:hover, .tribe-events-nav-pagination .
 
 
 button.dark, .button.dark, .pagination .button.current {
-  background: #231F20; 
-  background: -webkit-linear-gradient(left,#231F20 0%,#353035 100%);
-  background: linear-gradient(to right,#231F20 0%,#353035 100%);
-  border: none;
+  background: #231F20;
+  border-color: #231f20;
   color: #fff;
-  border-radius: 0.5rem;
-  transition: all 150ms;
-  box-shadow: 0 0 1px rgba(0,0,0,0.54);
-}
-
-.button.success {
-  border-color: #3adb76;
-}
-
-.button.alert {
-  border-color: #cc4b37;
-}
-
-.button.warning {
-  border-color: #ffae00;
 }
 
 /*********************
@@ -1053,30 +1021,12 @@ h2.dsa-local-brand {
 }
 
 /** begin jon white conversion **/
-#dsa-home-row-1 {
-  padding: 50px 0 0;
-}
 
 .sdsa-2017-global-footer section:nth-of-type(1),
 .sdsa-2017-global-footer section:nth-of-type(2) {
     margin-right: 5%
 }
-#content #dsa-home-row-1 {
-    padding-bottom: 50px
-}
 
-#content #dsa-home-row-1 {
-    min-height: 705px;
-    position: relative
-}
-
-.row.dsa-home-row-3-edit {
-    padding: 50px 0;
-}
-
-.row.dsa-home-row-4-edit {
-    padding: 50px 0;
-}
 
 h1.home-title {
   font-size: 2rem;
@@ -1114,12 +1064,12 @@ h1.home-title {
 }
 
 .sdsa-2017-frontispiece .card, .card {
-  border-radius: 1rem;
+  border-radius: 0.25rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.15);
-  border: none;
+  border: 1px solid rgba(0,0,0,0.15);
   background-color: #fff;
 }
 
@@ -1187,30 +1137,6 @@ h1.home-title {
         font-size: 1.125rem
     }
 }
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .control {
-    position: absolute;
-    background: transparent;
-    width: 2rem;
-    height: 3rem;
-    top: 50%;
-    border: none;
-    cursor: pointer;
-    transition: all 200ms;
-    transform: translateY(-50%) scale(1);
-    z-index: 2;
-    box-shadow: none;
-    font-weight: 400;
-    font-size:1.75rem;
-}
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .control.prev {
-    left: -10px;
-}
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .control.next {
-    right: -10px;
-}
-.sdsa-2017-frontispiece .diptych .beliefs-cycle .control:hover {
-    transform: translateY(-50%) scale(1.2)
-}
 
 h1 small, h2 small, h3 small, h4 small, h5 small {
   text-transform: uppercase;
@@ -1266,7 +1192,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
   margin: 4rem auto;
 }
 
-
 button.tribe-events-calendar-month__day-cell {
 	background: none;
     border-bottom: 1px solid #efefef;
@@ -1285,20 +1210,8 @@ button.tribe-events-calendar-month__day-cell {
 	background: none;
 }
 
-.tribe-common button.tribe-common-h3 {
-    background: var(--color-white);
-    color: var(--color-red);
-    border: 2px solid var(--color-red);
-    border-radius: 0.25rem;
-}
-
 .tribe-events .tribe-events-c-search__input-group {
 	margin-right: 1rem;
-}
-
-.tribe-events .tribe-events-c-ical__link {
-  color: var(--color-red);
-  border: 2px solid var(--color-red);
 }
 
 .tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date, .tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-link {
