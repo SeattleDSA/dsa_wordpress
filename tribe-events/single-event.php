@@ -26,7 +26,7 @@ $event_id = get_the_ID();
 
 	<div class="cell large-12 small-12">
 		<p class="tribe-events-back hide-for-print">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" class="button hollow"> <?php printf( '&#xE13A; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" class="button hollow"> <?php printf( '← ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
 		</p>
 		<!-- Notices -->
 		<?php tribe_the_notices() ?>
