@@ -17,6 +17,8 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 * **Homepage 2017:** Long-running homepage theme that's morphed over the years.
 * **Homepage 2020:** Stay-tuned. Potential redesign that takes advantage of the WordPress Block editor for easier configuration and closer WYSIWYG-ness.
 
+[[/documentation.jpg]]
+
 ## Vendor Libraries used
 * **JQuery** [repo](https://github.com/jquery/jquery)
 * **Foundation for Sites** css/js framework. [repo](https://github.com/foundation/foundation-sites)
