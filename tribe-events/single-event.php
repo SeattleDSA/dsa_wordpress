@@ -113,7 +113,7 @@ $event_id = get_the_ID();
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
 	</div>
-	<hr />
+	
 	<!-- Event footer -->
 	<div id="tribe-events-footer" class="hide-for-print cell large-12 small-12">
 		<!-- Navigation -->
