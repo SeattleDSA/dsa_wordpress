@@ -84,10 +84,7 @@ $event_id = get_the_ID();
 				<p><?php echo tribe_get_map_link_html() ?></p>
 
 				<?php if ( tribe_has_organizer() ) : ?>
-					<h2>Organizer</h2>
-					<p>
-						<?php echo tribe_get_organizer() ?>
-					</p>
+						<?php tribe_get_template_part( 'modules/meta/organizer' ); ?>	
 				<?php endif ?>
 				
 			</div>
