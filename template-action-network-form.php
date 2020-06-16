@@ -10,6 +10,10 @@ Template Name: Action Network Form
     .article-header { display: none; }
     #inner-content { text-align: center; }
     #main { margin: auto; }
+
+    #can_thank_you { background-color: transparent !important; }
+    #action_info { border-top: none !important; }
+    #action_thank_you_text { text-align: center !important; }
   </style>
 
   <div id="content" class="grid-container fluid">
