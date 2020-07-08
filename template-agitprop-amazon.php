@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: AgitProp (General Theme)
+Template Name: AgitProp (Amazon)
 */
 ?>
 
-<?php get_template_part( 'parts/header', 'agitprop' ); ?>
+<?php get_template_part( 'parts/header', 'amazon' ); ?>
 			
 	<div id="content" class="grid-container">
 	
@@ -18,7 +18,7 @@ Template Name: AgitProp (General Theme)
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<?php get_template_part( 'parts/loop', 'pageagitprop' ); ?>
+					<?php get_template_part( 'parts/loop', 'pageamazon' ); ?>
 					
 				<?php endwhile; endif; ?>							
 
@@ -28,4 +28,4 @@ Template Name: AgitProp (General Theme)
 	
 	</div> <!-- end #content -->
 
-<?php get_template_part( 'parts/footer', 'agitprop' ); ?>
+<?php get_template_part( 'parts/footer', 'amazon' ); ?>

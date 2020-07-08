@@ -409,6 +409,10 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+header p {
+	margin: 0;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -457,6 +461,11 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+.bold {
+	font-weight: 800;
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -886,10 +895,6 @@ header#masthead h1, header#masthead p {
 	margin: 0;
 }
 
-header#masthead a {
-	border-bottom: unset;
-}
-
 header#masthead > a {
 	font-weight: bold;
 }
@@ -914,6 +919,16 @@ header#masthead > a > svg {
 svg * {
 	width: 100%;
 	height: 100%;
+}
+
+body.logged-in.admin-bar {
+	margin-top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+body.logged-in.admin-bar {
+	margin-top: 46px;
+}
 }
 
 /*--------------------------------------------------------------
@@ -1062,4 +1077,8 @@ ul.sub-menu li {
 aside.blog-end-call-to-action {
     background: #f3f3f3;
     padding: 0.5rem 2rem;
+}
+
+.show-for-sr {
+	display None;
 }
