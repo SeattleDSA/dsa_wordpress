@@ -6,8 +6,8 @@ Template Name: AgitProp (General)
 
 <?php get_template_part( 'parts/header', 'agitprop' ); ?>
 			
-	<header id="masthead">
-		<div class="title">
+	<header id="masthead" class="grid grid-container">
+		<div class="title width-6">
 			<span class="parent-site-name bold">
 				<?php 
 					// get the page name
@@ -29,18 +29,16 @@ Template Name: AgitProp (General)
 				<small><?php if (function_exists('the_breadcrumb')) the_breadcrumb(); ?></small>
 			</nav>
 		</div>
+		<div class="space width-6">
+		</div>
 	</header>
 
 	
 
 
-	<div id="content" class="grid-container">
+	<div id="content" class="grid grid-container">
 	
-		<div id="inner-content" class="grid-x grid-x-margin">
-			
-			
-	
-		    <main id="main" class="cell medium-12" role="main">
+		    <main id="main" class="cell width-12" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -50,7 +48,6 @@ Template Name: AgitProp (General)
 
 			</main> <!-- end #main -->
 		    
-		</div> <!-- end #inner-content -->
 	
 	</div> <!-- end #content -->
 

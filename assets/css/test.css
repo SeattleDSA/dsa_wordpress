@@ -398,7 +398,7 @@ select,
 optgroup,
 textarea {
 	color: rgb(4, 4, 2);
-	font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Oxygen-Sans,"Segoe UI",Arial,Ubuntu,Cantarell,sans-serif;
+	font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Oxygen-Sans,"Arial Nova","Segoe UI",Arial,Ubuntu,Cantarell,sans-serif;
 	font-size: calc( 15px + 4 * (100vw / 1500));
 	line-height: 1.5;
 }
@@ -1045,7 +1045,7 @@ aside.blog-end-call-to-action {
  /*--------------------------------------------------------------
 ## Grid
 --------------------------------------------------------------*/
-.grid {
+.grid-x {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
@@ -1057,51 +1057,51 @@ aside.blog-end-call-to-action {
 	margin: 0 auto;
 }
 
-.width-1 {
+.large-1 {
   grid-column: span 1;
 }
 
-.width-2 {
+.large-2 {
   grid-column: span 2;
 }
 
-.width-3 {
+.large-3 {
   grid-column: span 3;
 }
 
-.width-4 {
+.large-4 {
   grid-column: span 4;
 }
 
-.width-5 {
+.large-5 {
   grid-column: span 5;
 }
 
-.width-6 {
+.large-6 {
   grid-column: span 6;
 }
 
-.width-7 {
+.large-7 {
   grid-column: span 7;
 }
 
-.width-8 {
+.large-8 {
   grid-column: span 8;
 }
 
-.width-9 {
+.large-9 {
   grid-column: span 9;
 }
 
-.width-10 {
+.large-10 {
   grid-column: span 10;
 }
 
-.width-11 {
+.large-11 {
   grid-column: span 11;
 }
 
-.width-12 {
+.large-12 {
   grid-column: span 12;
 }
 

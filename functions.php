@@ -23,7 +23,7 @@ require_once(get_template_directory().'/assets/functions/comments.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/assets/functions/page-navi.php');
 
-// Replace 'older/newer' post links with numbered navigation
+// Adds Custom Metaboxes for complex homepage layouts
 require_once(get_template_directory().'/assets/functions/dsa-metaboxes.php');
 
 if(in_array('the-events-calendar/the-events-calendar.php', apply_filters('active_plugins', get_option('active_plugins')))){
