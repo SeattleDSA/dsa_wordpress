@@ -3,13 +3,13 @@
 	<span class="post-published"><?php the_time('F j, Y') ?></span><span class="post-divider">🌹</span>
 	<span class="post-readtime">
 		<?php
-			function readtimeSum () {
-				$readtimeContent = get_post_field( 'post_content', $post->ID );
-				$readtimeWords = str_word_count( strip_tags( $readtimeContent ) );
-				$readtimeSum = $readtimeWords / 200;
-				return round($readtimeSum,1);
-			}
-		    	echo readtimeSum() . " minute read";
+		//	function readtimeSum () {
+		//		$readtimeContent = get_post_field( 'post_content', $post->ID );
+		//		$readtimeWords = str_word_count( strip_tags( $readtimeContent ) );
+		//		$readtimeSum = $readtimeWords / 200;
+		//		return round($readtimeSum,1);
+		//	}
+		//    	echo readtimeSum() . " minute read";
 		?>
 	</span>
 </div>
