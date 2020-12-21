@@ -58,8 +58,6 @@ else {
 
 /*****
 
-
-
 // Remove 4.2 Emoji Support
 // require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 
 
@@ -77,3 +75,4 @@ else {
 
 // Customize the WordPress admin
 // require_once(get_template_directory().'/assets/functions/admin.php'); 
+*/

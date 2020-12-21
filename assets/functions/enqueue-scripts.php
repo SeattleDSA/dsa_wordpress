@@ -2,7 +2,7 @@
 
 function dsa_change_jquery() {
   wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', '3.5.1' );
+  wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', '3.5.1' );
 }
 add_action( 'wp_enqueue_scripts', 'dsa_change_jquery' );
 

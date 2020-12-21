@@ -9,7 +9,7 @@
 	<!-- This content shows up if there are no widgets defined in the backend. -->
 						
 	<div class="alert help">
-		<p>This area is customizable under Widgets &lquote; Footer Left.</p>
+		<p>This area is customizable under Widgets ▶ Footer Left.</p>
 	</div>
 
 	<?php endif; ?>
