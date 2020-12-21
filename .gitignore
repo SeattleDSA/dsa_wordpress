@@ -2,3 +2,11 @@
 assets/scss/.sass-cache/*
 node_modules/
 bower_components/
+assets/functions/._theme-support.php
+assets/functions/._enqueue-scripts.php
+assets/functions/._sidebar.php
+._sidebar-page.php
+._sidebar-footerRight.php
+._sidebar-footerLeft.php
+._functions.php
+._footer.php
