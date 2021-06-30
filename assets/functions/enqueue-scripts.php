@@ -1,11 +1,5 @@
 <?php
 
-function dsa_change_jquery() {
-  wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', '3.5.1' );
-}
-add_action( 'wp_enqueue_scripts', 'dsa_change_jquery' );
-
 function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
     
@@ -22,7 +16,7 @@ function site_scripts() {
     wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/vendor/foundation-sites/dist/css/foundation.min.css', array(), '6.6.3', 'all' );
     wp_enqueue_style( 'justice-icons', get_template_directory_uri() . '/vendor/justice-icons/justice-icons.css', array(), '', 'all' );
     // Register main stylesheet
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.0996', 'all' );
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.09967', 'all' );
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

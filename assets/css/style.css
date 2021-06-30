@@ -1031,6 +1031,10 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 	right: 0;
 }
 
+button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile {
+    background: white;
+    border: 1px solid #ec1f27;
+}
 /******************************************************************
 23. fullPage.js Plugin Changes
 ******************************************************************/
