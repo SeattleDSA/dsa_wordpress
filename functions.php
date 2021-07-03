@@ -56,6 +56,22 @@ else {
 	
 }
 
+/*
+ * If post is private, redirects user to login screen then to the private post/page.
+*/
+add_action( 'wp', 'redirect_private_page_to_login' );
+function redirect_private_page_to_login(){
+    $queried_object = get_queried_object();
+    if (
+        isset( $queried_object->post_status ) &&
+        'private' === $queried_object->post_status &&
+        ! is_user_logged_in()
+    ) {
+        wp_safe_redirect( wp_login_url( get_permalink( $queried_object->ID ) ) );
+        exit;
+    }
+}
+
 /*****
 
 // Remove 4.2 Emoji Support
