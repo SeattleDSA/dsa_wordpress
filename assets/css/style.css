@@ -257,6 +257,14 @@ border-color: var(--color-red) transparent transparent!important;
 }
 }
 
+.off-canvas.is-open li.menu-item-has-children {
+  font-weight: bold;
+}
+
+.off-canvas.is-open li.menu-item-has-children > a:after {
+    content: " ᐅ";
+}
+
 .page-title {
 color: #231F20;
 margin: 4rem 0 3rem 0;
