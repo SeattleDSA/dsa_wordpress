@@ -395,6 +395,26 @@ button.dark, .button.dark, .pagination .button.current {
   color: #fff;
 }
 
+.wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+    color: #2c2e2f;
+    background: #ffe9e9;
+    border: 2pt solid #ec1f27;
+    border-radius: 1.55em;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125em;
+    padding: .667em 1.333em;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:hover, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button:hover {
+    color: #2c2e2f;
+    background: #f98084;
+}
+
 /*********************
 8. POSTS & CONTENT STYLES
 *********************/
