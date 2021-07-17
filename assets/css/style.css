@@ -415,6 +415,16 @@ button.dark, .button.dark, .pagination .button.current {
     background: #f98084;
 }
 
+svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top-bar__datepicker-button-icon-svg, time.tribe-events-c-top-bar__datepicker-time {
+  display: inline-block;
+}
+
+
+.wp-block-button.disabled a.wp-block-button__link {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
 /*********************
 8. POSTS & CONTENT STYLES
 *********************/
