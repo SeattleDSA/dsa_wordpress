@@ -29,6 +29,10 @@ h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
   text-align: center;
 }
 
+.align-bottom {
+    align-self: flex-end;
+}
+
 .page blockquote {
 font-size: 1.5rem;
 color: #231F20;
@@ -129,7 +133,7 @@ a:focus, a:hover {
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
 
-.caps {
+.caps, .capitalize {
   text-transform: uppercase;
 }
 
@@ -527,6 +531,24 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
     font-size: 0.85em;
     margin: 4px 0 7px;
     text-align: center; }
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.border-top {
+  border-top: 1px solid #000;
+}
+
+.blog-post .entry-content>p:first-of-type:first-letter {
+    font-size: 2rem;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--color-red);
+}
 
 /*********************
 10. IMAGE GALLERY STYLES

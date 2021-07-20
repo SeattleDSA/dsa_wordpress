@@ -4,7 +4,7 @@
 
 	<div id="inner-content" class="grid-x grid-margin-x">
 
-		<main id="main" class="cell large-8 medium-8 blog-post" role="main">
+		<main id="main" class="cell small-12 large-12 blog-post" role="main">
 		
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -17,14 +17,6 @@
 		    <?php endif; ?>
 
 		</main> <!-- end #main -->
-
-		<?php if ( in_category('minutes') ) {
-    		/* no sidebar for category minutes */
-		} 
-		else {
-			get_sidebar(); 
-		}
-		?>
 
 	</div> <!-- end #inner-content -->
 

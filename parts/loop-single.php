@@ -1,41 +1,62 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
-	<header class="article-header">	
-		<?php the_category(', ') ?>
-		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+	<header class="article-header cell small-12 large-12">	
 		<div class="grid-x grid-margin-x">
-			<?php get_template_part( 'parts/content', 'byline' ); ?> <?php get_template_part( 'parts/content', 'share' ); ?>
+			<div class="cell large-8 small-12 grid-x grid-margin-x">
+				<?php get_template_part( 'parts/content', 'singleHeader' ); ?>
+			</div>
+			<div class="cell large-4 small-12 grid-x grid-margin-x">
+				<?php get_template_part( 'parts/content', 'share' ); ?>
+			</div>
+		</div>	
+		<div class="grid-x grid-margin-x">	
+			<div class="cell large-6 small-12 align-bottom">
+				<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+				<div class="content-excerpt grid-x grid-margin-x">
+					<div class="cell large-8 small-12">
+						<?php dsa_wordpress_wp_posted_by(); ?>
+					</div>
+					<div class="cell large-4 small-12">
+						<?php dsa_wordpress_wp_post_readtime();?>
+					</div>
+					<div class="cell large-12 content-excerpt">
+						<?php the_excerpt(); ?>
+					</div>
+				</div>
+			</div>
+			<div class="cell large-6 small-12">
+				<?php if ( has_post_thumbnail() ) : ?>
+			    	<div class="cell large-12">
+			    		<?php the_post_thumbnail('full'); ?>
+			   		</div>
+			    	<div class="cell large-12 border-top featured-image-caption-container">
+			    		<?php if (get_post(get_post_thumbnail_id())->post_excerpt) { // search for if the image has caption added on it ?>
+						    <span class="featured-image-caption">
+						        <?php echo wp_kses_post(get_post(get_post_thumbnail_id())->post_excerpt); // displays the image caption ?>
+						    </span>
+						<?php } ?>
+					</div>
+				<?php endif; ?>
+			</div>
 		</div>
+
     </header> <!-- end article header -->
 	
 
-    <section class="entry-content" itemprop="articleBody">
-		<?php if ( has_post_thumbnail() ) : ?>
-		    <figure>
-		    	<?php the_post_thumbnail('full'); ?>
-		    	
-		    		<?php if ( ! function_exists( 'the_post_thumbnail_caption' ) ) {
-						 function the_post_thumbnail_caption() {
-						  global $post;
-
-						  $thumbnail_id    = get_post_thumbnail_id($post->ID);
-						  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
-
-						   if ($thumbnail_image && isset($thumbnail_image[0])) {
-						    return '<figcaption class="post-thumbnail-caption">'.$thumbnail_image[0]->post_excerpt.'</figcaption>';
-						   } else {
-						     return;
-						   }
-						 }
-						}
-					?>		
-		    </figure>
-		<?php endif; ?>
-
+    <section class="entry-content cell large-9 small-12" itemprop="articleBody">
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
-						
-	<footer class="article-footer">
+
+	<div class="sidebar cell large-3 small-12">
+		<?php if ( in_category('minutes') ) {
+    		/* no sidebar for category minutes */
+		} 
+		else {
+			get_sidebar(); 
+		}
+		?>
+	</div>				
+	<footer class="article-footer cell large-12">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>	
 		<div class="dsa-share">
@@ -43,7 +64,8 @@
 			<a class="button-icon-small" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook"></span></a>
 		</div>
 	</footer> <!-- end article footer -->
-					
-	<?php comments_template(); ?>	
+	<div class="article-comments cell large-12">
+		<?php comments_template(); ?>	
+	</div>
 													
 </article> <!-- end article -->

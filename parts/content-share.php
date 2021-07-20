@@ -1,4 +1,3 @@
-<div class="cell large-6 medium-6 small-12 dsa-share">
-	share <a class="button-icon-small" href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a> 
-	<a class="button-icon-small" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook"></span></a>
+<div class="cell large-12 medium-12 small-12 dsa-share border-top">
+	<p>share <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php echo wp_get_shortlink(); ?>" title="Tweet this!">Twitter</a> | <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook.">Facebook</a> | <a href="mailto:type email address here?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php the_title('','',true); ?>&#32;&#32;<?php the_permalink(); ?>" title="Email to a friend/colleague" target="_blank">Email</a></p>
 </div>

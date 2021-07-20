@@ -23,6 +23,9 @@ require_once(get_template_directory().'/assets/functions/comments.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/assets/functions/page-navi.php');
 
+// Custom template tags for this theme.
+require_once(get_template_directory().'/assets/functions/template-tags.php');
+
 // Adds Custom Metaboxes for complex homepage layouts
 require_once(get_template_directory().'/assets/functions/dsa-metaboxes.php');
 

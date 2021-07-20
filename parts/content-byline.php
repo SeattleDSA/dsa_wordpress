@@ -1,15 +1,16 @@
-<div class="cell large-6 medium-6 small-12 byline">
-	<span class="post-author"><?php the_author_posts_link(); ?></span><br>
-	<span class="post-published"><?php the_time('F j, Y') ?></span><span class="post-divider">🌹</span>
-	<span class="post-readtime">
-		<?php
-		//	function readtimeSum () {
-		//		$readtimeContent = get_post_field( 'post_content', $post->ID );
-		//		$readtimeWords = str_word_count( strip_tags( $readtimeContent ) );
-		//		$readtimeSum = $readtimeWords / 200;
-		//		return round($readtimeSum,1);
-		//	}
-		//    	echo readtimeSum() . " minute read";
-		?>
-	</span>
+<div class="cell small-12 byline grid-x grid-margin-x">
+	<div class="cell large-4 small-12 border-top">
+		<?php dsa_wordpress_wp_posted_on(); ?>
+	</div>
+	<div class="cell large-8 small-12 border-top">
+		<?php dsa_wordpress_wp_entry_tags(); ?>
+	</div>
+
+	<div class="cell large-4 small-12">
+		<?php dsa_wordpress_wp_posted_by(); ?>
+	</div>
+	<div class="cell large-8 small-12">
+			<?php dsa_wordpress_wp_post_readtime();?>
+	</div>
+	
 </div>
