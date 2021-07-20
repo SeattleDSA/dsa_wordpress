@@ -550,6 +550,10 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
     color: var(--color-red);
 }
 
+.archive article.post {
+    margin-bottom: 2rem;
+}
+
 /*********************
 10. IMAGE GALLERY STYLES
 *********************/

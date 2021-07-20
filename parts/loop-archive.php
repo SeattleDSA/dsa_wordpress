@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-3 medium-6 small-6 grid-x grid-margin-x'); ?> role="article">					
+<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-6 medium-6 small-6 grid-x grid-margin-x'); ?> role="article">					
 		
 		<header class="archive-item-content cell large-10 medium-8 small-12">
 			<div class="cell small-12 byline grid-x grid-margin-x">
@@ -24,7 +24,7 @@
 			</section> <!-- end archive-item-excerpt -->
 		</header> <!-- end archive-item-content -->
 
-		<div class="archive-item-background cell large-12 medium-12 small-12 align-bottom">
+		<div class="archive-item-background cell large-6 medium-8 small-12 align-bottom">
 			<a href="<?php the_permalink() ?>" class="archive-image-link">
 				<?php 
 					if ( has_post_thumbnail() ) { 
