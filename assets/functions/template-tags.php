@@ -74,14 +74,14 @@ if ( ! function_exists( 'dsa_wordpress_wp_entry_tags' ) ) :
 			$categories_list = get_the_category_list( esc_html__( '&nbsp;/&nbsp;', 'dsa_wordpress' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="post-category cat-links">' . esc_html__( '%1$s', 'dsa_wordpress' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="post-category cat-links">Category ' . esc_html__( '%1$s', 'dsa_wordpress' ) . '</span> | ', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'dsa_wordpress' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', '&nbsp;/&nbsp;', 'dsa_wordpress' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="post-tags tags-links">' . esc_html__( 'Tagged %1$s', 'dsa_wordpress' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="post-tags tags-links">' . esc_html__( 'Tagged %1$s', 'dsa_wordpress' ) . '</span> | ', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -108,7 +108,7 @@ if ( ! function_exists( 'dsa_wordpress_wp_entry_tags' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( ' | Edit <span class="screen-reader-text show-for-sr">%s</span>', 'dsa_wordpress' ),
+					__( 'Edit <span class="screen-reader-text show-for-sr">%s</span>', 'dsa_wordpress' ),
 					array(
 						'span' => array(
 							'class' => array(),
