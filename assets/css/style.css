@@ -1158,7 +1158,7 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
   .respond-form,
   nav {
     display: none; }
-  p {
+  p, .entry-content li, .entry-content p {
     font-size: 11pt;
      break-inside: avoid;
   }
@@ -1171,11 +1171,7 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
   h3 {
     font-size: 12pt;
   }
-  .wp-block-columns {
-    display: flex;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
-  }
+
   #wpadminbar {
     display: none;
   }
@@ -1183,14 +1179,17 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
     content: none !important;
   }
   .wp-block-columns {
-    display: block;
+    display: flex;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
   }
 
-  .wp-block-column {
-    display: block;
-  }
   .wp-block-spacer {
     display: none;
+  }
+
+  .grid-x>main.large-8 {
+      width: 100%;
   }
 }
 /******************************************************************
