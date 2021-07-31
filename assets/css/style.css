@@ -1159,18 +1159,19 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
   nav {
     display: none; }
   p {
-    font-size: 12pt;
+    font-size: 11pt;
+     break-inside: avoid;
   }
   h1 {
-    font-size: 18pt;
-  }
-  h2 {
     font-size: 16pt;
   }
-  h3 {
+  h2 {
     font-size: 14pt;
   }
-    .wp-block-columns {
+  h3 {
+    font-size: 12pt;
+  }
+  .wp-block-columns {
     display: flex;
     margin-top: 0rem;
     margin-bottom: 3rem;
