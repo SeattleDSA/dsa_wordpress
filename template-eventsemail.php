@@ -32,11 +32,29 @@ Template Name: Event List (Email 2)
 				font-size: 3rem;
 				color: #ec1f27;
 			}
+
+			@media only screen and (max-width: 480px){
+			    #templateColumns{
+			    	width:100% !important;
+			    }
+
+			    .templateColumnContainer{
+			    	display:block !important;
+			    	width:100% !important;
+			    }
+
+			    .columnImage{
+			        height:auto !important;
+			        max-width:480px !important;
+			        width:100% !important;
+			    }
+			}
 		</style><!-- Hide Header/Footer -->
-		
 		
 		<div class="cell large-12 small-12">
 			<h1><span class="icon-calendar"></span> <?php the_title(); ?></h1>
+			<?php the_content( 'Continue reading ' . get_the_title() ); ?>
+			<hr />
 			<p>Here are upcoming events:</p>
 		</div>
 		<div class="cell large-12 small-12">
@@ -60,16 +78,24 @@ Template Name: Event List (Email 2)
 				function empty_content($str) {
 					    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
 				}
-
+					echo "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"600\" id=\"templateColumns\">";
 					// Loop through the events, displaying the title
 					// and content for each
 					foreach ( $events as $event ) {
 						$dsa_event_description_raw = $event->post_content;
-						$dsa_event_description = wp_filter_nohtml_kses( $dsa_event_description_raw );
+						$dsa_event_description = sanitize_text_field( $dsa_event_description_raw );
 						$excerpt_length = 400;
 						$title = $event->post_title;
 
-					    echo "<h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
+						echo "<tr><td align=\"left\" valign=\"top\" width=\"34%\" class=\"templateColumnContainer\">";
+
+						if ( has_post_thumbnail( $event->ID ) ) {
+					        echo '<a href="' . get_permalink( $event->ID ) . '" title="' . esc_attr( $event->post_title ) . '">';
+					        echo get_the_post_thumbnail( $event->ID, 'medium' );
+					        echo '</a>';
+					    }
+
+					    echo "</td><td align=\"left\" valign=\"top\" width=\"66%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
 						echo "<p><strong>Time:</strong> " . tribe_events_event_schedule_details( $event->ID ) . "</p>";
 						echo "<p><strong>Venue:</strong> " . tribe_get_venue_single_line_address ( $event->ID, $link = false ) . "</p><p>";
 
@@ -82,8 +108,9 @@ Template Name: Event List (Email 2)
 					    echo $line;
 					    // echo wp_filter_nohtml_kses ($dsa_event_shortened);
 					    // echo $event->post_content; 
-					    echo " <a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\"> [Read More]</a></p><hr>";
+					    echo " <a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\"> [Read More]</a></p></td></tr>";
 					}
+					echo "</table>";
 				}
 				else {
 					echo "<div>This template uses The Events Calendar plugin. Please install.</div>";
