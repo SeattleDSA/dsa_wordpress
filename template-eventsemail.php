@@ -87,7 +87,7 @@ Template Name: Event List (Email 2)
 						$excerpt_length = 400;
 						$title = $event->post_title;
 
-						echo "<tr><td align=\"left\" valign=\"top\" width=\"34%\" class=\"templateColumnContainer\">";
+						echo "<tr><td align=\"left\" valign=\"top\" width=\"30%\" class=\"templateColumnContainer\">";
 
 						if ( has_post_thumbnail( $event->ID ) ) {
 					        echo '<a href="' . get_permalink( $event->ID ) . '" title="' . esc_attr( $event->post_title ) . '">';
@@ -95,9 +95,9 @@ Template Name: Event List (Email 2)
 					        echo '</a>';
 					    }
 
-					    echo "</td><td align=\"left\" valign=\"top\" width=\"66%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
-						echo "<p><strong>Time:</strong> " . tribe_events_event_schedule_details( $event->ID ) . "</p>";
-						echo "<p><strong>Venue:</strong> " . tribe_get_venue_single_line_address ( $event->ID, $link = false ) . "</p><p>";
+					    echo "</td><td align=\"left\" valign=\"top\" width=\"70%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
+						echo "<p><strong>When:</strong> " . tribe_events_event_schedule_details( $event->ID ) . "</p>";
+						echo "<p><strong>Where:</strong> " . tribe_get_venue ( $event->ID, $link = false ) . "</p><p>";
 
 					   	$line=$dsa_event_description;
 						if (preg_match('/^.{1,399}\b/su', $dsa_event_description, $match))
