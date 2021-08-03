@@ -1100,8 +1100,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 .tribe_events_cat-new-member .tribe-common-anchor:after, .tribe_events_cat-new-member .tribe-common-anchor-thin:after, .tribe_events_cat-new-member .tribe-events-calendar-month__calendar-event-title-link:after, .cat_new-member .tribe-events-calendar-month__calendar-event-title-link:after, .tribe_events_cat-new-member .tribe-events-calendar-month-mobile-events__mobile-event-title-link:after, .cat_new-member.tribe-events-calendar-month-mobile-events__mobile-event-title-link:after {
 	content: "🌹";
 	display: inline-flex;
-	position: absolute;
-	right: 0;
 }
 
 button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile {
