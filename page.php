@@ -2,7 +2,7 @@
 	
 	<div id="content" class="grid-container">
 
-		<div id="inner-content" class="grid-x grid-x-margin">
+		<div id="inner-content" class="grid-x grid-margin-x">
 	
 		    <main id="main" class="cell large-8 medium-8" role="main">
 				

@@ -1163,7 +1163,17 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
      break-inside: avoid;
   }
   h1 {
-    font-size: 16pt;
+    font-size: 24pt;
+  }
+  h1.page-title {
+    font-size: 24pt;
+    padding:  0;
+    margin:  0;
+  }
+  .page-template.page-template-template-committee header.article-header, .committee .page-template.page-template-template-committee header.article-header {
+    padding: 18pt 0 6pt 0;
+    border-bottom: 1px solid;
+    margin: 0 0 12pt 0;
   }
   h2 {
     font-size: 14pt;
@@ -1191,7 +1201,12 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
   .grid-x>main.large-8 {
       width: 100%;
   }
+
+  .committee .wp-block-columns, .page-template-template-committee .wp-block-columns {
+    flex-wrap: nowrap;
+  }
 }
+
 /******************************************************************
 25. Table of Contents
 ******************************************************************/
