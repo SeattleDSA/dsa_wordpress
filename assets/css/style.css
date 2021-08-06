@@ -1092,6 +1092,22 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
   margin: 0.5em 0 1em 0;
 }
 
+/*********************
+21c. 2021 Theme
+*********************/
+
+.grid-container.grid-x.featuredDioramaContainer {
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  max-height: 50vh;
+  max-width: 100%;
+  align-content: center;
+}
+
+img.featuredDiorama {
+  z-index: 0;
+}
 
 /*********************
 22. CALENDAR via THEEVENTSCALENDAR PLUGIN
