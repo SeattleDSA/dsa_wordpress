@@ -95,9 +95,10 @@ Template Name: Event List (Email 2)
 					        echo '</a>';
 					    }
 
-					    echo "</td><td align=\"left\" valign=\"top\" width=\"70%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
+					    echo "</td><td align=\"left\" valign=\"top\" width=\"60%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
 						echo "<p><strong>When:</strong> " . tribe_events_event_schedule_details( $event->ID ) . "</p>";
 						echo "<p><strong>Where:</strong> " . tribe_get_venue ( $event->ID, $link = false ) . "</p><p>";
+
 
 					   	$line=$dsa_event_description;
 						if (preg_match('/^.{1,399}\b/su', $dsa_event_description, $match))
@@ -108,7 +109,8 @@ Template Name: Event List (Email 2)
 					    echo $line;
 					    // echo wp_filter_nohtml_kses ($dsa_event_shortened);
 					    // echo $event->post_content; 
-					    echo " <a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\"> [Read More]</a></p></td></tr>";
+					    echo "<a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\"> [Read More]</a></p></td>";
+					    echo "<td align=\"left\" valign=\"top\" width=\"10%\" class=\"templateColumnContainer\">".tribe_get_event_website_link($event->ID) ."</td></tr>";
 					}
 					echo "</table>";
 				}
