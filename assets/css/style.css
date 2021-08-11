@@ -718,7 +718,8 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
 
 @media print, screen and (min-width: 40em) {
   .single #inner-content .sidebar {
-    margin-top: 24rem;
+    margin-top: 0rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -1234,6 +1235,44 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
       padding: 0 0.5rem 1rem 0.5rem;
       margin: 0;
   }
+
+  .print-1 {
+    flex-basis: calc(8.3% - 1rem) !important;
+  }
+  .print-2 {
+    flex-basis: calc(16.6% - 1rem) !important;
+  }
+  .print-3 {
+    flex-basis: calc(24.5% - 1rem) !important;
+  }
+  .print-4 {
+    flex-basis: calc(33.3% - 1rem) !important;
+  }
+  .print-5 {
+    flex-basis: calc(41.6% - 1rem) !important;
+  }
+  .print-6 {
+    flex-basis: calc(50% - 1rem) !important;
+  }
+  .print-7 {
+    flex-basis: calc(58.3% - 1rem) !important;
+  }
+  .print-8 {
+    flex-basis: calc(66.6% - 1rem) !important;
+  }
+  .print-9 {
+    flex-basis: calc(75% - 1rem) !important;
+  }
+  .print-10 {
+    flex-basis: calc(83.3% - 1rem) !important;
+  }
+  .print-11 {
+    flex-basis: calc(91.6% - 1rem) !important;
+  }
+  .print-12 {
+    flex-basis: 100% !important;
+  }
+
 
 }
 
