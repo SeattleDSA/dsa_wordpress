@@ -7,6 +7,12 @@ Template Name: Committee Pages
 <?php get_header(); ?>
 			
 	<div id="content" class="grid-container">
+
+		<nav aria-label="You are here:" role="navigation" class="grid-x grid-margin-x hide-for-print">
+			<div class="cell small-12 hide-for-print">
+				<?php if (function_exists('the_breadcrumb')) the_breadcrumb(); ?>
+			</div>
+		</nav>
 	
 		<div id="inner-content" class="grid-x grid-margin-x">
 	
