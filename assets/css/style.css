@@ -339,7 +339,7 @@ margin: 4rem 0 3rem 0;
     color: white;
 }
 
-button, .button, input[type="button"], .pagination .button {
+.button, input[type="button"], .pagination .button {
 	background: var(--color-red);
 	background: -webkit-linear-gradient(left,var(--color-red) 0%,var(--color-red2) 100%);
 	background: linear-gradient(to right,var(--color-red) 0%,var(--color-red2) 100%);
