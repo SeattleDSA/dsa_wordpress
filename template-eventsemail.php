@@ -87,7 +87,7 @@ Template Name: Event List (Email 2)
 						$excerpt_length = 400;
 						$title = $event->post_title;
 
-						echo "<tr style=\"border-bottom: 1px solid #202020;\"><td align=\"center\" valign=\"middle\" width=\"15%\">";
+						echo "<tr style=\"border-bottom: 1px solid #202020;\"><td align=\"center\" valign=\"middle\" width=\"15%\" style=\"text-align: center; vertical-align: middle;\">";
 
 						echo "<span class=\"dsa-event-textmonth\">" . tribe_get_start_date( $event->ID, $display_time = false, $date_format = "M" ) . "</span><br>";
 
@@ -95,7 +95,7 @@ Template Name: Event List (Email 2)
 
 						echo "<span class=\"dsa-event-textday\">" . tribe_get_start_date( $event->ID, $display_time = false, $date_format = "D" ) . "</span><br>";
 
-					    echo "</td><td align=\"left\" valign=\"middle\" width=\"84%\">";
+					    echo "</td><td align=\"left\" valign=\"middle\" width=\"84%\" style=\"vertical-align: middle; text-align: left;\">";
 					    echo "<span class=\"dsa-event-time\">" . tribe_get_start_time( $event->ID ) . " - " . tribe_get_end_time( $event->ID ) . "</span><br>";
 					    echo "<h3><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h3>";
 						
