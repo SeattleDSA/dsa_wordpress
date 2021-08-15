@@ -33,7 +33,7 @@ Use:	Grid-container with two most recent posts
 				    	<span class="dsa-event-textday"><?php the_time('D') ?></span>
 				    </div>
 				    <div class="cell large-9 medium-9 small-9">
-				    	<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4><br/>
+				    	<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 				    	<strong><?php the_author() ?></strong>
 				    </div>
 				</div>
