@@ -87,30 +87,21 @@ Template Name: Event List (Email 2)
 						$excerpt_length = 400;
 						$title = $event->post_title;
 
-						echo "<tr><td align=\"left\" valign=\"top\" width=\"30%\" class=\"templateColumnContainer\">";
+						echo "<tr style=\"border-bottom: 1px solid #202020;\"><td align=\"center\" valign=\"middle\" width=\"15%\">";
 
-						if ( has_post_thumbnail( $event->ID ) ) {
-					        echo '<a href="' . get_permalink( $event->ID ) . '" title="' . esc_attr( $event->post_title ) . '">';
-					        echo get_the_post_thumbnail( $event->ID, 'medium' );
-					        echo '</a>';
-					    }
+						echo "<span class=\"dsa-event-textmonth\">" . tribe_get_start_date( $event->ID, $display_time = false, $date_format = "M" ) . "</span><br>";
 
-					    echo "</td><td align=\"left\" valign=\"top\" width=\"60%\" class=\"templateColumnContainer\"><h2><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h2>";
-						echo "<p><strong>When:</strong> " . tribe_events_event_schedule_details( $event->ID ) . "</p>";
-						echo "<p><strong>Where:</strong> " . tribe_get_venue ( $event->ID, $link = false ) . "</p><p>";
+						echo "<span class=\"dsa-event-numericday\" style=\"font-size: 2rem; font-weight:bold;\">" . tribe_get_start_date( $event->ID, $display_time = false, $date_format = "j" ) . "</span><br>";
 
+						echo "<span class=\"dsa-event-textday\">" . tribe_get_start_date( $event->ID, $display_time = false, $date_format = "D" ) . "</span><br>";
 
-					   	$line=$dsa_event_description;
-						if (preg_match('/^.{1,399}\b/su', $dsa_event_description, $match))
-						{
-						    $line=$match[0];
-						}
+					    echo "</td><td align=\"left\" valign=\"middle\" width=\"84%\">";
+					    echo "<span class=\"dsa-event-time\">" . tribe_get_start_time( $event->ID ) . " - " . tribe_get_end_time( $event->ID ) . "</span><br>";
+					    echo "<h3><a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\">". $title . "</a></h3>";
+						
+						echo "<span class=\"dsa-event-location\"><strong>" . tribe_get_venue ( $event->ID, $link = false ) . "</strong></span> <span class=\"dsa-event-city\">" . tribe_get_city ($event->ID, $link = false);
 
-					    echo $line;
-					    // echo wp_filter_nohtml_kses ($dsa_event_shortened);
-					    // echo $event->post_content; 
-					    echo "<a href=\"" . tribe_get_event_link( $event->ID, $full_link=false) . "\"> [Read More]</a></p></td>";
-					    echo "<td align=\"left\" valign=\"top\" width=\"10%\" class=\"templateColumnContainer\">".tribe_get_event_website_link($event->ID) ."</td></tr>";
+					    echo "</span></tr>";
 					}
 					echo "</table>";
 				}

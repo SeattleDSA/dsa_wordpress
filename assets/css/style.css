@@ -1099,6 +1099,15 @@ button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-ce
     background: white;
     border: 1px solid #ec1f27;
 }
+
+span.dsa-event-numericday {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+span.dsa-event-textmonth, span.dsa-event-textday, span.dsa-event-address {
+font-color:  #5d5d5d;
+}
 /******************************************************************
 23. fullPage.js Plugin Changes
 ******************************************************************/

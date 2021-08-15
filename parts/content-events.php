@@ -18,7 +18,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 
 
 					$events = tribe_get_events( array(
-					    'posts_per_page' => 4,
+					    'posts_per_page' => 6,
 					    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
 					) );
 					
@@ -33,35 +33,33 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 						?>
 
 					    <div class="card cell large-6 medium-12 small-12 dsa-events-item">
-					    	<h4><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h4>
-					    	<hr>
 					    	<div class="grid-x grid-margin-x grid-margin-y">
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
-						    		<div class="grid-x grid-margin-x grid-margin-y">
-							    		<div class="cell large-6 medium-6 small-12">
-					    					<p><strong>When</strong><br><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
+						    		<div class="grid-x grid-margin-x grid-margin-y align-middle">
+							    		<div class="cell large-2 medium-3 small-3 text-center">
+					    					
+					    						<span class="dsa-event-textmonth"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "M" );?></span><br>
+					    						<span class="dsa-event-numericday"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "j" );?></span><br>
+					    						<span class="dsa-event-textday"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "D" );?></span>
 					    				</div>
-					    				<div class="cell large-6 medium-6 small-12">
-						    				<strong>Where</strong><br>
+					    				<div class="cell large-10 medium-9 small-9">
+					    					<span class="dsa-event-time"><?php echo tribe_get_start_time( $event->ID );?> - <?php echo tribe_get_end_time( $event->ID );?></span><br>
+					    					<h4><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h4>
 						    				<?php if ( tribe_has_venue( $event->ID ) ) {
-												echo '<p>';
-												echo tribe_get_venue( $event->ID ) . '<br>';
-												echo tribe_get_address( $event->ID ) . ' ' . tribe_get_city( $event->ID );
-												echo '</p>';
+												echo '<strong><span class=\"dsa-event-location\">';
+												echo tribe_get_venue( $event->ID ) . '</span></strong><br>';
+												echo '<span class=\"dsa-event-address\">' . tribe_get_address( $event->ID ) . ' ' . tribe_get_city( $event->ID );
+												echo '</span>';
 											} 
 											else {
-												echo '<p>Online</p>'; 
+												echo '<strong><span class=\"dsa-event-location\">Online</span></strong>'; 
 											} ?>		
 										</div>
 									</div>
 								</div>
-						    	<div class="cell large-12 medium-12 small-12 dsa-events-description">
-						    		<p><?php echo strip_tags(substr($dsa_event_description, 0, 300)) ?>...</p>
-									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button hollow">Find out more</a>
-								</div>
 							</div>
 						</div>
-						<br>
+						<hr>
 					<?php } ?>
 
 						<div class="cell text-center">
