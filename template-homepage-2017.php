@@ -43,14 +43,15 @@ Template Name: Hompage 2017
 		  </div><!-- end diptych -->
 		</div><!-- end sdsa-2017-frontispiece -->
 	
-		<div id="dsa-events" class="bg-dsa-red">
-			<?php get_template_part( 'parts/content', 'events' ); ?> <!-- see /parts/content-events.php -->
-		</div> 
+		<div class="grid-x grid-margin-x grid-margin-y align-top">
+			<div id="dsa-events" class="bg-light cell large-6 small-12">
+				<?php get_template_part( 'parts/content', 'events' ); ?> <!-- see /parts/content-events.php -->
+			</div> 
 
-		<div id="dsa-posts" class="bg-light">
-			<?php get_template_part( 'parts/content', 'dispatches' ); ?> <!-- see /parts/content-dispatches.php -->
+			<div id="dsa-posts" class="bg-light cell large-6 small-12">
+				<?php get_template_part( 'parts/content', 'dispatches' ); ?> <!-- see /parts/content-dispatches.php -->
+			</div>
 		</div>
-	
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
