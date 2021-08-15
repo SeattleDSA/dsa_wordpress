@@ -1091,6 +1091,10 @@ img.featuredDiorama {
 	display: inline-flex;
 }
 
+a.tribe-common-b2--bold.tribe-common-anchor-thin.tribe-events-widget-events-list__event-venue-name::after {
+    content: "";
+}
+
 button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile {
     background: white;
     border: 1px solid #ec1f27;
