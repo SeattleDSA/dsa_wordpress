@@ -36,37 +36,28 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 					    	<h4><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h4>
 					    	<hr>
 					    	<div class="grid-x grid-margin-x grid-margin-y">
-						    	<div class="cell large-12 medium-12 small-12 dsa-events-description">
-						    		<p><?php echo strip_tags(substr($dsa_event_description, 0, 300)) ?>...</p>
-									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button hollow">Find out more</a>
-								</div>
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
 						    		<div class="grid-x grid-margin-x grid-margin-y">
-							    		<div class="cell large-2 medium-3 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-calendar" aria-label="View event details on calendar">
-					    						
-					    					</a>
-					    			 	</div>
-					    				<div class="cell large-4 medium-9 small-9">
-					    					<p><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
+							    		<div class="cell large-6 medium-6 small-12">
+					    					<p><strong>When</strong><br><?php echo tribe_events_event_schedule_details( $event->ID ); ?></p>
 					    				</div>
-					    				<div class="cell large-2 medium-3 small-3">
-					    					<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button-icon-small icon-location"  aria-label="Details on event venue">
-
-					    					</a>
-					    				</div>
-					    				<div class="cell large-4 medium-9 small-9">
+					    				<div class="cell large-6 medium-6 small-12">
+						    				<strong>Where</strong><br>
 						    				<?php if ( tribe_has_venue( $event->ID ) ) {
 												echo '<p>';
 												echo tribe_get_venue( $event->ID ) . '<br>';
-												echo tribe_get_city( $event->ID ) . ' ' . tribe_get_state( $event->ID );
+												echo tribe_get_address( $event->ID ) . ' ' . tribe_get_city( $event->ID );
 												echo '</p>';
 											} 
 											else {
-												echo '<p>TBD</p>'; 
+												echo '<p>Online</p>'; 
 											} ?>		
 										</div>
 									</div>
+								</div>
+						    	<div class="cell large-12 medium-12 small-12 dsa-events-description">
+						    		<p><?php echo strip_tags(substr($dsa_event_description, 0, 300)) ?>...</p>
+									<a href="<?php echo tribe_get_event_link ( $event->ID  ); ?>" class="button hollow">Find out more</a>
 								</div>
 							</div>
 						</div>

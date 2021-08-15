@@ -339,56 +339,9 @@ margin: 4rem 0 3rem 0;
     color: white;
 }
 
-.button, input[type="button"], .pagination .button {
-	background: var(--color-red);
-	background: -webkit-linear-gradient(left,var(--color-red) 0%,var(--color-red2) 100%);
-	background: linear-gradient(to right,var(--color-red) 0%,var(--color-red2) 100%);
-	color: #fff;
-	border: 2px solid var(--color-red);
-	border-radius: 0.25rem;
-	padding: 0.5rem 1rem;
-	transition: all 150ms;
-	font-weight: bold;
-	font-weight: 700;
-	text-decoration: none;
-	box-shadow: 0 0 1px rgba(0,0,0,0.54);
-	-webkit-transition: all 300ms;
-	transition: all 300ms;
-	font-size: 1rem;
-  margin: 0.25rem;
-	display: inline-flex;
-}
-
 .footer .button {
 	background: var(--color-red);
 	box-shadow: none;
-}
-
-a.button.hollow, a.excerpt-read-more, button.hollow, input[type="button"], .pagination .button.hollow {
-  border: 2px solid var(--color-red);
-  border-radius: 0.25rem;
-  color: var(--color-red);
-  background: var(--color-white);
-  padding: 0.5rem 1rem;
-  margin: 0.25rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-}
-
-
-button.hollow:hover, .button.hollow:hover, .excerpt-read-more:hover, .button:focus, .button:hover, input[type="button"]:hover, .pagination .button:hover, .button.dark:focus, .button.dark:hover, input[type="button"]:hover {
-	box-shadow: 0 5px 8px rgba(244,67,54,0.25);
-    background: var(--color-red);
-    color: var(--color-white);
-    background: -webkit-linear-gradient(left,var(--color-red) 0%,var(--color-red2) 100%);
-    background: linear-gradient(to right,var(--color-red) 0%,var(--color-red2) 100%);
-    background-size: 400%;
-    -webkit-animation: Gradient 1s ease infinite;
-    animation: Gradient 1s ease infinite;
-    border-color: var(--color-red);
-    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
-    padding: 0.5rem 1rem;
 }
 
 .pagination .current {
@@ -402,28 +355,28 @@ button.hollow:hover, .button.hollow:hover, .excerpt-read-more:hover, .button:foc
 }
 
 
-button.dark, .button.dark, .pagination .button.current {
+.pagination .button.current {
   background: #231F20;
   border-color: #231f20;
   color: #fff;
 }
 
-.wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+.button, a.button, .pagination .button, a.excerpt-read-more, .wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
     color: #2c2e2f;
     background: #ffe9e9;
     border: 2pt solid #ec1f27;
-    border-radius: 1.55em;
+    border-radius: 2em;
     box-shadow: none;
     cursor: pointer;
     display: inline-block;
     font-size: 1.125em;
-    padding: .667em 1.333em;
+    padding: .75em 1em;
     text-align: center;
     text-decoration: none;
     overflow-wrap: break-word;
 }
 
-.wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:hover, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button:hover {
+a.button:focus, a.button:hover, .button:focus, .pagination .button:focus, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:hover, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button:hover, .button:hover, input[type="button"]:hover, .pagination .button:hover {
     color: #2c2e2f;
     background: #f98084;
 }
@@ -436,6 +389,25 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
 .wp-block-button.disabled a.wp-block-button__link {
     background-color: #eee;
     border-color: #ccc;
+}
+
+.button.hollow, input[type="button"].hollow, .pagination .button.hollow, .wp-block-button.hollow .wp-block-button__link {
+    color: #2c2e2f;
+    background: #ffffff;
+}
+
+a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-button__link:focus, .wp-block-button.hollow .wp-block-button__link:hover {
+    background: #fee9e9;
+}
+
+.button.solid, input[type="button"].solid, .pagination .button.solid, .wp-block-button.solid .wp-block-button__link {
+    color: #ffffff;
+    background: #ec1f27;
+    font-weight: bold;
+}
+
+.button.solid:focus, input[type="button"]:focus, input[type="button"]:hover, .wp-block-button.solid .wp-block-button__link:focus, .wp-block-button.solid .wp-block-button__link:hover, .button.solid:hover, input[type="button"]:hover {
+    background: #f98084;
 }
 
 /*********************
