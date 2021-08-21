@@ -2,9 +2,9 @@
 // SIDEBARS AND WIDGETIZED AREAS
 function joints_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar - Posts', 'jointswp'),
-		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'id' => 'sidebar3',
+		'name' => __('Sidebar - Posts - Left', 'jointswp'),
+		'description' => __('The left sidebar for posts on desktop.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -12,9 +12,19 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'sidebar1',
+		'name' => __('Sidebar - Posts - Right', 'jointswp'),
+		'description' => __('The right sidebar for posts on desktop.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
 		'id' => 'sidebar2',
 		'name' => __('Sidebar - Pages', 'jointswp'),
-		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'description' => __('The first (primary) sidebar on pages.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

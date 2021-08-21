@@ -433,7 +433,12 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 }
 
 .blog-post h1 {
-  margin: 0 0 5rem;
+  margin: 0 0 2rem;
+  font-size: 2.5rem;
+}
+
+.single-author, .single-excerpt {
+  margin-bottom: 2rem;
 }
 
 .post-divider {
