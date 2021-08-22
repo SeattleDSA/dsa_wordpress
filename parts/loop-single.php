@@ -46,7 +46,7 @@
     </header> <!-- end article header -->
 	
 	<div class="sidebar cell large-3 small-12 single-sidebar-left">
-		<?php get_sidebar('PostLeft'); ?>
+		<?php get_sidebar('postleft'); ?>
 	</div>
 
     <section class="entry-content cell large-6 small-12 single-content" itemprop="articleBody">
@@ -54,7 +54,7 @@
 	</section> <!-- end article section -->
 
 	<div class="sidebar cell large-3 small-12 single-sidebar-right">
-		<?php get_sidebar('PostRight'); ?>
+		<?php get_sidebar('postright'); ?>
 	</div>				
 	<footer class="article-footer cell large-12">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
