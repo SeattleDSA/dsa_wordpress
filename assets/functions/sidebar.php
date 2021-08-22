@@ -2,8 +2,8 @@
 // SIDEBARS AND WIDGETIZED AREAS
 function joints_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar3',
-		'name' => __('Sidebar - Posts - Left', 'jointswp'),
+		'id' => 'postleft',
+		'name' => __('Sidebar - Post - Left', 'jointswp'),
 		'description' => __('The left sidebar for posts on desktop.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -12,8 +12,8 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar - Posts - Right', 'jointswp'),
+		'id' => 'postright',
+		'name' => __('Sidebar - Post - Right', 'jointswp'),
 		'description' => __('The right sidebar for posts on desktop.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -22,9 +22,19 @@ function joints_register_sidebars() {
 	));
 	
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __('Sidebar - Pages', 'jointswp'),
+		'id' => 'pageright',
+		'name' => __('Sidebar - Page - Right', 'jointswp'),
 		'description' => __('The first (primary) sidebar on pages.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'alertmessage',
+		'name' => __('Widget - Alert Message', 'jointswp'),
+		'description' => __('If populated, will display an alert on homepage, pages, posts.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -44,7 +54,7 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'footerleft',
-		'name' => __('Footer Left', 'jointswp'),
+		'name' => __('Widget - Footer Left', 'jointswp'),
 		'description' => __('Populates top-left of footer.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -54,7 +64,7 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'footerright',
-		'name' => __('Footer Right', 'jointswp'),
+		'name' => __('Widget - Footer Right', 'jointswp'),
 		'description' => __('Populates top-right of footer.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',

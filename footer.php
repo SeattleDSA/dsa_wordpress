@@ -1,8 +1,8 @@
-				<footer class="footer padding-top hide-for-print" role="contentinfo">
+				<footer class="footer margin-top padding-top hide-for-print" role="contentinfo">
 					<div class="grid-container">
 						<div id="dsa-footer" class="hide-for-print grid-x grid-margin-x grid-margin-y">
-							<?php get_sidebar('footerLeft'); ?>
-							<?php get_sidebar('footerRight'); ?>
+							<?php get_sidebar('footerleft'); ?>
+							<?php get_sidebar('footerright'); ?>
 						</div>
 					</div><!-- end #dsaFooter-content widgets -->
 					<div class="grid-container">

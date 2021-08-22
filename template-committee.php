@@ -5,7 +5,7 @@ Template Name: Committee Pages
 ?>
 
 <?php get_header(); ?>
-			
+	<?php get_sidebar('alertmessage'); ?>
 	<div id="content" class="grid-container">
 
 		<nav aria-label="You are here:" role="navigation" class="grid-x grid-margin-x hide-for-print">

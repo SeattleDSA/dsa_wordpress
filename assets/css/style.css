@@ -11,6 +11,8 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: Roboto,-apple-sy
 	--color-red: #ec1f27;
 	--color-red2: #ff1744;
   --color-lightgray:  #ececec;
+  --color-gray: #888888;
+  --color-darkgray:  #333333;
 }
 
 /************************************************
@@ -285,16 +287,23 @@ margin: 4rem 0 3rem 0;
   }
 
 .bg-dsa-black {
-  background-color: #231F20;
+  background-color: var(--color-black);
 }
 
-.bg-dsa-red {
-  background: var(--color-red);
-    background: -webkit-linear-gradient(left, var(--color-red) 0%, var(--color-red2) 100%);
-    background: linear-gradient(to right, var(--color-red) 0%, var(--color-red2) 100%);
+.bg-dsa-red, .bg-red {
+  background-color: var(--color-red);
 }
 
-.bg-light {
+.bg-gray {
+  background-color: var(--color-gray);
+}
+
+.bg-darkgray {
+  background-color: var(--color-darkgray);
+}
+
+
+.bg-light, .bg-light-gray {
   background-color: var(--color-lightgray);
 }
 

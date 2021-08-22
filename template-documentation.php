@@ -6,7 +6,7 @@ Template Name: Documentation
 
 <?php get_header(); ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendor/tocbot/tocbot.css"> <!-- include vendor/tocbot Table of Contents generator theme -->
-
+	<?php get_sidebar('alertmessage'); ?>
 	<div id="content" class="grid-container fluid">
 	
 		<div id="inner-content" class="grid-x grid-margin-x">

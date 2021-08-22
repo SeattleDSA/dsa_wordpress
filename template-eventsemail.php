@@ -7,7 +7,7 @@ Template Name: Event List (Email 2)
 ?>
 
 <?php get_header(); ?>
-
+	<?php get_sidebar('alertmessage'); ?>
 	<div id="content" class="grid-x grid-margin-x grid-margin-y grid-container">
 		<style>
 			footer, .footer, #non-printable {

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	
+	<?php get_sidebar('alertmessage'); ?>
 	<div id="content" class="grid-container">
 
 		<div id="inner-content" class="grid-x grid-margin-x">
@@ -14,7 +14,7 @@
 			    					
 			</main> <!-- end #main -->
 
-		    <?php get_sidebar('page'); ?>
+		    <?php get_sidebar('pageright'); ?>
 		    
 		</div> <!-- end #inner-content -->
 
