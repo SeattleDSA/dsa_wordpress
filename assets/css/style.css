@@ -423,6 +423,12 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 /*********************
 8. POSTS & CONTENT STYLES
 *********************/
+
+.dsa-alert-message {
+  padding-top: 1rem;
+  padding-bottom:  .5rem;
+}
+
 #content #inner-content {
   padding: 1rem 0rem;
 }
@@ -908,12 +914,6 @@ table.sdsa-platform-table tr td:nth-child(1) {
    min-height: 25vh;
 }
 
-.dsa-alert {
-  background-color: #fafafa;
-  border-radius: 1rem;
-}
-
-
 .inline-icon {
   width: 3em;
   height: auto;
@@ -927,12 +927,6 @@ button.dsa-close {
   margin-top: 0.25rem;
   margin-left:1rem;
   padding: 0;
-}
-
-.dsa-alert-icon {
-  margin-right:1rem;
-  width: 2.5rem;
-  height: auto;
 }
 
 .button-group .button {

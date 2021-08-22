@@ -11,8 +11,7 @@ add_action( 'save_post', 'myplugin_save_postdata' );
 function myplugin_add_custom_box() {
   global $post;
     if ( 'template-homepage-2017.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-          add_meta_box( 'wp_editor_test_8_box', 'Email Signup Box (use Mailchimp embed code)', 'wp_editor_meta_box_8' );
-          add_meta_box( 'wp_editor_test_11_box', 'DSA Alert Box', 'wp_editor_meta_box_11' );
+          add_meta_box( 'wp_editor_test_8_box', 'Email Signup Box', 'wp_editor_meta_box_8' );
     }
 }
 
@@ -24,15 +23,6 @@ function wp_editor_meta_box_8( $post ) {
 
   $field_value = get_post_meta( $post->ID, '_email_signup', false );
   wp_editor( $field_value[0], '_email_signup' );
-}
-
-function wp_editor_meta_box_11( $post ) {
-
-  // Use nonce for verification
-  wp_nonce_field( plugin_basename( __FILE__ ), 'myplugin_noncename' );
-
-  $field_value = get_post_meta( $post->ID, '_dsa_alert_box', false );
-  wp_editor( $field_value[0], '_dsa_alert_box' );
 }
 
 
@@ -65,9 +55,6 @@ function myplugin_save_postdata( $post_id ) {
   
   if ( isset ( $_POST['_email_signup'] ) ) {
     update_post_meta( $post_id, '_email_signup', $_POST['_email_signup'] );
-  }
-   if ( isset ( $_POST['_dsa_alert_box'] ) ) {
-    update_post_meta( $post_id, '_dsa_alert_box', $_POST['_dsa_alert_box'] );
   }
 
 }
