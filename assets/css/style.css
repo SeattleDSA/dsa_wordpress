@@ -290,7 +290,7 @@ margin: 4rem 0 3rem 0;
   background-color: var(--color-black);
 }
 
-.bg-dsa-red, .bg-red {
+.bg-dsa-red, .bg-red, .sdsa-2017-frontispiece .bg-red.card {
   background-color: var(--color-red);
 }
 
@@ -427,6 +427,11 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 .dsa-alert-message {
   padding-top: 1rem;
   padding-bottom:  .5rem;
+}
+
+.dsa-alert-message a {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #content #inner-content {
