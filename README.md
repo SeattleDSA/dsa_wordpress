@@ -1,6 +1,8 @@
 # DSA Wordpress Theme
 
-This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation for Sites 6.6.3.
+Designed by the Seattle DSA Communications and Design team, this theme is now suitable for any DSA chapter to use. Significant updates to the theme occured in 2021.
+
+This theme forks JointsWP, a blank Wordpress Theme built using ZURB Foundation for Sites 6.6.3.
 
 ## Optional Theme Function(s)
 *The Events Calendar Plugin:* Adds events to the Homepage 2017 page template and enables Events List page templates (below).
@@ -8,7 +10,7 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 ## Page Template Types (new)
 * **Page (Default):** includes sidebar widget area.
 * **Committees:** Dedicated Committees/Working Group pages that double tabling literature thanks to CSS @media print queries.
-* **Page Banner (No Sidebar)**:** include banner and uses a wide container.
+* **Page Banner (No Sidebar):** include banner and uses a wide container.
 * **Page Extra Wide (No Sidebar):** page stretches full width of window or device.
 * **Event List (Print):** Print-ready upcoming events list, with 2-per-sheet to save on print costs.
 * **Event List (Email):** Email-ready upcoming events list, displays a week's worth for copy+paste into mass email blasts.
