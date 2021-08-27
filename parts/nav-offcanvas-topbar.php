@@ -8,7 +8,7 @@
 		</ul>
 	</div>
 	<div class="top-bar-right show-for-medium">
-		<?php joints_top_nav(); ?>	
+		<?php joints_top_nav(); ?><?php get_template_part( 'parts/header', 'searchform' ); ?>
 	</div>
 	<div class="top-bar-right show-for-small-only">
 		<ul class="menu">
