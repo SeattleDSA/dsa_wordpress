@@ -7,17 +7,25 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 
 ## Page Template Types (new)
 * **Page (Default):** includes sidebar widget area.
+* **Committees:** Dedicated Committees/Working Group pages that double tabling literature thanks to CSS @media print queries.
 * **Page Banner (No Sidebar)**:** include banner and uses a wide container.
-* **Page Wide (No Sidebar):** page content fills the full container in the default width.
 * **Page Extra Wide (No Sidebar):** page stretches full width of window or device.
 * **Event List (Print):** Print-ready upcoming events list, with 2-per-sheet to save on print costs.
 * **Event List (Email):** Email-ready upcoming events list, displays a week's worth for copy+paste into mass email blasts.
 * **Documentation:** uses TOCbot to automatically generate a table of contents based on headings, similar to Wikipedia.
+* **AgitProp:** Applies a unique header for minimalist subpages.
 * **AgitProp (Amazon Theme):** Applies a unique stylesheet and theme for organizing against Amazon.
 * **Homepage 2017:** Long-running homepage theme that's morphed over the years.
-* **Homepage 2020:** Stay-tuned. Potential redesign that takes advantage of the WordPress Block editor for easier configuration and closer WYSIWYG-ness.
+* **Homepage 2021:** Stay-tuned. Redesign takes advantage of the WordPress Block editor for easier configuration and WYSIWYG-ness.
 
-[Documentation Screenshot](https://github.com/SeattleDSA/dsa_wordpress/blob/master/documentation.jpg)
+## Widget / Sidebar Areas
+* **Sidebar - Post - Left: ▮▯▯** Occurs on posts just below the post header and left of the content on desktop, above the post body on mobile.
+* **Sidebar - Post - Right: ▯▯▮**  Occurs on posts just below the post header and right of the content on desktop, below the post body on mobile.
+* **Sidebar - Page - Right: ▯▮**  Occurs on pages just below the page title and right of the content on desktop, below the page body on mobile.
+* **Widget - Alert Message: ▬**  Appears on most pages, posts throughout the site, just below the top navigation bar.
+* **Widget - Footer - Left: ▮▯** Appears on most pages, posts throughout the site, after any and all content.
+* **Widget - Footer - Right: ▯▮** Appears on most pages, posts throughout the site, after any and all content.
+
 
 ## Vendor Libraries used
 * **JQuery** [repo](https://github.com/jquery/jquery)
