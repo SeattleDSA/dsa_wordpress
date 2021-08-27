@@ -19,12 +19,12 @@ This theme uses JointsWP, a blank Wordpress Theme built using ZURB Foundation fo
 * **Homepage 2021:** Stay-tuned. Redesign takes advantage of the WordPress Block editor for easier configuration and WYSIWYG-ness.
 
 ## Widget / Sidebar Areas
-* **Sidebar - Post - Left: ▮▯▯** Occurs on posts just below the post header and left of the content on desktop, above the post body on mobile.
-* **Sidebar - Post - Right: ▯▯▮**  Occurs on posts just below the post header and right of the content on desktop, below the post body on mobile.
-* **Sidebar - Page - Right: ▯▮**  Occurs on pages just below the page title and right of the content on desktop, below the page body on mobile.
-* **Widget - Alert Message: ▬**  Appears on most pages, posts throughout the site, just below the top navigation bar.
-* **Widget - Footer - Left: ▮▯** Appears on most pages, posts throughout the site, after any and all content.
-* **Widget - Footer - Right: ▯▮** Appears on most pages, posts throughout the site, after any and all content.
+* **Sidebar - Post - Left:**  Occurs on posts just below the post header and left of the content on desktop, above the post body on mobile. Visual: ▮▯▯
+* **Sidebar - Post - Right:**  Occurs on posts just below the post header and right of the content on desktop, below the post body on mobile. Visual: ▯▯▮ 
+* **Sidebar - Page - Right:**  Occurs on pages just below the page title and right of the content on desktop, below the page body on mobile. Visual: ▯▮
+* **Widget - Alert Message:**  Appears on most pages, posts throughout the site, just below the top navigation bar. Visual: ▬
+* **Widget - Footer - Left:** Appears on most pages, posts throughout the site, after any and all content. Visual: ▮▯
+* **Widget - Footer - Right:** Appears on most pages, posts throughout the site, after any and all content. Visual: ▯▮
 
 
 ## Vendor Libraries used
