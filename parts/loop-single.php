@@ -45,7 +45,7 @@
 
     </header> <!-- end article header -->
 	
-	<div class="sidebar cell large-3 small-12 single-sidebar-left">
+	<div class="sidebar cell large-3 small-12 single-sidebar-left border-top">
 		<?php get_sidebar('postleft'); ?>
 	</div>
 
@@ -53,7 +53,7 @@
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 
-	<div class="sidebar cell large-3 small-12 single-sidebar-right">
+	<div class="sidebar cell large-3 small-12 single-sidebar-right border-top">
 		<?php get_sidebar('postright'); ?>
 	</div>				
 	<footer class="article-footer cell large-12">
