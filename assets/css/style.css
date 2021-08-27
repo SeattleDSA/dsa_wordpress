@@ -1204,6 +1204,10 @@ font-color:  #5d5d5d;
     font-size: 12pt;
   }
 
+  h3.tribe-events-widget-events-list__event-title.tribe-common-h7, .tribe-common--breakpoint-medium.tribe-events-widget h3.tribe-events-widget-events-list__event-title {
+    font-size:  11pt;
+  }
+
   #wpadminbar {
     display: none;
   }
@@ -1233,6 +1237,10 @@ font-color:  #5d5d5d;
       flex-grow: 0;
       padding: 0 0.5rem 1rem 0.5rem;
       margin: 0;
+  }
+
+  .tribe-events-widget .tribe-events-widget-events-list__view-more-link {
+    display: none;
   }
 
   .print-1 {
