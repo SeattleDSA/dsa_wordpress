@@ -395,6 +395,9 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
   display: inline-block;
 }
 
+.tribe-events-content a:active, .tribe-events-content a:focus, .tribe-events-content a:hover {
+    border: 2pt solid #ec1f27;
+}
 
 .wp-block-button.disabled a.wp-block-button__link {
     background-color: #eee;
@@ -1109,9 +1112,12 @@ a.tribe-common-b2--bold.tribe-common-anchor-thin.tribe-events-widget-events-list
     content: "";
 }
 
-button.tribe-events-calendar-month__day-cell.tribe-events-calendar-month__day-cell--mobile {
-    background: white;
-    border: 1px solid #ec1f27;
+.tribe-events-calendar-month__day.tribe-events-calendar-month__day--past {
+    border-color: #f3f3f3;
+}
+.tribe-events .tribe-events-calendar-month__day {
+    border: 1px solid #bbb;
+    border-radius: 0px;
 }
 
 span.dsa-event-numericday {
