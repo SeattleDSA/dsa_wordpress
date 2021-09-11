@@ -1,5 +1,5 @@
 <?php if ( is_active_sidebar( 'alertmessage' ) ) : ?>
-	<div id="dsa-alertmessage" class="sidebar dsa-alert-message grid grid-x bg-darkgray txt-white" role="complementary">
+	<div id="dsa-alertmessage" class="sidebar dsa-alert-message grid grid-x bg-yellow" role="complementary">
 		<div class="grid-container cell large-12 small-12 txt-center">
 			<?php dynamic_sidebar( 'alertmessage' ); ?>
 		</div>

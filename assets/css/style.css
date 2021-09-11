@@ -13,6 +13,7 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: Roboto,-apple-sy
   --color-lightgray:  #ececec;
   --color-gray: #888888;
   --color-darkgray:  #333333;
+  --color-yellow:  #fff259;
 }
 
 /************************************************
@@ -302,6 +303,10 @@ margin: 4rem 0 3rem 0;
   background-color: var(--color-darkgray);
 }
 
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
 
 .bg-light, .bg-light-gray {
   background-color: var(--color-lightgray);
@@ -371,7 +376,7 @@ margin: 4rem 0 3rem 0;
   color: #fff;
 }
 
-.button, a.button, .pagination .button, a.excerpt-read-more, .wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button {
+.button, a.button, .pagination .button, a.excerpt-read-more, .wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button, .zammad-form-modal button {
     color: #2c2e2f;
     background: #ffe9e9;
     border: 2pt solid #ec1f27;
@@ -386,7 +391,7 @@ margin: 4rem 0 3rem 0;
     overflow-wrap: break-word;
 }
 
-a.button:focus, a.button:hover, .button:focus, .pagination .button:focus, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:hover, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button:hover, .button:hover, input[type="button"]:hover, .pagination .button:hover {
+a.button:focus, a.button:hover, .button:focus, .pagination .button:focus, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:hover, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button:hover, .button:hover, input[type="button"]:hover, .pagination .button:hover,  .zammad-form-modal button:hover {
     color: #2c2e2f;
     background: #f98084;
 }
@@ -1100,7 +1105,7 @@ img.featuredDiorama {
 }
 
 /*********************
-22. CALENDAR via THEEVENTSCALENDAR PLUGIN
+22 CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
 .tribe_events_cat-new-member .tribe-common-anchor:after, .tribe_events_cat-new-member .tribe-common-anchor-thin:after, .tribe_events_cat-new-member .tribe-events-calendar-month__calendar-event-title-link:after, .cat_new-member .tribe-events-calendar-month__calendar-event-title-link:after, .tribe_events_cat-new-member .tribe-events-calendar-month-mobile-events__mobile-event-title-link:after, .cat_new-member.tribe-events-calendar-month-mobile-events__mobile-event-title-link:after {
@@ -1128,6 +1133,7 @@ span.dsa-event-numericday {
 span.dsa-event-textmonth, span.dsa-event-textday, span.dsa-event-address {
 font-color:  #5d5d5d;
 }
+
 /******************************************************************
 23. fullPage.js Plugin Changes
 ******************************************************************/
