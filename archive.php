@@ -10,20 +10,28 @@
 		    		<h1 class="page-title"> <?php single_term_title(); ?> </h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 				</header>
-		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+		    	<div class="sidebar cell large-9 medium-8 small-12 archive-post-loop border-top">
+		    		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			 		
+						<!-- To see additional archive styles, visit the /parts directory -->
+						<?php get_template_part( 'parts/loop', 'archive' ); ?>
+						<?php joints_page_navi(); ?>
 				    
-				<?php endwhile; ?>	
+						<?php endwhile; ?>	
 
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
+							
+							
+						<?php else : ?>
+													
+							<?php get_template_part( 'parts/content', 'missing' ); ?>
+								
+						<?php endif; ?>
+				</div>
+				<div class="sidebar cell large-3 medium-4 small-12 single-sidebar-right" data-sticky-container>
+					<div class="sticky border-top bg-white" data-sticky data-margin-top="0">
+						<?php get_sidebar('postright'); ?>
+					</div>
+				</div>
 		
 			</main> <!-- end #main -->
 	    

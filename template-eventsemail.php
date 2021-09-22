@@ -63,7 +63,7 @@ Template Name: Event List (Email 2)
 				//plugin is activated
 
 				$events = tribe_get_events( array(
-				    'posts_per_page' => 12,
+				    'posts_per_page' => 20,
 				    'start_date' => date( 'Y-m-d H:i:s', strtotime("-6 hours")),
 				    'end_date' => date( 'Y-m-d H:i:s', strtotime("+1 week")),
 				    'tax_query'=> array(
