@@ -20,11 +20,11 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: Roboto,-apple-sy
   --color-sdsa-red-lighter: #F8AAAD;
   --color-sdsa-red-lightest: #FCD9DB;
 
-  --color-sdsa-yellow:  #ECBC1F;
-  --color-sdsa-yellow-mid: #F0CA4C;
-  --color-sdsa-yellow-light: #F4D87B;
-  --color-sdsa-yellow-lighter: #F8E6AA;
-  --color-sdsa-yellow-lightest: #FCF4D9;
+  --color-sdsa-yellow:  #FFE400;
+  --color-sdsa-yellow-mid: #FFE933;
+  --color-sdsa-yellow-light: #FFEF66;
+  --color-sdsa-yellow-lighter: #FFF499;
+  --color-sdsa-yellow-lightest: #FFFACC;
 
   --color-sdsa-green:  #52B79E;
   --color-sdsa-green-mid: #76C6B2;
@@ -107,9 +107,9 @@ img.icon-list {
 
 .archive.category .post .entry-content p, .archive.category .post .entry-content h1, .archive.category .post .entry-content h2, .archive.category .post .entry-content h3, .archive.category .post .entry-content h4, .archive.category .post .entry-content h5  {
   margin-bottom: 1rem;
-    font-size: 100%;
-    line-height: 1.6;
-    text-rendering: optimizeLegibility;
+  font-size: 100%;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
 }
 
 .archive-card .row.archive-item-image {
@@ -212,7 +212,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 .top-bar, .top-bar ul, .off-canvas { 
-  background-color: var(--color-white);
+  background-color: #FFFFFF;
 }
 
 .top-bar a, .top-bar ul a {
@@ -342,7 +342,59 @@ margin: 4rem 0 3rem 0;
 }
 
 .txt-white {
-  color: var(--color-white);
+  color: #FFFFFF;
+}
+
+.txt-black {
+  color: var(--color-sdsa-black);
+}
+
+.txt-yellow {
+  color: var(--color-sdsa-yellow);
+}
+
+.txt-red {
+  color: var(--color-sdsa-red);
+}
+
+.txt-light-gray {
+  color: var(--color-lightgray);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-darkgray {
+  color: var(--color-darkgray);
+}
+
+.bdr-white {
+  border-color: #FFFFFF;
+}
+
+.bdr-black {
+  border-color: var(--color-sdsa-black);
+}
+
+.bdr-yellow {
+  border-color: var(--color-sdsa-yellow);
+}
+
+.bdr-red {
+  border-color: var(--color-sdsa-red);
+}
+
+.bdr-light-gray {
+  border-color: var(--color-lightgray);
+}
+
+.bdr-gray {
+  border-color: var(--color-gray);
+}
+
+.bdr-darkgray {
+  border-color: var(--color-darkgray);
 }
 
 
@@ -351,7 +403,7 @@ margin: 4rem 0 3rem 0;
 ****************/
 
 .button-icon {
-	background-color: var(--color-sdsa-white);
+	background-color: #FFFFFF;
     color: var(--color-sdsa-red);
     border-radius: 50%;
     padding: 1rem;
@@ -363,7 +415,7 @@ margin: 4rem 0 3rem 0;
 }
 
 .button-icon-small {
-    background: var(--color-white);
+    background: #FFFFFF;
     color: var(--color-sdsa-red);
     border-radius: 50%;
     padding: .25rem;
@@ -395,7 +447,7 @@ margin: 4rem 0 3rem 0;
 
 .pagination .button a, .pagination .button a:hover {
   background-color: transparent;
-  color: var(--color-sdsa-white);
+  color: #FFFFFF;
 }
 
 
@@ -440,7 +492,7 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
 
 .button.hollow, input[type="button"].hollow, .pagination .button.hollow, .wp-block-button.hollow .wp-block-button__link {
     color: var(--color-sdsa-black);
-    background: var(--color-sdsa-white);
+    background: #FFFFFF;
 }
 
 a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-button__link:focus, .wp-block-button.hollow .wp-block-button__link:hover {
@@ -448,7 +500,7 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 }
 
 .button.solid, input[type="button"].solid, .pagination .button.solid, .wp-block-button.solid .wp-block-button__link {
-    color: var(--color-sdsa-white);
+    color: #FFFFFF;
     background-color: var(--color-sdsa-red);
     font-weight: bold;
 }
@@ -582,7 +634,7 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 }
 
 .border-top {
-  border-top: 1px solid #000;
+  border-top: 1px solid;
 }
 
 .blog-post .entry-content>p:first-of-type:first-letter {
@@ -595,7 +647,15 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
 }
 
 .archive article.post {
+    margin-top: 2rem;
     margin-bottom: 2rem;
+    padding:  2rem 0.2rem;
+}
+
+.archive-item-taxonomy {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-sdsa-black-lighter);
+  margin-top: 0.5rem;
 }
 
 /*********************
@@ -766,21 +826,21 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
   margin-top: 0em;
   padding-top:1em;
 background-color: var(--color-sdsa-red);
-color: var(--color-sdsa-white);
+color: #FFFFFF;
 }
 
 .footer a {
-color: var(--color-sdsa-white);
+color: #FFFFFF;
 }
 
 .footer a:hover {
 background-color: var(--color-sdsa-black);
-color: var(--color-sdsa-white);
+color: #FFFFFF;
 }
 
 .footer h4 {
     background-color: var(--color-sdsa-black);
-    color: var(--color-sdsa-white);
+    color: #FFFFFF;
     display: inline-block;
     padding: 0.25em 1em;
     font-weight: 400;
@@ -823,7 +883,7 @@ color: var(--color-sdsa-white);
 input[type="submit"] {
   background-color: var(--color-sdsa-red);
   padding: 1rem;
-  color: var(--color-white);
+  color: #FFFFFF;
   border: 0px;
 }
 
@@ -872,18 +932,18 @@ table.sdsa-platform-table tr td:nth-child(1) {
 }
 
 .tabs-title>a {
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1rem;
 }
 
 .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
   color: black;
-  background: var(--color-white);
+  background: #FFFFFF;
   box-shadow: 2px -2px 4px rgba(0,0,0,0.2);
 }
 
 .tabs-title>a:hover {
-  color: var(--color-white);
+  color: #FFFFFF;
   background: black;
 }
 
@@ -963,7 +1023,7 @@ table.sdsa-platform-table tr td:nth-child(1) {
 
 button.dsa-close {
   background-color: transparent;
-  color: var(--color-sdsa-white);
+  color: #FFFFFF;
   font-weight: 400;
   line-height: 2rem;
   margin-top: 0.25rem;
@@ -1056,7 +1116,7 @@ h1.home-title {
 }
 
 .sdsa-2017-frontispiece .diptych .beliefs-cycle {
-  color: var(--color-white);
+  color: #FFFFFF;
   -ms-flex-order: 2;
   order: 2;
   text-align: center;

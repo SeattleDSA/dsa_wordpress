@@ -1,8 +1,10 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-12 medium-12 small-12 grid-x grid-margin-x grid-margin-y'); ?> role="article">					
+<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-12 medium-12 small-12 grid-x grid-margin-x grid-margin-y border-top'); ?> role="article">					
 		
 		
 		<div class="archive-item-background cell large-3 medium-4 small-3 align-top">
 			<?php dsa_wordpress_wp_posted_on(); ?>
+			<time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('l Y.m.d'); ?></time>
+
 			<a href="<?php the_permalink() ?>" class="archive-image-link">
 				<?php 
 					if ( has_post_thumbnail() ) { 
@@ -13,7 +15,6 @@
 						}
 				?>
 			</a>
-			
 		</div>
 
 		<header class="archive-item-content cell large-9 medium-8 small-9">
@@ -38,7 +39,7 @@
 			</section> <!-- end archive-item-excerpt -->
 		</header> <!-- end archive-item-content -->
 		
-		<div class="cell large-12 small-12 border-top">
+		<div class="cell large-12 small-12 archive-item-taxonomy">
 			<?php dsa_wordpress_wp_entry_tags(); ?>
 		</div>
 		
