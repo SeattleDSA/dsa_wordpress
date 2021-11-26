@@ -29,6 +29,9 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 		<?php wp_head(); ?>
 
 		<!-- Drop Google Analytics here -->

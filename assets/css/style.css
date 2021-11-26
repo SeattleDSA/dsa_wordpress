@@ -3,7 +3,7 @@
 1. WEB FONTS
 *********************/
 
-html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Oxygen-Sans,"Arial Nova","Segoe UI",Arial,Ubuntu,Cantarell,sans-serif; }
+html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: 'Inter',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,Oxygen-Sans,"Arial Nova","Segoe UI",Arial,Ubuntu,Cantarell,sans-serif; font-display: swap;}
 
 :root {
 	--color-sdsa-black: #1A1E23;
@@ -44,6 +44,7 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: Roboto,-apple-sy
   --color-sdsa-purple-lighter: #C4B5ED;
   --color-sdsa-purple-lightest: #E5DEF7;
 
+  --tec-font-family-sans-serif: 'Inter',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,Oxygen-Sans,"Arial Nova","Segoe UI",Arial,Ubuntu,Cantarell,sans-serif;
 }
 
 /************************************************
@@ -535,6 +536,10 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
   color: #333;
   font-size: 1.25rem;
   line-height: 1.58;
+}
+
+.entry-content.single-content p, .entry-content.single-content li, .entry-content.single-content h1, .entry-content.single-content h2, .entry-content.single-content h3, .entry-content.single-content h4 {
+  /* Reserved for Future Update*/
 }
 
 .blog-post {
@@ -1194,7 +1199,7 @@ img.featuredDiorama {
 }
 
 /*********************
-22 CALENDAR via THEEVENTSCALENDAR PLUGIN
+22a CALENDAR via THEEVENTSCALENDAR PLUGIN
 *********************/
 
 .tribe_events_cat-new-member .tribe-common-anchor:after, .tribe_events_cat-new-member .tribe-common-anchor-thin:after, .tribe_events_cat-new-member .tribe-events-calendar-month__calendar-event-title-link:after, .cat_new-member .tribe-events-calendar-month__calendar-event-title-link:after, .tribe_events_cat-new-member .tribe-events-calendar-month-mobile-events__mobile-event-title-link:after, .cat_new-member.tribe-events-calendar-month-mobile-events__mobile-event-title-link:after {
@@ -1221,6 +1226,15 @@ span.dsa-event-numericday {
 
 span.dsa-event-textmonth, span.dsa-event-textday, span.dsa-event-address {
 font-color:  var(--color-sdsa-black-light);
+}
+
+
+/*********************
+22b WP Jobs Manager
+*********************/
+
+.single-job_listing #inner-content .sidebar * {
+  display:  none;
 }
 
 /******************************************************************

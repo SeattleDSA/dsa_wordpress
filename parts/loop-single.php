@@ -5,10 +5,10 @@
 			<div class="cell large-3 small-12 grid-x grid-margin-x border-top capitalize dsa-date">
 				<?php dsa_wordpress_wp_posted_on(); ?>
 			</div>
-			<div class="cell large-6 small-12 grid-x grid-margin-x border-top capitalize dsa-taxonomy">
+			<div class="cell large-6 small-12 grid-x grid-margin-x capitalize dsa-taxonomy">
 				<?php dsa_wordpress_wp_entry_tags(); ?>
 			</div>
-			<div class="cell large-3 small-12 grid-x grid-margin-x border-top capitalize dsa-share">
+			<div class="cell large-3 small-12 grid-x grid-margin-x capitalize border-top dsa-share">
 				<?php get_template_part( 'parts/content', 'share' ); ?>
 			</div>
 		</div>	
@@ -32,7 +32,7 @@
 			    	<div class="cell large-12 single-featured-image">
 			    		<?php the_post_thumbnail('full'); ?>
 			   		</div>
-			    	<div class="cell large-12 border-top featured-image-caption-container single-caption">
+			    	<div class="cell large-12 featured-image-caption-container single-caption">
 			    		<?php if (get_post(get_post_thumbnail_id())->post_excerpt) { // search for if the image has caption added on it ?>
 						    <span class="featured-image-caption">
 						        <?php echo wp_kses_post(get_post(get_post_thumbnail_id())->post_excerpt); // displays the image caption ?>
@@ -45,17 +45,41 @@
 
     </header> <!-- end article header -->
 	
-	<div class="sidebar cell large-3 small-12 single-sidebar-left border-top">
-		<?php get_sidebar('postleft'); ?>
-	</div>
+	<?php
+		if ( is_attachment() ) {
+		    // show adv. #1
+		} else { ?>
+			<div class="sidebar cell large-3 small-12 single-sidebar-left border-top">
+				<?php get_sidebar('postleft'); ?>
+			</div>
+	<?php
+		}
+	?>
 
-    <section class="entry-content cell large-6 small-12 single-content" itemprop="articleBody">
-		<?php the_content(); ?>
-	</section> <!-- end article section -->
+    <?php
+		if ( is_attachment() ) { ?>
+		    <section class="entry-content cell large-12 small-12 single-content attachment-content" itemprop="articleBody">
+				<?php the_content(); ?>
+			</section> <!-- end article section -->
+		<?php } else { ?>
+			<section class="entry-content cell large-6 small-12 single-content" itemprop="articleBody">
+				<?php the_content(); ?>
+			</section> <!-- end article section -->
+	<?php
+		}
+	?>
 
-	<div class="sidebar cell large-3 small-12 single-sidebar-right border-top">
-		<?php get_sidebar('postright'); ?>
-	</div>				
+	<?php
+		if ( is_attachment() ) {
+		    // show adv. #1
+		} else { ?>
+			<div class="sidebar cell large-3 small-12 single-sidebar-right border-top">
+				<?php get_sidebar('postright'); ?>
+			</div>	
+	<?php
+		}
+	?>
+				
 	<footer class="article-footer cell large-12">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<div class="grid-x grid-margin-x single-meta">
