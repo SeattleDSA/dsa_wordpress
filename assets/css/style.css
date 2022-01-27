@@ -1440,3 +1440,11 @@ font-color:  var(--color-sdsa-black-light);
 .js-toc-content article h1, .js-toc-content article h2, .js-toc-content article h3, .js-toc-content article h4, .js-toc-content article h5, .js-toc-content article h6 {
 padding-top: 3rem;
 }
+
+/******************************************************************
+26. Zammad HelpDesk forms
+******************************************************************/
+.zammad-form-modal-body {
+    /* Override default width to allow form to be larger */
+  max-width: 60em !important;
+}
