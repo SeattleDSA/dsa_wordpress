@@ -1444,7 +1444,13 @@ padding-top: 3rem;
 /******************************************************************
 26. Zammad HelpDesk forms
 ******************************************************************/
-.zammad-form-modal-body {
+.zammad-form-modal .zammad-form-modal-body {
     /* Override default width to allow form to be larger */
-  max-width: 60em !important;
+    max-width:  95%;
+    margin:  1.5rem;     
+}
+
+.zammad-form-modal .zammad-form-modal-body label {
+    font-weight: 800;
+    font-weight: bold;
 }
