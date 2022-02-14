@@ -1454,3 +1454,31 @@ padding-top: 3rem;
     font-weight: 800;
     font-weight: bold;
 }
+
+/******************************************************************
+27. Dark Mode
+******************************************************************/
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  .card, .sdsa-2017-frontispiece .card, .bg-light {
+    background: var(--color-sdsa-black);
+
+  }
+  p, body p, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2 {
+    color: var(--color-sdsa-white);
+  }
+
+  .button.hollow, a.button, .button, .off-canvas, .top-bar, .top-bar ul, body {
+    color: var(--color-sdsa-white);
+    background: var(--color-sdsa-black);
+  }
+
+  .tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday {
+    color: var(--color-sdsa-white);
+  }
+
+  .bg-light, .archive #content {
+    background: var(--color-sdsa-black);
+  }
+}
