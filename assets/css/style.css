@@ -1456,29 +1456,22 @@ padding-top: 3rem;
 }
 
 /******************************************************************
-27. Dark Mode
-******************************************************************/
+27. Dark Mode (not ready for primetime)
 
 @media (prefers-color-scheme: dark) {
-  /* Dark theme styles go here */
   .card, .sdsa-2017-frontispiece .card, .bg-light {
     background: var(--color-sdsa-black);
 
   }
-  p, body p, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2 {
+  p, body p, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2,.tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday, .tribe-events .tribe-events-calendar-month__calendar-event-title-link, .tribe-events .tribe-events-calendar-month__calendar-event-tooltip-title-link, .tribe-events-single-event-title, .tribe-events-meta-group .tribe-events-single-section-title, .single-tribe_events .tribe-events-single .tribe-events-event-meta {
     color: var(--color-sdsa-white);
   }
 
-  .button.hollow, a.button, .button, .off-canvas, .top-bar, .top-bar ul, body {
+  .button.hollow, a.button, .button, .off-canvas, .top-bar, .top-bar ul, body, tbody, tfoot, thead, .card, .sdsa-2017-frontispiece .card, .bg-light, , .bg-light, .archive #content; {
     color: var(--color-sdsa-white);
     background: var(--color-sdsa-black);
   }
 
-  .tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday {
-    color: var(--color-sdsa-white);
-  }
-
-  .bg-light, .archive #content {
-    background: var(--color-sdsa-black);
-  }
 }
+
+******************************************************************/
