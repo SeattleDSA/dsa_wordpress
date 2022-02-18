@@ -1463,7 +1463,7 @@ padding-top: 3rem;
     background: var(--color-sdsa-black);
 
   }
-  p, body p, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2,.tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday, .tribe-events .tribe-events-calendar-month__calendar-event-title-link, .tribe-events .tribe-events-calendar-month__calendar-event-tooltip-title-link, .tribe-events-single-event-title, .tribe-events-meta-group .tribe-events-single-section-title, .single-tribe_events .tribe-events-single .tribe-events-event-meta {
+  p, body, body .tribe-events-back a, .tribe-events .tribe-events-calendar-list__event-title-link, .tribe-events .tribe-events-calendar-month__day-date-daynum, body .tribe-events-back a:visited, body .tribe-events-notices li, body .tribe-events-notices ul, body .tribe-events-single-event-title, body .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month, body .tribe-events .tribe-events-calendar-latest-past__event-date-tag-year, body .tribe-events .tribe-events-calendar-latest-past__event-title-link, body .tribe-common .tribe-common-h1, body .tribe-common body .tribe-common-h2, body .tribe-common body .tribe-common-h3, body .tribe-common .tribe-common-h4, body .tribe-common .tribe-common-h5, body .tribe-common .tribe-common-h6, body p, .page-title, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2,.tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday, body .tribe-events .tribe-events-calendar-month__calendar-event-title-link, body .tribe-events .tribe-events-calendar-month__calendar-event-tooltip-title-link, .tribe-events-single-event-title, body .tribe-events-meta-group .tribe-events-single-section-title, body .single-tribe_events .tribe-events-single .tribe-events-event-meta {
     color: var(--color-sdsa-white);
   }
 
@@ -1472,6 +1472,17 @@ padding-top: 3rem;
     background: var(--color-sdsa-black);
   }
 
-}
+  body .tribe-events .tribe-events-calendar-latest-past__event-datetime, body .tribe-events .tribe-events-calendar-latest-past__event-title-link, body .tribe-events .tribe-events-calendar-latest-past__event-datetime, body .tribe-events .tribe-events-calendar-latest-past__event-title .tribe-events-calendar-latest-past__event-title-link {
+    color: var(--color-sdsa-black-lightest);
+  }
 
+  body, .off-canvas, .top-bar, .top-bar ul, .archive #content {
+    background-color: var(--color-sdsa-black);
+  }
+
+  body .widget.widget_block.widget_text p, .tooltipster-box .tooltipster-content {
+    color:  var(--color-sdsa-black);
+  }
+
+}
 ******************************************************************/
