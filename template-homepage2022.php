@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Hompage 2021
+Template Name: Hompage 2022
 */
 ?>
 

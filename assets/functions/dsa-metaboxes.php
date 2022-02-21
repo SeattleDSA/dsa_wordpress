@@ -10,7 +10,7 @@ add_action( 'save_post', 'myplugin_save_postdata' );
 /* Adds a box to the main column on the Post and Page edit screens */
 function myplugin_add_custom_box() {
   global $post;
-    if ( 'template-homepage-2017.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+    if ( 'template-homepage2017.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
           add_meta_box( 'wp_editor_test_8_box', 'Email Signup Box', 'wp_editor_meta_box_8' );
     }
 }
