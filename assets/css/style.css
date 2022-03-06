@@ -21,28 +21,10 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: 'Inter',-apple-s
   --color-sdsa-red-lightest: #FCD9DB;
 
   --color-sdsa-yellow:  #FFE400;
-  --color-sdsa-yellow-mid: #FFE933;
-  --color-sdsa-yellow-light: #FFEF66;
-  --color-sdsa-yellow-lighter: #FFF499;
-  --color-sdsa-yellow-lightest: #FFFACC;
-
   --color-sdsa-green:  #52B79E;
-  --color-sdsa-green-mid: #76C6B2;
-  --color-sdsa-green-light: #9AD5C6;
-  --color-sdsa-green-lighter: #BEE4DA;
-  --color-sdsa-green-lightest: #E2F3EF;
-
   --color-sdsa-blue:  #1E82EB;
-  --color-sdsa-blue-mid: #4D9CEF;
-  --color-sdsa-blue-light: #7CB6F3;
-  --color-sdsa-blue-lighter: #ABD0F7;
-  --color-sdsa-blue-lightest: #DAEAFC;
-
   --color-sdsa-purple:  #561EEB;
-  --color-sdsa-purple-mid: #8363D9;
-  --color-sdsa-purple-light: #A48CE3;
-  --color-sdsa-purple-lighter: #C4B5ED;
-  --color-sdsa-purple-lightest: #E5DEF7;
+  --color-sdsa-magenta:  #ff1762;
 
   --tec-font-family-sans-serif: 'Inter',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,Oxygen-Sans,"Arial Nova","Segoe UI",Arial,Ubuntu,Cantarell,sans-serif;
 }
@@ -69,14 +51,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small {opacity:0.85}
 }
 
 .page blockquote {
-font-size: 1.5rem;
-color: #231F20;
-border-left: 0px solid var(--color-sdsa-red);
-padding: 25px 0 25px 0;
+  font-size: 1rem;
+    color: #231f20;
+    border-left: 2pt solid #ec1f27;
+    padding: 0 0 0 2rem;
 }
 
 .page blockquote p {
-font-size: 1.5rem;
+font-size: 1rem;
 color: #231F20;
 padding: 0;
 }
@@ -633,7 +615,6 @@ a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-
     margin: 4px 0 7px;
     text-align: center; }
 
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1182,7 +1163,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 }
 
 /*********************
-21c. 2021 Theme
+21c. 2022 Theme
 *********************/
 
 .grid-container.grid-x.featuredDioramaContainer {
@@ -1227,7 +1208,6 @@ span.dsa-event-numericday {
 span.dsa-event-textmonth, span.dsa-event-textday, span.dsa-event-address {
 font-color:  var(--color-sdsa-black-light);
 }
-
 
 /*********************
 22b WP Jobs Manager
@@ -1339,6 +1319,17 @@ font-color:  var(--color-sdsa-black-light);
     display: none;
   }
 
+  .wp-block-separator.is-style-wide {
+    border-bottom-width: 1px;
+    max-width: 100%;
+}
+
+.wp-block-separator {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    max-width: 5rem;
+}
+
   .grid-x>main.large-8 {
       width: 100%;
   }
@@ -1395,54 +1386,10 @@ font-color:  var(--color-sdsa-black-light);
     flex-basis: 100% !important;
   }
 
-
 }
 
 /******************************************************************
-25. Table of Contents
-******************************************************************/
-
-
-.js-toc {
-  padding-top: 3rem;
-}
-
-.js-toc ol {
-  list-style-type: none;
-  
-}
-
-.js-toc > ol > li > ol {
-  border-left: 1px solid rgba(60, 65, 86, 0.1);
-}
-
-
-.js-toc-content h1::before, .js-toc-content h2::before, .js-toc-content h3::before, .js-toc-content h4::before, .js-toc-content h5::before, .js-toc-content h6::before {
-    display: block;
-    content: " ";
-    height: 60px;
-    margin-top: -60px;
-    visibility: hidden;
-}
-
-.js-toc a.toc-link {
-  height: 2rem;
-}
-
-.js-toc .toc-link::before {
-  background-color: transparent;
-}
-
-.js-toc .toc-link.is-active-link::before {
-  background-color: var(--color-sdsa-red);
-}
-
-.js-toc-content article h1, .js-toc-content article h2, .js-toc-content article h3, .js-toc-content article h4, .js-toc-content article h5, .js-toc-content article h6 {
-padding-top: 3rem;
-}
-
-/******************************************************************
-26. Zammad HelpDesk forms
+25. Zammad HelpDesk forms
 ******************************************************************/
 .zammad-form-modal .zammad-form-modal-body {
     /* Override default width to allow form to be larger */
@@ -1457,13 +1404,36 @@ padding-top: 3rem;
 
 /******************************************************************
 27. Dark Mode (not ready for primetime)
-******************************************************************/
+
 @media (prefers-color-scheme: dark) {
-  .card, .sdsa-2017-frontispiece .card, .bg-light {
-    background: var(--color-sdsa-black);
-  }
-  p, body, body .tribe-events-back a, .tribe-events-related-events-title, .tribe-events-event-meta dt, .tribe-events .tribe-events-calendar-list__event-title-link, .tribe-events .tribe-events-calendar-month__day-date-daynum, body .tribe-events-back a:visited, body .tribe-events-notices li, body .tribe-events-notices ul, body .tribe-events-single-event-title, body .tribe-events .tribe-events-calendar-latest-past__event-date-tag-month, body .tribe-events .tribe-events-calendar-latest-past__event-date-tag-year, body .tribe-events .tribe-events-calendar-latest-past__event-title-link, body .tribe-common .tribe-common-h1, body .tribe-common body .tribe-common-h2, body .tribe-common body .tribe-common-h3, body .tribe-common .tribe-common-h4, body .tribe-common .tribe-common-h5, body .tribe-common .tribe-common-h6, body p, .page-title, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, body .tribe-common a, body .tribe-common a:active, body .tribe-common a:focus, body .tribe-common a:hover, body .tribe-common a:visited, body .tribe-events-widget .tribe-events-widget-events-list__event-date-tag-month, body .tribe-common .tribe-common-h2, body .tribe-common .tribe-common-b2,.tribe-common a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday, body .tribe-events .tribe-events-calendar-month__calendar-event-title-link, body .tribe-events .tribe-events-calendar-month__calendar-event-tooltip-title-link, .tribe-events-single-event-title, body .tribe-events-meta-group .tribe-events-single-section-title, body .single-tribe_events .tribe-events-single .tribe-events-event-meta {
+  p, body, body p, .page-title, .entry-content li, .entry-content p, .card p, h1, h2, h3, h4, h5, h6, blockquote, pre, .top-bar a, .top-bar ul a, span.dsa-event-address, span.dsa-event-textday, span.dsa-event-textmonth, span.dsa-event-numericday {
     color: var(--color-sdsa-white);
+  }
+
+  a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, entry-content a, .pagination a, .pagination button {
+    color: var(--color-sdsa-magenta);
+   }
+
+  button, .button.disable, a.button, .button, .pagination .button, .wp-block-button .wp-block-button__link, .zammad-form-modal button, a.button, a.excerpt-read-more {
+    color: var(--color-sdsa-white);
+    background-color: var(--color-sdsa-magenta);
+    border-color: var(--color-sdsa-magenta);
+  }
+
+  a.button.hollow, a.button.solid, .button.hollow, .wp-block-button.hollow .wp-block-button__link, input[type="button"].hollow, .pagination .button.hollow, .wp-block-button.hollow .wp-block-button__link {
+    color: var(--color-sdsa-magenta);
+    background-color: var(--color-sdsa-black);
+    border-color: var(--color-sdsa-magenta);
+  }
+
+  .wp-block-button.disabled a.wp-block-button__link {
+    color:  var(--color-sdsa-black-lighter);
+  }
+
+  button:hover, a.button:hover, a.button.hollow:hover, a.button.solid:hover, a.button:focus, a.button.hollow:focus, a.button.solid:focus {
+    color: var(--color-sdsa-magenta);
+    background-color: var(--color-sdsa-white);
+    border-color: var(--color-sdsa-magenta);
   }
 
   .button.hollow, a.button, .button, .off-canvas, .top-bar, .top-bar ul, body, tbody, tfoot, thead, .card, .sdsa-2017-frontispiece .card, .bg-light, , .bg-light, .archive #content; {
@@ -1471,11 +1441,7 @@ padding-top: 3rem;
     background: var(--color-sdsa-black);
   }
 
-  body .tribe-events .tribe-events-calendar-latest-past__event-datetime, .tribe-events-schedule h2, .tribe-events-single ul.tribe-related-events li, .tribe-events-single ul.tribe-related-events li .tribe-related-events-title, .tribe-events .tribe-events-calendar-list__event-title-link, .single-tribe_events .tribe-events-single .tribe-events-event-meta, .tribe-events .tribe-events-calendar-list__event-date-tag-weekday, .tribe-events .tribe-events-calendar-list__event-datetime, .tribe-common .tribe-common-h7, .tribe-common .tribe-common-h8, body .tribe-events .tribe-events-calendar-latest-past__event-title-link, body .tribe-events .tribe-events-calendar-latest-past__event-datetime, body .tribe-events .tribe-events-calendar-latest-past__event-title .tribe-events-calendar-latest-past__event-title-link {
-    color: var(--color-sdsa-black-lighter);
-  }
-
-  body, .off-canvas, .top-bar, .top-bar ul, .archive #content, tbody, tfoot, thead {
+  body, .off-canvas, .top-bar, .top-bar ul, .archive #content, tbody, tfoot, thead, .card, .sdsa-2017-frontispiece .card, .bg-light {
     background-color: var(--color-sdsa-black);
   }
 
@@ -1486,5 +1452,43 @@ padding-top: 3rem;
   #site-footer {
     border-color: var(--color-sdsa-black);
   }
-
+  :root body {
+    --tec-color-text-primary: var(--color-sdsa-white);
+    --tec-color-text-event-title: var(--color-sdsa-white);
+    --tec-color-text-primary-light: var(--color-sdsa-black-lighter);
+    --tec-color-text-secondary: var(--color-sdsa-magenta);
+    --tec-color-text-disabled: var(--color-sdsa-black-light);
+    --tec-color-icon-primary: var(--color-sdsa-white);
+    --tec-color-icon-primary-alt: var(--color-sdsa-magenta);
+    --tec-color-icon-secondary: var(--color-sdsa-magenta);
+    --tec-color-icon-active: var(--color-sdsa-white);
+    --tec-color-text-events-title: var(--color-sdsa-white);;
+    --tec-color-icon-disabled: #d5d5d5;
+    --tec-color-icon-focus: #334aff;
+    --tec-color-icon-error: #da394d;
+    --tec-color-event-icon: var(--color-sdsa-white);
+    --tec-color-event-icon-hover: var(--color-sdsa-black-lighter);
+    --tec-color-accent-primary: var(--color-sdsa-magenta);
+    --tec-color-accent-secondary: var(--color-sdsa-magenta);
+    --tec-color-accent-secondary-hover: rgba(20,24,39,.8);
+    --tec-color-accent-secondary-active: rgba(20,24,39,.9);
+    --tec-color-accent-secondary-background: rgba(20,24,39,.07);
+    --tec-color-border-default: #d5d5d5;
+    --tec-color-border-secondary: #e4e4e4;
+    --tec-color-border-tertiary: #7d7d7d;
+    --tec-color-border-hover: #5d5d5d;
+    --tec-color-border-active: #141827;
+    --tec-color-background: var(--color-sdsa-black);
+    --tec-color-background-events: transparent;
+    --tec-color-background-transparent: hsla(0,0%,100%,.6);
+    --tec-color-background-secondary: #f7f6f6;
+    --tec-color-background-messages: rgba(20,24,39,.07);
+    --tec-color-background-secondary-hover: #f0eeee;
+    --tec-color-background-error: rgba(218,57,77,.08);
+    --tec-color-box-shadow: rgba(0,0,0,.14);
+    --tec-color-box-shadow-secondary: rgba(0,0,0,.1);
+    --tec-color-scroll-track: rgba(0,0,0,.25);
+    --tec-color-scroll-bar: rgba(0,0,0,.5);
+  }
 }
+******************************************************************/
