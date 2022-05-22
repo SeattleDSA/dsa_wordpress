@@ -26,13 +26,13 @@ Use:	Grid-container with two most recent posts
 			  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
 			    $my_query->the_post(); 
 			    ?>
-			    <div class="cell card large-6 medium-12 small-12 grid-x grid-margin-x grid-margin-y align-middle">
-			    	<div class="cell large-3 medium-3 small-3 text-center">
+			    <div class="cell grid-x grid-margin-x grid-margin-y">
+			    	<div class="cell large-2 medium-3 small-3 text-center">
 				    	<span class="dsa-event-textmonth"><?php the_time('M') ?></span><br>
 				    	<span class="dsa-event-numericday"><strong><?php the_time('j') ?></strong></span><br>
 				    	<span class="dsa-event-textday"><?php the_time('D') ?></span>
 				    </div>
-				    <div class="cell large-9 medium-9 small-9">
+				    <div class="cell large-10 medium-9 small-9">
 				    	<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 				    	<strong><?php the_author() ?></strong>
 				    </div>

@@ -1391,17 +1391,26 @@ font-color:  var(--color-sdsa-black-light);
 /******************************************************************
 25. Zammad HelpDesk forms
 ******************************************************************/
+.zammad-form-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    z-index: 999;
+    padding: 0;
+}
+
 .zammad-form-modal .zammad-form-modal-body {
-    /* Override default width to allow form to be larger */
-    max-width:  95%;
-    margin:  1.5rem;     
+    width: 100%;
+    margin: 3rem 0rem 0rem 0rem;
+    max-width: 100%;
+    padding: 1rem;
+    top: 0;
+    position: absolute;
+    left: 0;
 }
-
-.zammad-form-modal .zammad-form-modal-body label {
-    font-weight: 800;
-    font-weight: bold;
-}
-
 /******************************************************************
 27. Dark Mode (not ready for primetime)
 

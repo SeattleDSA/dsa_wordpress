@@ -32,17 +32,17 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 						$dsa_event_description = $event->post_content;
 						?>
 
-					    <div class="card cell large-6 medium-12 small-12 dsa-events-item">
-					    	<div class="grid-x grid-margin-x grid-margin-y">
+					    <div class="cell large-12 medium-12 small-12 dsa-events-item">
+					    	<div class="cell grid-x grid-margin-x grid-margin-y">
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
 						    		<div class="grid-x grid-margin-x grid-margin-y align-middle">
-							    		<div class="cell large-3 medium-3 small-3 text-center">
+							    		<div class="cell large-2 medium-3 small-3 text-center">
 					    					
 					    						<span class="dsa-event-textmonth"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "M" );?></span><br>
 					    						<span class="dsa-event-numericday"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "j" );?></span><br>
 					    						<span class="dsa-event-textday"><?php echo tribe_get_start_date( $event->ID, $display_time = false, $date_format = "D" );?></span>
 					    				</div>
-					    				<div class="cell large-9 medium-9 small-9">
+					    				<div class="cell large-10 medium-9 small-9">
 					    					<span class="dsa-event-time"><?php echo tribe_get_start_time( $event->ID );?> - <?php echo tribe_get_end_time( $event->ID );?></span><br>
 					    					<h4><?php echo tribe_get_event_link( $event->ID, $full_link=true); ?></h4>
 						    				<?php if ( tribe_has_venue( $event->ID ) ) {
@@ -59,7 +59,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 								</div>
 							</div>
 						</div>
-						<hr>
+						
 					<?php } ?>
 
 						<div class="cell text-center">
