@@ -1411,6 +1411,92 @@ font-color:  var(--color-sdsa-black-light);
     position: absolute;
     left: 0;
 }
+
+/******************************************************************
+26. actionnetwork4wordpress customizations
+******************************************************************/
+.actionnetwork-calendar-title {
+    font-weight: bold;
+}
+
+.actionnetwork-calendar-item {
+    border-bottom: 1px solid #000;
+}
+
+.actionnetwork-calendar-item {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+
+.actionnetwork-calendar-date {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 33%;
+    -ms-flex: 1 1 33%;
+    flex: 1 1 33%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    margin:  auto;
+}
+
+.actionnetwork-calendar-details {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-flex: 2 2 66%;
+    -ms-flex: 2 2 66%;
+    flex: 2 2 66%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    align-items: center;
+}
+
+.actionnetwork-calendar-dateNumber {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.actionnetwork-calendar-dateNameMonth {
+    text-align: center;
+}
+
+.actionnetwork-calendar-dateStartTime {
+    text-align: center;
+}
+
+.actionnetwork-calendar-title {
+    font-size: 1.25rem;
+}
+
+.actionnetwork-calendar-title {
+    font-size: 1rem;
+}
+
+.actionnetwork-calendar-location p, .actionnetwork-calendar-location {
+    font-size:  1rem;
+}
+
 /******************************************************************
 27. Dark Mode (not ready for primetime)
 
