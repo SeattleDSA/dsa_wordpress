@@ -8,7 +8,7 @@
 
 	<!-- This content shows up if there are no widgets defined in the backend. -->
 						
-	<div class="alert help">
+	<div class="alert help show-for-sr">
 		<p><?php _e( 'Please activate Widgets > Sidebar - Pages Right.', 'jointswp' );  ?></p>
 	</div>
 

@@ -13,8 +13,6 @@
 			    <?php endwhile; endif; ?>							
 			    					
 			</main> <!-- end #main -->
-
-		    <?php get_sidebar('pageright'); ?>
 		    
 		</div> <!-- end #inner-content -->
 

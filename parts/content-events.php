@@ -32,7 +32,7 @@ Use:	Shares platform of beliefs, similar to Black Panther Program, as well as po
 						$dsa_event_description = $event->post_content;
 						?>
 
-					    <div class="cell large-12 medium-12 small-12 dsa-events-item">
+					    <div class="cell large-12 medium-12 small-12 dsa-events-item card-ui">
 					    	<div class="cell grid-x grid-margin-x grid-margin-y">
 					    		<div class="cell large-12 medium-12 small-12 dsa-events-details">
 						    		<div class="grid-x grid-margin-x grid-margin-y align-middle">

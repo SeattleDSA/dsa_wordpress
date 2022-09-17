@@ -1,9 +1,8 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-12 medium-12 small-12 grid-x grid-margin-x grid-margin-y border-top'); ?> role="article">					
+<article id="post-<?php the_ID(); ?>" <?php post_class('cell large-12 medium-12 small-12 grid-x grid-margin-x grid-margin-y archive-item'); ?> role="article">					
 		
 		
-		<div class="archive-item-background cell large-3 medium-4 small-3 align-top">
+		<div class="archive-item-meta cell large-3 medium-4 small-3 align-top">
 			<?php dsa_wordpress_wp_posted_on(); ?>
-			<time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('l Y.m.d'); ?></time>
 
 			<a href="<?php the_permalink() ?>" class="archive-image-link">
 				<?php 

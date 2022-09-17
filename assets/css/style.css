@@ -101,6 +101,13 @@ img.icon-list {
   border-radius: 2rem;
 }
 
+.archive-list .archive-item {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
 .archive-card .row.archive-item-image {
   margin: 0 -13px 1rem -13px;
 }
@@ -170,12 +177,12 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 .header ul.off-canvas-list li {
   list-style: none; }
 
-.page-template header.article-header {
-  padding: 15vh 0 10vh 0;
-}
-
 .page-template.page-template-template-homepage-2017 header.article-header {
   padding: 0;
+}
+
+.home #sidebarPageRight {
+  display: none;
 }
 
 .breadcrumbs a {
@@ -453,7 +460,7 @@ margin: 4rem 0 3rem 0;
 .button, a.button, .pagination .button, a.excerpt-read-more, .wp-block-button .wp-block-button__link, button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-button, .zammad-form-modal button {
     color: var(--color-sdsa-black);
     background: var(--color-sdsa-red-lightest);
-    border: 2pt solid var(--color-sdsa-red);
+    border: 2px solid var(--color-sdsa-red);
     border-radius: 2em;
     box-shadow: none;
     cursor: pointer;
@@ -475,7 +482,7 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
 }
 
 .tribe-events-content a:active, .tribe-events-content a:focus, .tribe-events-content a:hover {
-    border: 2pt solid var(--color-sdsa-red);
+    border: 2px solid var(--color-sdsa-red);
 }
 
 .wp-block-button.disabled a.wp-block-button__link {
@@ -486,6 +493,7 @@ svg.tribe-common-c-svgicon.tribe-common-c-svgicon--caret-down.tribe-events-c-top
 .button.hollow, input[type="button"].hollow, .pagination .button.hollow, .wp-block-button.hollow .wp-block-button__link {
     color: var(--color-sdsa-black);
     background: #FFFFFF;
+    border: 2px solid var(--color-sdsa-red);
 }
 
 a.button.hollow:focus, a.button.hollow:hover, .wp-block-button.hollow .wp-block-button__link:focus, .wp-block-button.hollow .wp-block-button__link:hover {
@@ -1090,13 +1098,12 @@ h1.home-title {
     }
 }
 
-.sdsa-2017-frontispiece .card, .card {
-  border-radius: 0.25rem;
+.sdsa-2017-frontispiece .card, .card, .card-ui {
+  border-radius: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
   padding: 1rem;
-  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-  border: 1px solid rgb(200,200,200);
+  border: 1px solid var(--color-sdsa-background-light);
   background-color: #fff;
 }
 

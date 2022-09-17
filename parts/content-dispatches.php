@@ -26,7 +26,7 @@ Use:	Grid-container with two most recent posts
 			  while($my_query->have_posts() && $counter <= $how_many_last_posts) {
 			    $my_query->the_post(); 
 			    ?>
-			    <div class="cell grid-x grid-margin-x grid-margin-y">
+			    <div class="cell grid-x grid-margin-x grid-margin-y card-ui">
 			    	<div class="cell large-2 medium-3 small-3 text-center">
 				    	<span class="dsa-event-textmonth"><?php the_time('M') ?></span><br>
 				    	<span class="dsa-event-numericday"><strong><?php the_time('j') ?></strong></span><br>
