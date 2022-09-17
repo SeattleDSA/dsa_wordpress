@@ -1,4 +1,4 @@
-<div id="postleft" class="sidebar dsa-post-left cell large-4 medium-4" role="complementary">
+<div id="postleft" class="sidebar-inner dsa-post-left cell large-4 medium-4" role="complementary">
 
 	<?php if ( is_active_sidebar( 'postleft' ) ) : ?>
 

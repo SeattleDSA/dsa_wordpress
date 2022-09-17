@@ -12,6 +12,8 @@ html, body, h1, h2, h3, h4, h5, p, .tribe-common { font-family: 'Inter',-apple-s
   --color-sdsa-black-lighter:  #ADB6C2;
   --color-sdsa-black-lightest: #E8EAEE;
 
+  --color-sdsa-background-light: #F5F5F7;
+
 	--color-sdsa-white: #FFFFFF;
 
 	--color-sdsa-red: #EC1F27;
@@ -83,8 +85,8 @@ img.icon-list {
         border-bottom: 8px solid var(--color-sdsa-black);
 }
 
-.archive #content {
-  background-color: var(--color-sdsa-black-lightest);
+.off-canvas-content {
+  background-color: var(--color-sdsa-background-light);
 }
 
 
@@ -93,6 +95,10 @@ img.icon-list {
   font-size: 100%;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+.single-featured-image .wp-post-image {
+  border-radius: 2rem;
 }
 
 .archive-card .row.archive-item-image {
@@ -170,6 +176,10 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 
 .page-template.page-template-template-homepage-2017 header.article-header {
   padding: 0;
+}
+
+.breadcrumbs a {
+  color: var(--color-sdsa-red);
 }
 
 /*********************

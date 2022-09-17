@@ -49,7 +49,7 @@
 		if ( is_attachment() ) {
 		    // show adv. #1
 		} else { ?>
-			<div class="sidebar cell large-3 small-12 single-sidebar-left border-top">
+			<div class="sidebar cell large-4 small-12 single-sidebar-left">
 				<?php get_sidebar('postleft'); ?>
 			</div>
 	<?php
@@ -62,7 +62,7 @@
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
 		<?php } else { ?>
-			<section class="entry-content cell large-6 small-12 single-content" itemprop="articleBody">
+			<section class="entry-content cell large-8 small-12 single-content" itemprop="articleBody">
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
 	<?php
@@ -73,9 +73,9 @@
 		if ( is_attachment() ) {
 		    // show adv. #1
 		} else { ?>
-			<div class="sidebar cell large-3 small-12 single-sidebar-right border-top">
-				<?php get_sidebar('postright'); ?>
-			</div>	
+			<!-- Removing Sidebar Right <div class="sidebar cell large-3 small-12 single-sidebar-right border-top">
+				<?php // get_sidebar('postright'); ?>
+			</div>	-->
 	<?php
 		}
 	?>
@@ -83,14 +83,11 @@
 	<footer class="article-footer cell large-12">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>
 		<div class="grid-x grid-margin-x single-meta">
-			<div class="cell large-3 small-12 grid-x grid-margin-x border-top capitalize dsa-date">
+			<div class="cell large-4 small-12 grid-x grid-margin-x border-top capitalize dsa-date">
 				<?php dsa_wordpress_wp_posted_on(); ?>
 			</div>
-			<div class="cell large-6 small-12 grid-x grid-margin-x border-top capitalize dsa-taxonomy">
+			<div class="cell large-8 small-12 grid-x grid-margin-x border-top capitalize dsa-taxonomy">
 				<?php dsa_wordpress_wp_entry_tags(); ?>
-			</div>
-			<div class="cell large-3 small-12 grid-x grid-margin-x border-top capitalize dsa-share">
-				<?php get_template_part( 'parts/content', 'share' ); ?>
 			</div>
 		</div>	
 	</footer> <!-- end article footer -->
