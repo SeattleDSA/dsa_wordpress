@@ -16,6 +16,12 @@ function joints_theme_support() {
 	
 	// Add Support for WP Controlled Title Tag
 	add_theme_support( 'title-tag' );
+
+	// Add Support for WP Controlled Responsive Embeds
+	add_theme_support( 'responsive-embeds' );
+
+	// Add Support for WP Controlled Editor Styles
+	add_theme_support( 'editor-styles' );
 	
 	// Add HTML5 Support
 	add_theme_support( 'html5', 

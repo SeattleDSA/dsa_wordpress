@@ -183,9 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _foundation_accordion__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_foundation_accordion__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _foundation_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./foundation.tabs */ "./foundation.tabs");
 /* harmony import */ var _foundation_tabs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_foundation_tabs__WEBPACK_IMPORTED_MODULE_4__);
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -193,15 +191,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -246,17 +248,17 @@ var MenuPlugins = {
  * @requires foundation.tabs
  */
 
-var ResponsiveAccordionTabs =
-/*#__PURE__*/
-function (_Plugin) {
+var ResponsiveAccordionTabs = /*#__PURE__*/function (_Plugin) {
   _inherits(ResponsiveAccordionTabs, _Plugin);
+
+  var _super = _createSuper(ResponsiveAccordionTabs);
 
   function ResponsiveAccordionTabs(element, options) {
     var _this2;
 
     _classCallCheck(this, ResponsiveAccordionTabs);
 
-    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(ResponsiveAccordionTabs).call(this, element, options));
+    _this2 = _super.call(this, element, options);
     return _possibleConstructorReturn(_this2, _this2.options.reflow && _this2.storezfData || _assertThisInitialized(_this2));
   }
   /**
@@ -284,8 +286,6 @@ function (_Plugin) {
       if (!this.$element.attr('id')) {
         this.$element.attr('id', Object(_foundation_core_utils__WEBPACK_IMPORTED_MODULE_2__["GetYoDigits"])(6, 'responsiveaccordiontabs'));
       }
-
-      ;
 
       this._init();
 
@@ -351,7 +351,9 @@ function (_Plugin) {
             }
 
             tmpPlugin.destroy();
-          } catch (e) {}
+          } catch (e) {
+            console.warn("Warning: Problems getting Accordion/Tab options: ".concat(e));
+          }
         }
       }
     }
@@ -421,7 +423,6 @@ function (_Plugin) {
         return;
       }
 
-      ;
       var tabsTitle = _this.allOptions.linkClass ? _this.allOptions.linkClass : 'tabs-title';
       var tabsPanel = _this.allOptions.panelClass ? _this.allOptions.panelClass : 'tabs-panel';
       this.$element.removeAttr('role');
@@ -435,7 +436,6 @@ function (_Plugin) {
         $panels = $liHeads.children('[data-tab-content]').removeClass('accordion-content');
       }
 
-      ;
       $panels.css({
         display: '',
         visibility: ''
@@ -465,7 +465,6 @@ function (_Plugin) {
           $tabsContent = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div class="tabs-content"></div>').insertAfter(_this.$element).attr('data-tabs-content', _this.$element.attr('id'));
         }
 
-        ;
         $panels.each(function (key, value) {
           var tempValue = jquery__WEBPACK_IMPORTED_MODULE_0___default()(value).appendTo($tabsContent).addClass(tabsPanel);
           var hash = $liHeadsA.get(key).hash.slice(1);
@@ -479,18 +478,13 @@ function (_Plugin) {
               jquery__WEBPACK_IMPORTED_MODULE_0___default()(value).attr('id', hash);
               jquery__WEBPACK_IMPORTED_MODULE_0___default()($liHeadsA.get(key)).attr('href', jquery__WEBPACK_IMPORTED_MODULE_0___default()($liHeadsA.get(key)).attr('href').replace('#', '') + '#' + hash);
             }
-
-            ;
           }
 
-          ;
           var isActive = jquery__WEBPACK_IMPORTED_MODULE_0___default()($liHeads.get(key)).hasClass('is-active');
 
           if (isActive) {
             tempValue.addClass('is-active');
           }
-
-          ;
         });
         $liHeads.addClass(tabsTitle);
       }
@@ -507,7 +501,7 @@ function (_Plugin) {
 
   }, {
     key: "open",
-    value: function open(target) {
+    value: function open() {
       if (this.currentRule && typeof this.currentRule.open === 'function') {
         var _this$currentRule;
 
@@ -523,7 +517,7 @@ function (_Plugin) {
 
   }, {
     key: "close",
-    value: function close(target) {
+    value: function close() {
       if (this.currentRule && typeof this.currentRule.close === 'function') {
         var _this$currentRule2;
 
@@ -539,7 +533,7 @@ function (_Plugin) {
 
   }, {
     key: "toggle",
-    value: function toggle(target) {
+    value: function toggle() {
       if (this.currentRule && typeof this.currentRule.toggle === 'function') {
         var _this$currentRule3;
 
@@ -574,7 +568,7 @@ ResponsiveAccordionTabs.defaults = {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.responsiveAccordionTabs.js */"./js/entries/plugins/foundation.responsiveAccordionTabs.js");
+module.exports = __webpack_require__(/*! /Users/joeworkman/Development/foundation-sites/js/entries/plugins/foundation.responsiveAccordionTabs.js */"./js/entries/plugins/foundation.responsiveAccordionTabs.js");
 
 
 /***/ }),

@@ -143,14 +143,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-
-
 var Nest = {
   Feather: function Feather(menu) {
     var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'zf';
     menu.attr('role', 'menubar');
-    var items = menu.find('li').attr({
+    menu.find('a').attr({
       'role': 'menuitem'
+    });
+    var items = menu.find('li').attr({
+      'role': 'none'
     }),
         subMenuClass = "is-".concat(type, "-submenu"),
         subItemClass = "".concat(subMenuClass, "-item"),
@@ -165,9 +166,10 @@ var Nest = {
         $item.addClass(hasSubClass);
 
         if (applyAria) {
-          $item.attr({
+          var firstItem = $item.children('a:first');
+          firstItem.attr({
             'aria-haspopup': true,
-            'aria-label': $item.children('a:first').text()
+            'aria-label': firstItem.attr('aria-label') || firstItem.text()
           }); // Note:  Drilldowns behave differently in how they hide, and so need
           // additional attributes.  We should look if this possibly over-generalized
           // utility (Nest) is appropriate when we rework menus in 6.4
@@ -216,7 +218,7 @@ var Nest = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.util.nest.js */"./js/entries/plugins/foundation.util.nest.js");
+module.exports = __webpack_require__(/*! /Users/joeworkman/Development/foundation-sites/js/entries/plugins/foundation.util.nest.js */"./js/entries/plugins/foundation.util.nest.js");
 
 
 /***/ }),

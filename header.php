@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 
-  <html class="no-js"  <?php language_attributes(); ?>>
+  <html  <?php language_attributes(); ?>>
 
 	<head>
 		<meta charset="utf-8">
@@ -29,20 +29,15 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-		<?php wp_head(); ?>
-
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
-
+		<?php wp_head(); ?>
 	</head>
 	
 	<!-- Uncomment this line if using the Off-Canvas Menu --> 
 		
 	<body <?php body_class(); ?>>
-		
+	<?php do_action( 'wp_body_open' ); ?>	
 		<div class="off-canvas-wrapper">
 							
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>

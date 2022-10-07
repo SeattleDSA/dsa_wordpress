@@ -140,34 +140,26 @@ _foundation_core__WEBPACK_IMPORTED_MODULE_0__["Foundation"].Box = _foundation_ut
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Box", function() { return Box; });
-/* harmony import */ var _foundation_core_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./foundation.core.utils */ "./foundation.core");
-/* harmony import */ var _foundation_core_utils__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_foundation_core_utils__WEBPACK_IMPORTED_MODULE_0__);
-
-
-
 var Box = {
   ImNotTouchingYou: ImNotTouchingYou,
   OverlapArea: OverlapArea,
   GetDimensions: GetDimensions,
   GetExplicitOffsets: GetExplicitOffsets
-  /**
-   * Compares the dimensions of an element to a container and determines collision events with container.
-   * @function
-   * @param {jQuery} element - jQuery object to test for collisions.
-   * @param {jQuery} parent - jQuery object to use as bounding container.
-   * @param {Boolean} lrOnly - set to true to check left and right values only.
-   * @param {Boolean} tbOnly - set to true to check top and bottom values only.
-   * @default if no parent object passed, detects collisions with `window`.
-   * @returns {Boolean} - true if collision free, false if a collision in any direction.
-   */
-
 };
+/**
+ * Compares the dimensions of an element to a container and determines collision events with container.
+ * @function
+ * @param {jQuery} element - jQuery object to test for collisions.
+ * @param {jQuery} parent - jQuery object to use as bounding container.
+ * @param {Boolean} lrOnly - set to true to check left and right values only.
+ * @param {Boolean} tbOnly - set to true to check top and bottom values only.
+ * @default if no parent object passed, detects collisions with `window`.
+ * @returns {Boolean} - true if collision free, false if a collision in any direction.
+ */
 
 function ImNotTouchingYou(element, parent, lrOnly, tbOnly, ignoreBottom) {
   return OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) === 0;
 }
-
-;
 
 function OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) {
   var eleDims = GetDimensions(element),
@@ -270,63 +262,66 @@ function GetDimensions(elem) {
 function GetExplicitOffsets(element, anchor, position, alignment, vOffset, hOffset, isOverflow) {
   var $eleDims = GetDimensions(element),
       $anchorDims = anchor ? GetDimensions(anchor) : null;
-  var topVal, leftVal; // set position related attribute
+  var topVal, leftVal;
 
-  switch (position) {
-    case 'top':
-      topVal = $anchorDims.offset.top - ($eleDims.height + vOffset);
-      break;
+  if ($anchorDims !== null) {
+    // set position related attribute
+    switch (position) {
+      case 'top':
+        topVal = $anchorDims.offset.top - ($eleDims.height + vOffset);
+        break;
 
-    case 'bottom':
-      topVal = $anchorDims.offset.top + $anchorDims.height + vOffset;
-      break;
+      case 'bottom':
+        topVal = $anchorDims.offset.top + $anchorDims.height + vOffset;
+        break;
 
-    case 'left':
-      leftVal = $anchorDims.offset.left - ($eleDims.width + hOffset);
-      break;
+      case 'left':
+        leftVal = $anchorDims.offset.left - ($eleDims.width + hOffset);
+        break;
 
-    case 'right':
-      leftVal = $anchorDims.offset.left + $anchorDims.width + hOffset;
-      break;
-  } // set alignment related attribute
+      case 'right':
+        leftVal = $anchorDims.offset.left + $anchorDims.width + hOffset;
+        break;
+    } // set alignment related attribute
 
 
-  switch (position) {
-    case 'top':
-    case 'bottom':
-      switch (alignment) {
-        case 'left':
-          leftVal = $anchorDims.offset.left + hOffset;
-          break;
+    switch (position) {
+      case 'top':
+      case 'bottom':
+        switch (alignment) {
+          case 'left':
+            leftVal = $anchorDims.offset.left + hOffset;
+            break;
 
-        case 'right':
-          leftVal = $anchorDims.offset.left - $eleDims.width + $anchorDims.width - hOffset;
-          break;
+          case 'right':
+            leftVal = $anchorDims.offset.left - $eleDims.width + $anchorDims.width - hOffset;
+            break;
 
-        case 'center':
-          leftVal = isOverflow ? hOffset : $anchorDims.offset.left + $anchorDims.width / 2 - $eleDims.width / 2 + hOffset;
-          break;
-      }
+          case 'center':
+            leftVal = isOverflow ? hOffset : $anchorDims.offset.left + $anchorDims.width / 2 - $eleDims.width / 2 + hOffset;
+            break;
+        }
 
-      break;
+        break;
 
-    case 'right':
-    case 'left':
-      switch (alignment) {
-        case 'bottom':
-          topVal = $anchorDims.offset.top - vOffset + $anchorDims.height - $eleDims.height;
-          break;
+      case 'right':
+      case 'left':
+        switch (alignment) {
+          case 'bottom':
+            topVal = $anchorDims.offset.top - vOffset + $anchorDims.height - $eleDims.height;
+            break;
 
-        case 'top':
-          topVal = $anchorDims.offset.top + vOffset;
-          break;
+          case 'top':
+            topVal = $anchorDims.offset.top + vOffset;
+            break;
 
-        case 'center':
-          topVal = $anchorDims.offset.top + vOffset + $anchorDims.height / 2 - $eleDims.height / 2;
-          break;
-      }
+          case 'center':
+            topVal = $anchorDims.offset.top + vOffset + $anchorDims.height / 2 - $eleDims.height / 2;
+            break;
+        }
 
-      break;
+        break;
+    }
   }
 
   return {
@@ -346,7 +341,7 @@ function GetExplicitOffsets(element, anchor, position, alignment, vOffset, hOffs
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.util.box.js */"./js/entries/plugins/foundation.util.box.js");
+module.exports = __webpack_require__(/*! /Users/joeworkman/Development/foundation-sites/js/entries/plugins/foundation.util.box.js */"./js/entries/plugins/foundation.util.box.js");
 
 
 /***/ })

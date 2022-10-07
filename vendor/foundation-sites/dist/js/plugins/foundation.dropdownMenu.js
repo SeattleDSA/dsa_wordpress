@@ -196,9 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _foundation_util_box__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_foundation_util_box__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _foundation_util_touch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./foundation.util.touch */ "./foundation.util.touch");
 /* harmony import */ var _foundation_util_touch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_foundation_util_touch__WEBPACK_IMPORTED_MODULE_5__);
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -206,15 +204,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -232,20 +234,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
  * @requires foundation.util.touch
  */
 
-var DropdownMenu =
-/*#__PURE__*/
-function (_Plugin) {
+var DropdownMenu = /*#__PURE__*/function (_Plugin) {
   _inherits(DropdownMenu, _Plugin);
+
+  var _super = _createSuper(DropdownMenu);
 
   function DropdownMenu() {
     _classCallCheck(this, DropdownMenu);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(DropdownMenu).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(DropdownMenu, [{
     key: "_setup",
-
+    value:
     /**
      * Creates a new instance of DropdownMenu.
      * @class
@@ -254,7 +256,7 @@ function (_Plugin) {
      * @param {jQuery} element - jQuery object to make into a dropdown menu.
      * @param {Object} options - Overrides to the default plugin settings.
      */
-    value: function _setup(element, options) {
+    function _setup(element, options) {
       this.$element = element;
       this.options = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.extend({}, DropdownMenu.defaults, this.$element.data(), options);
       this.className = 'DropdownMenu'; // ie9 back compat
@@ -285,8 +287,8 @@ function (_Plugin) {
       _foundation_util_nest__WEBPACK_IMPORTED_MODULE_3__["Nest"].Feather(this.$element, 'dropdown');
       var subs = this.$element.find('li.is-dropdown-submenu-parent');
       this.$element.children('.is-dropdown-submenu-parent').children('.is-dropdown-submenu').addClass('first-sub');
-      this.$menuItems = this.$element.find('[role="menuitem"]');
-      this.$tabs = this.$element.children('[role="menuitem"]');
+      this.$menuItems = this.$element.find('li[role="none"]');
+      this.$tabs = this.$element.children('li[role="none"]');
       this.$tabs.find('ul.is-dropdown-submenu').addClass(this.options.verticalClass);
 
       if (this.options.alignment === 'auto') {
@@ -345,10 +347,12 @@ function (_Plugin) {
               return;
             }
 
+            e.stopImmediatePropagation();
             e.preventDefault();
 
             _this._hide($elem);
           } else {
+            e.stopImmediatePropagation();
             e.preventDefault();
 
             _this._show($sub);
@@ -364,7 +368,7 @@ function (_Plugin) {
 
 
       if (_this.options.closeOnClickInside) {
-        this.$menuItems.on('click.zf.dropdownMenu', function (e) {
+        this.$menuItems.on('click.zf.dropdownMenu', function () {
           var $elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this),
               hasSub = $elem.hasClass(parClass);
 
@@ -374,8 +378,10 @@ function (_Plugin) {
         });
       }
 
+      if (hasTouch && this.options.disableHoverOnTouch) this.options.disableHover = true;
+
       if (!this.options.disableHover) {
-        this.$menuItems.on('mouseenter.zf.dropdownMenu', function (e) {
+        this.$menuItems.on('mouseenter.zf.dropdownMenu', function () {
           var $elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this),
               hasSub = $elem.hasClass(parClass);
 
@@ -385,7 +391,7 @@ function (_Plugin) {
               _this._show($elem.children('.is-dropdown-submenu'));
             }, _this.options.hoverDelay));
           }
-        }).on('mouseleave.zf.dropdownmenu', Object(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__["ignoreMousedisappear"])(function (e) {
+        }).on('mouseleave.zf.dropdownMenu', Object(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__["ignoreMousedisappear"])(function () {
           var $elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this),
               hasSub = $elem.hasClass(parClass);
 
@@ -403,7 +409,7 @@ function (_Plugin) {
       }
 
       this.$menuItems.on('keydown.zf.dropdownMenu', function (e) {
-        var $element = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parentsUntil('ul', '[role="menuitem"]'),
+        var $element = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parentsUntil('ul', '[role="none"]'),
             isTab = _this.$tabs.index($element) > -1,
             $elements = isTab ? _this.$tabs : $element.siblings('li').add($element),
             $prevElement,
@@ -621,7 +627,7 @@ function (_Plugin) {
       if ($elem && $elem.length) {
         $toClose = $elem;
       } else if (typeof idx !== 'undefined') {
-        $toClose = this.$tabs.not(function (i, el) {
+        $toClose = this.$tabs.not(function (i) {
           return i === idx;
         });
       } else {
@@ -684,6 +690,14 @@ DropdownMenu.defaults = {
    * @default false
    */
   disableHover: false,
+
+  /**
+   * Disallows hover on touch devices
+   * @option
+   * @type {boolean}
+   * @default true
+   */
+  disableHoverOnTouch: true,
 
   /**
    * Allow a submenu to automatically close on a mouseleave event, if not clicked open.
@@ -776,7 +790,7 @@ DropdownMenu.defaults = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.dropdownMenu.js */"./js/entries/plugins/foundation.dropdownMenu.js");
+module.exports = __webpack_require__(/*! /Users/joeworkman/Development/foundation-sites/js/entries/plugins/foundation.dropdownMenu.js */"./js/entries/plugins/foundation.dropdownMenu.js");
 
 
 /***/ }),

@@ -144,9 +144,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation.core.plugin */ "./foundation.core");
 /* harmony import */ var _foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -154,15 +152,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -172,20 +174,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
  * @module foundation.abide
  */
 
-var Abide =
-/*#__PURE__*/
-function (_Plugin) {
+var Abide = /*#__PURE__*/function (_Plugin) {
   _inherits(Abide, _Plugin);
+
+  var _super = _createSuper(Abide);
 
   function Abide() {
     _classCallCheck(this, Abide);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Abide).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(Abide, [{
     key: "_setup",
-
+    value:
     /**
      * Creates a new instance of Abide.
      * @class
@@ -194,7 +196,7 @@ function (_Plugin) {
      * @param {Object} element - jQuery object to add the trigger to.
      * @param {Object} options - Overrides to the default plugin settings.
      */
-    value: function _setup(element) {
+    function _setup(element) {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       this.$element = element;
       this.options = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.extend(true, {}, Abide.defaults, this.$element.data(), options);
@@ -299,10 +301,10 @@ function (_Plugin) {
       } else if (typeof this.formnovalidate === 'boolean') {
         // triggered by $submit
         return this.formnovalidate;
-      } else {
-        // triggered by Enter in non-submit input
-        return this.$submits.length ? this.$submits[0].getAttribute('formnovalidate') !== null : false;
-      }
+      } // triggered by Enter in non-submit input
+
+
+      return this.$submits.length ? this.$submits[0].getAttribute('formnovalidate') !== null : false;
     }
     /**
      * Enables the whole validation
@@ -362,12 +364,15 @@ function (_Plugin) {
      * This allows for multiple form errors per input, though if none are found, no form errors will be shown.
      *
      * @param {Object} $el - jQuery object to use as reference to find the form error selector.
+     * @param {String[]} [failedValidators] - List of failed validators.
      * @returns {Object} jQuery object with the selector.
      */
 
   }, {
     key: "findFormError",
-    value: function findFormError($el) {
+    value: function findFormError($el, failedValidators) {
+      var _this4 = this;
+
       var id = $el.length ? $el[0].id : '';
       var $error = $el.siblings(this.options.formErrorSelector);
 
@@ -377,6 +382,14 @@ function (_Plugin) {
 
       if (id) {
         $error = $error.add(this.$element.find("[data-form-error-for=\"".concat(id, "\"]")));
+      }
+
+      if (!!failedValidators) {
+        $error = $error.not('[data-form-error-on]');
+        failedValidators.forEach(function (v) {
+          $error = $error.add($el.siblings("[data-form-error-on=\"".concat(v, "\"]")));
+          $error = $error.add(_this4.$element.find("[data-form-error-for=\"".concat(id, "\"][data-form-error-on=\"").concat(v, "\"]")));
+        });
       }
 
       return $error;
@@ -414,12 +427,12 @@ function (_Plugin) {
   }, {
     key: "findRadioLabels",
     value: function findRadioLabels($els) {
-      var _this4 = this;
+      var _this5 = this;
 
       var labels = $els.map(function (i, el) {
         var id = el.id;
 
-        var $label = _this4.$element.find("label[for=\"".concat(id, "\"]"));
+        var $label = _this5.$element.find("label[for=\"".concat(id, "\"]"));
 
         if (!$label.length) {
           $label = jquery__WEBPACK_IMPORTED_MODULE_0___default()(el).closest('label');
@@ -441,12 +454,12 @@ function (_Plugin) {
   }, {
     key: "findCheckboxLabels",
     value: function findCheckboxLabels($els) {
-      var _this5 = this;
+      var _this6 = this;
 
       var labels = $els.map(function (i, el) {
         var id = el.id;
 
-        var $label = _this5.$element.find("label[for=\"".concat(id, "\"]"));
+        var $label = _this6.$element.find("label[for=\"".concat(id, "\"]"));
 
         if (!$label.length) {
           $label = jquery__WEBPACK_IMPORTED_MODULE_0___default()(el).closest('label');
@@ -459,13 +472,14 @@ function (_Plugin) {
     /**
      * Adds the CSS error class as specified by the Abide settings to the label, input, and the form
      * @param {Object} $el - jQuery object to add the class to
+     * @param {String[]} [failedValidators] - List of failed validators.
      */
 
   }, {
     key: "addErrorClasses",
-    value: function addErrorClasses($el) {
+    value: function addErrorClasses($el, failedValidators) {
       var $label = this.findLabel($el);
-      var $formError = this.findFormError($el);
+      var $formError = this.findFormError($el, failedValidators);
 
       if ($label.length) {
         $label.addClass(this.options.labelErrorClass);
@@ -479,6 +493,10 @@ function (_Plugin) {
         'data-invalid': '',
         'aria-invalid': true
       });
+
+      if ($formError.filter(':visible').length) {
+        this.addA11yErrorDescribe($el, $formError);
+      }
     }
     /**
      * Adds [for] and [role=alert] attributes to all form error targetting $el,
@@ -491,20 +509,11 @@ function (_Plugin) {
     value: function addA11yAttributes($el) {
       var $errors = this.findFormError($el);
       var $labels = $errors.filter('label');
-      var $error = $errors.first();
-      if (!$errors.length) return; // Set [aria-describedby] on the input toward the first form error if it is not set
+      if (!$errors.length) return;
+      var $error = $errors.filter(':visible').first();
 
-      if (typeof $el.attr('aria-describedby') === 'undefined') {
-        // Get the first error ID or create one
-        var errorId = $error.attr('id');
-
-        if (typeof errorId === 'undefined') {
-          errorId = Object(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__["GetYoDigits"])(6, 'abide-error');
-          $error.attr('id', errorId);
-        }
-
-        ;
-        $el.attr('aria-describedby', errorId);
+      if ($error.length) {
+        this.addA11yErrorDescribe($el, $error);
       }
 
       if ($labels.filter('[for]').length < $labels.length) {
@@ -514,9 +523,8 @@ function (_Plugin) {
         if (typeof elemId === 'undefined') {
           elemId = Object(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__["GetYoDigits"])(6, 'abide-input');
           $el.attr('id', elemId);
-        }
+        } // For each label targeting $el, set [for] if it is not set.
 
-        ; // For each label targeting $el, set [for] if it is not set.
 
         $labels.each(function (i, label) {
           var $label = jquery__WEBPACK_IMPORTED_MODULE_0___default()(label);
@@ -529,6 +537,21 @@ function (_Plugin) {
         var $label = jquery__WEBPACK_IMPORTED_MODULE_0___default()(label);
         if (typeof $label.attr('role') === 'undefined') $label.attr('role', 'alert');
       }).end();
+    }
+  }, {
+    key: "addA11yErrorDescribe",
+    value: function addA11yErrorDescribe($el, $error) {
+      if (typeof $el.attr('aria-describedby') !== 'undefined') return; // Set [aria-describedby] on the input toward the first form error if it is not set
+      // Get the first error ID or create one
+
+      var errorId = $error.attr('id');
+
+      if (typeof errorId === 'undefined') {
+        errorId = Object(_foundation_core_plugin__WEBPACK_IMPORTED_MODULE_1__["GetYoDigits"])(6, 'abide-error');
+        $error.attr('id', errorId);
+      }
+
+      $el.attr('aria-describedby', errorId).data('abide-describedby', true);
     }
     /**
      * Adds [aria-live] attribute to the given global form error $el.
@@ -601,12 +624,12 @@ function (_Plugin) {
     key: "removeErrorClasses",
     value: function removeErrorClasses($el) {
       // radios need to clear all of the els
-      if ($el[0].type == 'radio') {
+      if ($el[0].type === 'radio') {
         return this.removeRadioErrorClasses($el.attr('name'));
       } // checkboxes need to clear all of the els
-      else if ($el[0].type == 'checkbox') {
-          return this.removeCheckboxErrorClasses($el.attr('name'));
-        }
+      else if ($el[0].type === 'checkbox') {
+        return this.removeCheckboxErrorClasses($el.attr('name'));
+      }
 
       var $label = this.findLabel($el);
       var $formError = this.findFormError($el);
@@ -623,6 +646,10 @@ function (_Plugin) {
         'data-invalid': null,
         'aria-invalid': null
       });
+
+      if ($el.data('abide-describedby')) {
+        $el.removeAttr('aria-describedby').removeData('abide-describedby');
+      }
     }
     /**
      * Goes through a form to find inputs and proceeds to validate them in ways specific to their type.
@@ -636,11 +663,12 @@ function (_Plugin) {
   }, {
     key: "validateInput",
     value: function validateInput($el) {
+      var _this7 = this;
+
       var clearRequire = this.requiredCheck($el),
-          validated = false,
-          customValidator = true,
           validator = $el.attr('data-validator'),
-          equalTo = true; // skip validation if disabled
+          failedValidators = [],
+          manageErrorClasses = true; // skip validation if disabled
 
       if (this._validationIsDisabled()) {
         return true;
@@ -653,33 +681,38 @@ function (_Plugin) {
 
       switch ($el[0].type) {
         case 'radio':
-          validated = this.validateRadio($el.attr('name'));
+          this.validateRadio($el.attr('name')) || failedValidators.push('required');
           break;
 
         case 'checkbox':
-          validated = this.validateCheckbox($el.attr('name'));
-          clearRequire = true;
+          this.validateCheckbox($el.attr('name')) || failedValidators.push('required'); // validateCheckbox() adds/removes error classes
+
+          manageErrorClasses = false;
           break;
 
         case 'select':
         case 'select-one':
         case 'select-multiple':
-          validated = clearRequire;
+          clearRequire || failedValidators.push('required');
           break;
 
         default:
-          validated = this.validateText($el);
+          clearRequire || failedValidators.push('required');
+          this.validateText($el) || failedValidators.push('pattern');
       }
 
       if (validator) {
-        customValidator = this.matchValidation($el, validator, $el.attr('required'));
+        var required = $el.attr('required') ? true : false;
+        validator.split(' ').forEach(function (v) {
+          _this7.options.validators[v]($el, required, $el.parent()) || failedValidators.push(v);
+        });
       }
 
       if ($el.attr('data-equalto')) {
-        equalTo = this.options.validators.equalTo($el);
+        this.options.validators.equalTo($el) || failedValidators.push('equalTo');
       }
 
-      var goodToGo = [clearRequire, validated, customValidator, equalTo].indexOf(false) === -1;
+      var goodToGo = failedValidators.length === 0;
       var message = (goodToGo ? 'valid' : 'invalid') + '.zf.abide';
 
       if (goodToGo) {
@@ -697,13 +730,20 @@ function (_Plugin) {
         }
       }
 
-      this[goodToGo ? 'removeErrorClasses' : 'addErrorClasses']($el);
+      if (manageErrorClasses) {
+        if (!goodToGo) {
+          this.addErrorClasses($el, failedValidators);
+        } else {
+          this.removeErrorClasses($el);
+        }
+      }
       /**
        * Fires when the input is done checking for validation. Event trigger is either `valid.zf.abide` or `invalid.zf.abide`
        * Trigger includes the DOM element of the input.
        * @event Abide#valid
        * @event Abide#invalid
        */
+
 
       $el.trigger(message, [$el]);
       return goodToGo;
@@ -718,7 +758,7 @@ function (_Plugin) {
   }, {
     key: "validateForm",
     value: function validateForm() {
-      var _this6 = this;
+      var _this8 = this;
 
       var acc = [];
 
@@ -749,7 +789,7 @@ function (_Plugin) {
       this.$element.find('[data-abide-error]').each(function (i, elem) {
         var $elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(elem); // Ensure a11y attributes are set
 
-        if (_this6.options.a11yAttributes) _this6.addGlobalErrorA11yAttributes($elem); // Show or hide the error
+        if (_this8.options.a11yAttributes) _this8.addGlobalErrorA11yAttributes($elem); // Show or hide the error
 
         $elem.css('display', noError ? 'none' : 'block');
       });
@@ -776,7 +816,7 @@ function (_Plugin) {
       // A pattern can be passed to this function, or it will be infered from the input's "pattern" attribute, or it's "type" attribute
       pattern = pattern || $el.attr('data-pattern') || $el.attr('pattern') || $el.attr('type');
       var inputText = $el.val();
-      var valid = false;
+      var valid = true;
 
       if (inputText.length) {
         // If the pattern attribute on the element is in Abide's list of patterns, then test that regexp
@@ -784,14 +824,9 @@ function (_Plugin) {
           valid = this.options.patterns[pattern].test(inputText);
         } // If the pattern name isn't also the type attribute of the field, then test it as a regexp
         else if (pattern !== $el.attr('type')) {
-            valid = new RegExp(pattern).test(inputText);
-          } else {
-            valid = true;
-          }
-      } // An empty field is valid if it's not required
-      else if (!$el.prop('required')) {
-          valid = true;
+          valid = new RegExp(pattern).test(inputText);
         }
+      }
 
       return valid;
     }
@@ -826,7 +861,6 @@ function (_Plugin) {
         });
       }
 
-      ;
       return valid;
     }
     /**
@@ -838,7 +872,7 @@ function (_Plugin) {
   }, {
     key: "validateCheckbox",
     value: function validateCheckbox(groupName) {
-      var _this7 = this;
+      var _this9 = this;
 
       // If at least one checkbox in the group has the `required` attribute, the group is considered required
       // Per W3C spec, all checkboxes in a group should have `required`, but we're being nice
@@ -864,16 +898,15 @@ function (_Plugin) {
           }
 
           if (typeof jquery__WEBPACK_IMPORTED_MODULE_0___default()(e).attr('data-min-required') !== 'undefined') {
-            minRequired = parseInt(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e).attr('data-min-required'));
+            minRequired = parseInt(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e).attr('data-min-required'), 10);
           }
         }); // For the group to be valid, the minRequired amount of checkboxes have to be checked
 
         if (checked >= minRequired) {
           valid = true;
         }
-      }
+      } // Skip validation if more than 1 checkbox have to be checked AND if the form hasn't got submitted yet (otherwise it will already show an error during the first fill in)
 
-      ; // Skip validation if more than 1 checkbox have to be checked AND if the form hasn't got submitted yet (otherwise it will already show an error during the first fill in)
 
       if (this.initialized !== true && minRequired > 1) {
         return true;
@@ -882,9 +915,9 @@ function (_Plugin) {
 
       $group.each(function (i, e) {
         if (!valid) {
-          _this7.addErrorClasses(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e));
+          _this9.addErrorClasses(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e), ['required']);
         } else {
-          _this7.removeErrorClasses(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e));
+          _this9.removeErrorClasses(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e));
         }
       });
       return valid;
@@ -900,11 +933,11 @@ function (_Plugin) {
   }, {
     key: "matchValidation",
     value: function matchValidation($el, validators, required) {
-      var _this8 = this;
+      var _this10 = this;
 
       required = required ? true : false;
       var clear = validators.split(' ').map(function (v) {
-        return _this8.options.validators[v]($el, required, $el.parent());
+        return _this10.options.validators[v]($el, required, $el.parent());
       });
       return clear.indexOf(false) === -1;
     }
@@ -1046,6 +1079,7 @@ Abide.defaults = {
   validateOnBlur: false,
   patterns: {
     alpha: /^[a-zA-Z]+$/,
+    // eslint-disable-next-line camelcase
     alpha_numeric: /^[a-zA-Z0-9]+$/,
     integer: /^[-+]?\d+$/,
     number: /^[-+]?\d*(?:[\.\,]\d+)?$/,
@@ -1067,15 +1101,17 @@ Abide.defaults = {
     time: /^(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9]){2}$/,
     dateISO: /^\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}$/,
     // MM/DD/YYYY
+    // eslint-disable-next-line camelcase
     month_day_year: /^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.]\d{4}$/,
     // DD/MM/YYYY
+    // eslint-disable-next-line camelcase
     day_month_year: /^(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.]\d{4}$/,
     // #FFF or #FFFFFF
     color: /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,
     // Domain || URL
     website: {
       test: function test(text) {
-        return Abide.defaults.patterns['domain'].test(text) || Abide.defaults.patterns['url'].test(text);
+        return Abide.defaults.patterns.domain.test(text) || Abide.defaults.patterns.url.test(text);
       }
     }
   },
@@ -1084,12 +1120,10 @@ Abide.defaults = {
    * Optional validation functions to be used. `equalTo` being the only default included function.
    * Functions should return only a boolean if the input is valid or not. Functions are given the following arguments:
    * el : The jQuery element to validate.
-   * required : Boolean value of the required attribute be present or not.
-   * parent : The direct parent of the input.
    * @option
    */
   validators: {
-    equalTo: function equalTo(el, required, parent) {
+    equalTo: function equalTo(el) {
       return jquery__WEBPACK_IMPORTED_MODULE_0___default()("#".concat(el.attr('data-equalto'))).val() === el.val();
     }
   }
@@ -1105,7 +1139,7 @@ Abide.defaults = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.abide.js */"./js/entries/plugins/foundation.abide.js");
+module.exports = __webpack_require__(/*! /Users/joeworkman/Development/foundation-sites/js/entries/plugins/foundation.abide.js */"./js/entries/plugins/foundation.abide.js");
 
 
 /***/ }),

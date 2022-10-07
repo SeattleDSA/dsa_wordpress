@@ -1,8 +1,8 @@
 
 <?php
 /*
-Part:	Beliefs Carousel
-Use:	Shares platform of beliefs, similar to Black Panther Program, as well as points to a Platform landing page at (your__url)/platform
+Part:	Events List
+Use:	Lists upcoming events from The Events Calendar
 */
 ?>
 <div class="grid-container homepage-events">
