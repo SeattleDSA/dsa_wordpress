@@ -78,7 +78,7 @@ Template Name: Event List (Email 2)
 				function empty_content($str) {
 					    return trim(str_replace('&nbsp;','',strip_tags($str))) == '';
 				}
-					echo "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"600\" id=\"templateColumns\">";
+					echo "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"600\" id=\"emailTable\" class=\"templateColumns\">";
 					// Loop through the events, displaying the title
 					// and content for each
 					foreach ( $events as $event ) {
