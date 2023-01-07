@@ -17,7 +17,7 @@ function site_scripts() {
 
     wp_enqueue_style( 'justice-icons', get_template_directory_uri() . '/vendor/justice-icons/justice-icons.css', array(), '', 'all' );
     // Register main stylesheet
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.153', 'all' );
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.154', 'all' );
 
     wp_enqueue_script( 'jquery' );
 

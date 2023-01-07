@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
   <html class="no-js"  <?php language_attributes(); ?>>
 
@@ -33,13 +33,12 @@
 
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
-
+		<style></style>
 	</head>
 	
 	<!-- Uncomment this line if using the Off-Canvas Menu --> 
 		
 	<body <?php body_class(); ?>>
-		<!-- For Seattle DSA only <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQX7PPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 
 		<div class="off-canvas-wrapper">
 							
