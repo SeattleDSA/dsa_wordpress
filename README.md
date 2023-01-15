@@ -1,6 +1,6 @@
 # DSA Wordpress Theme
 
-Designed by the Seattle DSA Communications and Design team, this theme is now suitable for any DSA chapter to use. Significant updates to the theme occured in 2021.
+Designed by the Seattle DSA Communications and Design team, this theme is now suitable for any DSA chapter to use. Significant updates to the theme occured in 2023.
 
 This theme forks JointsWP, a blank Wordpress Theme built using ZURB Foundation for Sites 6.6.3.
 
@@ -17,8 +17,8 @@ This theme forks JointsWP, a blank Wordpress Theme built using ZURB Foundation f
 * **Documentation:** uses TOCbot to automatically generate a table of contents based on headings, similar to Wikipedia.
 * **AgitProp:** Applies a unique header for minimalist subpages.
 * **AgitProp (Amazon Theme):** Applies a unique stylesheet and theme for organizing against Amazon.
-* **Homepage 2017:** Long-running homepage theme that's morphed over the years.
-* **Homepage 2021:** Stay-tuned. Redesign takes advantage of the WordPress Block editor for easier configuration and WYSIWYG-ness.
+* **Homepage - Seattle DSA:** Long-running homepage theme that's morphed over the years.
+* **Homepage - Any Chapter:** Redesign ready for any chapter. Simply set a featured image and update the main text and Email signup box areas.
 
 ## Widget / Sidebar Areas
 * **Sidebar - Post - Left:**  Occurs on posts just below the post header and left of the content on desktop, above the post body on mobile. Visual: ▮▯▯
