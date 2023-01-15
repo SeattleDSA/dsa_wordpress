@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Hompage 2017
+Template Name: Homepage - Seattle DSA
 */
 ?>
 
