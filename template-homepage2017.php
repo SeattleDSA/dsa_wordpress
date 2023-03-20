@@ -22,21 +22,11 @@ Template Name: Homepage - Seattle DSA
 		  </article><!-- end article -->
 
 		  <div class="diptych">
-		    <div class="grid-container">
+		    <div class="dsa-widgetRow">
 		      <div class="grid-x grid-margin-x align-middle">
-		        <div class="card cell large-6 medium-6 small-12 beliefs-cycle bg-red">
-		        	<?php get_template_part( 'parts/content', 'beliefs' ); ?> <!-- see /parts/content-beliefs.php -->
-				</div>
-		        <div class="card cell large-6 medium-6 small-12 newsletter-signup">
-		            <div class="grid-x grid-margin-x">
-		              <div class="form cell large-12 medium-12 small-12">
-		                <div class="fields">
-		                    <?php echo apply_filters('the_content', get_post_meta($post->ID, '_email_signup', true)); ?> <!-- see "Email Signup Box (use Mailchimp embed code)" metabox in Page Editor -->
-		                </div>
-		              </div>
-		            </div>
-		        </div><!-- newsletter signup -->
-
+		      	<?php get_sidebar('featuredhomepagearea'); ?>
+		      	<?php get_sidebar('emailhomepagearea'); ?>
+		        <?php get_sidebar('beliefshomepagearea'); ?>
 		      </div><!-- end cards -->
 		    </div><!-- end bound -->
 		  </div><!-- end diptych -->

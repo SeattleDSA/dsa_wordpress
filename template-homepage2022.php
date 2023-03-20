@@ -28,16 +28,9 @@ Template Name: Hompage - Any Chapter
 		</div>
 	</div><!-- end diorama -->
     <div class="grid-x grid-margin-x align-middle" id="dsa-newsletter">
-        <div class="card cell large-6 large-offset-3 medium-8 medium-offset-2 small-12 newsletter-signup">
-            <div class="grid-x grid-margin-x">
-              <div class="form cell large-12 medium-12 small-12">
-                <div class="fields">
-                    <?php echo apply_filters('the_content', get_post_meta($post->ID, '_email_signup', true)); ?>
-                    <!-- Editable Metabox Area: "Email Signup Box (use Mailchimp embed code)" -->
-                </div>
-              </div>
-            </div>
-        </div><!-- newsletter signup area -->
+      	<?php get_sidebar('featuredhomepagearea'); ?>
+      	<?php get_sidebar('emailhomepagearea'); ?>
+        <?php get_sidebar('beliefshomepagearea'); ?>
     </div><!-- end top half -->
 	
 	
