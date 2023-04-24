@@ -45,6 +45,11 @@ function redirect_private_page_to_login(){
     }
 }
 
+// Allow more than 30 events to be exported
+// https://theeventscalendar.com/knowledgebase/k/changing-the-number-of-events-in-ical-export/
+add_filter( 'tribe_ical_feed_posts_per_page', function() { return 100; } );
+
+
 /*****
 
 // Remove 4.2 Emoji Support
