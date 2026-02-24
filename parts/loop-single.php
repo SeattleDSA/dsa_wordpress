@@ -22,9 +22,6 @@
 					<div class="cell large-4 small-12 single-read-time">
 						<?php dsa_wordpress_wp_post_readtime();?>
 					</div>
-					<div class="cell large-12 single-excerpt content-excerpt">
-						<?php the_excerpt(); ?>
-					</div>
 				</div>
 			</div>
 			<div class="cell large-6 small-12">
@@ -44,17 +41,6 @@
 		</div>
 
     </header> <!-- end article header -->
-	
-	<?php
-		if ( is_attachment() ) {
-		    // show adv. #1
-		} else { ?>
-			<div class="sidebar cell large-4 small-12 single-sidebar-left">
-				<?php get_sidebar('postleft'); ?>
-			</div>
-	<?php
-		}
-	?>
 
     <?php
 		if ( is_attachment() ) { ?>
@@ -65,6 +51,17 @@
 			<section class="entry-content cell large-8 small-12 single-content" itemprop="articleBody">
 				<?php the_content(); ?>
 			</section> <!-- end article section -->
+	<?php
+		}
+	?>
+
+    <?php
+		if ( is_attachment() ) {
+		    // show adv. #1
+		} else { ?>
+			<div class="sidebar cell large-4 small-12 single-sidebar-left">
+				<?php get_sidebar('postleft'); ?>
+			</div>
 	<?php
 		}
 	?>
